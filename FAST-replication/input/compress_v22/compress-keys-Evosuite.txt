@@ -1,0 +1,8 @@
+BZip2CompressorInputStream_ESTest::test0
+BZip2CompressorInputStream_ESTest::test1
+BZip2CompressorInputStream_ESTest::test2
+BZip2CompressorInputStream_ESTest::test3
+BZip2CompressorInputStream_ESTest::test4
+BZip2CompressorInputStream_ESTest::test5
+BZip2CompressorInputStream_ESTest::test6
+BZip2CompressorInputStream_ESTest::test7

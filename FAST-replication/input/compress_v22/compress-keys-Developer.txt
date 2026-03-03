@@ -1,0 +1,2 @@
+PythonTruncatedBzip2Test::testTruncatedData
+PythonTruncatedBzip2Test::testPartialReadTruncatedData

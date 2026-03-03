@@ -1,0 +1,2 @@
+ArchiveStreamFactoryTest::shortTextFilesAreNoTARs
+ArchiveStreamFactoryTest::aiffFilesAreNoTARs
