@@ -1,0 +1,3 @@
+DataUtilTest::testCharset
+DataUtilTest::testQuotedCharset
+DataUtilTest::discardsSpuriousByteOrderMark
