@@ -1,3 +1,0 @@
-Cleaner_ESTest::test0
-Cleaner_ESTest::test1
-Cleaner_ESTest::test2
