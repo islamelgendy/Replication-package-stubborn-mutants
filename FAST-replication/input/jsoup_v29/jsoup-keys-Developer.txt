@@ -1,0 +1,11 @@
+DocumentTypeTest::constructorValidationThrowsExceptionOnBlankName
+DocumentTypeTest::constructorValidationThrowsExceptionOnNulls
+DocumentTypeTest::constructorValidationOkWithBlankPublicAndSystemIds
+DocumentTypeTest::outerHtmlGeneration
+DocumentTest::setTextPreservesDocumentStructure
+DocumentTest::testTitles
+DocumentTest::testOutputEncoding
+DocumentTest::testXhtmlReferences
+DocumentTest::testNormalisesStructure
+DocumentTest::testClone
+DocumentTest::testClonesDeclarations
