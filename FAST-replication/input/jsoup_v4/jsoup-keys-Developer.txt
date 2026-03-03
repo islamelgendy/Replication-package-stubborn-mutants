@@ -1,0 +1,3 @@
+EntitiesTest::escape
+EntitiesTest::unescape
+EntitiesTest::caseSensitive

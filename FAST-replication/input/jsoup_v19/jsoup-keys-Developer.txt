@@ -1,0 +1,17 @@
+CleanerTest::simpleBehaviourTest
+CleanerTest::simpleBehaviourTest2
+CleanerTest::basicBehaviourTest
+CleanerTest::basicWithImagesTest
+CleanerTest::testRelaxed
+CleanerTest::testDropComments
+CleanerTest::testDropXmlProc
+CleanerTest::testDropScript
+CleanerTest::testDropImageScript
+CleanerTest::testCleanJavascriptHref
+CleanerTest::testDropsUnknownTags
+CleanerTest::testHandlesEmptyAttributes
+CleanerTest::testIsValid
+CleanerTest::resolvesRelativeLinks
+CleanerTest::preservesRelatedLinksIfConfigured
+CleanerTest::dropsUnresolvableRelativeLinks
+CleanerTest::handlesCustomProtocols

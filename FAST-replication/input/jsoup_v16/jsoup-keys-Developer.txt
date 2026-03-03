@@ -1,0 +1,4 @@
+DocumentTypeTest::constructorValidationThrowsExceptionOnBlankName
+DocumentTypeTest::constructorValidationThrowsExceptionOnNulls
+DocumentTypeTest::constructorValidationOkWithBlankPublicAndSystemIds
+DocumentTypeTest::outerHtmlGeneration

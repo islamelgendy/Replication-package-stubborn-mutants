@@ -1,0 +1,7 @@
+public void test0() throws Throwable { Document document0 = Document.createShell("Xv4X&n"); Document.OutputSettings document_OutputSettings0 = document0.outputSettings(); String string0 = Entities.escape("Xv4X&n", document_OutputSettings0); assertEquals("Xv4X&amp;n", string0); }
+public void test1() throws Throwable { Entities entities0 = new Entities(); }
+public void test2() throws Throwable { Entities.EscapeMode entities_EscapeMode0 = Entities.EscapeMode.extended; // Undeclared exception! try { Entities.escape("OK", (CharsetEncoder) null, entities_EscapeMode0); fail("Expecting exception: NullPointerException"); } catch(NullPointerException e) { // // no message in exception (getMessage() returned null) // verifyException("org.jsoup.nodes.Entities", e); } }
+public void test3() throws Throwable { String string0 = Entities.unescape("#5&#7jAEZN'9=F"); assertEquals("#5\u0007jAEZN'9=F", string0); }
+public void test4() throws Throwable { String string0 = Entities.unescape("CloseCurlyDoubleQuote"); assertEquals("CloseCurlyDoubleQuote", string0); }
+public void test5() throws Throwable { String string0 = Entities.unescape("&pi&n"); assertEquals("\u03C0&n", string0); }
+public void test6() throws Throwable { String string0 = Entities.unescape("#5&#X5A|ZN'95!nF"); assertEquals("#5Z|ZN'95!nF", string0); }
