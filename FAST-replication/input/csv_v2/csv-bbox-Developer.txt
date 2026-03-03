@@ -1,0 +1,8 @@
+public void testGetInt() { assertEquals(values[0], record.get(0)); assertEquals(values[1], record.get(1)); assertEquals(values[2], record.get(2)); }
+public void testGetString() { assertEquals(values[0], recordWithHeader.get("first")); assertEquals(values[1], recordWithHeader.get("second")); assertEquals(values[2], recordWithHeader.get("third")); }
+public void testGetStringNoHeader() { record.get("first"); }
+public void testGetStringInconsistentRecord() { header.put("fourth", Integer.valueOf(4)); recordWithHeader.get("fourth"); }
+public void testIsConsistent() { assertTrue(record.isConsistent()); assertTrue(recordWithHeader.isConsistent()); header.put("fourth", Integer.valueOf(4)); assertFalse(recordWithHeader.isConsistent()); }
+public void testIsMapped() { assertFalse(record.isMapped("first")); assertTrue(recordWithHeader.isMapped("first")); assertFalse(recordWithHeader.isMapped("fourth")); }
+public void testIsSet() { assertFalse(record.isSet("first")); assertTrue(recordWithHeader.isSet("first")); assertFalse(recordWithHeader.isSet("fourth")); }
+public void testIterator() { int i = 0; for (Iterator<String> itr = record.iterator(); itr.hasNext();) { String value = itr.next(); assertEquals(values[i], value); i++; } }
