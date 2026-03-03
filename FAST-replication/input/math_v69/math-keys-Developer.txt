@@ -1,0 +1,8 @@
+PearsonsCorrelationTest::testLongly
+PearsonsCorrelationTest::testSwissFertility
+PearsonsCorrelationTest::testPValueNearZero
+PearsonsCorrelationTest::testConstant
+PearsonsCorrelationTest::testInsufficientData
+PearsonsCorrelationTest::testStdErrorConsistency
+PearsonsCorrelationTest::testCovarianceConsistency
+PearsonsCorrelationTest::testConsistency

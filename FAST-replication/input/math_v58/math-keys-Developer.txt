@@ -1,0 +1,8 @@
+GaussianFitterTest::testFit01
+GaussianFitterTest::testFit02
+GaussianFitterTest::testFit03
+GaussianFitterTest::testFit04
+GaussianFitterTest::testFit05
+GaussianFitterTest::testFit06
+GaussianFitterTest::testFit07
+GaussianFitterTest::testMath519

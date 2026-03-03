@@ -1,0 +1,8 @@
+TypeUtilsTest::testGetTypeArguments
+TypeUtilsTest::testTypesSatisfyVariables
+TypeUtilsTest::testDetermineTypeVariableAssignments
+TypeUtilsTest::testGetRawType
+TypeUtilsTest::testIsArrayTypeClasses
+TypeUtilsTest::testIsArrayGenericTypes
+TypeUtilsTest::testGetPrimitiveArrayComponentType
+TypeUtilsTest::testGetArrayComponentType

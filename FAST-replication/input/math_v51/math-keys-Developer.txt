@@ -1,0 +1,9 @@
+BaseSecantSolverAbstractTest::testSinZero
+BaseSecantSolverAbstractTest::testQuinticZero
+BaseSecantSolverAbstractTest::testRootEndpoints
+BaseSecantSolverAbstractTest::testBadEndpoints
+BaseSecantSolverAbstractTest::testSolutionLeftSide
+BaseSecantSolverAbstractTest::testSolutionRightSide
+BaseSecantSolverAbstractTest::testSolutionBelowSide
+BaseSecantSolverAbstractTest::testSolutionAboveSide
+RegulaFalsiSolverTest::testIssue631

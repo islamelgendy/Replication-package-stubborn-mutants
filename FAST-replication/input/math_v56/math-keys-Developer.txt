@@ -1,0 +1,5 @@
+MultidimensionalCounterTest::testPreconditions
+MultidimensionalCounterTest::testIteratorPreconditions
+MultidimensionalCounterTest::testMulti2UniConversion
+MultidimensionalCounterTest::testAccessors
+MultidimensionalCounterTest::testIterationConsistency

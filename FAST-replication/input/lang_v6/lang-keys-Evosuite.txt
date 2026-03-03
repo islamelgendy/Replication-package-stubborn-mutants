@@ -1,0 +1,6 @@
+CharSequenceTranslator_ESTest::test0
+CharSequenceTranslator_ESTest::test1
+CharSequenceTranslator_ESTest::test2
+CharSequenceTranslator_ESTest::test3
+CharSequenceTranslator_ESTest::test4
+CharSequenceTranslator_ESTest::test5

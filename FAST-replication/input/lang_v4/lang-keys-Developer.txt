@@ -1,0 +1,2 @@
+LookupTranslatorTest::testBasicLookup
+LookupTranslatorTest::testLang882

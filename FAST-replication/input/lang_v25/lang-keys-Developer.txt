@@ -1,0 +1,3 @@
+EntityArraysTest::testConstructorExists
+EntityArraysTest::testHTML40_EXTENDED_ESCAPE
+EntityArraysTest::testISO8859_1_ESCAPE

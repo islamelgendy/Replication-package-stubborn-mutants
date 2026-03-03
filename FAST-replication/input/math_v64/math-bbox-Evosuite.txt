@@ -1,0 +1,1 @@
+public void test0() throws Throwable { LevenbergMarquardtOptimizer levenbergMarquardtOptimizer0 = new LevenbergMarquardtOptimizer(); assertEquals(1000, levenbergMarquardtOptimizer0.getMaxIterations()); }

@@ -1,0 +1,2 @@
+MultiStartUnivariateRealOptimizerTest::testSinMin
+MultiStartUnivariateRealOptimizerTest::testQuinticMin

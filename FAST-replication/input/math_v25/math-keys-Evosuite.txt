@@ -1,0 +1,6 @@
+HarmonicFitter_ESTest::test0
+HarmonicFitter_ESTest::test1
+HarmonicFitter_ESTest::test2
+HarmonicFitter_ESTest::test3
+HarmonicFitter_ESTest::test4
+HarmonicFitter_ESTest::test5

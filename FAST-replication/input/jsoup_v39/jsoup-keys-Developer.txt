@@ -1,0 +1,8 @@
+DataUtilTest::testCharset
+DataUtilTest::testQuotedCharset
+DataUtilTest::discardsSpuriousByteOrderMark
+DataUtilTest::discardsSpuriousByteOrderMarkWhenNoCharsetSet
+DataUtilTest::shouldNotThrowExceptionOnEmptyCharset
+DataUtilTest::shouldSelectFirstCharsetOnWeirdMultileCharsetsInMetaTags
+DataUtilTest::shouldCorrectCharsetForDuplicateCharsetString
+DataUtilTest::shouldReturnNullForIllegalCharsetNames

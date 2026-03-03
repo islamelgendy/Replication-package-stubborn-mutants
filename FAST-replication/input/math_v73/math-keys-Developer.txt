@@ -1,0 +1,6 @@
+BrentSolverTest::testDeprecated
+BrentSolverTest::testSinZero
+BrentSolverTest::testQuinticZero
+BrentSolverTest::testRootEndpoints
+BrentSolverTest::testBadEndpoints
+BrentSolverTest::testInitialGuess

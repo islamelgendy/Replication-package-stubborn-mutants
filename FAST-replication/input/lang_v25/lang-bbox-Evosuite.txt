@@ -1,0 +1,11 @@
+public void test00() throws Throwable { String[][] stringArray0 = EntityArrays.BASIC_ESCAPE(); assertEquals(4, stringArray0.length); }
+public void test01() throws Throwable { String[][] stringArray0 = EntityArrays.JAVA_CTRL_CHARS_ESCAPE(); assertEquals(5, stringArray0.length); }
+public void test02() throws Throwable { String[][] stringArray0 = EntityArrays.BASIC_UNESCAPE(); assertEquals(4, stringArray0.length); }
+public void test03() throws Throwable { String[][] stringArray0 = EntityArrays.APOS_UNESCAPE(); assertEquals(1, stringArray0.length); }
+public void test04() throws Throwable { String[][] stringArray0 = EntityArrays.ISO8859_1_ESCAPE(); assertEquals(96, stringArray0.length); }
+public void test05() throws Throwable { String[][] stringArray0 = EntityArrays.HTML40_EXTENDED_UNESCAPE(); assertEquals(151, stringArray0.length); }
+public void test06() throws Throwable { EntityArrays entityArrays0 = new EntityArrays(); }
+public void test07() throws Throwable { String[][] stringArray0 = EntityArrays.APOS_ESCAPE(); assertEquals(1, stringArray0.length); }
+public void test08() throws Throwable { String[][] stringArray0 = EntityArrays.ISO8859_1_UNESCAPE(); assertEquals(96, stringArray0.length); }
+public void test09() throws Throwable { String[][] stringArray0 = EntityArrays.HTML40_EXTENDED_ESCAPE(); assertEquals(151, stringArray0.length); }
+public void test10() throws Throwable { String[][] stringArray0 = EntityArrays.JAVA_CTRL_CHARS_UNESCAPE(); String[][] stringArray1 = EntityArrays.invert(stringArray0); assertNotSame(stringArray1, stringArray0); }

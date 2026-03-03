@@ -1,0 +1,3 @@
+NumericEntityUnescaperTest::testSupplementaryUnescaping
+NumericEntityUnescaperTest::testOutOfBounds
+NumericEntityUnescaperTest::testUnfinishedEntity

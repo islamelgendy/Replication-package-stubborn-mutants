@@ -1,0 +1,8 @@
+ExtendedMessageFormatTest::testExtendedFormats
+ExtendedMessageFormatTest::testEscapedQuote_LANG_477
+ExtendedMessageFormatTest::testExtendedAndBuiltInFormats
+ExtendedMessageFormatTest::testBuiltInChoiceFormat
+ExtendedMessageFormatTest::testBuiltInDateTimeFormat
+ExtendedMessageFormatTest::testOverriddenBuiltinFormat
+ExtendedMessageFormatTest::testBuiltInNumberFormat
+ExtendedMessageFormatTest::testEqualsHashcode

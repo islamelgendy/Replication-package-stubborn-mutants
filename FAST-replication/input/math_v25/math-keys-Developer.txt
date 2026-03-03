@@ -1,0 +1,7 @@
+HarmonicFitterTest::testPreconditions1
+HarmonicFitterTest::testNoError
+HarmonicFitterTest::test1PercentError
+HarmonicFitterTest::testTinyVariationsData
+HarmonicFitterTest::testInitialGuess
+HarmonicFitterTest::testUnsorted
+HarmonicFitterTest::testMath844

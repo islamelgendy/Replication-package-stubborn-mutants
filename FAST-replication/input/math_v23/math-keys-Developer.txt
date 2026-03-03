@@ -1,0 +1,10 @@
+BrentOptimizerTest::testSinMin
+BrentOptimizerTest::testSinMinWithValueChecker
+BrentOptimizerTest::testBoundaries
+BrentOptimizerTest::testQuinticMin
+BrentOptimizerTest::testQuinticMinStatistics
+BrentOptimizerTest::testQuinticMax
+BrentOptimizerTest::testMinEndpoints
+BrentOptimizerTest::testMath832
+BrentOptimizerTest::testKeepInitIfBest
+BrentOptimizerTest::testMath855

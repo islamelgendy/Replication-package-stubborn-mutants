@@ -1,0 +1,11 @@
+Weight_ESTest::test0
+Weight_ESTest::test1
+Weight_ESTest::test2
+AbstractLeastSquaresOptimizer_ESTest::test0
+AbstractLeastSquaresOptimizer_ESTest::test1
+AbstractLeastSquaresOptimizer_ESTest::test2
+AbstractLeastSquaresOptimizer_ESTest::test3
+AbstractLeastSquaresOptimizer_ESTest::test4
+AbstractLeastSquaresOptimizer_ESTest::test5
+AbstractLeastSquaresOptimizer_ESTest::test6
+AbstractLeastSquaresOptimizer_ESTest::test7

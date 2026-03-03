@@ -1,0 +1,3 @@
+MannWhitneyUTestTest::testMannWhitneyUSimple
+MannWhitneyUTestTest::testMannWhitneyUInputValidation
+MannWhitneyUTestTest::testBigDataSet
