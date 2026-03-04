@@ -1,3 +1,0 @@
-Method,Fault-Detected
-BigFractionTest::testFloatValueForLargeNumeratorAndDenominator, 1
-BigFractionTest::testDoubleValueForLargeNumeratorAndDenominator, 1

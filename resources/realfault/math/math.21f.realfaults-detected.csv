@@ -1,4 +1,0 @@
-Method,Fault-Detected
-CorrelatedRandomVectorGeneratorTest::testSampleWithZeroCovariance, 1
-RectangularCholeskyDecompositionTest::testMath789, 1
-RectangularCholeskyDecompositionTest::testFullRank, 1

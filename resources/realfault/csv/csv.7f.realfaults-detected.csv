@@ -1,3 +1,0 @@
-Method,Fault-Detected
-CSVParserTest::testDuplicateHeaderEntries, 1
-CSVParser_ESTest::test13, 1

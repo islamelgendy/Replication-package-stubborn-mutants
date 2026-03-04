@@ -1,3 +1,0 @@
-Method,Fault-Detected
-SpearmansRankCorrelationTest::testPValueNearZero, 1
-PearsonsCorrelationTest::testPValueNearZero, 1

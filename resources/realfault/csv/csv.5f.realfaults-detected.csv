@@ -1,4 +1,0 @@
-Method,Fault-Detected
-CSVFormatTest::testNullRecordSeparatorCsv106, 1
-CSVPrinter_ESTest::test06, 1
-CSVPrinter_ESTest::test25, 1

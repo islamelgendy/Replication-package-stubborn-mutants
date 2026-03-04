@@ -1,3 +1,0 @@
-Method,Fault-Detected
-DataUtilTest::discardsSpuriousByteOrderMarkWhenNoCharsetSet, 1
-DataUtil_ESTest::test04, 1

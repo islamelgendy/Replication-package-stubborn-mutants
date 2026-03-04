@@ -1,3 +1,0 @@
-ContinuedFractionTest::testGoldenRatio
-BigFractionFormatTest::testFormat
-BigFractionFormatTest::testFormatZero

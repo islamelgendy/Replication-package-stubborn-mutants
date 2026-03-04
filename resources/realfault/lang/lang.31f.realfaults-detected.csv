@@ -1,3 +1,0 @@
-Method,Fault-Detected
-StringUtilsEqualsIndexOfTest::testContainsAnyCharArrayWithSupplementaryChars, 1
-StringUtilsEqualsIndexOfTest::testContainsAnyStringWithSupplementaryChars, 1
