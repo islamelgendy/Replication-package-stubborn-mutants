@@ -1,0 +1,7 @@
+LookupTranslator_ESTest::test0
+LookupTranslator_ESTest::test1
+LookupTranslator_ESTest::test2
+LookupTranslator_ESTest::test3
+LookupTranslator_ESTest::test4
+LookupTranslatorTest::testBasicLookup
+LookupTranslatorTest::testLang882

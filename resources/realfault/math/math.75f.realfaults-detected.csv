@@ -1,0 +1,15 @@
+Method,Fault-Detected
+RegressionTest1::test0826, 1
+RegressionTest2::test1117, 1
+RegressionTest2::test1372, 1
+RegressionTest3::test1579, 1
+RegressionTest3::test1805, 1
+RegressionTest5::test2537, 1
+RegressionTest5::test2796, 1
+RegressionTest5::test2857, 1
+RegressionTest5::test2944, 1
+RegressionTest7::test3501, 1
+RegressionTest8::test4197, 1
+RegressionTest8::test4476, 1
+RegressionTest10::test5246, 1
+FrequencyTest::testPcts, 1

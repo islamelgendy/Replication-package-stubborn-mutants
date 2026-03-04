@@ -1,0 +1,15 @@
+BisectionSolverTest::testDeprecated
+BisectionSolverTest::testSinZero
+BisectionSolverTest::testQuinticZero
+BisectionSolverTest::testMath369
+BisectionSolverTest::testSetFunctionValueAccuracy
+BisectionSolverTest::testResetFunctionValueAccuracy
+BisectionSolverTest::testSetAbsoluteAccuracy
+BisectionSolverTest::testResetAbsoluteAccuracy
+BisectionSolverTest::testSetMaximalIterationCount
+BisectionSolverTest::testResetMaximalIterationCount
+BisectionSolverTest::testSetRelativeAccuracy
+BisectionSolverTest::testResetRelativeAccuracy
+BisectionSolver_ESTest::test0
+BisectionSolver_ESTest::test1
+BisectionSolver_ESTest::test2

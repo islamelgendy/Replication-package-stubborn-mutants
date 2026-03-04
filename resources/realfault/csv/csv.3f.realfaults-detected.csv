@@ -1,0 +1,5 @@
+Method,Fault-Detected
+CSVParserTest::testBackslashEscaping, 1
+Lexer_ESTest::test11, 1
+CSVLexerTest::testEscapedMySqlNullValue, 1
+CSVLexerTest::testEscapedCharacter, 1

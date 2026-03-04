@@ -1,0 +1,4 @@
+Method,Fault-Detected
+BrentOptimizer_ESTest::test0, 1
+BrentOptimizer_ESTest::test6, 1
+BrentOptimizerTest::testMath855, 1

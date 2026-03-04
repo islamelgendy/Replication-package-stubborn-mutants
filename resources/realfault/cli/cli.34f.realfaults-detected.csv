@@ -1,0 +1,7 @@
+Method,Fault-Detected
+OptionBuilderTest::testTwoCompleteOptions, 1
+Option_ESTest::test13, 1
+Option_ESTest::test16, 1
+Option_ESTest::test27, 1
+Option_ESTest::test36, 1
+CommandLineTest::testGetParsedOptionValue, 1

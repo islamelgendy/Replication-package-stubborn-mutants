@@ -1,0 +1,9 @@
+Method,Fault-Detected
+SynchronizedSummaryStatisticsTest::testOverrideMeanWithMathClass, 1
+SynchronizedSummaryStatisticsTest::testOverrideGeoMeanWithMathClass, 1
+SynchronizedSummaryStatisticsTest::testOverrideVarianceWithMathClass, 1
+SummaryStatisticsTest::testOverrideMeanWithMathClass, 1
+SummaryStatisticsTest::testOverrideGeoMeanWithMathClass, 1
+SummaryStatisticsTest::testOverrideVarianceWithMathClass, 1
+RegressionTest0::test0380, 1
+RegressionTest1::test0635, 1

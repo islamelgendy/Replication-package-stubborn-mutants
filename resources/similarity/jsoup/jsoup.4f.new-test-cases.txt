@@ -1,0 +1,10 @@
+Entities_ESTest::test0
+Entities_ESTest::test1
+Entities_ESTest::test2
+Entities_ESTest::test3
+Entities_ESTest::test4
+Entities_ESTest::test5
+Entities_ESTest::test6
+EntitiesTest::escape
+EntitiesTest::unescape
+EntitiesTest::caseSensitive

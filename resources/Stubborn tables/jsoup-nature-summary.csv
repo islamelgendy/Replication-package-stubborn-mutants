@@ -1,0 +1,18 @@
+Key,Value,Count
+Access modifier,package-private,9
+Access modifier,public,4
+Access modifier,private,3
+Is static,False,10
+Is static,True,6
+Is void,Non-void,11
+Is void,Void,4
+Is void,Constructor,1
+Mutator,NegateConditionalsMutator,8
+Mutator,VoidMethodCallMutator,5
+Mutator,EmptyObjectReturnValsMutator,2
+Mutator,ConditionalsBoundaryMutator,1
+Nesting level,0,13
+Nesting level,1,3
+Type of node,IfStatement,9
+Type of node,MethodInvocation,5
+Type of node,ReturnStatement,2

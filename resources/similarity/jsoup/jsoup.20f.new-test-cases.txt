@@ -1,0 +1,12 @@
+DataUtilTest::testCharset
+DataUtilTest::testQuotedCharset
+DataUtilTest::discardsSpuriousByteOrderMark
+DataUtil_ESTest::test0
+DataUtil_ESTest::test1
+DataUtil_ESTest::test2
+DataUtil_ESTest::test3
+DataUtil_ESTest::test4
+DataUtil_ESTest::test5
+DataUtil_ESTest::test6
+DataUtil_ESTest::test7
+DataUtil_ESTest::test8

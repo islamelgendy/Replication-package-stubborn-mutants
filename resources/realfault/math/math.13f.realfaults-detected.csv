@@ -1,0 +1,5 @@
+Method,Fault-Detected
+RegressionTest0::test042, 1
+RegressionTest0::test087, 1
+RegressionTest0::test359, 1
+PolynomialFitterTest::testLargeSample, 1

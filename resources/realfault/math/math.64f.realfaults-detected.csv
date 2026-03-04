@@ -1,0 +1,3 @@
+Method,Fault-Detected
+MinpackTest::testMinpackJennrichSampson, 1
+MinpackTest::testMinpackFreudensteinRoth, 1

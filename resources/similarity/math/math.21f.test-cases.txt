@@ -1,0 +1,4279 @@
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test01
+Start line: 12
+End line: 23
+Method source code: 
+    public void test01() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test01");
+        org.apache.commons.math3.linear.RealMatrix realMatrix0 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math3.linear.RectangularCholeskyDecomposition rectangularCholeskyDecomposition2 = new org.apache.commons.math3.linear.RectangularCholeskyDecomposition(realMatrix0, (double) 100.0f);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #6
+19: aastore
+20: invokevirtual #7
+23: pop
+24: aconst_null
+25: astore_1
+26: new           #8
+29: dup
+30: aload_1
+31: ldc2_w        #9
+34: invokespecial #11
+37: astore_2
+38: ldc           #12
+40: invokestatic  #13
+43: goto          47
+46: astore_2
+47: return
+Exception table:
+from    to  target type
+26    43    46   Class java/lang/NullPointerException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test02
+Start line: 26
+End line: 63
+Method source code: 
+    public void test02() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test02");
+        double[] doubleArray5 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix6 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray5);
+        double[] doubleArray12 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix13 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray12);
+        double[] doubleArray19 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix20 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray19);
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix21 = array2DRowRealMatrix13.add(array2DRowRealMatrix20);
+        org.apache.commons.math3.linear.RealMatrix realMatrix22 = array2DRowRealMatrix6.subtract((org.apache.commons.math3.linear.RealMatrix) array2DRowRealMatrix21);
+        double double23 = array2DRowRealMatrix21.getFrobeniusNorm();
+        int int24 = array2DRowRealMatrix21.getColumnDimension();
+        double[] doubleArray30 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix31 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray30);
+        double[] doubleArray32 = array2DRowRealMatrix21.preMultiply(doubleArray30);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math3.linear.RectangularCholeskyDecomposition rectangularCholeskyDecomposition34 = new org.apache.commons.math3.linear.RectangularCholeskyDecomposition((org.apache.commons.math3.linear.RealMatrix) array2DRowRealMatrix21, 3.141592653589793d);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 1");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(doubleArray5);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray5), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray12);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray12), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray19);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray19), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix21);
+        org.junit.Assert.assertNotNull(realMatrix22);
+        org.junit.Assert.assertTrue("'" + double23 + "' != '" + 105.92450141492289d + "'", double23 == 105.92450141492289d);
+        org.junit.Assert.assertTrue("'" + int24 + "' != '" + 1 + "'", int24 == 1);
+        org.junit.Assert.assertNotNull(doubleArray30);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray30), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray32);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray32), "[5610.0]");
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #15
+19: aastore
+20: invokevirtual #7
+23: pop
+24: iconst_5
+25: newarray       double
+27: dup
+28: iconst_0
+29: ldc2_w        #16
+32: dastore
+33: dup
+34: iconst_1
+35: dconst_0
+36: dastore
+37: dup
+38: iconst_2
+39: dconst_0
+40: dastore
+41: dup
+42: iconst_3
+43: dconst_1
+44: dastore
+45: dup
+46: iconst_4
+47: ldc2_w        #18
+50: dastore
+51: astore_1
+52: new           #20
+55: dup
+56: aload_1
+57: invokespecial #21
+60: astore_2
+61: iconst_5
+62: newarray       double
+64: dup
+65: iconst_0
+66: ldc2_w        #16
+69: dastore
+70: dup
+71: iconst_1
+72: dconst_0
+73: dastore
+74: dup
+75: iconst_2
+76: dconst_0
+77: dastore
+78: dup
+79: iconst_3
+80: dconst_1
+81: dastore
+82: dup
+83: iconst_4
+84: ldc2_w        #18
+87: dastore
+88: astore_3
+89: new           #20
+92: dup
+93: aload_3
+94: invokespecial #21
+97: astore        4
+99: iconst_5
+100: newarray       double
+102: dup
+103: iconst_0
+104: ldc2_w        #16
+107: dastore
+108: dup
+109: iconst_1
+110: dconst_0
+111: dastore
+112: dup
+113: iconst_2
+114: dconst_0
+115: dastore
+116: dup
+117: iconst_3
+118: dconst_1
+119: dastore
+120: dup
+121: iconst_4
+122: ldc2_w        #18
+125: dastore
+126: astore        5
+128: new           #20
+131: dup
+132: aload         5
+134: invokespecial #21
+137: astore        6
+139: aload         4
+141: aload         6
+143: invokevirtual #22
+146: astore        7
+148: aload_2
+149: aload         7
+151: invokevirtual #23
+154: astore        8
+156: aload         7
+158: invokevirtual #24
+161: dstore        9
+163: aload         7
+165: invokevirtual #25
+168: istore        11
+170: iconst_5
+171: newarray       double
+173: dup
+174: iconst_0
+175: ldc2_w        #16
+178: dastore
+179: dup
+180: iconst_1
+181: dconst_0
+182: dastore
+183: dup
+184: iconst_2
+185: dconst_0
+186: dastore
+187: dup
+188: iconst_3
+189: dconst_1
+190: dastore
+191: dup
+192: iconst_4
+193: ldc2_w        #18
+196: dastore
+197: astore        12
+199: new           #20
+202: dup
+203: aload         12
+205: invokespecial #21
+208: astore        13
+210: aload         7
+212: aload         12
+214: invokevirtual #26
+217: astore        14
+219: new           #8
+222: dup
+223: aload         7
+225: ldc2_w        #27
+228: invokespecial #11
+231: astore        15
+233: ldc           #29
+235: invokestatic  #13
+238: goto          243
+241: astore        15
+243: aload_1
+244: invokestatic  #31
+247: aload_1
+248: invokestatic  #32
+251: ldc           #33
+253: invokestatic  #34
+256: aload_3
+257: invokestatic  #31
+260: aload_3
+261: invokestatic  #32
+264: ldc           #33
+266: invokestatic  #34
+269: aload         5
+271: invokestatic  #31
+274: aload         5
+276: invokestatic  #32
+279: ldc           #33
+281: invokestatic  #34
+284: aload         7
+286: invokestatic  #31
+289: aload         8
+291: invokestatic  #31
+294: new           #35
+297: dup
+298: invokespecial #36
+301: ldc           #37
+303: invokevirtual #38
+306: dload         9
+308: invokevirtual #39
+311: ldc           #40
+313: invokevirtual #38
+316: ldc2_w        #41
+319: invokevirtual #39
+322: ldc           #37
+324: invokevirtual #38
+327: invokevirtual #43
+330: dload         9
+332: ldc2_w        #41
+335: dcmpl
+336: ifne          343
+339: iconst_1
+340: goto          344
+343: iconst_0
+344: invokestatic  #44
+347: new           #35
+350: dup
+351: invokespecial #36
+354: ldc           #37
+356: invokevirtual #38
+359: iload         11
+361: invokevirtual #45
+364: ldc           #40
+366: invokevirtual #38
+369: iconst_1
+370: invokevirtual #45
+373: ldc           #37
+375: invokevirtual #38
+378: invokevirtual #43
+381: iload         11
+383: iconst_1
+384: if_icmpne     391
+387: iconst_1
+388: goto          392
+391: iconst_0
+392: invokestatic  #44
+395: aload         12
+397: invokestatic  #31
+400: aload         12
+402: invokestatic  #32
+405: ldc           #33
+407: invokestatic  #34
+410: aload         14
+412: invokestatic  #31
+415: aload         14
+417: invokestatic  #32
+420: ldc           #46
+422: invokestatic  #34
+425: return
+Exception table:
+from    to  target type
+219   238   241   Class java/lang/ArrayIndexOutOfBoundsException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test03
+Start line: 66
+End line: 88
+Method source code: 
+    public void test03() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test03");
+        double[] doubleArray5 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix6 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray5);
+        double[] doubleArray12 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix13 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray12);
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix14 = array2DRowRealMatrix6.add(array2DRowRealMatrix13);
+        org.apache.commons.math3.linear.RealMatrix realMatrix15 = array2DRowRealMatrix14.copy();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math3.linear.RectangularCholeskyDecomposition rectangularCholeskyDecomposition17 = new org.apache.commons.math3.linear.RectangularCholeskyDecomposition((org.apache.commons.math3.linear.RealMatrix) array2DRowRealMatrix14, 0.5319724169601437d);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 1");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(doubleArray5);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray5), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray12);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray12), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix14);
+        org.junit.Assert.assertNotNull(realMatrix15);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #47
+19: aastore
+20: invokevirtual #7
+23: pop
+24: iconst_5
+25: newarray       double
+27: dup
+28: iconst_0
+29: ldc2_w        #16
+32: dastore
+33: dup
+34: iconst_1
+35: dconst_0
+36: dastore
+37: dup
+38: iconst_2
+39: dconst_0
+40: dastore
+41: dup
+42: iconst_3
+43: dconst_1
+44: dastore
+45: dup
+46: iconst_4
+47: ldc2_w        #18
+50: dastore
+51: astore_1
+52: new           #20
+55: dup
+56: aload_1
+57: invokespecial #21
+60: astore_2
+61: iconst_5
+62: newarray       double
+64: dup
+65: iconst_0
+66: ldc2_w        #16
+69: dastore
+70: dup
+71: iconst_1
+72: dconst_0
+73: dastore
+74: dup
+75: iconst_2
+76: dconst_0
+77: dastore
+78: dup
+79: iconst_3
+80: dconst_1
+81: dastore
+82: dup
+83: iconst_4
+84: ldc2_w        #18
+87: dastore
+88: astore_3
+89: new           #20
+92: dup
+93: aload_3
+94: invokespecial #21
+97: astore        4
+99: aload_2
+100: aload         4
+102: invokevirtual #22
+105: astore        5
+107: aload         5
+109: invokevirtual #48
+112: astore        6
+114: new           #8
+117: dup
+118: aload         5
+120: ldc2_w        #49
+123: invokespecial #11
+126: astore        7
+128: ldc           #29
+130: invokestatic  #13
+133: goto          138
+136: astore        7
+138: aload_1
+139: invokestatic  #31
+142: aload_1
+143: invokestatic  #32
+146: ldc           #33
+148: invokestatic  #34
+151: aload_3
+152: invokestatic  #31
+155: aload_3
+156: invokestatic  #32
+159: ldc           #33
+161: invokestatic  #34
+164: aload         5
+166: invokestatic  #31
+169: aload         6
+171: invokestatic  #31
+174: return
+Exception table:
+from    to  target type
+114   133   136   Class java/lang/ArrayIndexOutOfBoundsException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test04
+Start line: 91
+End line: 110
+Method source code: 
+    public void test04() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test04");
+        org.apache.commons.math3.linear.BlockRealMatrix blockRealMatrix2 = new org.apache.commons.math3.linear.BlockRealMatrix((int) 'a', (int) (byte) 100);
+        org.apache.commons.math3.linear.RealVector realVector4 = blockRealMatrix2.getColumnVector(2);
+        double double5 = blockRealMatrix2.getNorm();
+        org.apache.commons.math3.linear.BlockRealMatrix blockRealMatrix6 = blockRealMatrix2.transpose();
+        org.apache.commons.math3.linear.BlockRealMatrix blockRealMatrix7 = blockRealMatrix6.transpose();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math3.linear.RectangularCholeskyDecomposition rectangularCholeskyDecomposition9 = new org.apache.commons.math3.linear.RectangularCholeskyDecomposition((org.apache.commons.math3.linear.RealMatrix) blockRealMatrix6, 262143.99999999994d);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 97");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(realVector4);
+        org.junit.Assert.assertTrue("'" + double5 + "' != '" + 0.0d + "'", double5 == 0.0d);
+        org.junit.Assert.assertNotNull(blockRealMatrix6);
+        org.junit.Assert.assertNotNull(blockRealMatrix7);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #51
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #52
+27: dup
+28: bipush        97
+30: bipush        100
+32: invokespecial #53
+35: astore_1
+36: aload_1
+37: iconst_2
+38: invokevirtual #54
+41: astore_2
+42: aload_1
+43: invokevirtual #55
+46: dstore_3
+47: aload_1
+48: invokevirtual #56
+51: astore        5
+53: aload         5
+55: invokevirtual #56
+58: astore        6
+60: new           #8
+63: dup
+64: aload         5
+66: ldc2_w        #57
+69: invokespecial #11
+72: astore        7
+74: ldc           #59
+76: invokestatic  #13
+79: goto          84
+82: astore        7
+84: aload_2
+85: invokestatic  #31
+88: new           #35
+91: dup
+92: invokespecial #36
+95: ldc           #37
+97: invokevirtual #38
+100: dload_3
+101: invokevirtual #39
+104: ldc           #40
+106: invokevirtual #38
+109: dconst_0
+110: invokevirtual #39
+113: ldc           #37
+115: invokevirtual #38
+118: invokevirtual #43
+121: dload_3
+122: dconst_0
+123: dcmpl
+124: ifne          131
+127: iconst_1
+128: goto          132
+131: iconst_0
+132: invokestatic  #44
+135: aload         5
+137: invokestatic  #31
+140: aload         6
+142: invokestatic  #31
+145: return
+Exception table:
+from    to  target type
+60    79    82   Class java/lang/ArrayIndexOutOfBoundsException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test05
+Start line: 113
+End line: 134
+Method source code: 
+    public void test05() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test05");
+        double[] doubleArray5 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix6 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray5);
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix7 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray5);
+        int int8 = org.apache.commons.math3.util.MathUtils.hash(doubleArray5);
+        org.apache.commons.math3.linear.RealMatrix realMatrix9 = org.apache.commons.math3.linear.MatrixUtils.createRowRealMatrix(doubleArray5);
+        org.apache.commons.math3.linear.RealMatrix realMatrix10 = realMatrix9.copy();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math3.linear.RectangularCholeskyDecomposition rectangularCholeskyDecomposition12 = new org.apache.commons.math3.linear.RectangularCholeskyDecomposition(realMatrix10, 743.8608740886967d);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math3.linear.NonPositiveDefiniteMatrixException; message: 10 is smaller than, or equal to, the minimum (743.861): not positive definite matrix: value 10 at index 0");
+        } catch (org.apache.commons.math3.linear.NonPositiveDefiniteMatrixException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(doubleArray5);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray5), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertTrue("'" + int8 + "' != '" + (-1909270369) + "'", int8 == (-1909270369));
+        org.junit.Assert.assertNotNull(realMatrix9);
+        org.junit.Assert.assertNotNull(realMatrix10);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #60
+19: aastore
+20: invokevirtual #7
+23: pop
+24: iconst_5
+25: newarray       double
+27: dup
+28: iconst_0
+29: ldc2_w        #16
+32: dastore
+33: dup
+34: iconst_1
+35: dconst_0
+36: dastore
+37: dup
+38: iconst_2
+39: dconst_0
+40: dastore
+41: dup
+42: iconst_3
+43: dconst_1
+44: dastore
+45: dup
+46: iconst_4
+47: ldc2_w        #18
+50: dastore
+51: astore_1
+52: new           #20
+55: dup
+56: aload_1
+57: invokespecial #21
+60: astore_2
+61: new           #20
+64: dup
+65: aload_1
+66: invokespecial #21
+69: astore_3
+70: aload_1
+71: invokestatic  #61
+74: istore        4
+76: aload_1
+77: invokestatic  #62
+80: astore        5
+82: aload         5
+84: invokeinterface #63,  1
+89: astore        6
+91: new           #8
+94: dup
+95: aload         6
+97: ldc2_w        #64
+100: invokespecial #11
+103: astore        7
+105: ldc           #66
+107: invokestatic  #13
+110: goto          115
+113: astore        7
+115: aload_1
+116: invokestatic  #31
+119: aload_1
+120: invokestatic  #32
+123: ldc           #33
+125: invokestatic  #34
+128: new           #35
+131: dup
+132: invokespecial #36
+135: ldc           #37
+137: invokevirtual #38
+140: iload         4
+142: invokevirtual #45
+145: ldc           #40
+147: invokevirtual #38
+150: ldc           #68
+152: invokevirtual #45
+155: ldc           #37
+157: invokevirtual #38
+160: invokevirtual #43
+163: iload         4
+165: ldc           #68
+167: if_icmpne     174
+170: iconst_1
+171: goto          175
+174: iconst_0
+175: invokestatic  #44
+178: aload         5
+180: invokestatic  #31
+183: aload         6
+185: invokestatic  #31
+188: return
+Exception table:
+from    to  target type
+91   110   113   Class org/apache/commons/math3/linear/NonPositiveDefiniteMatrixException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test06
+Start line: 137
+End line: 219
+Method source code: 
+    public void test06() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test06");
+        double[] doubleArray5 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix6 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray5);
+        double[] doubleArray12 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix13 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray12);
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix14 = array2DRowRealMatrix6.add(array2DRowRealMatrix13);
+        boolean boolean15 = array2DRowRealMatrix14.isSquare();
+        double[] doubleArray21 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix22 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray21);
+        double[] doubleArray28 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix29 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray28);
+        double[] doubleArray35 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix36 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray35);
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix37 = array2DRowRealMatrix29.add(array2DRowRealMatrix36);
+        org.apache.commons.math3.linear.RealMatrix realMatrix38 = array2DRowRealMatrix22.subtract((org.apache.commons.math3.linear.RealMatrix) array2DRowRealMatrix37);
+        org.apache.commons.math3.linear.MatrixUtils.checkAdditionCompatible((org.apache.commons.math3.linear.AnyMatrix) array2DRowRealMatrix14, (org.apache.commons.math3.linear.AnyMatrix) array2DRowRealMatrix37);
+        double[] doubleArray45 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix46 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray45);
+        double[] doubleArray52 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix53 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray52);
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix54 = array2DRowRealMatrix46.add(array2DRowRealMatrix53);
+        boolean boolean55 = array2DRowRealMatrix54.isSquare();
+        double[] doubleArray61 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix62 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray61);
+        double[] doubleArray68 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix69 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray68);
+        double[] doubleArray75 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix76 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray75);
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix77 = array2DRowRealMatrix69.add(array2DRowRealMatrix76);
+        org.apache.commons.math3.linear.RealMatrix realMatrix78 = array2DRowRealMatrix62.subtract((org.apache.commons.math3.linear.RealMatrix) array2DRowRealMatrix77);
+        org.apache.commons.math3.linear.MatrixUtils.checkAdditionCompatible((org.apache.commons.math3.linear.AnyMatrix) array2DRowRealMatrix54, (org.apache.commons.math3.linear.AnyMatrix) array2DRowRealMatrix77);
+        double[] doubleArray85 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix86 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray85);
+        double[] doubleArray87 = array2DRowRealMatrix54.preMultiply(doubleArray85);
+        double[] doubleArray89 = array2DRowRealMatrix54.getRow((int) (short) 0);
+        double[][] doubleArray90 = array2DRowRealMatrix54.getData();
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix91 = array2DRowRealMatrix37.subtract(array2DRowRealMatrix54);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math3.linear.RectangularCholeskyDecomposition rectangularCholeskyDecomposition93 = new org.apache.commons.math3.linear.RectangularCholeskyDecomposition((org.apache.commons.math3.linear.RealMatrix) array2DRowRealMatrix37, 0.0d);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 1");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(doubleArray5);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray5), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray12);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray12), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix14);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertNotNull(doubleArray21);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray21), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray28);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray28), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray35);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray35), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix37);
+        org.junit.Assert.assertNotNull(realMatrix38);
+        org.junit.Assert.assertNotNull(doubleArray45);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray45), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray52);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray52), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix54);
+        org.junit.Assert.assertTrue("'" + boolean55 + "' != '" + false + "'", boolean55 == false);
+        org.junit.Assert.assertNotNull(doubleArray61);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray61), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray68);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray68), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray75);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray75), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix77);
+        org.junit.Assert.assertNotNull(realMatrix78);
+        org.junit.Assert.assertNotNull(doubleArray85);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray85), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray87);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray87), "[5610.0]");
+        org.junit.Assert.assertNotNull(doubleArray89);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray89), "[20.0]");
+        org.junit.Assert.assertNotNull(doubleArray90);
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix91);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #69
+19: aastore
+20: invokevirtual #7
+23: pop
+24: iconst_5
+25: newarray       double
+27: dup
+28: iconst_0
+29: ldc2_w        #16
+32: dastore
+33: dup
+34: iconst_1
+35: dconst_0
+36: dastore
+37: dup
+38: iconst_2
+39: dconst_0
+40: dastore
+41: dup
+42: iconst_3
+43: dconst_1
+44: dastore
+45: dup
+46: iconst_4
+47: ldc2_w        #18
+50: dastore
+51: astore_1
+52: new           #20
+55: dup
+56: aload_1
+57: invokespecial #21
+60: astore_2
+61: iconst_5
+62: newarray       double
+64: dup
+65: iconst_0
+66: ldc2_w        #16
+69: dastore
+70: dup
+71: iconst_1
+72: dconst_0
+73: dastore
+74: dup
+75: iconst_2
+76: dconst_0
+77: dastore
+78: dup
+79: iconst_3
+80: dconst_1
+81: dastore
+82: dup
+83: iconst_4
+84: ldc2_w        #18
+87: dastore
+88: astore_3
+89: new           #20
+92: dup
+93: aload_3
+94: invokespecial #21
+97: astore        4
+99: aload_2
+100: aload         4
+102: invokevirtual #22
+105: astore        5
+107: aload         5
+109: invokevirtual #70
+112: istore        6
+114: iconst_5
+115: newarray       double
+117: dup
+118: iconst_0
+119: ldc2_w        #16
+122: dastore
+123: dup
+124: iconst_1
+125: dconst_0
+126: dastore
+127: dup
+128: iconst_2
+129: dconst_0
+130: dastore
+131: dup
+132: iconst_3
+133: dconst_1
+134: dastore
+135: dup
+136: iconst_4
+137: ldc2_w        #18
+140: dastore
+141: astore        7
+143: new           #20
+146: dup
+147: aload         7
+149: invokespecial #21
+152: astore        8
+154: iconst_5
+155: newarray       double
+157: dup
+158: iconst_0
+159: ldc2_w        #16
+162: dastore
+163: dup
+164: iconst_1
+165: dconst_0
+166: dastore
+167: dup
+168: iconst_2
+169: dconst_0
+170: dastore
+171: dup
+172: iconst_3
+173: dconst_1
+174: dastore
+175: dup
+176: iconst_4
+177: ldc2_w        #18
+180: dastore
+181: astore        9
+183: new           #20
+186: dup
+187: aload         9
+189: invokespecial #21
+192: astore        10
+194: iconst_5
+195: newarray       double
+197: dup
+198: iconst_0
+199: ldc2_w        #16
+202: dastore
+203: dup
+204: iconst_1
+205: dconst_0
+206: dastore
+207: dup
+208: iconst_2
+209: dconst_0
+210: dastore
+211: dup
+212: iconst_3
+213: dconst_1
+214: dastore
+215: dup
+216: iconst_4
+217: ldc2_w        #18
+220: dastore
+221: astore        11
+223: new           #20
+226: dup
+227: aload         11
+229: invokespecial #21
+232: astore        12
+234: aload         10
+236: aload         12
+238: invokevirtual #22
+241: astore        13
+243: aload         8
+245: aload         13
+247: invokevirtual #23
+250: astore        14
+252: aload         5
+254: aload         13
+256: invokestatic  #71
+259: iconst_5
+260: newarray       double
+262: dup
+263: iconst_0
+264: ldc2_w        #16
+267: dastore
+268: dup
+269: iconst_1
+270: dconst_0
+271: dastore
+272: dup
+273: iconst_2
+274: dconst_0
+275: dastore
+276: dup
+277: iconst_3
+278: dconst_1
+279: dastore
+280: dup
+281: iconst_4
+282: ldc2_w        #18
+285: dastore
+286: astore        15
+288: new           #20
+291: dup
+292: aload         15
+294: invokespecial #21
+297: astore        16
+299: iconst_5
+300: newarray       double
+302: dup
+303: iconst_0
+304: ldc2_w        #16
+307: dastore
+308: dup
+309: iconst_1
+310: dconst_0
+311: dastore
+312: dup
+313: iconst_2
+314: dconst_0
+315: dastore
+316: dup
+317: iconst_3
+318: dconst_1
+319: dastore
+320: dup
+321: iconst_4
+322: ldc2_w        #18
+325: dastore
+326: astore        17
+328: new           #20
+331: dup
+332: aload         17
+334: invokespecial #21
+337: astore        18
+339: aload         16
+341: aload         18
+343: invokevirtual #22
+346: astore        19
+348: aload         19
+350: invokevirtual #70
+353: istore        20
+355: iconst_5
+356: newarray       double
+358: dup
+359: iconst_0
+360: ldc2_w        #16
+363: dastore
+364: dup
+365: iconst_1
+366: dconst_0
+367: dastore
+368: dup
+369: iconst_2
+370: dconst_0
+371: dastore
+372: dup
+373: iconst_3
+374: dconst_1
+375: dastore
+376: dup
+377: iconst_4
+378: ldc2_w        #18
+381: dastore
+382: astore        21
+384: new           #20
+387: dup
+388: aload         21
+390: invokespecial #21
+393: astore        22
+395: iconst_5
+396: newarray       double
+398: dup
+399: iconst_0
+400: ldc2_w        #16
+403: dastore
+404: dup
+405: iconst_1
+406: dconst_0
+407: dastore
+408: dup
+409: iconst_2
+410: dconst_0
+411: dastore
+412: dup
+413: iconst_3
+414: dconst_1
+415: dastore
+416: dup
+417: iconst_4
+418: ldc2_w        #18
+421: dastore
+422: astore        23
+424: new           #20
+427: dup
+428: aload         23
+430: invokespecial #21
+433: astore        24
+435: iconst_5
+436: newarray       double
+438: dup
+439: iconst_0
+440: ldc2_w        #16
+443: dastore
+444: dup
+445: iconst_1
+446: dconst_0
+447: dastore
+448: dup
+449: iconst_2
+450: dconst_0
+451: dastore
+452: dup
+453: iconst_3
+454: dconst_1
+455: dastore
+456: dup
+457: iconst_4
+458: ldc2_w        #18
+461: dastore
+462: astore        25
+464: new           #20
+467: dup
+468: aload         25
+470: invokespecial #21
+473: astore        26
+475: aload         24
+477: aload         26
+479: invokevirtual #22
+482: astore        27
+484: aload         22
+486: aload         27
+488: invokevirtual #23
+491: astore        28
+493: aload         19
+495: aload         27
+497: invokestatic  #71
+500: iconst_5
+501: newarray       double
+503: dup
+504: iconst_0
+505: ldc2_w        #16
+508: dastore
+509: dup
+510: iconst_1
+511: dconst_0
+512: dastore
+513: dup
+514: iconst_2
+515: dconst_0
+516: dastore
+517: dup
+518: iconst_3
+519: dconst_1
+520: dastore
+521: dup
+522: iconst_4
+523: ldc2_w        #18
+526: dastore
+527: astore        29
+529: new           #20
+532: dup
+533: aload         29
+535: invokespecial #21
+538: astore        30
+540: aload         19
+542: aload         29
+544: invokevirtual #26
+547: astore        31
+549: aload         19
+551: iconst_0
+552: invokevirtual #72
+555: astore        32
+557: aload         19
+559: invokevirtual #73
+562: astore        33
+564: aload         13
+566: aload         19
+568: invokevirtual #74
+571: astore        34
+573: new           #8
+576: dup
+577: aload         13
+579: dconst_0
+580: invokespecial #11
+583: astore        35
+585: ldc           #29
+587: invokestatic  #13
+590: goto          595
+593: astore        35
+595: aload_1
+596: invokestatic  #31
+599: aload_1
+600: invokestatic  #32
+603: ldc           #33
+605: invokestatic  #34
+608: aload_3
+609: invokestatic  #31
+612: aload_3
+613: invokestatic  #32
+616: ldc           #33
+618: invokestatic  #34
+621: aload         5
+623: invokestatic  #31
+626: new           #35
+629: dup
+630: invokespecial #36
+633: ldc           #37
+635: invokevirtual #38
+638: iload         6
+640: invokevirtual #75
+643: ldc           #40
+645: invokevirtual #38
+648: iconst_0
+649: invokevirtual #75
+652: ldc           #37
+654: invokevirtual #38
+657: invokevirtual #43
+660: iload         6
+662: ifne          669
+665: iconst_1
+666: goto          670
+669: iconst_0
+670: invokestatic  #44
+673: aload         7
+675: invokestatic  #31
+678: aload         7
+680: invokestatic  #32
+683: ldc           #33
+685: invokestatic  #34
+688: aload         9
+690: invokestatic  #31
+693: aload         9
+695: invokestatic  #32
+698: ldc           #33
+700: invokestatic  #34
+703: aload         11
+705: invokestatic  #31
+708: aload         11
+710: invokestatic  #32
+713: ldc           #33
+715: invokestatic  #34
+718: aload         13
+720: invokestatic  #31
+723: aload         14
+725: invokestatic  #31
+728: aload         15
+730: invokestatic  #31
+733: aload         15
+735: invokestatic  #32
+738: ldc           #33
+740: invokestatic  #34
+743: aload         17
+745: invokestatic  #31
+748: aload         17
+750: invokestatic  #32
+753: ldc           #33
+755: invokestatic  #34
+758: aload         19
+760: invokestatic  #31
+763: new           #35
+766: dup
+767: invokespecial #36
+770: ldc           #37
+772: invokevirtual #38
+775: iload         20
+777: invokevirtual #75
+780: ldc           #40
+782: invokevirtual #38
+785: iconst_0
+786: invokevirtual #75
+789: ldc           #37
+791: invokevirtual #38
+794: invokevirtual #43
+797: iload         20
+799: ifne          806
+802: iconst_1
+803: goto          807
+806: iconst_0
+807: invokestatic  #44
+810: aload         21
+812: invokestatic  #31
+815: aload         21
+817: invokestatic  #32
+820: ldc           #33
+822: invokestatic  #34
+825: aload         23
+827: invokestatic  #31
+830: aload         23
+832: invokestatic  #32
+835: ldc           #33
+837: invokestatic  #34
+840: aload         25
+842: invokestatic  #31
+845: aload         25
+847: invokestatic  #32
+850: ldc           #33
+852: invokestatic  #34
+855: aload         27
+857: invokestatic  #31
+860: aload         28
+862: invokestatic  #31
+865: aload         29
+867: invokestatic  #31
+870: aload         29
+872: invokestatic  #32
+875: ldc           #33
+877: invokestatic  #34
+880: aload         31
+882: invokestatic  #31
+885: aload         31
+887: invokestatic  #32
+890: ldc           #46
+892: invokestatic  #34
+895: aload         32
+897: invokestatic  #31
+900: aload         32
+902: invokestatic  #32
+905: ldc           #76
+907: invokestatic  #34
+910: aload         33
+912: invokestatic  #31
+915: aload         34
+917: invokestatic  #31
+920: return
+Exception table:
+from    to  target type
+573   590   593   Class java/lang/ArrayIndexOutOfBoundsException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test07
+Start line: 222
+End line: 263
+Method source code: 
+    public void test07() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test07");
+        double[] doubleArray5 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix6 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray5);
+        double[] doubleArray12 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix13 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray12);
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix14 = array2DRowRealMatrix6.add(array2DRowRealMatrix13);
+        boolean boolean15 = array2DRowRealMatrix14.isSquare();
+        array2DRowRealMatrix14.setEntry(0, (int) (short) 0, (double) (short) 1);
+        org.apache.commons.math3.linear.RealMatrix realMatrix21 = array2DRowRealMatrix14.getColumnMatrix(0);
+        double[] doubleArray27 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix28 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray27);
+        double[] doubleArray34 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix35 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray34);
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix36 = array2DRowRealMatrix28.add(array2DRowRealMatrix35);
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix37 = array2DRowRealMatrix14.add(array2DRowRealMatrix35);
+        int int38 = array2DRowRealMatrix14.getColumnDimension();
+        org.apache.commons.math3.linear.RealMatrix realMatrix40 = array2DRowRealMatrix14.scalarMultiply((double) (-0.0f));
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math3.linear.RectangularCholeskyDecomposition rectangularCholeskyDecomposition42 = new org.apache.commons.math3.linear.RectangularCholeskyDecomposition((org.apache.commons.math3.linear.RealMatrix) array2DRowRealMatrix14, (double) 0);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: 1");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(doubleArray5);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray5), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray12);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray12), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix14);
+        org.junit.Assert.assertTrue("'" + boolean15 + "' != '" + false + "'", boolean15 == false);
+        org.junit.Assert.assertNotNull(realMatrix21);
+        org.junit.Assert.assertNotNull(doubleArray27);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray27), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray34);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray34), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix36);
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix37);
+        org.junit.Assert.assertTrue("'" + int38 + "' != '" + 1 + "'", int38 == 1);
+        org.junit.Assert.assertNotNull(realMatrix40);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #77
+19: aastore
+20: invokevirtual #7
+23: pop
+24: iconst_5
+25: newarray       double
+27: dup
+28: iconst_0
+29: ldc2_w        #16
+32: dastore
+33: dup
+34: iconst_1
+35: dconst_0
+36: dastore
+37: dup
+38: iconst_2
+39: dconst_0
+40: dastore
+41: dup
+42: iconst_3
+43: dconst_1
+44: dastore
+45: dup
+46: iconst_4
+47: ldc2_w        #18
+50: dastore
+51: astore_1
+52: new           #20
+55: dup
+56: aload_1
+57: invokespecial #21
+60: astore_2
+61: iconst_5
+62: newarray       double
+64: dup
+65: iconst_0
+66: ldc2_w        #16
+69: dastore
+70: dup
+71: iconst_1
+72: dconst_0
+73: dastore
+74: dup
+75: iconst_2
+76: dconst_0
+77: dastore
+78: dup
+79: iconst_3
+80: dconst_1
+81: dastore
+82: dup
+83: iconst_4
+84: ldc2_w        #18
+87: dastore
+88: astore_3
+89: new           #20
+92: dup
+93: aload_3
+94: invokespecial #21
+97: astore        4
+99: aload_2
+100: aload         4
+102: invokevirtual #22
+105: astore        5
+107: aload         5
+109: invokevirtual #70
+112: istore        6
+114: aload         5
+116: iconst_0
+117: iconst_0
+118: dconst_1
+119: invokevirtual #78
+122: aload         5
+124: iconst_0
+125: invokevirtual #79
+128: astore        7
+130: iconst_5
+131: newarray       double
+133: dup
+134: iconst_0
+135: ldc2_w        #16
+138: dastore
+139: dup
+140: iconst_1
+141: dconst_0
+142: dastore
+143: dup
+144: iconst_2
+145: dconst_0
+146: dastore
+147: dup
+148: iconst_3
+149: dconst_1
+150: dastore
+151: dup
+152: iconst_4
+153: ldc2_w        #18
+156: dastore
+157: astore        8
+159: new           #20
+162: dup
+163: aload         8
+165: invokespecial #21
+168: astore        9
+170: iconst_5
+171: newarray       double
+173: dup
+174: iconst_0
+175: ldc2_w        #16
+178: dastore
+179: dup
+180: iconst_1
+181: dconst_0
+182: dastore
+183: dup
+184: iconst_2
+185: dconst_0
+186: dastore
+187: dup
+188: iconst_3
+189: dconst_1
+190: dastore
+191: dup
+192: iconst_4
+193: ldc2_w        #18
+196: dastore
+197: astore        10
+199: new           #20
+202: dup
+203: aload         10
+205: invokespecial #21
+208: astore        11
+210: aload         9
+212: aload         11
+214: invokevirtual #22
+217: astore        12
+219: aload         5
+221: aload         11
+223: invokevirtual #22
+226: astore        13
+228: aload         5
+230: invokevirtual #25
+233: istore        14
+235: aload         5
+237: ldc2_w        #80
+240: invokevirtual #82
+243: astore        15
+245: new           #8
+248: dup
+249: aload         5
+251: dconst_0
+252: invokespecial #11
+255: astore        16
+257: ldc           #29
+259: invokestatic  #13
+262: goto          267
+265: astore        16
+267: aload_1
+268: invokestatic  #31
+271: aload_1
+272: invokestatic  #32
+275: ldc           #33
+277: invokestatic  #34
+280: aload_3
+281: invokestatic  #31
+284: aload_3
+285: invokestatic  #32
+288: ldc           #33
+290: invokestatic  #34
+293: aload         5
+295: invokestatic  #31
+298: new           #35
+301: dup
+302: invokespecial #36
+305: ldc           #37
+307: invokevirtual #38
+310: iload         6
+312: invokevirtual #75
+315: ldc           #40
+317: invokevirtual #38
+320: iconst_0
+321: invokevirtual #75
+324: ldc           #37
+326: invokevirtual #38
+329: invokevirtual #43
+332: iload         6
+334: ifne          341
+337: iconst_1
+338: goto          342
+341: iconst_0
+342: invokestatic  #44
+345: aload         7
+347: invokestatic  #31
+350: aload         8
+352: invokestatic  #31
+355: aload         8
+357: invokestatic  #32
+360: ldc           #33
+362: invokestatic  #34
+365: aload         10
+367: invokestatic  #31
+370: aload         10
+372: invokestatic  #32
+375: ldc           #33
+377: invokestatic  #34
+380: aload         12
+382: invokestatic  #31
+385: aload         13
+387: invokestatic  #31
+390: new           #35
+393: dup
+394: invokespecial #36
+397: ldc           #37
+399: invokevirtual #38
+402: iload         14
+404: invokevirtual #45
+407: ldc           #40
+409: invokevirtual #38
+412: iconst_1
+413: invokevirtual #45
+416: ldc           #37
+418: invokevirtual #38
+421: invokevirtual #43
+424: iload         14
+426: iconst_1
+427: if_icmpne     434
+430: iconst_1
+431: goto          435
+434: iconst_0
+435: invokestatic  #44
+438: aload         15
+440: invokestatic  #31
+443: return
+Exception table:
+from    to  target type
+245   262   265   Class java/lang/ArrayIndexOutOfBoundsException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test08
+Start line: 266
+End line: 284
+Method source code: 
+    public void test08() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test08");
+        org.apache.commons.math3.linear.BlockRealMatrix blockRealMatrix2 = new org.apache.commons.math3.linear.BlockRealMatrix((int) 'a', (int) (byte) 100);
+        org.apache.commons.math3.linear.BlockRealMatrix blockRealMatrix5 = new org.apache.commons.math3.linear.BlockRealMatrix((int) 'a', (int) (byte) 100);
+        org.apache.commons.math3.linear.BlockRealMatrix blockRealMatrix6 = blockRealMatrix2.add(blockRealMatrix5);
+        org.apache.commons.math3.linear.BlockRealMatrix blockRealMatrix8 = blockRealMatrix6.scalarAdd(0.0d);
+        double double9 = blockRealMatrix6.getNorm();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math3.linear.RectangularCholeskyDecomposition rectangularCholeskyDecomposition11 = new org.apache.commons.math3.linear.RectangularCholeskyDecomposition((org.apache.commons.math3.linear.RealMatrix) blockRealMatrix6, 1.1920928955078068E-7d);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math3.linear.NonPositiveDefiniteMatrixException; message: 0 is smaller than, or equal to, the minimum (0): not positive definite matrix: value 0 at index 0");
+        } catch (org.apache.commons.math3.linear.NonPositiveDefiniteMatrixException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(blockRealMatrix6);
+        org.junit.Assert.assertNotNull(blockRealMatrix8);
+        org.junit.Assert.assertTrue("'" + double9 + "' != '" + 0.0d + "'", double9 == 0.0d);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #83
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #52
+27: dup
+28: bipush        97
+30: bipush        100
+32: invokespecial #53
+35: astore_1
+36: new           #52
+39: dup
+40: bipush        97
+42: bipush        100
+44: invokespecial #53
+47: astore_2
+48: aload_1
+49: aload_2
+50: invokevirtual #84
+53: astore_3
+54: aload_3
+55: dconst_0
+56: invokevirtual #85
+59: astore        4
+61: aload_3
+62: invokevirtual #55
+65: dstore        5
+67: new           #8
+70: dup
+71: aload_3
+72: ldc2_w        #86
+75: invokespecial #11
+78: astore        7
+80: ldc           #88
+82: invokestatic  #13
+85: goto          90
+88: astore        7
+90: aload_3
+91: invokestatic  #31
+94: aload         4
+96: invokestatic  #31
+99: new           #35
+102: dup
+103: invokespecial #36
+106: ldc           #37
+108: invokevirtual #38
+111: dload         5
+113: invokevirtual #39
+116: ldc           #40
+118: invokevirtual #38
+121: dconst_0
+122: invokevirtual #39
+125: ldc           #37
+127: invokevirtual #38
+130: invokevirtual #43
+133: dload         5
+135: dconst_0
+136: dcmpl
+137: ifne          144
+140: iconst_1
+141: goto          145
+144: iconst_0
+145: invokestatic  #44
+148: return
+Exception table:
+from    to  target type
+67    85    88   Class org/apache/commons/math3/linear/NonPositiveDefiniteMatrixException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test09
+Start line: 287
+End line: 306
+Method source code: 
+    public void test09() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test09");
+        org.apache.commons.math3.linear.BlockRealMatrix blockRealMatrix2 = new org.apache.commons.math3.linear.BlockRealMatrix((int) 'a', (int) (byte) 100);
+        org.apache.commons.math3.linear.BlockRealMatrix blockRealMatrix4 = blockRealMatrix2.scalarAdd(1.0d);
+        double double5 = blockRealMatrix4.getNorm();
+        org.apache.commons.math3.linear.DefaultRealMatrixPreservingVisitor defaultRealMatrixPreservingVisitor6 = new org.apache.commons.math3.linear.DefaultRealMatrixPreservingVisitor();
+        defaultRealMatrixPreservingVisitor6.start(36, (int) (byte) 0, (int) (byte) 10, 4, (int) (short) 1, 10);
+        double double14 = blockRealMatrix4.walkInOptimizedOrder((org.apache.commons.math3.linear.RealMatrixPreservingVisitor) defaultRealMatrixPreservingVisitor6);
+        org.apache.commons.math3.linear.RealMatrix realMatrix16 = blockRealMatrix4.getRowMatrix(0);
+        int int17 = blockRealMatrix4.getColumnDimension();
+        org.apache.commons.math3.linear.RectangularCholeskyDecomposition rectangularCholeskyDecomposition19 = new org.apache.commons.math3.linear.RectangularCholeskyDecomposition((org.apache.commons.math3.linear.RealMatrix) blockRealMatrix4, (-57.29577951308232d));
+        int int20 = rectangularCholeskyDecomposition19.getRank();
+        org.junit.Assert.assertNotNull(blockRealMatrix4);
+        org.junit.Assert.assertTrue("'" + double5 + "' != '" + 97.0d + "'", double5 == 97.0d);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 0.0d + "'", double14 == 0.0d);
+        org.junit.Assert.assertNotNull(realMatrix16);
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + 100 + "'", int17 == 100);
+        org.junit.Assert.assertTrue("'" + int20 + "' != '" + 97 + "'", int20 == 97);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #89
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #52
+27: dup
+28: bipush        97
+30: bipush        100
+32: invokespecial #53
+35: astore_1
+36: aload_1
+37: dconst_1
+38: invokevirtual #85
+41: astore_2
+42: aload_2
+43: invokevirtual #55
+46: dstore_3
+47: new           #90
+50: dup
+51: invokespecial #91
+54: astore        5
+56: aload         5
+58: bipush        36
+60: iconst_0
+61: bipush        10
+63: iconst_4
+64: iconst_1
+65: bipush        10
+67: invokevirtual #92
+70: aload_2
+71: aload         5
+73: invokevirtual #93
+76: dstore        6
+78: aload_2
+79: iconst_0
+80: invokevirtual #94
+83: astore        8
+85: aload_2
+86: invokevirtual #95
+89: istore        9
+91: new           #8
+94: dup
+95: aload_2
+96: ldc2_w        #96
+99: invokespecial #11
+102: astore        10
+104: aload         10
+106: invokevirtual #98
+109: istore        11
+111: aload_2
+112: invokestatic  #31
+115: new           #35
+118: dup
+119: invokespecial #36
+122: ldc           #37
+124: invokevirtual #38
+127: dload_3
+128: invokevirtual #39
+131: ldc           #40
+133: invokevirtual #38
+136: ldc2_w        #99
+139: invokevirtual #39
+142: ldc           #37
+144: invokevirtual #38
+147: invokevirtual #43
+150: dload_3
+151: ldc2_w        #99
+154: dcmpl
+155: ifne          162
+158: iconst_1
+159: goto          163
+162: iconst_0
+163: invokestatic  #44
+166: new           #35
+169: dup
+170: invokespecial #36
+173: ldc           #37
+175: invokevirtual #38
+178: dload         6
+180: invokevirtual #39
+183: ldc           #40
+185: invokevirtual #38
+188: dconst_0
+189: invokevirtual #39
+192: ldc           #37
+194: invokevirtual #38
+197: invokevirtual #43
+200: dload         6
+202: dconst_0
+203: dcmpl
+204: ifne          211
+207: iconst_1
+208: goto          212
+211: iconst_0
+212: invokestatic  #44
+215: aload         8
+217: invokestatic  #31
+220: new           #35
+223: dup
+224: invokespecial #36
+227: ldc           #37
+229: invokevirtual #38
+232: iload         9
+234: invokevirtual #45
+237: ldc           #40
+239: invokevirtual #38
+242: bipush        100
+244: invokevirtual #45
+247: ldc           #37
+249: invokevirtual #38
+252: invokevirtual #43
+255: iload         9
+257: bipush        100
+259: if_icmpne     266
+262: iconst_1
+263: goto          267
+266: iconst_0
+267: invokestatic  #44
+270: new           #35
+273: dup
+274: invokespecial #36
+277: ldc           #37
+279: invokevirtual #38
+282: iload         11
+284: invokevirtual #45
+287: ldc           #40
+289: invokevirtual #38
+292: bipush        97
+294: invokevirtual #45
+297: ldc           #37
+299: invokevirtual #38
+302: invokevirtual #43
+305: iload         11
+307: bipush        97
+309: if_icmpne     316
+312: iconst_1
+313: goto          317
+316: iconst_0
+317: invokestatic  #44
+320: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test10
+Start line: 309
+End line: 358
+Method source code: 
+    public void test10() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test10");
+        org.apache.commons.math3.linear.BlockRealMatrix blockRealMatrix2 = new org.apache.commons.math3.linear.BlockRealMatrix((int) 'a', (int) (byte) 100);
+        org.apache.commons.math3.linear.BlockRealMatrix blockRealMatrix4 = blockRealMatrix2.scalarAdd(1.0d);
+        double double5 = blockRealMatrix4.getNorm();
+        org.apache.commons.math3.linear.DefaultRealMatrixPreservingVisitor defaultRealMatrixPreservingVisitor6 = new org.apache.commons.math3.linear.DefaultRealMatrixPreservingVisitor();
+        defaultRealMatrixPreservingVisitor6.start(36, (int) (byte) 0, (int) (byte) 10, 4, (int) (short) 1, 10);
+        double double14 = blockRealMatrix4.walkInOptimizedOrder((org.apache.commons.math3.linear.RealMatrixPreservingVisitor) defaultRealMatrixPreservingVisitor6);
+        org.apache.commons.math3.linear.RealMatrix realMatrix16 = blockRealMatrix4.getRowMatrix(0);
+        int int17 = blockRealMatrix4.getColumnDimension();
+        org.apache.commons.math3.linear.RectangularCholeskyDecomposition rectangularCholeskyDecomposition19 = new org.apache.commons.math3.linear.RectangularCholeskyDecomposition((org.apache.commons.math3.linear.RealMatrix) blockRealMatrix4, (-57.29577951308232d));
+        double[] doubleArray25 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix26 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray25);
+        double[] doubleArray32 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix33 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray32);
+        double[] doubleArray39 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix40 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray39);
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix41 = array2DRowRealMatrix33.add(array2DRowRealMatrix40);
+        org.apache.commons.math3.linear.RealMatrix realMatrix42 = array2DRowRealMatrix26.subtract((org.apache.commons.math3.linear.RealMatrix) array2DRowRealMatrix41);
+        double[][] doubleArray43 = array2DRowRealMatrix26.getData();
+        double[] doubleArray49 = new double[] { 10, 0L, 0.0d, (byte) 1, '4' };
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix50 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray49);
+        org.apache.commons.math3.linear.Array2DRowRealMatrix array2DRowRealMatrix51 = new org.apache.commons.math3.linear.Array2DRowRealMatrix(doubleArray49);
+        org.apache.commons.math3.linear.RealMatrix realMatrix52 = array2DRowRealMatrix26.add((org.apache.commons.math3.linear.RealMatrix) array2DRowRealMatrix51);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math3.linear.BlockRealMatrix blockRealMatrix53 = blockRealMatrix4.add(realMatrix52);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math3.linear.MatrixDimensionMismatchException; message: got 97x100 but expected 5x1");
+        } catch (org.apache.commons.math3.linear.MatrixDimensionMismatchException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(blockRealMatrix4);
+        org.junit.Assert.assertTrue("'" + double5 + "' != '" + 97.0d + "'", double5 == 97.0d);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 0.0d + "'", double14 == 0.0d);
+        org.junit.Assert.assertNotNull(realMatrix16);
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + 100 + "'", int17 == 100);
+        org.junit.Assert.assertNotNull(doubleArray25);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray25), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray32);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray32), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(doubleArray39);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray39), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix41);
+        org.junit.Assert.assertNotNull(realMatrix42);
+        org.junit.Assert.assertNotNull(doubleArray43);
+        org.junit.Assert.assertNotNull(doubleArray49);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray49), "[10.0, 0.0, 0.0, 1.0, 52.0]");
+        org.junit.Assert.assertNotNull(realMatrix52);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #101
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #52
+27: dup
+28: bipush        97
+30: bipush        100
+32: invokespecial #53
+35: astore_1
+36: aload_1
+37: dconst_1
+38: invokevirtual #85
+41: astore_2
+42: aload_2
+43: invokevirtual #55
+46: dstore_3
+47: new           #90
+50: dup
+51: invokespecial #91
+54: astore        5
+56: aload         5
+58: bipush        36
+60: iconst_0
+61: bipush        10
+63: iconst_4
+64: iconst_1
+65: bipush        10
+67: invokevirtual #92
+70: aload_2
+71: aload         5
+73: invokevirtual #93
+76: dstore        6
+78: aload_2
+79: iconst_0
+80: invokevirtual #94
+83: astore        8
+85: aload_2
+86: invokevirtual #95
+89: istore        9
+91: new           #8
+94: dup
+95: aload_2
+96: ldc2_w        #96
+99: invokespecial #11
+102: astore        10
+104: iconst_5
+105: newarray       double
+107: dup
+108: iconst_0
+109: ldc2_w        #16
+112: dastore
+113: dup
+114: iconst_1
+115: dconst_0
+116: dastore
+117: dup
+118: iconst_2
+119: dconst_0
+120: dastore
+121: dup
+122: iconst_3
+123: dconst_1
+124: dastore
+125: dup
+126: iconst_4
+127: ldc2_w        #18
+130: dastore
+131: astore        11
+133: new           #20
+136: dup
+137: aload         11
+139: invokespecial #21
+142: astore        12
+144: iconst_5
+145: newarray       double
+147: dup
+148: iconst_0
+149: ldc2_w        #16
+152: dastore
+153: dup
+154: iconst_1
+155: dconst_0
+156: dastore
+157: dup
+158: iconst_2
+159: dconst_0
+160: dastore
+161: dup
+162: iconst_3
+163: dconst_1
+164: dastore
+165: dup
+166: iconst_4
+167: ldc2_w        #18
+170: dastore
+171: astore        13
+173: new           #20
+176: dup
+177: aload         13
+179: invokespecial #21
+182: astore        14
+184: iconst_5
+185: newarray       double
+187: dup
+188: iconst_0
+189: ldc2_w        #16
+192: dastore
+193: dup
+194: iconst_1
+195: dconst_0
+196: dastore
+197: dup
+198: iconst_2
+199: dconst_0
+200: dastore
+201: dup
+202: iconst_3
+203: dconst_1
+204: dastore
+205: dup
+206: iconst_4
+207: ldc2_w        #18
+210: dastore
+211: astore        15
+213: new           #20
+216: dup
+217: aload         15
+219: invokespecial #21
+222: astore        16
+224: aload         14
+226: aload         16
+228: invokevirtual #22
+231: astore        17
+233: aload         12
+235: aload         17
+237: invokevirtual #23
+240: astore        18
+242: aload         12
+244: invokevirtual #73
+247: astore        19
+249: iconst_5
+250: newarray       double
+252: dup
+253: iconst_0
+254: ldc2_w        #16
+257: dastore
+258: dup
+259: iconst_1
+260: dconst_0
+261: dastore
+262: dup
+263: iconst_2
+264: dconst_0
+265: dastore
+266: dup
+267: iconst_3
+268: dconst_1
+269: dastore
+270: dup
+271: iconst_4
+272: ldc2_w        #18
+275: dastore
+276: astore        20
+278: new           #20
+281: dup
+282: aload         20
+284: invokespecial #21
+287: astore        21
+289: new           #20
+292: dup
+293: aload         20
+295: invokespecial #21
+298: astore        22
+300: aload         12
+302: aload         22
+304: invokevirtual #102
+307: astore        23
+309: aload_2
+310: aload         23
+312: invokevirtual #103
+315: astore        24
+317: ldc           #104
+319: invokestatic  #13
+322: goto          327
+325: astore        24
+327: aload_2
+328: invokestatic  #31
+331: new           #35
+334: dup
+335: invokespecial #36
+338: ldc           #37
+340: invokevirtual #38
+343: dload_3
+344: invokevirtual #39
+347: ldc           #40
+349: invokevirtual #38
+352: ldc2_w        #99
+355: invokevirtual #39
+358: ldc           #37
+360: invokevirtual #38
+363: invokevirtual #43
+366: dload_3
+367: ldc2_w        #99
+370: dcmpl
+371: ifne          378
+374: iconst_1
+375: goto          379
+378: iconst_0
+379: invokestatic  #44
+382: new           #35
+385: dup
+386: invokespecial #36
+389: ldc           #37
+391: invokevirtual #38
+394: dload         6
+396: invokevirtual #39
+399: ldc           #40
+401: invokevirtual #38
+404: dconst_0
+405: invokevirtual #39
+408: ldc           #37
+410: invokevirtual #38
+413: invokevirtual #43
+416: dload         6
+418: dconst_0
+419: dcmpl
+420: ifne          427
+423: iconst_1
+424: goto          428
+427: iconst_0
+428: invokestatic  #44
+431: aload         8
+433: invokestatic  #31
+436: new           #35
+439: dup
+440: invokespecial #36
+443: ldc           #37
+445: invokevirtual #38
+448: iload         9
+450: invokevirtual #45
+453: ldc           #40
+455: invokevirtual #38
+458: bipush        100
+460: invokevirtual #45
+463: ldc           #37
+465: invokevirtual #38
+468: invokevirtual #43
+471: iload         9
+473: bipush        100
+475: if_icmpne     482
+478: iconst_1
+479: goto          483
+482: iconst_0
+483: invokestatic  #44
+486: aload         11
+488: invokestatic  #31
+491: aload         11
+493: invokestatic  #32
+496: ldc           #33
+498: invokestatic  #34
+501: aload         13
+503: invokestatic  #31
+506: aload         13
+508: invokestatic  #32
+511: ldc           #33
+513: invokestatic  #34
+516: aload         15
+518: invokestatic  #31
+521: aload         15
+523: invokestatic  #32
+526: ldc           #33
+528: invokestatic  #34
+531: aload         17
+533: invokestatic  #31
+536: aload         18
+538: invokestatic  #31
+541: aload         19
+543: invokestatic  #31
+546: aload         20
+548: invokestatic  #31
+551: aload         20
+553: invokestatic  #32
+556: ldc           #33
+558: invokestatic  #34
+561: aload         23
+563: invokestatic  #31
+566: return
+Exception table:
+from    to  target type
+309   322   325   Class org/apache/commons/math3/linear/MatrixDimensionMismatchException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test11
+Start line: 361
+End line: 386
+Method source code: 
+    public void test11() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test11");
+        org.apache.commons.math3.linear.BlockRealMatrix blockRealMatrix2 = new org.apache.commons.math3.linear.BlockRealMatrix((int) 'a', (int) (byte) 100);
+        org.apache.commons.math3.linear.BlockRealMatrix blockRealMatrix4 = blockRealMatrix2.scalarAdd(1.0d);
+        double double5 = blockRealMatrix4.getNorm();
+        org.apache.commons.math3.linear.DefaultRealMatrixPreservingVisitor defaultRealMatrixPreservingVisitor6 = new org.apache.commons.math3.linear.DefaultRealMatrixPreservingVisitor();
+        defaultRealMatrixPreservingVisitor6.start(36, (int) (byte) 0, (int) (byte) 10, 4, (int) (short) 1, 10);
+        double double14 = blockRealMatrix4.walkInOptimizedOrder((org.apache.commons.math3.linear.RealMatrixPreservingVisitor) defaultRealMatrixPreservingVisitor6);
+        org.apache.commons.math3.linear.RealMatrix realMatrix16 = blockRealMatrix4.getRowMatrix(0);
+        int int17 = blockRealMatrix4.getColumnDimension();
+        org.apache.commons.math3.linear.RectangularCholeskyDecomposition rectangularCholeskyDecomposition19 = new org.apache.commons.math3.linear.RectangularCholeskyDecomposition((org.apache.commons.math3.linear.RealMatrix) blockRealMatrix4, (-57.29577951308232d));
+        org.apache.commons.math3.linear.RealMatrix realMatrix20 = rectangularCholeskyDecomposition19.getRootMatrix();
+        int int21 = rectangularCholeskyDecomposition19.getRank();
+        int int22 = rectangularCholeskyDecomposition19.getRank();
+        org.apache.commons.math3.linear.RealMatrix realMatrix23 = rectangularCholeskyDecomposition19.getRootMatrix();
+        org.junit.Assert.assertNotNull(blockRealMatrix4);
+        org.junit.Assert.assertTrue("'" + double5 + "' != '" + 97.0d + "'", double5 == 97.0d);
+        org.junit.Assert.assertTrue("'" + double14 + "' != '" + 0.0d + "'", double14 == 0.0d);
+        org.junit.Assert.assertNotNull(realMatrix16);
+        org.junit.Assert.assertTrue("'" + int17 + "' != '" + 100 + "'", int17 == 100);
+        org.junit.Assert.assertNotNull(realMatrix20);
+        org.junit.Assert.assertTrue("'" + int21 + "' != '" + 97 + "'", int21 == 97);
+        org.junit.Assert.assertTrue("'" + int22 + "' != '" + 97 + "'", int22 == 97);
+        org.junit.Assert.assertNotNull(realMatrix23);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #106
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #52
+27: dup
+28: bipush        97
+30: bipush        100
+32: invokespecial #53
+35: astore_1
+36: aload_1
+37: dconst_1
+38: invokevirtual #85
+41: astore_2
+42: aload_2
+43: invokevirtual #55
+46: dstore_3
+47: new           #90
+50: dup
+51: invokespecial #91
+54: astore        5
+56: aload         5
+58: bipush        36
+60: iconst_0
+61: bipush        10
+63: iconst_4
+64: iconst_1
+65: bipush        10
+67: invokevirtual #92
+70: aload_2
+71: aload         5
+73: invokevirtual #93
+76: dstore        6
+78: aload_2
+79: iconst_0
+80: invokevirtual #94
+83: astore        8
+85: aload_2
+86: invokevirtual #95
+89: istore        9
+91: new           #8
+94: dup
+95: aload_2
+96: ldc2_w        #96
+99: invokespecial #11
+102: astore        10
+104: aload         10
+106: invokevirtual #107
+109: astore        11
+111: aload         10
+113: invokevirtual #98
+116: istore        12
+118: aload         10
+120: invokevirtual #98
+123: istore        13
+125: aload         10
+127: invokevirtual #107
+130: astore        14
+132: aload_2
+133: invokestatic  #31
+136: new           #35
+139: dup
+140: invokespecial #36
+143: ldc           #37
+145: invokevirtual #38
+148: dload_3
+149: invokevirtual #39
+152: ldc           #40
+154: invokevirtual #38
+157: ldc2_w        #99
+160: invokevirtual #39
+163: ldc           #37
+165: invokevirtual #38
+168: invokevirtual #43
+171: dload_3
+172: ldc2_w        #99
+175: dcmpl
+176: ifne          183
+179: iconst_1
+180: goto          184
+183: iconst_0
+184: invokestatic  #44
+187: new           #35
+190: dup
+191: invokespecial #36
+194: ldc           #37
+196: invokevirtual #38
+199: dload         6
+201: invokevirtual #39
+204: ldc           #40
+206: invokevirtual #38
+209: dconst_0
+210: invokevirtual #39
+213: ldc           #37
+215: invokevirtual #38
+218: invokevirtual #43
+221: dload         6
+223: dconst_0
+224: dcmpl
+225: ifne          232
+228: iconst_1
+229: goto          233
+232: iconst_0
+233: invokestatic  #44
+236: aload         8
+238: invokestatic  #31
+241: new           #35
+244: dup
+245: invokespecial #36
+248: ldc           #37
+250: invokevirtual #38
+253: iload         9
+255: invokevirtual #45
+258: ldc           #40
+260: invokevirtual #38
+263: bipush        100
+265: invokevirtual #45
+268: ldc           #37
+270: invokevirtual #38
+273: invokevirtual #43
+276: iload         9
+278: bipush        100
+280: if_icmpne     287
+283: iconst_1
+284: goto          288
+287: iconst_0
+288: invokestatic  #44
+291: aload         11
+293: invokestatic  #31
+296: new           #35
+299: dup
+300: invokespecial #36
+303: ldc           #37
+305: invokevirtual #38
+308: iload         12
+310: invokevirtual #45
+313: ldc           #40
+315: invokevirtual #38
+318: bipush        97
+320: invokevirtual #45
+323: ldc           #37
+325: invokevirtual #38
+328: invokevirtual #43
+331: iload         12
+333: bipush        97
+335: if_icmpne     342
+338: iconst_1
+339: goto          343
+342: iconst_0
+343: invokestatic  #44
+346: new           #35
+349: dup
+350: invokespecial #36
+353: ldc           #37
+355: invokevirtual #38
+358: iload         13
+360: invokevirtual #45
+363: ldc           #40
+365: invokevirtual #38
+368: bipush        97
+370: invokevirtual #45
+373: ldc           #37
+375: invokevirtual #38
+378: invokevirtual #43
+381: iload         13
+383: bipush        97
+385: if_icmpne     392
+388: iconst_1
+389: goto          393
+392: iconst_0
+393: invokestatic  #44
+396: aload         14
+398: invokestatic  #31
+401: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/CholeskyDecompositionTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/CholeskyDecompositionTest.class
+Class name: CholeskyDecompositionTest
+Method name: testDimensions
+Start line: 34
+End line: 41
+Method source code: 
+    public void testDimensions() {
+        CholeskyDecomposition llt =
+            new CholeskyDecomposition(MatrixUtils.createRealMatrix(testData));
+        Assert.assertEquals(testData.length, llt.getL().getRowDimension());
+        Assert.assertEquals(testData.length, llt.getL().getColumnDimension());
+        Assert.assertEquals(testData.length, llt.getLT().getRowDimension());
+        Assert.assertEquals(testData.length, llt.getLT().getColumnDimension());
+    }
+Method byte code: 
+0: new           #32
+3: dup
+4: aload_0
+5: getfield      #31
+8: invokestatic  #33
+11: invokespecial #34
+14: astore_1
+15: aload_0
+16: getfield      #31
+19: arraylength
+20: i2l
+21: aload_1
+22: invokevirtual #35
+25: invokeinterface #36,  1
+30: i2l
+31: invokestatic  #37
+34: aload_0
+35: getfield      #31
+38: arraylength
+39: i2l
+40: aload_1
+41: invokevirtual #35
+44: invokeinterface #38,  1
+49: i2l
+50: invokestatic  #37
+53: aload_0
+54: getfield      #31
+57: arraylength
+58: i2l
+59: aload_1
+60: invokevirtual #39
+63: invokeinterface #36,  1
+68: i2l
+69: invokestatic  #37
+72: aload_0
+73: getfield      #31
+76: arraylength
+77: i2l
+78: aload_1
+79: invokevirtual #39
+82: invokeinterface #38,  1
+87: i2l
+88: invokestatic  #37
+91: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/CholeskyDecompositionTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/CholeskyDecompositionTest.class
+Class name: CholeskyDecompositionTest
+Method name: testNonSquare
+Start line: 45
+End line: 47
+Method source code: 
+    public void testNonSquare() {
+        new CholeskyDecomposition(MatrixUtils.createRealMatrix(new double[3][2]));
+    }
+Method byte code: 
+0: new           #32
+3: dup
+4: iconst_3
+5: iconst_2
+6: multianewarray #40,  2
+10: invokestatic  #33
+13: invokespecial #34
+16: pop
+17: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/CholeskyDecompositionTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/CholeskyDecompositionTest.class
+Class name: CholeskyDecompositionTest
+Method name: testNotSymmetricMatrixException
+Start line: 51
+End line: 55
+Method source code: 
+    public void testNotSymmetricMatrixException() {
+        double[][] changed = testData.clone();
+        changed[0][changed[0].length - 1] += 1.0e-5;
+        new CholeskyDecomposition(MatrixUtils.createRealMatrix(changed));
+    }
+Method byte code: 
+0: aload_0
+1: getfield      #31
+4: invokevirtual #41
+7: checkcast     #40
+10: astore_1
+11: aload_1
+12: iconst_0
+13: aaload
+14: aload_1
+15: iconst_0
+16: aaload
+17: arraylength
+18: iconst_1
+19: isub
+20: dup2
+21: daload
+22: ldc2_w        #42
+25: dadd
+26: dastore
+27: new           #32
+30: dup
+31: aload_1
+32: invokestatic  #33
+35: invokespecial #34
+38: pop
+39: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/CholeskyDecompositionTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/CholeskyDecompositionTest.class
+Class name: CholeskyDecompositionTest
+Method name: testNotPositiveDefinite
+Start line: 59
+End line: 67
+Method source code: 
+    public void testNotPositiveDefinite() {
+        new CholeskyDecomposition(MatrixUtils.createRealMatrix(new double[][] {
+                { 14, 11, 13, 15, 24 },
+                { 11, 34, 13, 8,  25 },
+                { 13, 13, 14, 15, 21 },
+                { 15, 8,  15, 18, 23 },
+                { 24, 25, 21, 23, 45 }
+        }));
+    }
+Method byte code: 
+0: new           #32
+3: dup
+4: iconst_5
+5: anewarray     #2
+8: dup
+9: iconst_0
+10: iconst_5
+11: newarray       double
+13: dup
+14: iconst_0
+15: ldc2_w        #44
+18: dastore
+19: dup
+20: iconst_1
+21: ldc2_w        #9
+24: dastore
+25: dup
+26: iconst_2
+27: ldc2_w        #11
+30: dastore
+31: dup
+32: iconst_3
+33: ldc2_w        #46
+36: dastore
+37: dup
+38: iconst_4
+39: ldc2_w        #48
+42: dastore
+43: aastore
+44: dup
+45: iconst_1
+46: iconst_5
+47: newarray       double
+49: dup
+50: iconst_0
+51: ldc2_w        #9
+54: dastore
+55: dup
+56: iconst_1
+57: ldc2_w        #50
+60: dastore
+61: dup
+62: iconst_2
+63: ldc2_w        #11
+66: dastore
+67: dup
+68: iconst_3
+69: ldc2_w        #52
+72: dastore
+73: dup
+74: iconst_4
+75: ldc2_w        #54
+78: dastore
+79: aastore
+80: dup
+81: iconst_2
+82: iconst_5
+83: newarray       double
+85: dup
+86: iconst_0
+87: ldc2_w        #11
+90: dastore
+91: dup
+92: iconst_1
+93: ldc2_w        #11
+96: dastore
+97: dup
+98: iconst_2
+99: ldc2_w        #44
+102: dastore
+103: dup
+104: iconst_3
+105: ldc2_w        #46
+108: dastore
+109: dup
+110: iconst_4
+111: ldc2_w        #56
+114: dastore
+115: aastore
+116: dup
+117: iconst_3
+118: iconst_5
+119: newarray       double
+121: dup
+122: iconst_0
+123: ldc2_w        #46
+126: dastore
+127: dup
+128: iconst_1
+129: ldc2_w        #52
+132: dastore
+133: dup
+134: iconst_2
+135: ldc2_w        #46
+138: dastore
+139: dup
+140: iconst_3
+141: ldc2_w        #58
+144: dastore
+145: dup
+146: iconst_4
+147: ldc2_w        #13
+150: dastore
+151: aastore
+152: dup
+153: iconst_4
+154: iconst_5
+155: newarray       double
+157: dup
+158: iconst_0
+159: ldc2_w        #48
+162: dastore
+163: dup
+164: iconst_1
+165: ldc2_w        #54
+168: dastore
+169: dup
+170: iconst_2
+171: ldc2_w        #56
+174: dastore
+175: dup
+176: iconst_3
+177: ldc2_w        #13
+180: dastore
+181: dup
+182: iconst_4
+183: ldc2_w        #60
+186: dastore
+187: aastore
+188: invokestatic  #33
+191: invokespecial #34
+194: pop
+195: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/CholeskyDecompositionTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/CholeskyDecompositionTest.class
+Class name: CholeskyDecompositionTest
+Method name: testMath274
+Start line: 70
+End line: 78
+Method source code: 
+    public void testMath274() {
+        new CholeskyDecomposition(MatrixUtils.createRealMatrix(new double[][] {
+                { 0.40434286, -0.09376327, 0.30328980, 0.04909388 },
+                {-0.09376327,  0.10400408, 0.07137959, 0.04762857 },
+                { 0.30328980,  0.07137959, 0.30458776, 0.04882449 },
+                { 0.04909388,  0.04762857, 0.04882449, 0.07543265 }
+
+        }));
+    }
+Method byte code: 
+0: new           #32
+3: dup
+4: iconst_4
+5: anewarray     #2
+8: dup
+9: iconst_0
+10: iconst_4
+11: newarray       double
+13: dup
+14: iconst_0
+15: ldc2_w        #62
+18: dastore
+19: dup
+20: iconst_1
+21: ldc2_w        #64
+24: dastore
+25: dup
+26: iconst_2
+27: ldc2_w        #66
+30: dastore
+31: dup
+32: iconst_3
+33: ldc2_w        #68
+36: dastore
+37: aastore
+38: dup
+39: iconst_1
+40: iconst_4
+41: newarray       double
+43: dup
+44: iconst_0
+45: ldc2_w        #64
+48: dastore
+49: dup
+50: iconst_1
+51: ldc2_w        #70
+54: dastore
+55: dup
+56: iconst_2
+57: ldc2_w        #72
+60: dastore
+61: dup
+62: iconst_3
+63: ldc2_w        #74
+66: dastore
+67: aastore
+68: dup
+69: iconst_2
+70: iconst_4
+71: newarray       double
+73: dup
+74: iconst_0
+75: ldc2_w        #66
+78: dastore
+79: dup
+80: iconst_1
+81: ldc2_w        #72
+84: dastore
+85: dup
+86: iconst_2
+87: ldc2_w        #76
+90: dastore
+91: dup
+92: iconst_3
+93: ldc2_w        #78
+96: dastore
+97: aastore
+98: dup
+99: iconst_3
+100: iconst_4
+101: newarray       double
+103: dup
+104: iconst_0
+105: ldc2_w        #68
+108: dastore
+109: dup
+110: iconst_1
+111: ldc2_w        #74
+114: dastore
+115: dup
+116: iconst_2
+117: ldc2_w        #78
+120: dastore
+121: dup
+122: iconst_3
+123: ldc2_w        #80
+126: dastore
+127: aastore
+128: invokestatic  #33
+131: invokespecial #34
+134: pop
+135: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/CholeskyDecompositionTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/CholeskyDecompositionTest.class
+Class name: CholeskyDecompositionTest
+Method name: testAEqualLLT
+Start line: 82
+End line: 89
+Method source code: 
+    public void testAEqualLLT() {
+        RealMatrix matrix = MatrixUtils.createRealMatrix(testData);
+        CholeskyDecomposition llt = new CholeskyDecomposition(matrix);
+        RealMatrix l  = llt.getL();
+        RealMatrix lt = llt.getLT();
+        double norm = l.multiply(lt).subtract(matrix).getNorm();
+        Assert.assertEquals(0, norm, 1.0e-15);
+    }
+Method byte code: 
+0: aload_0
+1: getfield      #31
+4: invokestatic  #33
+7: astore_1
+8: new           #32
+11: dup
+12: aload_1
+13: invokespecial #34
+16: astore_2
+17: aload_2
+18: invokevirtual #35
+21: astore_3
+22: aload_2
+23: invokevirtual #39
+26: astore        4
+28: aload_3
+29: aload         4
+31: invokeinterface #82,  2
+36: aload_1
+37: invokeinterface #83,  2
+42: invokeinterface #84,  1
+47: dstore        5
+49: dconst_0
+50: dload         5
+52: ldc2_w        #85
+55: invokestatic  #87
+58: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/CholeskyDecompositionTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/CholeskyDecompositionTest.class
+Class name: CholeskyDecompositionTest
+Method name: testLLowerTriangular
+Start line: 93
+End line: 101
+Method source code: 
+    public void testLLowerTriangular() {
+        RealMatrix matrix = MatrixUtils.createRealMatrix(testData);
+        RealMatrix l = new CholeskyDecomposition(matrix).getL();
+        for (int i = 0; i < l.getRowDimension(); i++) {
+            for (int j = i + 1; j < l.getColumnDimension(); j++) {
+                Assert.assertEquals(0.0, l.getEntry(i, j), 0.0);
+            }
+        }
+    }
+Method byte code: 
+0: aload_0
+1: getfield      #31
+4: invokestatic  #33
+7: astore_1
+8: new           #32
+11: dup
+12: aload_1
+13: invokespecial #34
+16: invokevirtual #35
+19: astore_2
+20: iconst_0
+21: istore_3
+22: iload_3
+23: aload_2
+24: invokeinterface #36,  1
+29: if_icmpge     74
+32: iload_3
+33: iconst_1
+34: iadd
+35: istore        4
+37: iload         4
+39: aload_2
+40: invokeinterface #38,  1
+45: if_icmpge     68
+48: dconst_0
+49: aload_2
+50: iload_3
+51: iload         4
+53: invokeinterface #88,  3
+58: dconst_0
+59: invokestatic  #87
+62: iinc          4, 1
+65: goto          37
+68: iinc          3, 1
+71: goto          22
+74: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/CholeskyDecompositionTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/CholeskyDecompositionTest.class
+Class name: CholeskyDecompositionTest
+Method name: testLTTransposed
+Start line: 105
+End line: 112
+Method source code: 
+    public void testLTTransposed() {
+        RealMatrix matrix = MatrixUtils.createRealMatrix(testData);
+        CholeskyDecomposition llt = new CholeskyDecomposition(matrix);
+        RealMatrix l  = llt.getL();
+        RealMatrix lt = llt.getLT();
+        double norm = l.subtract(lt.transpose()).getNorm();
+        Assert.assertEquals(0, norm, 1.0e-15);
+    }
+Method byte code: 
+0: aload_0
+1: getfield      #31
+4: invokestatic  #33
+7: astore_1
+8: new           #32
+11: dup
+12: aload_1
+13: invokespecial #34
+16: astore_2
+17: aload_2
+18: invokevirtual #35
+21: astore_3
+22: aload_2
+23: invokevirtual #39
+26: astore        4
+28: aload_3
+29: aload         4
+31: invokeinterface #89,  1
+36: invokeinterface #83,  2
+41: invokeinterface #84,  1
+46: dstore        5
+48: dconst_0
+49: dload         5
+51: ldc2_w        #85
+54: invokestatic  #87
+57: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/CholeskyDecompositionTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/CholeskyDecompositionTest.class
+Class name: CholeskyDecompositionTest
+Method name: testMatricesValues
+Start line: 116
+End line: 136
+Method source code: 
+    public void testMatricesValues() {
+        RealMatrix lRef = MatrixUtils.createRealMatrix(new double[][] {
+                {  1,  0,  0,  0,  0 },
+                {  2,  3,  0,  0,  0 },
+                {  4,  5,  6,  0,  0 },
+                {  7,  8,  9, 10,  0 },
+                { 11, 12, 13, 14, 15 }
+        });
+       CholeskyDecomposition llt =
+            new CholeskyDecomposition(MatrixUtils.createRealMatrix(testData));
+
+        // check values against known references
+        RealMatrix l = llt.getL();
+        Assert.assertEquals(0, l.subtract(lRef).getNorm(), 1.0e-13);
+        RealMatrix lt = llt.getLT();
+        Assert.assertEquals(0, lt.subtract(lRef.transpose()).getNorm(), 1.0e-13);
+
+        // check the same cached instance is returned the second time
+        Assert.assertTrue(l  == llt.getL());
+        Assert.assertTrue(lt == llt.getLT());
+    }
+Method byte code: 
+0: iconst_5
+1: anewarray     #2
+4: dup
+5: iconst_0
+6: iconst_5
+7: newarray       double
+9: dup
+10: iconst_0
+11: dconst_1
+12: dastore
+13: dup
+14: iconst_1
+15: dconst_0
+16: dastore
+17: dup
+18: iconst_2
+19: dconst_0
+20: dastore
+21: dup
+22: iconst_3
+23: dconst_0
+24: dastore
+25: dup
+26: iconst_4
+27: dconst_0
+28: dastore
+29: aastore
+30: dup
+31: iconst_1
+32: iconst_5
+33: newarray       double
+35: dup
+36: iconst_0
+37: ldc2_w        #3
+40: dastore
+41: dup
+42: iconst_1
+43: ldc2_w        #90
+46: dastore
+47: dup
+48: iconst_2
+49: dconst_0
+50: dastore
+51: dup
+52: iconst_3
+53: dconst_0
+54: dastore
+55: dup
+56: iconst_4
+57: dconst_0
+58: dastore
+59: aastore
+60: dup
+61: iconst_2
+62: iconst_5
+63: newarray       double
+65: dup
+66: iconst_0
+67: ldc2_w        #5
+70: dastore
+71: dup
+72: iconst_1
+73: ldc2_w        #92
+76: dastore
+77: dup
+78: iconst_2
+79: ldc2_w        #94
+82: dastore
+83: dup
+84: iconst_3
+85: dconst_0
+86: dastore
+87: dup
+88: iconst_4
+89: dconst_0
+90: dastore
+91: aastore
+92: dup
+93: iconst_3
+94: iconst_5
+95: newarray       double
+97: dup
+98: iconst_0
+99: ldc2_w        #7
+102: dastore
+103: dup
+104: iconst_1
+105: ldc2_w        #52
+108: dastore
+109: dup
+110: iconst_2
+111: ldc2_w        #96
+114: dastore
+115: dup
+116: iconst_3
+117: ldc2_w        #98
+120: dastore
+121: dup
+122: iconst_4
+123: dconst_0
+124: dastore
+125: aastore
+126: dup
+127: iconst_4
+128: iconst_5
+129: newarray       double
+131: dup
+132: iconst_0
+133: ldc2_w        #9
+136: dastore
+137: dup
+138: iconst_1
+139: ldc2_w        #100
+142: dastore
+143: dup
+144: iconst_2
+145: ldc2_w        #11
+148: dastore
+149: dup
+150: iconst_3
+151: ldc2_w        #44
+154: dastore
+155: dup
+156: iconst_4
+157: ldc2_w        #46
+160: dastore
+161: aastore
+162: invokestatic  #33
+165: astore_1
+166: new           #32
+169: dup
+170: aload_0
+171: getfield      #31
+174: invokestatic  #33
+177: invokespecial #34
+180: astore_2
+181: aload_2
+182: invokevirtual #35
+185: astore_3
+186: dconst_0
+187: aload_3
+188: aload_1
+189: invokeinterface #83,  2
+194: invokeinterface #84,  1
+199: ldc2_w        #102
+202: invokestatic  #87
+205: aload_2
+206: invokevirtual #39
+209: astore        4
+211: dconst_0
+212: aload         4
+214: aload_1
+215: invokeinterface #89,  1
+220: invokeinterface #83,  2
+225: invokeinterface #84,  1
+230: ldc2_w        #102
+233: invokestatic  #87
+236: aload_3
+237: aload_2
+238: invokevirtual #35
+241: if_acmpne     248
+244: iconst_1
+245: goto          249
+248: iconst_0
+249: invokestatic  #104
+252: aload         4
+254: aload_2
+255: invokevirtual #39
+258: if_acmpne     265
+261: iconst_1
+262: goto          266
+265: iconst_0
+266: invokestatic  #104
+269: return
+}
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RectangularCholeskyDecompositionTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RectangularCholeskyDecompositionTest.class
+Class name: RectangularCholeskyDecompositionTest
+Method name: testDecomposition3x3
+Start line: 25
+End line: 47
+Method source code: 
+    public void testDecomposition3x3() {
+
+        RealMatrix m = MatrixUtils.createRealMatrix(new double[][] {
+            { 1,   9,   9 },
+            { 9, 225, 225 },
+            { 9, 225, 625 }
+        });
+
+        RectangularCholeskyDecomposition d =
+                new RectangularCholeskyDecomposition(m, 1.0e-6);
+
+        // as this decomposition permutes lines and columns, the root is NOT triangular
+        // (in fact here it is the lower right part of the matrix which is zero and
+        //  the upper left non-zero)
+        Assert.assertEquals(0.8,  d.getRootMatrix().getEntry(0, 2), 1.0e-15);
+        Assert.assertEquals(25.0, d.getRootMatrix().getEntry(2, 0), 1.0e-15);
+        Assert.assertEquals(0.0,  d.getRootMatrix().getEntry(2, 2), 1.0e-15);
+
+        RealMatrix root = d.getRootMatrix();
+        RealMatrix rebuiltM = root.multiply(root.transpose());
+        Assert.assertEquals(0.0, m.subtract(rebuiltM).getNorm(), 1.0e-15);
+
+    }
+Method byte code: 
+0: iconst_3
+1: anewarray     #2
+4: dup
+5: iconst_0
+6: iconst_3
+7: newarray       double
+9: dup
+10: iconst_0
+11: dconst_1
+12: dastore
+13: dup
+14: iconst_1
+15: ldc2_w        #3
+18: dastore
+19: dup
+20: iconst_2
+21: ldc2_w        #3
+24: dastore
+25: aastore
+26: dup
+27: iconst_1
+28: iconst_3
+29: newarray       double
+31: dup
+32: iconst_0
+33: ldc2_w        #3
+36: dastore
+37: dup
+38: iconst_1
+39: ldc2_w        #5
+42: dastore
+43: dup
+44: iconst_2
+45: ldc2_w        #5
+48: dastore
+49: aastore
+50: dup
+51: iconst_2
+52: iconst_3
+53: newarray       double
+55: dup
+56: iconst_0
+57: ldc2_w        #3
+60: dastore
+61: dup
+62: iconst_1
+63: ldc2_w        #5
+66: dastore
+67: dup
+68: iconst_2
+69: ldc2_w        #7
+72: dastore
+73: aastore
+74: invokestatic  #9
+77: astore_1
+78: new           #10
+81: dup
+82: aload_1
+83: ldc2_w        #11
+86: invokespecial #13
+89: astore_2
+90: ldc2_w        #14
+93: aload_2
+94: invokevirtual #16
+97: iconst_0
+98: iconst_2
+99: invokeinterface #17,  3
+104: ldc2_w        #18
+107: invokestatic  #20
+110: ldc2_w        #21
+113: aload_2
+114: invokevirtual #16
+117: iconst_2
+118: iconst_0
+119: invokeinterface #17,  3
+124: ldc2_w        #18
+127: invokestatic  #20
+130: dconst_0
+131: aload_2
+132: invokevirtual #16
+135: iconst_2
+136: iconst_2
+137: invokeinterface #17,  3
+142: ldc2_w        #18
+145: invokestatic  #20
+148: aload_2
+149: invokevirtual #16
+152: astore_3
+153: aload_3
+154: aload_3
+155: invokeinterface #23,  1
+160: invokeinterface #24,  2
+165: astore        4
+167: dconst_0
+168: aload_1
+169: aload         4
+171: invokeinterface #25,  2
+176: invokeinterface #26,  1
+181: ldc2_w        #18
+184: invokestatic  #20
+187: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RectangularCholeskyDecompositionTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RectangularCholeskyDecompositionTest.class
+Class name: RectangularCholeskyDecompositionTest
+Method name: testFullRank
+Start line: 50
+End line: 72
+Method source code: 
+    public void testFullRank() {
+
+        RealMatrix base = MatrixUtils.createRealMatrix(new double[][] {
+            { 0.1159548705,      0.,           0.,           0.      },
+            { 0.0896442724, 0.1223540781,      0.,           0.      },
+            { 0.0852155322, 4.558668e-3,  0.1083577299,      0.      },
+            { 0.0905486674, 0.0213768077, 0.0128878333, 0.1014155693 }
+        });
+
+        RealMatrix m = base.multiply(base.transpose());
+
+        RectangularCholeskyDecomposition d =
+                new RectangularCholeskyDecomposition(m, 1.0e-10);
+
+        RealMatrix root = d.getRootMatrix();
+        RealMatrix rebuiltM = root.multiply(root.transpose());
+        Assert.assertEquals(0.0, m.subtract(rebuiltM).getNorm(), 1.0e-15);
+
+        // the pivoted Cholesky decomposition is *not* unique. Here, the root is
+        // not equal to the original trianbular base matrix
+        Assert.assertTrue(root.subtract(base).getNorm() > 0.3);
+
+    }
+Method byte code: 
+0: iconst_4
+1: anewarray     #2
+4: dup
+5: iconst_0
+6: iconst_4
+7: newarray       double
+9: dup
+10: iconst_0
+11: ldc2_w        #27
+14: dastore
+15: dup
+16: iconst_1
+17: dconst_0
+18: dastore
+19: dup
+20: iconst_2
+21: dconst_0
+22: dastore
+23: dup
+24: iconst_3
+25: dconst_0
+26: dastore
+27: aastore
+28: dup
+29: iconst_1
+30: iconst_4
+31: newarray       double
+33: dup
+34: iconst_0
+35: ldc2_w        #29
+38: dastore
+39: dup
+40: iconst_1
+41: ldc2_w        #31
+44: dastore
+45: dup
+46: iconst_2
+47: dconst_0
+48: dastore
+49: dup
+50: iconst_3
+51: dconst_0
+52: dastore
+53: aastore
+54: dup
+55: iconst_2
+56: iconst_4
+57: newarray       double
+59: dup
+60: iconst_0
+61: ldc2_w        #33
+64: dastore
+65: dup
+66: iconst_1
+67: ldc2_w        #35
+70: dastore
+71: dup
+72: iconst_2
+73: ldc2_w        #37
+76: dastore
+77: dup
+78: iconst_3
+79: dconst_0
+80: dastore
+81: aastore
+82: dup
+83: iconst_3
+84: iconst_4
+85: newarray       double
+87: dup
+88: iconst_0
+89: ldc2_w        #39
+92: dastore
+93: dup
+94: iconst_1
+95: ldc2_w        #41
+98: dastore
+99: dup
+100: iconst_2
+101: ldc2_w        #43
+104: dastore
+105: dup
+106: iconst_3
+107: ldc2_w        #45
+110: dastore
+111: aastore
+112: invokestatic  #9
+115: astore_1
+116: aload_1
+117: aload_1
+118: invokeinterface #23,  1
+123: invokeinterface #24,  2
+128: astore_2
+129: new           #10
+132: dup
+133: aload_2
+134: ldc2_w        #47
+137: invokespecial #13
+140: astore_3
+141: aload_3
+142: invokevirtual #16
+145: astore        4
+147: aload         4
+149: aload         4
+151: invokeinterface #23,  1
+156: invokeinterface #24,  2
+161: astore        5
+163: dconst_0
+164: aload_2
+165: aload         5
+167: invokeinterface #25,  2
+172: invokeinterface #26,  1
+177: ldc2_w        #18
+180: invokestatic  #20
+183: aload         4
+185: aload_1
+186: invokeinterface #25,  2
+191: invokeinterface #26,  1
+196: ldc2_w        #49
+199: dcmpl
+200: ifle          207
+203: iconst_1
+204: goto          208
+207: iconst_0
+208: invokestatic  #51
+211: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RectangularCholeskyDecompositionTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RectangularCholeskyDecompositionTest.class
+Class name: RectangularCholeskyDecompositionTest
+Method name: testMath789
+Start line: 75
+End line: 109
+Method source code: 
+    public void testMath789() {
+
+        final RealMatrix m1 = MatrixUtils.createRealMatrix(new double[][]{
+            {0.013445532, 0.010394690, 0.009881156, 0.010499559},
+            {0.010394690, 0.023006616, 0.008196856, 0.010732709},
+            {0.009881156, 0.008196856, 0.019023866, 0.009210099},
+            {0.010499559, 0.010732709, 0.009210099, 0.019107243}
+        });
+        RealMatrix root1 = new RectangularCholeskyDecomposition(m1, 1.0e-10).getRootMatrix();
+        RealMatrix rebuiltM1 = root1.multiply(root1.transpose());
+        Assert.assertEquals(0.0, m1.subtract(rebuiltM1).getNorm(), 1.0e-16);
+
+        final RealMatrix m2 = MatrixUtils.createRealMatrix(new double[][]{
+            {0.0, 0.0, 0.0, 0.0, 0.0},
+            {0.0, 0.013445532, 0.010394690, 0.009881156, 0.010499559},
+            {0.0, 0.010394690, 0.023006616, 0.008196856, 0.010732709},
+            {0.0, 0.009881156, 0.008196856, 0.019023866, 0.009210099},
+            {0.0, 0.010499559, 0.010732709, 0.009210099, 0.019107243}
+        });
+        RealMatrix root2 = new RectangularCholeskyDecomposition(m2, 1.0e-10).getRootMatrix();
+        RealMatrix rebuiltM2 = root2.multiply(root2.transpose());
+        Assert.assertEquals(0.0, m2.subtract(rebuiltM2).getNorm(), 1.0e-16);
+
+        final RealMatrix m3 = MatrixUtils.createRealMatrix(new double[][]{
+            {0.013445532, 0.010394690, 0.0, 0.009881156, 0.010499559},
+            {0.010394690, 0.023006616, 0.0, 0.008196856, 0.010732709},
+            {0.0, 0.0, 0.0, 0.0, 0.0},
+            {0.009881156, 0.008196856, 0.0, 0.019023866, 0.009210099},
+            {0.010499559, 0.010732709, 0.0, 0.009210099, 0.019107243}
+        });
+        RealMatrix root3 = new RectangularCholeskyDecomposition(m3, 1.0e-10).getRootMatrix();
+        RealMatrix rebuiltM3 = root3.multiply(root3.transpose());
+        Assert.assertEquals(0.0, m3.subtract(rebuiltM3).getNorm(), 1.0e-16);
+
+    }
+Method byte code: 
+0: iconst_4
+1: anewarray     #2
+4: dup
+5: iconst_0
+6: iconst_4
+7: newarray       double
+9: dup
+10: iconst_0
+11: ldc2_w        #52
+14: dastore
+15: dup
+16: iconst_1
+17: ldc2_w        #54
+20: dastore
+21: dup
+22: iconst_2
+23: ldc2_w        #56
+26: dastore
+27: dup
+28: iconst_3
+29: ldc2_w        #58
+32: dastore
+33: aastore
+34: dup
+35: iconst_1
+36: iconst_4
+37: newarray       double
+39: dup
+40: iconst_0
+41: ldc2_w        #54
+44: dastore
+45: dup
+46: iconst_1
+47: ldc2_w        #60
+50: dastore
+51: dup
+52: iconst_2
+53: ldc2_w        #62
+56: dastore
+57: dup
+58: iconst_3
+59: ldc2_w        #64
+62: dastore
+63: aastore
+64: dup
+65: iconst_2
+66: iconst_4
+67: newarray       double
+69: dup
+70: iconst_0
+71: ldc2_w        #56
+74: dastore
+75: dup
+76: iconst_1
+77: ldc2_w        #62
+80: dastore
+81: dup
+82: iconst_2
+83: ldc2_w        #66
+86: dastore
+87: dup
+88: iconst_3
+89: ldc2_w        #68
+92: dastore
+93: aastore
+94: dup
+95: iconst_3
+96: iconst_4
+97: newarray       double
+99: dup
+100: iconst_0
+101: ldc2_w        #58
+104: dastore
+105: dup
+106: iconst_1
+107: ldc2_w        #64
+110: dastore
+111: dup
+112: iconst_2
+113: ldc2_w        #68
+116: dastore
+117: dup
+118: iconst_3
+119: ldc2_w        #70
+122: dastore
+123: aastore
+124: invokestatic  #9
+127: astore_1
+128: new           #10
+131: dup
+132: aload_1
+133: ldc2_w        #47
+136: invokespecial #13
+139: invokevirtual #16
+142: astore_2
+143: aload_2
+144: aload_2
+145: invokeinterface #23,  1
+150: invokeinterface #24,  2
+155: astore_3
+156: dconst_0
+157: aload_1
+158: aload_3
+159: invokeinterface #25,  2
+164: invokeinterface #26,  1
+169: ldc2_w        #72
+172: invokestatic  #20
+175: iconst_5
+176: anewarray     #2
+179: dup
+180: iconst_0
+181: iconst_5
+182: newarray       double
+184: dup
+185: iconst_0
+186: dconst_0
+187: dastore
+188: dup
+189: iconst_1
+190: dconst_0
+191: dastore
+192: dup
+193: iconst_2
+194: dconst_0
+195: dastore
+196: dup
+197: iconst_3
+198: dconst_0
+199: dastore
+200: dup
+201: iconst_4
+202: dconst_0
+203: dastore
+204: aastore
+205: dup
+206: iconst_1
+207: iconst_5
+208: newarray       double
+210: dup
+211: iconst_0
+212: dconst_0
+213: dastore
+214: dup
+215: iconst_1
+216: ldc2_w        #52
+219: dastore
+220: dup
+221: iconst_2
+222: ldc2_w        #54
+225: dastore
+226: dup
+227: iconst_3
+228: ldc2_w        #56
+231: dastore
+232: dup
+233: iconst_4
+234: ldc2_w        #58
+237: dastore
+238: aastore
+239: dup
+240: iconst_2
+241: iconst_5
+242: newarray       double
+244: dup
+245: iconst_0
+246: dconst_0
+247: dastore
+248: dup
+249: iconst_1
+250: ldc2_w        #54
+253: dastore
+254: dup
+255: iconst_2
+256: ldc2_w        #60
+259: dastore
+260: dup
+261: iconst_3
+262: ldc2_w        #62
+265: dastore
+266: dup
+267: iconst_4
+268: ldc2_w        #64
+271: dastore
+272: aastore
+273: dup
+274: iconst_3
+275: iconst_5
+276: newarray       double
+278: dup
+279: iconst_0
+280: dconst_0
+281: dastore
+282: dup
+283: iconst_1
+284: ldc2_w        #56
+287: dastore
+288: dup
+289: iconst_2
+290: ldc2_w        #62
+293: dastore
+294: dup
+295: iconst_3
+296: ldc2_w        #66
+299: dastore
+300: dup
+301: iconst_4
+302: ldc2_w        #68
+305: dastore
+306: aastore
+307: dup
+308: iconst_4
+309: iconst_5
+310: newarray       double
+312: dup
+313: iconst_0
+314: dconst_0
+315: dastore
+316: dup
+317: iconst_1
+318: ldc2_w        #58
+321: dastore
+322: dup
+323: iconst_2
+324: ldc2_w        #64
+327: dastore
+328: dup
+329: iconst_3
+330: ldc2_w        #68
+333: dastore
+334: dup
+335: iconst_4
+336: ldc2_w        #70
+339: dastore
+340: aastore
+341: invokestatic  #9
+344: astore        4
+346: new           #10
+349: dup
+350: aload         4
+352: ldc2_w        #47
+355: invokespecial #13
+358: invokevirtual #16
+361: astore        5
+363: aload         5
+365: aload         5
+367: invokeinterface #23,  1
+372: invokeinterface #24,  2
+377: astore        6
+379: dconst_0
+380: aload         4
+382: aload         6
+384: invokeinterface #25,  2
+389: invokeinterface #26,  1
+394: ldc2_w        #72
+397: invokestatic  #20
+400: iconst_5
+401: anewarray     #2
+404: dup
+405: iconst_0
+406: iconst_5
+407: newarray       double
+409: dup
+410: iconst_0
+411: ldc2_w        #52
+414: dastore
+415: dup
+416: iconst_1
+417: ldc2_w        #54
+420: dastore
+421: dup
+422: iconst_2
+423: dconst_0
+424: dastore
+425: dup
+426: iconst_3
+427: ldc2_w        #56
+430: dastore
+431: dup
+432: iconst_4
+433: ldc2_w        #58
+436: dastore
+437: aastore
+438: dup
+439: iconst_1
+440: iconst_5
+441: newarray       double
+443: dup
+444: iconst_0
+445: ldc2_w        #54
+448: dastore
+449: dup
+450: iconst_1
+451: ldc2_w        #60
+454: dastore
+455: dup
+456: iconst_2
+457: dconst_0
+458: dastore
+459: dup
+460: iconst_3
+461: ldc2_w        #62
+464: dastore
+465: dup
+466: iconst_4
+467: ldc2_w        #64
+470: dastore
+471: aastore
+472: dup
+473: iconst_2
+474: iconst_5
+475: newarray       double
+477: dup
+478: iconst_0
+479: dconst_0
+480: dastore
+481: dup
+482: iconst_1
+483: dconst_0
+484: dastore
+485: dup
+486: iconst_2
+487: dconst_0
+488: dastore
+489: dup
+490: iconst_3
+491: dconst_0
+492: dastore
+493: dup
+494: iconst_4
+495: dconst_0
+496: dastore
+497: aastore
+498: dup
+499: iconst_3
+500: iconst_5
+501: newarray       double
+503: dup
+504: iconst_0
+505: ldc2_w        #56
+508: dastore
+509: dup
+510: iconst_1
+511: ldc2_w        #62
+514: dastore
+515: dup
+516: iconst_2
+517: dconst_0
+518: dastore
+519: dup
+520: iconst_3
+521: ldc2_w        #66
+524: dastore
+525: dup
+526: iconst_4
+527: ldc2_w        #68
+530: dastore
+531: aastore
+532: dup
+533: iconst_4
+534: iconst_5
+535: newarray       double
+537: dup
+538: iconst_0
+539: ldc2_w        #58
+542: dastore
+543: dup
+544: iconst_1
+545: ldc2_w        #64
+548: dastore
+549: dup
+550: iconst_2
+551: dconst_0
+552: dastore
+553: dup
+554: iconst_3
+555: ldc2_w        #68
+558: dastore
+559: dup
+560: iconst_4
+561: ldc2_w        #70
+564: dastore
+565: aastore
+566: invokestatic  #9
+569: astore        7
+571: new           #10
+574: dup
+575: aload         7
+577: ldc2_w        #47
+580: invokespecial #13
+583: invokevirtual #16
+586: astore        8
+588: aload         8
+590: aload         8
+592: invokeinterface #23,  1
+597: invokeinterface #24,  2
+602: astore        9
+604: dconst_0
+605: aload         7
+607: aload         9
+609: invokeinterface #25,  2
+614: invokeinterface #26,  1
+619: ldc2_w        #72
+622: invokestatic  #20
+625: return
+}
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RectangularCholeskyDecomposition_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RectangularCholeskyDecomposition_ESTest.class
+Class name: RectangularCholeskyDecomposition_ESTest
+Method name: test0
+Start line: 19
+End line: 27
+Method source code: 
+  public void test0()  throws Throwable  {
+      double[] doubleArray0 = new double[3];
+      doubleArray0[0] = 3680.718975;
+      Array2DRowRealMatrix array2DRowRealMatrix0 = new Array2DRowRealMatrix(doubleArray0);
+      RealMatrix realMatrix0 = array2DRowRealMatrix0.getSubMatrix(0, 0, 0, 0);
+      RectangularCholeskyDecomposition rectangularCholeskyDecomposition0 = new RectangularCholeskyDecomposition(realMatrix0, 103.9215079);
+      int int0 = rectangularCholeskyDecomposition0.getRank();
+      assertEquals(1, int0);
+  }
+Method byte code: 
+0: iconst_3
+1: newarray       double
+3: astore_1
+4: aload_1
+5: iconst_0
+6: ldc2_w        #2
+9: dastore
+10: new           #4
+13: dup
+14: aload_1
+15: invokespecial #5
+18: astore_2
+19: aload_2
+20: iconst_0
+21: iconst_0
+22: iconst_0
+23: iconst_0
+24: invokevirtual #6
+27: astore_3
+28: new           #7
+31: dup
+32: aload_3
+33: ldc2_w        #8
+36: invokespecial #10
+39: astore        4
+41: aload         4
+43: invokevirtual #11
+46: istore        5
+48: lconst_1
+49: iload         5
+51: i2l
+52: invokestatic  #12
+55: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RectangularCholeskyDecomposition_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RectangularCholeskyDecomposition_ESTest.class
+Class name: RectangularCholeskyDecomposition_ESTest
+Method name: test1
+Start line: 30
+End line: 38
+Method source code: 
+  public void test1()  throws Throwable  {
+      double[] doubleArray0 = new double[3];
+      doubleArray0[0] = 3680.718975;
+      Array2DRowRealMatrix array2DRowRealMatrix0 = new Array2DRowRealMatrix(doubleArray0);
+      RealMatrix realMatrix0 = array2DRowRealMatrix0.getSubMatrix(0, 0, 0, 0);
+      RectangularCholeskyDecomposition rectangularCholeskyDecomposition0 = new RectangularCholeskyDecomposition(realMatrix0, 103.9215079);
+      RealMatrix realMatrix1 = rectangularCholeskyDecomposition0.getRootMatrix();
+      assertNotSame(realMatrix1, realMatrix0);
+  }
+Method byte code: 
+0: iconst_3
+1: newarray       double
+3: astore_1
+4: aload_1
+5: iconst_0
+6: ldc2_w        #2
+9: dastore
+10: new           #4
+13: dup
+14: aload_1
+15: invokespecial #5
+18: astore_2
+19: aload_2
+20: iconst_0
+21: iconst_0
+22: iconst_0
+23: iconst_0
+24: invokevirtual #6
+27: astore_3
+28: new           #7
+31: dup
+32: aload_3
+33: ldc2_w        #8
+36: invokespecial #10
+39: astore        4
+41: aload         4
+43: invokevirtual #13
+46: astore        5
+48: aload         5
+50: aload_3
+51: invokestatic  #14
+54: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RectangularCholeskyDecomposition_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RectangularCholeskyDecomposition_ESTest.class
+Class name: RectangularCholeskyDecomposition_ESTest
+Method name: test2
+Start line: 41
+End line: 64
+Method source code: 
+  public void test2()  throws Throwable  {
+      double[] doubleArray0 = new double[3];
+      doubleArray0[2] = 1582.601578048;
+      double[][] doubleArray1 = new double[6][1];
+      doubleArray1[0] = doubleArray0;
+      doubleArray1[1] = doubleArray0;
+      doubleArray1[2] = doubleArray0;
+      doubleArray1[3] = doubleArray0;
+      doubleArray1[4] = doubleArray0;
+      doubleArray1[5] = doubleArray0;
+      Array2DRowRealMatrix array2DRowRealMatrix0 = new Array2DRowRealMatrix(doubleArray1, true);
+      RealMatrix realMatrix0 = array2DRowRealMatrix0.transpose();
+      RectangularCholeskyDecomposition rectangularCholeskyDecomposition0 = null;
+      try {
+        rectangularCholeskyDecomposition0 = new RectangularCholeskyDecomposition(realMatrix0, 2281.191013467);
+        fail("Expecting exception: IllegalArgumentException");
+      
+      } catch(IllegalArgumentException e) {
+         //
+         // 1,582.602 is smaller than, or equal to, the minimum (2,281.191): not positive definite matrix: value 1,582.602 at index 2
+         //
+         verifyException("org.apache.commons.math3.linear.RectangularCholeskyDecomposition", e);
+      }
+  }
+Method byte code: 
+0: iconst_3
+1: newarray       double
+3: astore_1
+4: aload_1
+5: iconst_2
+6: ldc2_w        #15
+9: dastore
+10: bipush        6
+12: iconst_1
+13: multianewarray #17,  2
+17: astore_2
+18: aload_2
+19: iconst_0
+20: aload_1
+21: aastore
+22: aload_2
+23: iconst_1
+24: aload_1
+25: aastore
+26: aload_2
+27: iconst_2
+28: aload_1
+29: aastore
+30: aload_2
+31: iconst_3
+32: aload_1
+33: aastore
+34: aload_2
+35: iconst_4
+36: aload_1
+37: aastore
+38: aload_2
+39: iconst_5
+40: aload_1
+41: aastore
+42: new           #4
+45: dup
+46: aload_2
+47: iconst_1
+48: invokespecial #18
+51: astore_3
+52: aload_3
+53: invokevirtual #19
+56: astore        4
+58: aconst_null
+59: astore        5
+61: new           #7
+64: dup
+65: aload         4
+67: ldc2_w        #20
+70: invokespecial #10
+73: astore        5
+75: ldc           #22
+77: invokestatic  #23
+80: goto          92
+83: astore        6
+85: ldc           #25
+87: aload         6
+89: invokestatic  #26
+92: return
+Exception table:
+from    to  target type
+61    80    83   Class java/lang/IllegalArgumentException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RectangularCholeskyDecomposition_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RectangularCholeskyDecomposition_ESTest.class
+Class name: RectangularCholeskyDecomposition_ESTest
+Method name: test3
+Start line: 67
+End line: 81
+Method source code: 
+  public void test3()  throws Throwable  {
+      double[] doubleArray0 = new double[3];
+      doubleArray0[0] = 3680.718975;
+      double[][] doubleArray1 = new double[6][1];
+      doubleArray1[0] = doubleArray0;
+      doubleArray1[1] = doubleArray0;
+      doubleArray1[2] = doubleArray0;
+      doubleArray1[3] = doubleArray0;
+      doubleArray1[4] = doubleArray0;
+      doubleArray1[5] = doubleArray0;
+      Array2DRowRealMatrix array2DRowRealMatrix0 = new Array2DRowRealMatrix(doubleArray1, true);
+      RealMatrix realMatrix0 = array2DRowRealMatrix0.transpose();
+      RectangularCholeskyDecomposition rectangularCholeskyDecomposition0 = new RectangularCholeskyDecomposition(realMatrix0, 2281.191013467);
+      assertEquals(2, rectangularCholeskyDecomposition0.getRank());
+  }
+Method byte code: 
+0: iconst_3
+1: newarray       double
+3: astore_1
+4: aload_1
+5: iconst_0
+6: ldc2_w        #2
+9: dastore
+10: bipush        6
+12: iconst_1
+13: multianewarray #17,  2
+17: astore_2
+18: aload_2
+19: iconst_0
+20: aload_1
+21: aastore
+22: aload_2
+23: iconst_1
+24: aload_1
+25: aastore
+26: aload_2
+27: iconst_2
+28: aload_1
+29: aastore
+30: aload_2
+31: iconst_3
+32: aload_1
+33: aastore
+34: aload_2
+35: iconst_4
+36: aload_1
+37: aastore
+38: aload_2
+39: iconst_5
+40: aload_1
+41: aastore
+42: new           #4
+45: dup
+46: aload_2
+47: iconst_1
+48: invokespecial #18
+51: astore_3
+52: aload_3
+53: invokevirtual #19
+56: astore        4
+58: new           #7
+61: dup
+62: aload         4
+64: ldc2_w        #20
+67: invokespecial #10
+70: astore        5
+72: ldc2_w        #27
+75: aload         5
+77: invokevirtual #11
+80: i2l
+81: invokestatic  #12
+84: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/src/test/java/org/apache/commons/math3/linear/RectangularCholeskyDecomposition_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/21/target/test-classes/org/apache/commons/math3/linear/RectangularCholeskyDecomposition_ESTest.class
+Class name: RectangularCholeskyDecomposition_ESTest
+Method name: test4
+Start line: 84
+End line: 108
+Method source code: 
+  public void test4()  throws Throwable  {
+      double[] doubleArray0 = new double[3];
+      doubleArray0[0] = 3680.718975;
+      doubleArray0[2] = 1582.601578048;
+      double[][] doubleArray1 = new double[6][1];
+      doubleArray1[0] = doubleArray0;
+      doubleArray1[1] = doubleArray0;
+      doubleArray1[2] = doubleArray0;
+      doubleArray1[3] = doubleArray0;
+      doubleArray1[4] = doubleArray0;
+      doubleArray1[5] = doubleArray0;
+      Array2DRowRealMatrix array2DRowRealMatrix0 = new Array2DRowRealMatrix(doubleArray1, true);
+      RealMatrix realMatrix0 = array2DRowRealMatrix0.transpose();
+      RectangularCholeskyDecomposition rectangularCholeskyDecomposition0 = null;
+      try {
+        rectangularCholeskyDecomposition0 = new RectangularCholeskyDecomposition(realMatrix0, (-830.17));
+        fail("Expecting exception: IllegalArgumentException");
+      
+      } catch(IllegalArgumentException e) {
+         //
+         // -2,776.352 is smaller than, or equal to, the minimum (-830.17): not positive definite matrix: value -2,776.352 at index 2
+         //
+         verifyException("org.apache.commons.math3.linear.RectangularCholeskyDecomposition", e);
+      }
+  }
+Method byte code: 
+0: iconst_3
+1: newarray       double
+3: astore_1
+4: aload_1
+5: iconst_0
+6: ldc2_w        #2
+9: dastore
+10: aload_1
+11: iconst_2
+12: ldc2_w        #15
+15: dastore
+16: bipush        6
+18: iconst_1
+19: multianewarray #17,  2
+23: astore_2
+24: aload_2
+25: iconst_0
+26: aload_1
+27: aastore
+28: aload_2
+29: iconst_1
+30: aload_1
+31: aastore
+32: aload_2
+33: iconst_2
+34: aload_1
+35: aastore
+36: aload_2
+37: iconst_3
+38: aload_1
+39: aastore
+40: aload_2
+41: iconst_4
+42: aload_1
+43: aastore
+44: aload_2
+45: iconst_5
+46: aload_1
+47: aastore
+48: new           #4
+51: dup
+52: aload_2
+53: iconst_1
+54: invokespecial #18
+57: astore_3
+58: aload_3
+59: invokevirtual #19
+62: astore        4
+64: aconst_null
+65: astore        5
+67: new           #7
+70: dup
+71: aload         4
+73: ldc2_w        #29
+76: invokespecial #10
+79: astore        5
+81: ldc           #22
+83: invokestatic  #23
+86: goto          98
+89: astore        6
+91: ldc           #25
+93: aload         6
+95: invokestatic  #26
+98: return
+Exception table:
+from    to  target type
+67    86    89   Class java/lang/IllegalArgumentException
+}

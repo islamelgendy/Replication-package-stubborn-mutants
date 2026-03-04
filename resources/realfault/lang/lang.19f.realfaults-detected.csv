@@ -1,0 +1,10 @@
+Method,Fault-Detected
+NumericEntityUnescaperTest::testUnfinishedEntity, 1
+NumericEntityUnescaperTest::testOutOfBounds, 1
+NumericEntityUnescaper_ESTest::test2, 1
+NumericEntityUnescaper_ESTest::test3, 1
+NumericEntityUnescaper_ESTest::test4, 1
+NumericEntityUnescaper_ESTest::test6, 1
+NumericEntityUnescaper_ESTest::test7, 1
+NumericEntityUnescaper_ESTest::test8, 1
+NumericEntityUnescaper_ESTest::test9, 1

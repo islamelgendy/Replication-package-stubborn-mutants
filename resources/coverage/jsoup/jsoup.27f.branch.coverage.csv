@@ -1,0 +1,52 @@
+Class::Test,DataUtil:40, DataUtil:77, DataUtil:82, DataUtil:83, DataUtil:84, DataUtil:95, DataUtil:99, DataUtil:114, DataUtil:128, DataUtil:130, DataUtil:132, DataUtil:134, 
+RegressionTest0::test01, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test02, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test03, 0.5,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test04, 0,0.5,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test05, 0,0.5,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test06, 0.5,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test07, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test08, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test09, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test10, 0.5,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test11, 0.5,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test12, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test13, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test14, 0,0,0,0,0,0,0,0,0.5,0.5,0,0,
+RegressionTest0::test15, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test16, 0,0,0,0,0,0,0,0,0.5,0.5,0,0,
+RegressionTest0::test17, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test18, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test19, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test20, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test21, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test22, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test23, 0,0,0,0,0,0,0,0,0.5,0.5,0,0,
+RegressionTest0::test24, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test25, 0.5,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test26, 0,0.5,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test27, 0.5,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test28, 0.5,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test29, 0,0.5,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test30, 0,0.5,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test31, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test32, 0.5,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test33, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test34, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test35, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test36, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test37, 0,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test38, 0,0.5,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test39, 0.5,0,0,0,0,0,0,0,0,0,0,0,
+RegressionTest0::test40, 0,0,0,0,0,0,0,0,0,0,0,0,
+DataUtilTest::testCharset , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 1 , 1 , 1 , 0.5 
+DataUtilTest::testQuotedCharset , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0.5 , 0.5 , 1 , 0.5 
+DataUtilTest::discardsSpuriousByteOrderMark , 0 , 0.5 , 0 , 0 , 0 , 0.5 , 0.5 , 0 , 0 , 0 , 0 , 0 
+DataUtil_ESTest::test0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 
+DataUtil_ESTest::test1 , 0 , 0.5 , 0 , 0 , 0 , 0 , 0 , 0.5 , 0 , 0 , 0 , 0 
+DataUtil_ESTest::test2 , 0.5 , 0.5 , 0.5 , 0 , 0 , 0.5 , 0 , 0.5 , 0 , 0 , 0 , 0 
+DataUtil_ESTest::test3 , 0.5 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 
+DataUtil_ESTest::test4 , 0.5 , 0.5 , 0 , 0 , 0 , 0 , 0 , 0.5 , 0 , 0 , 0 , 0 
+DataUtil_ESTest::test5 , 0 , 0.5 , 0 , 0 , 0 , 0.5 , 0.5 , 0 , 0 , 0 , 0 , 0 
+DataUtil_ESTest::test7 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0.5 , 0.5 , 0 , 0 
+DataUtil_ESTest::test8 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0.5 , 0 , 0 , 0 

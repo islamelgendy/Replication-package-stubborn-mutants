@@ -1,0 +1,4 @@
+Method,Fault-Detected
+Fraction_ESTest::test17, 1
+FractionTest::testIntegerOverflow, 1
+RegressionTest0::test0376, 1
