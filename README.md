@@ -1,6 +1,6 @@
 # Replication-package-stubborn-mutants
 
-This replication package contains all necessary scripts, data, and results to reproduce the experiments from our study on the impact of diversity-based test selection in killing stubborn mutants.
+This replication package contains all the necessary scripts, data, and results to reproduce the experiments from our study on the impact of diversity-based test selection in killing stubborn mutants.
 
 ## Repository Structure
 
@@ -9,9 +9,9 @@ The replication package consists of the following directories:
 ### 1. `Scripts/`
 This directory contains all Python scripts used to execute various steps of our study, including:
 - **Selection stubborn mutants**: A script to perform all test case selection approaches to kill the stubborn mutants for a project.
-- **Subject-stats**: A Script to analyise the subjects to produce the stats about the stubborn mutants for a particular project.
+- **Subject-stats**: A Script to analyse the subjects to produce the stats about the stubborn mutants for a particular project.
 - **Stubborn mutant analysis**: A script to analyse the nature of each stubborn mutant.
-- **Stubborn mutant analysis cumulative**: A script to analyse the nature of each stubborn mutant accross all versions of a project.
+- **Stubborn mutant analysis cumulative**: A script to analyse the nature of each stubborn mutant across all versions of a project.
 - **utils**: Scripts implementing utility functions.
 
 ### 2. `Resources/`
@@ -33,7 +33,7 @@ This directory contains all plots generated from our experimental results.
 To replicate the results, follow these steps:
 
 1. **Install Dependencies**
-   Ensure you have Python and necessary libraries installed. You can install the dependencies using:
+   Ensure you have Python and the necessary libraries installed. You can install the dependencies using:
    ```bash
    pip install -r requirements.txt
    ```
@@ -50,7 +50,7 @@ To replicate the results, follow these steps:
     ```
 
     #### Parameters:
-    - **[project]**: Specify the project to analyze. Choose one of the following options:
+    - **[project]**: Specify the project to analyse. Choose one of the following options:
         - `cli`
         - `compress`
         - `csv`
@@ -59,19 +59,19 @@ To replicate the results, follow these steps:
         - `math`
         - `time`
     - **[True/False]**: 
-        - Use `False` for **Normal stubborness** (the one in our study).
-        - Use `True` for **Reachability stubborness** (future work still in progress).
+        - Use `False` for **Normal stubbornness** (the one in our study).
+        - Use `True` for **Reachability stubbornness** (future work still in progress).
     - **[stubbornScoreThresholdValue]**: 
-        - Use `0.75` for a RSTM threshold stubborness value of 0.75.
-        - Use `0.5` for a RSTM threshold stubborness value of 0.50.
-        - Use `0.25` for a RSTM threshold stubborness value of 0.25.
-        - Use `0.1` for a RSTM threshold stubborness value of 0.10.
-        - Use `0.05` for a RSTM threshold stubborness value of 0.05.
-        - Use `0.01` for a RSTM threshold stubborness value of 0.01.
-        - Use `0.005` for a RSTM threshold stubborness value of 0.005.
-        - Use `0.003` for a RSTM threshold stubborness value of 0.003.
-        - Use `0.002` for a RSTM threshold stubborness value of 0.002.        
-        - Use `0.001` for a RSTM threshold stubborness value of 0.001.        
+        - Use `0.75` for an RSTM threshold stubbornness value of 0.75.
+        - Use `0.5` for an RSTM threshold stubbornness value of 0.50.
+        - Use `0.25` for an RSTM threshold stubbornness value of 0.25.
+        - Use `0.1` for an RSTM threshold stubbornness value of 0.10.
+        - Use `0.05` for an RSTM threshold stubbornness value of 0.05.
+        - Use `0.01` for an RSTM threshold stubbornness value of 0.01.
+        - Use `0.005` for an RSTM threshold stubbornness value of 0.005.
+        - Use `0.003` for an RSTM threshold stubbornness value of 0.003.
+        - Use `0.002` for an RSTM threshold stubbornness value of 0.002.        
+        - Use `0.001` for an RSTM threshold stubbornness value of 0.001.        
         - Use `Hard0.05` for applying a fixed threshold of 0.05.        
         - Use `Hard0.025` for applying a fixed threshold of 0.025.        
 
@@ -95,6 +95,35 @@ To replicate the results, follow these steps:
    the required script to visualise the results. Running these scripts will output the visualisations in pdf files under
    the folder `resources/plots`.  Also, within the `resources/plots` folder, CSV files will be generated that
    give a summary of the number of mutants and types found using RSTM.
+
+   To view the mutation analysis (i.e. view how many stubborn mutants are identified per threshold and view the mutants' characteristics)
+   open the `resources/Stubborn tables`. If you want to run the script that generates these tables, run the following:
+
+   ```bash
+    python3 scripts/stubborn_mutant_analysis.py [project] [rank] [stubbornScoreThresholdValue]
+    ```
+
+   #### Parameters:
+    - **[project]**: Specify the project to analyse. Choose one of the following options:
+        - `cli`
+        - `compress`
+        - `csv`
+        - `jsoup`
+        - `lang`
+        - `math`
+        - `time`
+    - **[rank]**: 
+        - A rank 1 means analysis of only the mutants killed by 1 test case.
+        - A rank 2 means analysis of only the mutants killed by 2 test cases.
+    - **[stubbornScoreThresholdValue]**: 
+        - Use `0.75` for an RSTM threshold stubbornness value of 0.75.
+        - Same as before.
+     
+   #### Example:
+    To analyse all mutants of rank 1 (killed by only one test case) of the `time` project:
+    ```bash
+    python3 scripts/stubborn_mutant_analysis.py time 1
+    ```
 
 4. **Reproducing FAST-TCP Results**
    Navigate to `FAST-replication/` and follow the instructions in its README to run FAST-TCP experiments.
