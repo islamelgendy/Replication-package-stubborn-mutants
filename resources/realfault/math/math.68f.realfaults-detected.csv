@@ -1,0 +1,6 @@
+Method,Fault-Detected
+MinpackTest::testMinpackJennrichSampson, 1
+MinpackTest::testMinpackFreudensteinRoth, 1
+RegressionTest0::test087, 1
+RegressionTest0::test233, 1
+RegressionTest0::test380, 1

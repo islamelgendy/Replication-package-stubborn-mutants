@@ -1,0 +1,4 @@
+Method,Fault-Detected
+SparseRealVectorTest::testEbeDivideMixedTypes, 1
+SparseRealVectorTest::testEbeMultiplyMixedTypes, 1
+SparseRealVectorTest::testEbeMultiplySameType, 1

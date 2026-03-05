@@ -1,0 +1,10 @@
+Method,Fault-Detected
+SubLine_ESTest::test3, 1
+SubLineTest::testIntersectionNotIntersecting, 1
+SubLine_ESTest::test03, 1
+RegressionTest0::test040, 1
+RegressionTest0::test049, 1
+RegressionTest0::test099, 1
+RegressionTest0::test120, 1
+RegressionTest0::test374, 1
+SubLineTest::testIntersectionParallel, 1

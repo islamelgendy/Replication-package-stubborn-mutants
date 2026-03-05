@@ -1,0 +1,20 @@
+Method,Fault-Detected
+NormalDistributionTest::testSampling, 1
+PoissonDistributionImpl_ESTest::test5, 1
+PoissonDistributionTest::testMean, 1
+RegressionTest0::test004, 1
+RegressionTest0::test013, 1
+RegressionTest0::test019, 1
+RegressionTest0::test020, 1
+RegressionTest0::test037, 1
+RegressionTest0::test052, 1
+RegressionTest0::test055, 1
+RegressionTest0::test066, 1
+RegressionTest0::test082, 1
+RegressionTest0::test095, 1
+RegressionTest0::test110, 1
+RegressionTest0::test163, 1
+RegressionTest0::test165, 1
+RegressionTest0::test203, 1
+RegressionTest0::test324, 1
+RegressionTest0::test351, 1

@@ -1,0 +1,10 @@
+Method,Fault-Detected
+GnuParserTest::testPropertyOptionGroup, 1
+GnuParserTest::testPropertyOptionUnexpected, 1
+DefaultParserTest::testPropertyOptionGroup, 1
+DefaultParserTest::testPropertyOptionUnexpected, 1
+PosixParserTest::testPropertyOptionGroup, 1
+PosixParserTest::testPropertyOptionUnexpected, 1
+BasicParserTest::testPropertyOptionGroup, 1
+BasicParserTest::testPropertyOptionUnexpected, 1
+OptionGroupTest::testTwoOptionsFromGroupWithProperties, 1

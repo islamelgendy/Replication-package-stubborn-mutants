@@ -1,0 +1,9 @@
+Method,Fault-Detected
+DataUtil_ESTest::test06, 1
+DataUtil_ESTest::test10, 1
+DataUtilTest::shouldCorrectCharsetForDuplicateCharsetString, 1
+DataUtilTest::shouldNotThrowExceptionOnEmptyCharset, 1
+DataUtilTest::testQuotedCharset, 1
+DataUtilTest::shouldSelectFirstCharsetOnWeirdMultileCharsetsInMetaTags, 1
+DataUtilTest::shouldReturnNullForIllegalCharsetNames, 1
+ParseTest::testBrokenHtml5CharsetWithASingleDoubleQuote, 1

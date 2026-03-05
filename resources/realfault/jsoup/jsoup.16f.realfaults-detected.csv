@@ -1,0 +1,13 @@
+Method,Fault-Detected
+DocumentType_ESTest::test2, 1
+DocumentType_ESTest::test3, 1
+RegressionTest0::test001, 1
+RegressionTest0::test014, 1
+RegressionTest0::test015, 1
+RegressionTest0::test025, 1
+RegressionTest0::test071, 1
+RegressionTest0::test119, 1
+RegressionTest0::test133, 1
+RegressionTest0::test167, 1
+DocumentTypeTest::outerHtmlGeneration, 1
+DocumentTypeTest::constructorValidationThrowsExceptionOnBlankName, 1

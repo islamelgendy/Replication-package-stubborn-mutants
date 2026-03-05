@@ -1,0 +1,7 @@
+Method,Fault-Detected
+Cleaner_ESTest::test0, 1
+Cleaner_ESTest::test3, 1
+CleanerTest::testIsValid, 1
+RegressionTest0::test157, 1
+RegressionTest0::test160, 1
+RegressionTest0::test233, 1

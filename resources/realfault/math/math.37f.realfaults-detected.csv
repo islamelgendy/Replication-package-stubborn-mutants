@@ -1,0 +1,13 @@
+Method,Fault-Detected
+Complex_ESTest::test05, 1
+Complex_ESTest::test10, 1
+Complex_ESTest::test39, 1
+Complex_ESTest::test44, 1
+Complex_ESTest::test52, 1
+Complex_ESTest::test68, 1
+Complex_ESTest::test70, 1
+Complex_ESTest::test73, 1
+ComplexTest::testTanhInf, 1
+ComplexTest::testTan, 1
+ComplexTest::testTanh, 1
+ComplexTest::testTanInf, 1

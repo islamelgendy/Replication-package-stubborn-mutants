@@ -1,0 +1,5 @@
+Method,Fault-Detected
+EmpiricalDistributionTest::testDistributionClone, 1
+NormalDistributionTest::testDistributionClone, 1
+GammaDistributionTest::testDistributionClone, 1
+LogNormalDistributionTest::testDistributionClone, 1

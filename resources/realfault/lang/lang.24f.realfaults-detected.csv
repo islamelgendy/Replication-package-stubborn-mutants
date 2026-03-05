@@ -1,0 +1,3 @@
+Method,Fault-Detected
+NumberUtilsTest::testIsNumber, 1
+NumberUtils_ESTest::test135, 1

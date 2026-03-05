@@ -1,0 +1,22 @@
+Method,Fault-Detected
+PolynomialFitterTest::testLargeSample, 1
+AbstractLeastSquaresOptimizer_ESTest::test7, 1
+RegressionTest0::test006, 1
+RegressionTest0::test008, 1
+RegressionTest0::test012, 1
+RegressionTest0::test016, 1
+RegressionTest0::test018, 1
+RegressionTest0::test026, 1
+RegressionTest0::test027, 1
+RegressionTest0::test031, 1
+RegressionTest0::test040, 1
+RegressionTest0::test054, 1
+RegressionTest0::test074, 1
+RegressionTest0::test080, 1
+RegressionTest0::test085, 1
+RegressionTest0::test095, 1
+RegressionTest0::test096, 1
+RegressionTest0::test116, 1
+RegressionTest0::test117, 1
+RegressionTest0::test128, 1
+RegressionTest0::test130, 1

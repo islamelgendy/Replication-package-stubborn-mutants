@@ -1,0 +1,8 @@
+Method,Fault-Detected
+BrentOptimizer_ESTest::test2, 1
+BrentOptimizer_ESTest::test4, 1
+BrentOptimizer_ESTest::test5, 1
+BrentOptimizer_ESTest::test6, 1
+RegressionTest0::test163, 1
+RegressionTest0::test228, 1
+BrentOptimizerTest::testKeepInitIfBest, 1
