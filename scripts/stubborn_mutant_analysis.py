@@ -446,7 +446,7 @@ def getCSVRecord(id, cov, ms, easyMut, stubbornMut, liveMutants):
 if __name__ == "__main__":
     args = sys.argv
     if len(args) == 1:
-        prj = "math"
+        prj = "cli"
         rank = 1
         stubbornScoreThresholdValues = [ 0.5, 0.1, 0.01]
     elif len(args) == 2:
