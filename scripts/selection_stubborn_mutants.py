@@ -1,3 +1,5 @@
+from pathlib import Path
+
 from utils.Hybrid_selection import HybridSelection
 from utils.Coverage_selection import CoverageSelection
 
@@ -93,10 +95,10 @@ def runExp(root, project, id, testType, csvContents, stubbornScoreThreshold = 0.
     bytecodeExt = 'byteCodeSimilarity.csv'
     bytecodeBytExt = 'byteCodeSimilarity.bytes.csv'
     mutationExt = 'mutation.csv'
-    FASTfile = root + '/resources/FAST-replication/output/{}_v{}/prioritized/FAST-pw-bbox-1.pickle'.format(project, id)
-    methodNamesFile = root + f'/resources/FAST-replication/input/{project}_v{id}/{project}-keys.txt'
-    FASTfileBytecode = root + '/resources/FAST-replication/output/{}_v{}/prioritized/FAST-pw-bbox-1-bytecode.pickle'.format(project, id)
-    methodNamesFileBytecode = root + f'/resources/FAST-replication/input/{project}_v{id}/{project}-keys-bytecode.txt'
+    FASTfile = root + '/FAST-replication/output/{}_v{}/prioritized/FAST-pw-bbox-1.pickle'.format(project, id)
+    methodNamesFile = root + f'/FAST-replication/input/{project}_v{id}/{project}-keys.txt'
+    FASTfileBytecode = root + '/FAST-replication/output/{}_v{}/prioritized/FAST-pw-bbox-1-bytecode.pickle'.format(project, id)
+    methodNamesFileBytecode = root + f'/FAST-replication/input/{project}_v{id}/{project}-keys-bytecode.txt'
 
     if testType == "dev" or testType == "randoop" or testType == "evosuite":
         # coverageFolder += testType + '/'
@@ -144,15 +146,15 @@ def runExp(root, project, id, testType, csvContents, stubbornScoreThreshold = 0.
         print('Similarity bytecode matrix can NOT be loaded')
 
     # Load the FAST priotization
-    try:
-        FASTlist = loadPickleFile(FASTfile)
-        FASTlistBytecode = loadPickleFile(FASTfileBytecode)
+    # try:
+    FASTlist = loadPickleFile(FASTfile)
+    FASTlistBytecode = loadPickleFile(FASTfileBytecode)
 
-        # Load the keys (method names)
-        methodNames = loadMethodNames(methodNamesFile)
-        methodNamesBytecode = loadMethodNames(methodNamesFileBytecode)
-    except:
-        print('FAST files can NOT be loaded')
+    # Load the keys (method names)
+    methodNames = loadMethodNames(methodNamesFile)
+    methodNamesBytecode = loadMethodNames(methodNamesFileBytecode)
+    # except:
+    #     print('FAST files can NOT be loaded')
 
     # isBranch = statementCSV.CSVType == 'branch'
 
@@ -491,60 +493,44 @@ args = sys.argv
 if len(args) == 1:
     prj = "time"
     reachabilityStubborn = False
-    coverageType = 'Statement'
+    
     stubbornType = 'Hard0.025'
     stubbornScoreThresholdValues = [0.75, 0.5, 0.25, 0.15, 0.1, 0.05, 0.03, 0.02, 0.01, 0.005, 0.003, 0.002, 0.001] #[ 0.1]
 elif len(args) == 2:
     prj = args[1]
     reachabilityStubborn = True
-    coverageType = 'Statement'
+
     stubbornType = 'Hard0.05'
     stubbornScoreThresholdValues = [0.75, 0.5, 0.25, 0.15, 0.1, 0.05, 0.03, 0.02, 0.01, 0.005, 0.003, 0.002, 0.001]
 elif len(args) == 3:
     prj = args[1]
-    reachabilityStubborn = bool(args[2])
-    coverageType = 'Statement'
+    if args[2] == 'False':
+        reachabilityStubborn = False
+    else:
+        reachabilityStubborn = True
+
     stubbornType = 'Hard0.05'
     stubbornScoreThresholdValues = [0.75, 0.5, 0.25, 0.15, 0.1, 0.05, 0.03, 0.02, 0.01, 0.005, 0.003, 0.002, 0.001]
 elif len(args) == 4:
     prj = args[1]
-    # reachabilityStubborn = bool(args[2])
     if args[2] == 'False':
         reachabilityStubborn = False
     else:
         reachabilityStubborn = True
-    coverageType = args[3]
-    stubbornType = 'Hard0.05'
-    stubbornScoreThresholdValues = [0.75, 0.5, 0.25, 0.15, 0.1, 0.05, 0.03, 0.02, 0.01, 0.005, 0.003, 0.002, 0.001]
-elif len(args) == 5:
-    prj = args[1]
-    # reachabilityStubborn = bool(args[2])
-    if args[2] == 'False':
-        reachabilityStubborn = False
-    else:
-        reachabilityStubborn = True
-    coverageType = args[3]
-    stubbornType = args[4]
-    stubbornScoreThresholdValues = [0.75, 0.5, 0.25, 0.15, 0.1, 0.05, 0.03, 0.02, 0.01, 0.005, 0.003, 0.002, 0.001]
-elif len(args) == 6:
-    prj = args[1]
-    # reachabilityStubborn = bool(args[2])
-    if args[2] == 'False':
-        reachabilityStubborn = False
-    else:
-        reachabilityStubborn = True
-    coverageType = args[3]
-    stubbornType = args[4]
-    stbValue = float(args[5])
+    stbValue = float(args[3])
     stubbornScoreThresholdValues = [stbValue]
+    stubbornType = 'Hard0.05'
 else: 
     print('Wrong number of arugments passed')
     exit()
 
 print(args)
-lastSlashPos = args[0].rfind('/')
-secondToLastSlashPos = args[0][:lastSlashPos].rfind('/')
-root = args[0][:secondToLastSlashPos]
+print(prj)
+print(reachabilityStubborn)
+print(stbValue)
+root = Path(__file__).resolve().parents[1]
+root = str(root)
+coverageType = 'Statement'
 
 
 if prj == 'math':
