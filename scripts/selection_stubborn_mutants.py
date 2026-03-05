@@ -131,6 +131,13 @@ def runExp(root, project, id, testType, csvContents, stubbornScoreThreshold = 0.
     except:
         print('Similarity matrix can NOT be loaded')
     
+    # Load the bytecode similarity matrix
+    # try:
+    #     similarityBytecodeFile = filterFiles(similarityFolder, project + '.' + id + 'f', bytecodeExt)[0]
+    #     simlarityBytecodeCSV = CSVLoader(similarityBytecodeFile)
+    # except:
+    #     print('Similarity bytecode matrix can NOT be loaded')
+    
     # Load the bytes bytecode similarity matrix
     try:
         similarityBytecodeBytFile = filterFiles(similarityFolder, project + '.' + id + 'f', bytecodeBytExt)[0]
@@ -340,6 +347,24 @@ def runExp(root, project, id, testType, csvContents, stubbornScoreThreshold = 0.
                     raceWithIndex['FAST-Bytecode'] = raceIndex
                     FASTBytOrders.append(raceIndex)
                     FASTBytRanks.append(order)
+
+            # if not 'hybrid' in raceWithRank.keys():
+            #     hybridMethod = hybridObject.makeOneSelection()
+            #     if checkMethodKillingMutant(mut, hybridMethod, killingTests):
+            #         killFlag += 1
+            #         raceWithRank['hybrid'] = order
+            #         raceWithIndex['hybrid'] = raceIndex
+            #         hybridOrders.append(raceIndex)
+            #         hybridRanks.append(order)
+            
+            # if not 'bytecode' in raceWithRank.keys():
+            #     bytecodeMethod = diversityBytecodeObject.makeOneSelection()
+            #     if checkMethodKillingMutant(mut, bytecodeMethod, killingTests):
+            #         killFlag += 1
+            #         raceWithRank['bytecode'] = order
+            #         raceWithIndex['bytecode'] = raceIndex
+            #         bytecodeOrders.append(raceIndex)
+            #         bytecodeRanks.append(order)
             
             if not 'bytecodeByt' in raceWithRank.keys():
                 bytecodeBytMethod = diversityBytecodeBytObject.makeOneSelection()
@@ -500,12 +525,6 @@ else:
     exit()
 
 print(args)
-<<<<<<< HEAD
-print(prj)
-print(reachabilityStubborn)
-print(stbValue)
-=======
->>>>>>> 2b3a9d933bacac345cf76077932455be5ce71e42
 root = Path(__file__).resolve().parents[1]
 root = str(root)
 coverageType = 'Statement'
