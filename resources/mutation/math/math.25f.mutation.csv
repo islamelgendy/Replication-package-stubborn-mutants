@@ -1,0 +1,6 @@
+Class::Test , 77::NullReturnValsMutator::11 , 62::NullReturnValsMutator::9 
+HarmonicFitterTest::test1PercentError , 1 , 1 , 
+HarmonicFitterTest::testInitialGuess , 0 , 1 , 
+HarmonicFitterTest::testNoError , 1 , 1 , 
+HarmonicFitterTest::testTinyVariationsData , 0 , 0 , 
+HarmonicFitterTest::testUnsorted , 1 , 1 , 

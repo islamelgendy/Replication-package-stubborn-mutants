@@ -1,0 +1,36 @@
+Key,Value,Count
+Access modifier,public,3077
+Access modifier,private,298
+Is static,True,3065
+Is static,False,310
+Is void,Non-void,3281
+Is void,Void,87
+Is void,Constructor,7
+Mutator,NegateConditionalsMutator,1515
+Mutator,ConditionalsBoundaryMutator,429
+Mutator,MathMutator,285
+Mutator,NullReturnValsMutator,274
+Mutator,EmptyObjectReturnValsMutator,253
+Mutator,PrimitiveReturnsMutator,228
+Mutator,BooleanTrueReturnValsMutator,167
+Mutator,BooleanFalseReturnValsMutator,95
+Mutator,VoidMethodCallMutator,63
+Mutator,IncrementsMutator,50
+Mutator,InvertNegsMutator,16
+Nesting level,0,2021
+Nesting level,1,889
+Nesting level,2,298
+Nesting level,3,74
+Nesting level,4,48
+Nesting level,5,25
+Nesting level,6,14
+Nesting level,7,6
+Type of node,IfStatement,1612
+Type of node,ReturnStatement,1023
+Type of node,BinaryOperation,538
+Type of node,ForStatement,103
+Type of node,MethodInvocation,61
+Type of node,TernaryExpression,28
+Type of node,StatementExpression,7
+Type of node,WhileStatement,2
+Type of node,VariableDeclaration,1
