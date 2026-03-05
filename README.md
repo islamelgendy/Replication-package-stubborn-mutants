@@ -46,7 +46,7 @@ To replicate the results, follow these steps:
     Use the following command:
 
     ```bash
-    python3 scripts/selection_stubborn_mutants.py [project] [True/False] [coverageType] [stubbornScoreThresholdValue]
+    python3 scripts/selection_stubborn_mutants.py [project] [True/False] [stubbornScoreThresholdValue]
     ```
 
     #### Parameters:
@@ -61,9 +61,6 @@ To replicate the results, follow these steps:
     - **[True/False]**: 
         - Use `False` for **Normal stubborness** (the one in our study).
         - Use `True` for **Reachability stubborness** (future work still in progress).
-    - **[coverageType]**: 
-        - Use `Statement` for **Statement coverage**.
-        - Use `Branch` for **Branch coverage**.
     - **[stubbornScoreThresholdValue]**: 
         - Use `0.75` for a RSTM threshold stubborness value of 0.75.
         - Use `0.5` for a RSTM threshold stubborness value of 0.50.
@@ -81,17 +78,17 @@ To replicate the results, follow these steps:
     #### Example:
     To run using RSTM threshold value of 0.75 on the `math` project:
     ```bash
-    python3 scripts/selection_stubborn_mutants.py math False Statement 0.75
+    python3 scripts/selection_stubborn_mutants.py math False 0.75
     ```
 
     To run using RSTM threshold value of 0.002 on the `jsoup` project:
     ```bash
-    python3 scripts/selection_stubborn_mutants.py jsoup False Statement 0.002
+    python3 scripts/selection_stubborn_mutants.py jsoup False 0.002
     ```
     
     To run using a fixed threshold value of 0.05 on the `compress` project:
     ```bash
-    python3 scripts/selection_stubborn_mutants.py compress False Statement Hard0.05
+    python3 scripts/selection_stubborn_mutants.py compress False Hard0.05
     ```
 
 3. **Reproducing FAST-TCP Results**
