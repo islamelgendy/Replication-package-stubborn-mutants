@@ -500,7 +500,7 @@ elif len(args) == 2:
     prj = args[1]
     reachabilityStubborn = True
 
-    stubbornType = 'Hard0.05'
+    stubbornType = 'RSTM'
     stubbornScoreThresholdValues = [0.75, 0.5, 0.25, 0.15, 0.1, 0.05, 0.03, 0.02, 0.01, 0.005, 0.003, 0.002, 0.001]
 elif len(args) == 3:
     prj = args[1]
@@ -509,7 +509,7 @@ elif len(args) == 3:
     else:
         reachabilityStubborn = True
 
-    stubbornType = 'Hard0.05'
+    stubbornType = 'RSTM'
     stubbornScoreThresholdValues = [0.75, 0.5, 0.25, 0.15, 0.1, 0.05, 0.03, 0.02, 0.01, 0.005, 0.003, 0.002, 0.001]
 elif len(args) == 4:
     prj = args[1]
@@ -519,7 +519,7 @@ elif len(args) == 4:
         reachabilityStubborn = True
     stbValue = float(args[3])
     stubbornScoreThresholdValues = [stbValue]
-    stubbornType = 'Hard0.05'
+    stubbornType = 'RSTM'
 else: 
     print('Wrong number of arugments passed')
     exit()
