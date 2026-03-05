@@ -1,4 +1,5 @@
 from collections import Counter
+from pathlib import Path
 from utils.mutationxml import *
 from utils.Hybrid_selection import HybridSelection
 from utils.Coverage_selection import CoverageSelection
@@ -466,14 +467,13 @@ if __name__ == "__main__":
         exit()
 
     print(args)
-    lastSlashPos = args[0].rfind('/')
-    secondToLastSlashPos = args[0][:lastSlashPos].rfind('/')
-    root = args[0][:secondToLastSlashPos]
+    root = Path(__file__).resolve().parents[1]
+    root = str(root)
 
     loadAll = False
     if loadAll:
         all_natures = list()
-        picklePath = f"{root}/resources/stubborn/natures/"
+        picklePath = f"{root}/resources/stubborn/"
         summary_files = getAllFilesEndingWith(picklePath, '-nature-summary.pkl')
         for pickleFile in summary_files:
             cur_natures = loadDataStructure(pickleFile)
@@ -551,8 +551,8 @@ if __name__ == "__main__":
     combine_data_and_write_csv(root, prj, dataList)
 
     # Define the CSV file name
-    createFolder(root + '/resources/stubborn/natures/' )
-    pickleFile = f"{root}/resources/stubborn/natures/{prj}-nature-summary.pkl"
+    createFolder(root + '/resources/stubborn/' )
+    pickleFile = f"{root}/resources/stubborn/{prj}-nature-summary.pkl"
     saveDataStructure(natureList, pickleFile)
 
     # Generate the summary
@@ -561,7 +561,7 @@ if __name__ == "__main__":
     csvFile = f"{root}/resources/stubborn/{prj}-nature-summary.csv"
     save_summary(sorted_summary, csvFile)
 
-    csvFile = f"{root}/resources/stubborn/natures/{prj}-all-killable-mutants.csv"
+    csvFile = f"{root}/resources/stubborn/{prj}-all-killable-mutants.csv"
     write_dict_to_csv(allkillablemutants, csvFile)
 
     # Print the summary
