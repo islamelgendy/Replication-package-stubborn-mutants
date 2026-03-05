@@ -1,0 +1,196 @@
+Class::Test,DocumentType:35, DocumentType:37, DocumentType:39, 
+RegressionTest0::test01, 0,0,0,
+RegressionTest0::test02, 0,0,0,
+RegressionTest0::test03, 0,0,0,
+RegressionTest0::test04, 0,0,0,
+RegressionTest0::test05, 0,0,0,
+RegressionTest0::test06, 0,0,0,
+RegressionTest0::test07, 0,0,0,
+RegressionTest0::test08, 0,0,0,
+RegressionTest0::test09, 0.5,0.5,0.5,
+RegressionTest0::test10, 0,0,0,
+RegressionTest0::test11, 0,0,0,
+RegressionTest0::test12, 0,0,0,
+RegressionTest0::test13, 0,0,0,
+RegressionTest0::test14, 0,0,0,
+RegressionTest0::test15, 0,0,0,
+RegressionTest0::test16, 0.5,0.5,0.5,
+RegressionTest0::test17, 0,0,0,
+RegressionTest0::test18, 0,0,0,
+RegressionTest0::test19, 0,0,0,
+RegressionTest0::test20, 0,0,0,
+RegressionTest0::test21, 0,0,0,
+RegressionTest0::test22, 0,0,0,
+RegressionTest0::test23, 0,0,0,
+RegressionTest0::test24, 0.5,0.5,0.5,
+RegressionTest0::test25, 0,0,0,
+RegressionTest0::test26, 0,0,0,
+RegressionTest0::test27, 0,0,0,
+RegressionTest0::test28, 0.5,0.5,0.5,
+RegressionTest0::test29, 0,0,0,
+RegressionTest0::test30, 0.5,0.5,0.5,
+RegressionTest0::test31, 0.5,0.5,0.5,
+RegressionTest0::test32, 0,0,0,
+RegressionTest0::test33, 0,0,0,
+RegressionTest0::test34, 0,0,0,
+RegressionTest0::test35, 0,0,0,
+RegressionTest0::test36, 0,0,0,
+RegressionTest0::test37, 0,0,0,
+RegressionTest0::test38, 0,0,0,
+RegressionTest0::test39, 0,0,0,
+RegressionTest0::test40, 0,0,0,
+RegressionTest0::test41, 0,0,0,
+RegressionTest0::test42, 0.5,0.5,0.5,
+RegressionTest0::test43, 0.5,0.5,0.5,
+RegressionTest0::test44, 0,0,0,
+RegressionTest0::test45, 0,0,0,
+RegressionTest0::test46, 0,0,0,
+RegressionTest0::test47, 0,0,0,
+RegressionTest0::test48, 0.5,0.5,0.5,
+RegressionTest0::test49, 0,0,0,
+RegressionTest0::test50, 0,0,0,
+RegressionTest0::test51, 0,0,0,
+RegressionTest0::test52, 0,0,0,
+RegressionTest0::test53, 0,0,0,
+RegressionTest0::test54, 0,0,0,
+RegressionTest0::test55, 0,0,0,
+RegressionTest0::test56, 0,0,0,
+RegressionTest0::test57, 0,0,0,
+RegressionTest0::test58, 0,0,0,
+RegressionTest0::test59, 0,0,0,
+RegressionTest0::test60, 0,0,0,
+RegressionTest0::test61, 0,0,0,
+RegressionTest0::test62, 0,0,0,
+RegressionTest0::test63, 0,0,0,
+RegressionTest0::test64, 0,0,0,
+RegressionTest0::test65, 0,0,0,
+RegressionTest0::test66, 0,0,0,
+RegressionTest0::test67, 0,0,0,
+RegressionTest0::test68, 0,0,0,
+RegressionTest0::test69, 0,0,0,
+RegressionTest0::test70, 0,0,0,
+RegressionTest0::test71, 0,0,0,
+RegressionTest0::test72, 0,0,0,
+RegressionTest0::test73, 0,0,0,
+RegressionTest0::test74, 0,0,0,
+RegressionTest0::test75, 0,0,0,
+RegressionTest0::test76, 0,0,0,
+RegressionTest0::test77, 0,0,0,
+RegressionTest0::test78, 0,0,0,
+RegressionTest0::test79, 0,0,0,
+RegressionTest0::test80, 0,0,0,
+RegressionTest0::test81, 0,0,0,
+RegressionTest0::test82, 0,0,0,
+RegressionTest0::test83, 0,0,0,
+RegressionTest0::test84, 0,0,0,
+RegressionTest0::test85, 0,0,0,
+RegressionTest0::test86, 0,0,0,
+RegressionTest0::test87, 0,0,0,
+RegressionTest0::test88, 0,0,0,
+RegressionTest0::test89, 0,0,0,
+RegressionTest0::test90, 0,0,0,
+RegressionTest0::test91, 0,0,0,
+RegressionTest0::test92, 0,0,0,
+RegressionTest0::test93, 0,0,0,
+RegressionTest0::test94, 0,0,0,
+RegressionTest0::test95, 0,0,0,
+HtmlParserTest::parsesSimpleDocument , 0 , 0 , 0 
+HtmlParserTest::parsesRoughAttributes , 0 , 0 , 0 
+HtmlParserTest::parsesQuiteRoughAttributes , 0 , 0 , 0 
+HtmlParserTest::parsesComments , 0 , 0 , 0 
+HtmlParserTest::parsesUnterminatedComments , 0 , 0 , 0 
+HtmlParserTest::dropsUnterminatedTag , 0 , 0 , 0 
+HtmlParserTest::dropsUnterminatedAttribute , 0 , 0 , 0 
+HtmlParserTest::parsesUnterminatedTextarea , 0 , 0 , 0 
+HtmlParserTest::parsesUnterminatedOption , 0 , 0 , 0 
+HtmlParserTest::testSpaceAfterTag , 0 , 0 , 0 
+HtmlParserTest::createsDocumentStructure , 0 , 0 , 0 
+HtmlParserTest::createsStructureFromBodySnippet , 0 , 0 , 0 
+HtmlParserTest::handlesEscapedData , 0 , 0 , 0 
+HtmlParserTest::handlesDataOnlyTags , 0 , 0 , 0 
+HtmlParserTest::handlesTextAfterData , 0 , 0 , 0 
+HtmlParserTest::handlesTextArea , 0 , 0 , 0 
+HtmlParserTest::preservesSpaceInTextArea , 0 , 0 , 0 
+HtmlParserTest::preservesSpaceInScript , 0 , 0 , 0 
+HtmlParserTest::doesNotCreateImplicitLists , 0 , 0 , 0 
+HtmlParserTest::discardsNakedTds , 0 , 0 , 0 
+HtmlParserTest::handlesNestedImplicitTable , 0 , 0 , 0 
+HtmlParserTest::handlesWhatWgExpensesTableExample , 0 , 0 , 0 
+HtmlParserTest::handlesTbodyTable , 0 , 0 , 0 
+HtmlParserTest::handlesImplicitCaptionClose , 0 , 0 , 0 
+HtmlParserTest::noTableDirectInTable , 0 , 0 , 0 
+HtmlParserTest::ignoresDupeEndTrTag , 0 , 0 , 0 
+HtmlParserTest::handlesBaseTags , 0 , 0 , 0 
+HtmlParserTest::handlesCdata , 0 , 0 , 0 
+HtmlParserTest::handlesUnclosedCdataAtEOF , 0 , 0 , 0 
+HtmlParserTest::handlesInvalidStartTags , 0 , 0 , 0 
+HtmlParserTest::handlesUnknownTags , 0 , 0 , 0 
+HtmlParserTest::handlesUnknownInlineTags , 0 , 0 , 0 
+HtmlParserTest::parsesBodyFragment , 0 , 0 , 0 
+HtmlParserTest::handlesUnknownNamespaceTags , 0 , 0 , 0 
+HtmlParserTest::handlesKnownEmptyBlocks , 0 , 0 , 0 
+HtmlParserTest::handlesSolidusAtAttributeEnd , 0 , 0 , 0 
+HtmlParserTest::handlesMultiClosingBody , 0 , 0 , 0 
+HtmlParserTest::handlesUnclosedDefinitionLists , 0 , 0 , 0 
+HtmlParserTest::handlesBlocksInDefinitions , 0 , 0 , 0 
+HtmlParserTest::handlesFrames , 0 , 0 , 0 
+HtmlParserTest::ignoresContentAfterFrameset , 0 , 0 , 0 
+HtmlParserTest::handlesJavadocFont , 0 , 0 , 0 
+HtmlParserTest::handlesBaseWithoutHref , 0 , 0 , 0 
+HtmlParserTest::normalisesDocument , 0.5 , 0.5 , 0.5 
+HtmlParserTest::normalisesEmptyDocument , 0 , 0 , 0 
+HtmlParserTest::normalisesHeadlessBody , 0 , 0 , 0 
+HtmlParserTest::normalisedBodyAfterContent , 0 , 0 , 0 
+HtmlParserTest::findsCharsetInMalformedMeta , 0 , 0 , 0 
+HtmlParserTest::testHgroup , 0 , 0 , 0 
+HtmlParserTest::testRelaxedTags , 0 , 0 , 0 
+HtmlParserTest::testHeaderContents , 0 , 0 , 0 
+HtmlParserTest::testSpanContents , 0 , 0 , 0 
+HtmlParserTest::testNoImagesInNoScriptInHead , 0 , 0 , 0 
+HtmlParserTest::testAFlowContents , 0 , 0 , 0 
+HtmlParserTest::testFontFlowContents , 0 , 0 , 0 
+HtmlParserTest::handlesMisnestedTagsBI , 0 , 0 , 0 
+HtmlParserTest::handlesMisnestedTagsBP , 0 , 0 , 0 
+HtmlParserTest::handlesUnexpectedMarkupInTables , 0 , 0 , 0 
+HtmlParserTest::handlesUnclosedFormattingElements , 0.5 , 0.5 , 0.5 
+HtmlParserTest::handlesUnclosedAnchors , 0 , 0 , 0 
+HtmlParserTest::reconstructFormattingElements , 0 , 0 , 0 
+HtmlParserTest::reconstructFormattingElementsInTable , 0 , 0 , 0 
+HtmlParserTest::commentBeforeHtml , 0 , 0 , 0 
+HtmlParserTest::emptyTdTag , 0 , 0 , 0 
+HtmlParserTest::handlesSolidusInA , 0 , 0 , 0 
+HtmlParserTest::handlesSpanInTbody , 0 , 0 , 0 
+HtmlParserTest::handlesUnclosedTitleAtEof , 0 , 0 , 0 
+HtmlParserTest::handlesUnclosedTitle , 0 , 0 , 0 
+HtmlParserTest::handlesUnclosedScriptAtEof , 0 , 0 , 0 
+HtmlParserTest::handlesUnclosedRawtextAtEof , 0 , 0 , 0 
+HtmlParserTest::noImplicitFormForTextAreas , 0 , 0 , 0 
+HtmlParserTest::handlesEscapedScript , 0 , 0 , 0 
+HtmlParserTest::handles0CharacterAsText , 0 , 0 , 0 
+HtmlParserTest::handlesNullInData , 0 , 0 , 0 
+HtmlParserTest::handlesNullInComments , 0 , 0 , 0 
+HtmlParserTest::handlesNewlinesAndWhitespaceInTag , 0 , 0 , 0 
+HtmlParserTest::handlesWhitespaceInoDocType , 0.5 , 0.5 , 0.5 
+HtmlParserTest::tracksErrorsWhenRequested , 0 , 0 , 0 
+HtmlParserTest::tracksLimitedErrorsWhenRequested , 0 , 0 , 0 
+HtmlParserTest::noErrorsByDefault , 0 , 0 , 0 
+HtmlParserTest::handlesCommentsInTable , 0 , 0 , 0 
+HtmlParserTest::handlesQuotesInCommentsInScripts , 0 , 0 , 0 
+HtmlParserTest::handleNullContextInParseFragment , 0 , 0 , 0 
+HtmlParserTest::doesNotFindShortestMatchingEntity , 0 , 0 , 0 
+HtmlParserTest::relaxedBaseEntityMatchAndStrictExtendedMatch , 0 , 0 , 0 
+HtmlParserTest::handlesXmlDeclarationAsBogusComment , 0 , 0 , 0 
+HtmlParserTest::handlesTagsInTextarea , 0 , 0 , 0 
+HtmlParserTest::createsFormElements , 0 , 0 , 0 
+HtmlParserTest::associatedFormControlsWithDisjointForms , 0 , 0 , 0 
+HtmlParserTest::handlesInputInTable , 0 , 0 , 0 
+HtmlParserTest::convertsImageToImg , 0 , 0 , 0 
+HtmlParserTest::handlesInvalidDoctypes , 1 , 0.5 , 0.5 
+DocumentType_ESTest::test0 , 0 , 0 , 0 
+DocumentType_ESTest::test1 , 0 , 0 , 0 
+DocumentType_ESTest::test2 , 0.5 , 0.5 , 0.5 
+DocumentType_ESTest::test3 , 0.5 , 0.5 , 0.5 
+DocumentTypeTest::constructorValidationOkWithBlankName , 0 , 0 , 0 
+DocumentTypeTest::constructorValidationThrowsExceptionOnNulls , 0 , 0 , 0 
+DocumentTypeTest::constructorValidationOkWithBlankPublicAndSystemIds , 0 , 0 , 0 
+DocumentTypeTest::outerHtmlGeneration , 0.5 , 1 , 1 

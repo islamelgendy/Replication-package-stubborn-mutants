@@ -1,0 +1,8 @@
+Class::Test,MultiStartUnivariateRealOptimizer:135, MultiStartUnivariateRealOptimizer:158, MultiStartUnivariateRealOptimizer:160, MultiStartUnivariateRealOptimizer:175, MultiStartUnivariateRealOptimizer:193, MultiStartUnivariateRealOptimizer:194, MultiStartUnivariateRealOptimizer:195, MultiStartUnivariateRealOptimizer:200, 
+MultiStartUnivariateRealOptimizerTest::testSinMin, 0.5,1,1,0.5,0.5,0,0.5,0.5,
+MultiStartUnivariateRealOptimizerTest::testQuinticMin, 0.5,1,1,0.5,0.5,0,0.5,0.5,
+MultiStartUnivariateRealOptimizer_ESTest::test1, 0,0.5,0.5,0,0,0,0,0,
+MultiStartUnivariateRealOptimizer_ESTest::test2, 0,0,0,0,0,0,0,0,
+MultiStartUnivariateRealOptimizer_ESTest::test3, 0,0,0,0,0,0,0,0,
+MultiStartUnivariateRealOptimizer_ESTest::test4, 0.5,1,1,0.5,1,1,0.5,0,
+MultiStartUnivariateRealOptimizer_ESTest::test5, 0.5,0,0,0,0,0,0,0,
