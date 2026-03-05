@@ -20,7 +20,7 @@ This directory contains essential data files used in our TCP approaches, includi
 - **Mutation Kill Maps**: Data files mapping tests to mutants.
 - **Coverage Information**: Test coverage data for all test cases.
 - **Error-Revealing Tests**: Identified error-revealing test cases from experiments.
-- **subjects**: The study subjects used in our study.
+- **Subjects**: The study subjects used in our study. Make sure to unzip these files!
 
 ### 3. `FAST-replication/`
 This directory includes the implementation of **FAST-TCP**, modified to work with textual and bytecode information.
