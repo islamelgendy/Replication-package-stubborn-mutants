@@ -91,7 +91,12 @@ To replicate the results, follow these steps:
     python3 scripts/selection_stubborn_mutants.py compress False Hard0.05
     ```
 
-3. **Reproducing FAST-TCP Results**
+   By the end of the script, the tool will generate a folder `PlotGeneration` at the root directory, where it contains
+   the required script to visualise the results. Running these scripts will output the visualisations in pdf files under
+   the folder `resources/plots`.  Also, within the `resources/plots` folder, CSV files will be generated that
+   give a summary of the number of mutants and types found using RSTM.
+
+4. **Reproducing FAST-TCP Results**
    Navigate to `FAST-replication/` and follow the instructions in its README to run FAST-TCP experiments.
 
  ## Citation
