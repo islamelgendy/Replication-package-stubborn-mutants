@@ -1,0 +1,14 @@
+Key,Value,Count
+Access modifier,public,3
+Access modifier,package-private,1
+Access modifier,private,1
+Is static,False,5
+Is void,Non-void,3
+Is void,Void,2
+Mutator,NegateConditionalsMutator,4
+Mutator,ConditionalsBoundaryMutator,1
+Nesting level,0,3
+Nesting level,2,2
+Type of node,IfStatement,3
+Type of node,TernaryExpression,1
+Type of node,ForStatement,1
