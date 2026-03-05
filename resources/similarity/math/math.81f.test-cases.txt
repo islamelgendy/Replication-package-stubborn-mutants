@@ -1,0 +1,6331 @@
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test01
+Start line: 12
+End line: 34
+Method source code: 
+    public void test01() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test01");
+        double[] doubleArray1 = new double[] { 'a' };
+        double[] doubleArray3 = new double[] { 'a' };
+        double[][] doubleArray4 = new double[][] { doubleArray1, doubleArray3 };
+        org.apache.commons.math.linear.RealMatrix realMatrix5 = org.apache.commons.math.linear.MatrixUtils.createRealMatrix(doubleArray4);
+        int int6 = realMatrix5.getRowDimension();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.EigenDecompositionImpl eigenDecompositionImpl8 = new org.apache.commons.math.linear.EigenDecompositionImpl(realMatrix5, (double) 10);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.linear.NonSquareMatrixException; message: a 2x1 matrix was provided instead of a square matrix");
+        } catch (org.apache.commons.math.linear.NonSquareMatrixException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(doubleArray1);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray1), "[97.0]");
+        org.junit.Assert.assertNotNull(doubleArray3);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray3), "[97.0]");
+        org.junit.Assert.assertNotNull(doubleArray4);
+        org.junit.Assert.assertNotNull(realMatrix5);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 2 + "'", int6 == 2);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #6
+19: aastore
+20: invokevirtual #7
+23: pop
+24: iconst_1
+25: newarray       double
+27: dup
+28: iconst_0
+29: ldc2_w        #8
+32: dastore
+33: astore_1
+34: iconst_1
+35: newarray       double
+37: dup
+38: iconst_0
+39: ldc2_w        #8
+42: dastore
+43: astore_2
+44: iconst_2
+45: anewarray     #10
+48: dup
+49: iconst_0
+50: aload_1
+51: aastore
+52: dup
+53: iconst_1
+54: aload_2
+55: aastore
+56: astore_3
+57: aload_3
+58: invokestatic  #11
+61: astore        4
+63: aload         4
+65: invokeinterface #12,  1
+70: istore        5
+72: new           #13
+75: dup
+76: aload         4
+78: ldc2_w        #14
+81: invokespecial #16
+84: astore        6
+86: ldc           #17
+88: invokestatic  #18
+91: goto          96
+94: astore        6
+96: aload_1
+97: invokestatic  #20
+100: aload_1
+101: invokestatic  #21
+104: ldc           #22
+106: invokestatic  #23
+109: aload_2
+110: invokestatic  #20
+113: aload_2
+114: invokestatic  #21
+117: ldc           #22
+119: invokestatic  #23
+122: aload_3
+123: invokestatic  #20
+126: aload         4
+128: invokestatic  #20
+131: new           #24
+134: dup
+135: invokespecial #25
+138: ldc           #26
+140: invokevirtual #27
+143: iload         5
+145: invokevirtual #28
+148: ldc           #29
+150: invokevirtual #27
+153: iconst_2
+154: invokevirtual #28
+157: ldc           #26
+159: invokevirtual #27
+162: invokevirtual #30
+165: iload         5
+167: iconst_2
+168: if_icmpne     175
+171: iconst_1
+172: goto          176
+175: iconst_0
+176: invokestatic  #31
+179: return
+Exception table:
+from    to  target type
+72    91    94   Class org/apache/commons/math/linear/NonSquareMatrixException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test02
+Start line: 37
+End line: 61
+Method source code: 
+    public void test02() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test02");
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix2 = new org.apache.commons.math.linear.Array2DRowRealMatrix((int) '#', (int) (short) 1);
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix5 = new org.apache.commons.math.linear.Array2DRowRealMatrix((int) '#', (int) (short) 1);
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix6 = array2DRowRealMatrix2.add(array2DRowRealMatrix5);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector7 = new org.apache.commons.math.linear.ArrayRealVector();
+        org.apache.commons.math.linear.RealVector realVector8 = arrayRealVector7.mapAsin();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector9 = new org.apache.commons.math.linear.ArrayRealVector();
+        org.apache.commons.math.linear.RealVector realVector10 = arrayRealVector9.mapAsin();
+        org.apache.commons.math.linear.RealVector realVector11 = arrayRealVector7.ebeDivide(realVector10);
+        boolean boolean12 = array2DRowRealMatrix5.equals((java.lang.Object) realVector10);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.EigenDecompositionImpl eigenDecompositionImpl14 = new org.apache.commons.math.linear.EigenDecompositionImpl((org.apache.commons.math.linear.RealMatrix) array2DRowRealMatrix5, (double) (-1L));
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.linear.NonSquareMatrixException; message: a 35x1 matrix was provided instead of a square matrix");
+        } catch (org.apache.commons.math.linear.NonSquareMatrixException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix6);
+        org.junit.Assert.assertNotNull(realVector8);
+        org.junit.Assert.assertNotNull(realVector10);
+        org.junit.Assert.assertNotNull(realVector11);
+        org.junit.Assert.assertTrue("'" + boolean12 + "' != '" + false + "'", boolean12 == false);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #32
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #33
+27: dup
+28: bipush        35
+30: iconst_1
+31: invokespecial #34
+34: astore_1
+35: new           #33
+38: dup
+39: bipush        35
+41: iconst_1
+42: invokespecial #34
+45: astore_2
+46: aload_1
+47: aload_2
+48: invokevirtual #35
+51: astore_3
+52: new           #36
+55: dup
+56: invokespecial #37
+59: astore        4
+61: aload         4
+63: invokevirtual #38
+66: astore        5
+68: new           #36
+71: dup
+72: invokespecial #37
+75: astore        6
+77: aload         6
+79: invokevirtual #38
+82: astore        7
+84: aload         4
+86: aload         7
+88: invokevirtual #39
+91: astore        8
+93: aload_2
+94: aload         7
+96: invokevirtual #40
+99: istore        9
+101: new           #13
+104: dup
+105: aload_2
+106: ldc2_w        #41
+109: invokespecial #16
+112: astore        10
+114: ldc           #43
+116: invokestatic  #18
+119: goto          124
+122: astore        10
+124: aload_3
+125: invokestatic  #20
+128: aload         5
+130: invokestatic  #20
+133: aload         7
+135: invokestatic  #20
+138: aload         8
+140: invokestatic  #20
+143: new           #24
+146: dup
+147: invokespecial #25
+150: ldc           #26
+152: invokevirtual #27
+155: iload         9
+157: invokevirtual #44
+160: ldc           #29
+162: invokevirtual #27
+165: iconst_0
+166: invokevirtual #44
+169: ldc           #26
+171: invokevirtual #27
+174: invokevirtual #30
+177: iload         9
+179: ifne          186
+182: iconst_1
+183: goto          187
+186: iconst_0
+187: invokestatic  #31
+190: return
+Exception table:
+from    to  target type
+101   119   122   Class org/apache/commons/math/linear/NonSquareMatrixException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test03
+Start line: 64
+End line: 163
+Method source code: 
+    public void test03() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test03");
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector0 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray1 = arrayRealVector0.getData();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector2 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray3 = arrayRealVector2.getData();
+        org.apache.commons.math.linear.RealVector realVector4 = arrayRealVector0.projection((org.apache.commons.math.linear.RealVector) arrayRealVector2);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector5 = new org.apache.commons.math.linear.ArrayRealVector();
+        org.apache.commons.math.linear.RealVector realVector6 = arrayRealVector5.mapAcosToSelf();
+        org.apache.commons.math.linear.RealVector realVector7 = arrayRealVector5.mapExp();
+        double double8 = arrayRealVector0.dotProduct(realVector7);
+        double[] doubleArray9 = arrayRealVector0.getData();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector10 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray11 = arrayRealVector10.getData();
+        double double12 = arrayRealVector0.getLInfDistance(doubleArray11);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector13 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray14 = arrayRealVector13.getData();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector15 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray16 = arrayRealVector15.getData();
+        org.apache.commons.math.linear.RealVector realVector17 = arrayRealVector13.projection((org.apache.commons.math.linear.RealVector) arrayRealVector15);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector18 = new org.apache.commons.math.linear.ArrayRealVector();
+        org.apache.commons.math.linear.RealVector realVector19 = arrayRealVector18.mapAcosToSelf();
+        org.apache.commons.math.linear.RealVector realVector20 = arrayRealVector18.mapExp();
+        double double21 = arrayRealVector13.dotProduct(realVector20);
+        double[] doubleArray22 = arrayRealVector13.getData();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector23 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray24 = arrayRealVector23.getData();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector25 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray26 = arrayRealVector25.getData();
+        org.apache.commons.math.linear.RealVector realVector27 = arrayRealVector23.projection((org.apache.commons.math.linear.RealVector) arrayRealVector25);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector28 = new org.apache.commons.math.linear.ArrayRealVector();
+        org.apache.commons.math.linear.RealVector realVector29 = arrayRealVector28.mapAcosToSelf();
+        org.apache.commons.math.linear.RealVector realVector30 = arrayRealVector28.mapExp();
+        double double31 = arrayRealVector23.dotProduct(realVector30);
+        org.apache.commons.math.linear.RealVector realVector32 = arrayRealVector23.mapLog10();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector33 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray34 = arrayRealVector33.getData();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector35 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray36 = arrayRealVector35.getData();
+        org.apache.commons.math.linear.RealVector realVector37 = arrayRealVector33.projection((org.apache.commons.math.linear.RealVector) arrayRealVector35);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector38 = new org.apache.commons.math.linear.ArrayRealVector();
+        org.apache.commons.math.linear.RealVector realVector39 = arrayRealVector38.mapAcosToSelf();
+        org.apache.commons.math.linear.RealVector realVector40 = arrayRealVector38.mapExp();
+        double double41 = arrayRealVector33.dotProduct(realVector40);
+        org.apache.commons.math.linear.RealVector realVector42 = arrayRealVector23.ebeMultiply(realVector40);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector43 = arrayRealVector13.ebeDivide(arrayRealVector23);
+        double[] doubleArray44 = arrayRealVector13.data;
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.EigenDecompositionImpl eigenDecompositionImpl46 = new org.apache.commons.math.linear.EigenDecompositionImpl(doubleArray11, doubleArray44, 0.0d);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -1");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(doubleArray1);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray1), "[]");
+        org.junit.Assert.assertNotNull(doubleArray3);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray3), "[]");
+        org.junit.Assert.assertNotNull(realVector4);
+        org.junit.Assert.assertNotNull(realVector6);
+        org.junit.Assert.assertNotNull(realVector7);
+        org.junit.Assert.assertTrue("'" + double8 + "' != '" + 0.0d + "'", double8 == 0.0d);
+        org.junit.Assert.assertNotNull(doubleArray9);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray9), "[]");
+        org.junit.Assert.assertNotNull(doubleArray11);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray11), "[]");
+        org.junit.Assert.assertTrue("'" + double12 + "' != '" + 0.0d + "'", double12 == 0.0d);
+        org.junit.Assert.assertNotNull(doubleArray14);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray14), "[]");
+        org.junit.Assert.assertNotNull(doubleArray16);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray16), "[]");
+        org.junit.Assert.assertNotNull(realVector17);
+        org.junit.Assert.assertNotNull(realVector19);
+        org.junit.Assert.assertNotNull(realVector20);
+        org.junit.Assert.assertTrue("'" + double21 + "' != '" + 0.0d + "'", double21 == 0.0d);
+        org.junit.Assert.assertNotNull(doubleArray22);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray22), "[]");
+        org.junit.Assert.assertNotNull(doubleArray24);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray24), "[]");
+        org.junit.Assert.assertNotNull(doubleArray26);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray26), "[]");
+        org.junit.Assert.assertNotNull(realVector27);
+        org.junit.Assert.assertNotNull(realVector29);
+        org.junit.Assert.assertNotNull(realVector30);
+        org.junit.Assert.assertTrue("'" + double31 + "' != '" + 0.0d + "'", double31 == 0.0d);
+        org.junit.Assert.assertNotNull(realVector32);
+        org.junit.Assert.assertNotNull(doubleArray34);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray34), "[]");
+        org.junit.Assert.assertNotNull(doubleArray36);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray36), "[]");
+        org.junit.Assert.assertNotNull(realVector37);
+        org.junit.Assert.assertNotNull(realVector39);
+        org.junit.Assert.assertNotNull(realVector40);
+        org.junit.Assert.assertTrue("'" + double41 + "' != '" + 0.0d + "'", double41 == 0.0d);
+        org.junit.Assert.assertNotNull(realVector42);
+        org.junit.Assert.assertNotNull(arrayRealVector43);
+        org.junit.Assert.assertNotNull(doubleArray44);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray44), "[]");
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #45
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #36
+27: dup
+28: invokespecial #37
+31: astore_1
+32: aload_1
+33: invokevirtual #46
+36: astore_2
+37: new           #36
+40: dup
+41: invokespecial #37
+44: astore_3
+45: aload_3
+46: invokevirtual #46
+49: astore        4
+51: aload_1
+52: aload_3
+53: invokevirtual #47
+56: astore        5
+58: new           #36
+61: dup
+62: invokespecial #37
+65: astore        6
+67: aload         6
+69: invokevirtual #48
+72: astore        7
+74: aload         6
+76: invokevirtual #49
+79: astore        8
+81: aload_1
+82: aload         8
+84: invokevirtual #50
+87: dstore        9
+89: aload_1
+90: invokevirtual #46
+93: astore        11
+95: new           #36
+98: dup
+99: invokespecial #37
+102: astore        12
+104: aload         12
+106: invokevirtual #46
+109: astore        13
+111: aload_1
+112: aload         13
+114: invokevirtual #51
+117: dstore        14
+119: new           #36
+122: dup
+123: invokespecial #37
+126: astore        16
+128: aload         16
+130: invokevirtual #46
+133: astore        17
+135: new           #36
+138: dup
+139: invokespecial #37
+142: astore        18
+144: aload         18
+146: invokevirtual #46
+149: astore        19
+151: aload         16
+153: aload         18
+155: invokevirtual #47
+158: astore        20
+160: new           #36
+163: dup
+164: invokespecial #37
+167: astore        21
+169: aload         21
+171: invokevirtual #48
+174: astore        22
+176: aload         21
+178: invokevirtual #49
+181: astore        23
+183: aload         16
+185: aload         23
+187: invokevirtual #50
+190: dstore        24
+192: aload         16
+194: invokevirtual #46
+197: astore        26
+199: new           #36
+202: dup
+203: invokespecial #37
+206: astore        27
+208: aload         27
+210: invokevirtual #46
+213: astore        28
+215: new           #36
+218: dup
+219: invokespecial #37
+222: astore        29
+224: aload         29
+226: invokevirtual #46
+229: astore        30
+231: aload         27
+233: aload         29
+235: invokevirtual #47
+238: astore        31
+240: new           #36
+243: dup
+244: invokespecial #37
+247: astore        32
+249: aload         32
+251: invokevirtual #48
+254: astore        33
+256: aload         32
+258: invokevirtual #49
+261: astore        34
+263: aload         27
+265: aload         34
+267: invokevirtual #50
+270: dstore        35
+272: aload         27
+274: invokevirtual #52
+277: astore        37
+279: new           #36
+282: dup
+283: invokespecial #37
+286: astore        38
+288: aload         38
+290: invokevirtual #46
+293: astore        39
+295: new           #36
+298: dup
+299: invokespecial #37
+302: astore        40
+304: aload         40
+306: invokevirtual #46
+309: astore        41
+311: aload         38
+313: aload         40
+315: invokevirtual #47
+318: astore        42
+320: new           #36
+323: dup
+324: invokespecial #37
+327: astore        43
+329: aload         43
+331: invokevirtual #48
+334: astore        44
+336: aload         43
+338: invokevirtual #49
+341: astore        45
+343: aload         38
+345: aload         45
+347: invokevirtual #50
+350: dstore        46
+352: aload         27
+354: aload         45
+356: invokevirtual #53
+359: astore        48
+361: aload         16
+363: aload         27
+365: invokevirtual #54
+368: astore        49
+370: aload         16
+372: getfield      #55
+375: astore        50
+377: new           #13
+380: dup
+381: aload         13
+383: aload         50
+385: dconst_0
+386: invokespecial #56
+389: astore        51
+391: ldc           #57
+393: invokestatic  #18
+396: goto          401
+399: astore        51
+401: aload_2
+402: invokestatic  #20
+405: aload_2
+406: invokestatic  #21
+409: ldc           #59
+411: invokestatic  #23
+414: aload         4
+416: invokestatic  #20
+419: aload         4
+421: invokestatic  #21
+424: ldc           #59
+426: invokestatic  #23
+429: aload         5
+431: invokestatic  #20
+434: aload         7
+436: invokestatic  #20
+439: aload         8
+441: invokestatic  #20
+444: new           #24
+447: dup
+448: invokespecial #25
+451: ldc           #26
+453: invokevirtual #27
+456: dload         9
+458: invokevirtual #60
+461: ldc           #29
+463: invokevirtual #27
+466: dconst_0
+467: invokevirtual #60
+470: ldc           #26
+472: invokevirtual #27
+475: invokevirtual #30
+478: dload         9
+480: dconst_0
+481: dcmpl
+482: ifne          489
+485: iconst_1
+486: goto          490
+489: iconst_0
+490: invokestatic  #31
+493: aload         11
+495: invokestatic  #20
+498: aload         11
+500: invokestatic  #21
+503: ldc           #59
+505: invokestatic  #23
+508: aload         13
+510: invokestatic  #20
+513: aload         13
+515: invokestatic  #21
+518: ldc           #59
+520: invokestatic  #23
+523: new           #24
+526: dup
+527: invokespecial #25
+530: ldc           #26
+532: invokevirtual #27
+535: dload         14
+537: invokevirtual #60
+540: ldc           #29
+542: invokevirtual #27
+545: dconst_0
+546: invokevirtual #60
+549: ldc           #26
+551: invokevirtual #27
+554: invokevirtual #30
+557: dload         14
+559: dconst_0
+560: dcmpl
+561: ifne          568
+564: iconst_1
+565: goto          569
+568: iconst_0
+569: invokestatic  #31
+572: aload         17
+574: invokestatic  #20
+577: aload         17
+579: invokestatic  #21
+582: ldc           #59
+584: invokestatic  #23
+587: aload         19
+589: invokestatic  #20
+592: aload         19
+594: invokestatic  #21
+597: ldc           #59
+599: invokestatic  #23
+602: aload         20
+604: invokestatic  #20
+607: aload         22
+609: invokestatic  #20
+612: aload         23
+614: invokestatic  #20
+617: new           #24
+620: dup
+621: invokespecial #25
+624: ldc           #26
+626: invokevirtual #27
+629: dload         24
+631: invokevirtual #60
+634: ldc           #29
+636: invokevirtual #27
+639: dconst_0
+640: invokevirtual #60
+643: ldc           #26
+645: invokevirtual #27
+648: invokevirtual #30
+651: dload         24
+653: dconst_0
+654: dcmpl
+655: ifne          662
+658: iconst_1
+659: goto          663
+662: iconst_0
+663: invokestatic  #31
+666: aload         26
+668: invokestatic  #20
+671: aload         26
+673: invokestatic  #21
+676: ldc           #59
+678: invokestatic  #23
+681: aload         28
+683: invokestatic  #20
+686: aload         28
+688: invokestatic  #21
+691: ldc           #59
+693: invokestatic  #23
+696: aload         30
+698: invokestatic  #20
+701: aload         30
+703: invokestatic  #21
+706: ldc           #59
+708: invokestatic  #23
+711: aload         31
+713: invokestatic  #20
+716: aload         33
+718: invokestatic  #20
+721: aload         34
+723: invokestatic  #20
+726: new           #24
+729: dup
+730: invokespecial #25
+733: ldc           #26
+735: invokevirtual #27
+738: dload         35
+740: invokevirtual #60
+743: ldc           #29
+745: invokevirtual #27
+748: dconst_0
+749: invokevirtual #60
+752: ldc           #26
+754: invokevirtual #27
+757: invokevirtual #30
+760: dload         35
+762: dconst_0
+763: dcmpl
+764: ifne          771
+767: iconst_1
+768: goto          772
+771: iconst_0
+772: invokestatic  #31
+775: aload         37
+777: invokestatic  #20
+780: aload         39
+782: invokestatic  #20
+785: aload         39
+787: invokestatic  #21
+790: ldc           #59
+792: invokestatic  #23
+795: aload         41
+797: invokestatic  #20
+800: aload         41
+802: invokestatic  #21
+805: ldc           #59
+807: invokestatic  #23
+810: aload         42
+812: invokestatic  #20
+815: aload         44
+817: invokestatic  #20
+820: aload         45
+822: invokestatic  #20
+825: new           #24
+828: dup
+829: invokespecial #25
+832: ldc           #26
+834: invokevirtual #27
+837: dload         46
+839: invokevirtual #60
+842: ldc           #29
+844: invokevirtual #27
+847: dconst_0
+848: invokevirtual #60
+851: ldc           #26
+853: invokevirtual #27
+856: invokevirtual #30
+859: dload         46
+861: dconst_0
+862: dcmpl
+863: ifne          870
+866: iconst_1
+867: goto          871
+870: iconst_0
+871: invokestatic  #31
+874: aload         48
+876: invokestatic  #20
+879: aload         49
+881: invokestatic  #20
+884: aload         50
+886: invokestatic  #20
+889: aload         50
+891: invokestatic  #21
+894: ldc           #59
+896: invokestatic  #23
+899: return
+Exception table:
+from    to  target type
+377   396   399   Class java/lang/ArrayIndexOutOfBoundsException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test04
+Start line: 166
+End line: 182
+Method source code: 
+    public void test04() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test04");
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix2 = new org.apache.commons.math.linear.Array2DRowRealMatrix((int) '#', (int) (short) 1);
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix5 = new org.apache.commons.math.linear.Array2DRowRealMatrix((int) '#', (int) (short) 1);
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix6 = array2DRowRealMatrix2.add(array2DRowRealMatrix5);
+        org.apache.commons.math.linear.RealMatrix realMatrix7 = array2DRowRealMatrix2.transpose();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.EigenDecompositionImpl eigenDecompositionImpl9 = new org.apache.commons.math.linear.EigenDecompositionImpl((org.apache.commons.math.linear.RealMatrix) array2DRowRealMatrix2, 10.0d);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.linear.NonSquareMatrixException; message: a 35x1 matrix was provided instead of a square matrix");
+        } catch (org.apache.commons.math.linear.NonSquareMatrixException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix6);
+        org.junit.Assert.assertNotNull(realMatrix7);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #61
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #33
+27: dup
+28: bipush        35
+30: iconst_1
+31: invokespecial #34
+34: astore_1
+35: new           #33
+38: dup
+39: bipush        35
+41: iconst_1
+42: invokespecial #34
+45: astore_2
+46: aload_1
+47: aload_2
+48: invokevirtual #35
+51: astore_3
+52: aload_1
+53: invokevirtual #62
+56: astore        4
+58: new           #13
+61: dup
+62: aload_1
+63: ldc2_w        #14
+66: invokespecial #16
+69: astore        5
+71: ldc           #43
+73: invokestatic  #18
+76: goto          81
+79: astore        5
+81: aload_3
+82: invokestatic  #20
+85: aload         4
+87: invokestatic  #20
+90: return
+Exception table:
+from    to  target type
+58    76    79   Class org/apache/commons/math/linear/NonSquareMatrixException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test05
+Start line: 185
+End line: 200
+Method source code: 
+    public void test05() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test05");
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix2 = new org.apache.commons.math.linear.Array2DRowRealMatrix(1, (int) '#');
+        org.apache.commons.math.linear.RealVector realVector4 = array2DRowRealMatrix2.getColumnVector(2);
+        org.apache.commons.math.linear.RealMatrix realMatrix6 = array2DRowRealMatrix2.getColumnMatrix(10);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.EigenDecompositionImpl eigenDecompositionImpl8 = new org.apache.commons.math.linear.EigenDecompositionImpl((org.apache.commons.math.linear.RealMatrix) array2DRowRealMatrix2, 100.0d);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.linear.MatrixIndexException; message: no entry at indices (1, 0) in a 1x35 matrix");
+        } catch (org.apache.commons.math.linear.MatrixIndexException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(realVector4);
+        org.junit.Assert.assertNotNull(realMatrix6);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #63
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #33
+27: dup
+28: iconst_1
+29: bipush        35
+31: invokespecial #34
+34: astore_1
+35: aload_1
+36: iconst_2
+37: invokevirtual #64
+40: astore_2
+41: aload_1
+42: bipush        10
+44: invokevirtual #65
+47: astore_3
+48: new           #13
+51: dup
+52: aload_1
+53: ldc2_w        #66
+56: invokespecial #16
+59: astore        4
+61: ldc           #68
+63: invokestatic  #18
+66: goto          71
+69: astore        4
+71: aload_2
+72: invokestatic  #20
+75: aload_3
+76: invokestatic  #20
+79: return
+Exception table:
+from    to  target type
+48    66    69   Class org/apache/commons/math/linear/MatrixIndexException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test06
+Start line: 203
+End line: 223
+Method source code: 
+    public void test06() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test06");
+        double[] doubleArray1 = new double[] { 'a' };
+        double[] doubleArray3 = new double[] { 'a' };
+        double[][] doubleArray4 = new double[][] { doubleArray1, doubleArray3 };
+        org.apache.commons.math.linear.RealMatrix realMatrix5 = org.apache.commons.math.linear.MatrixUtils.createRealMatrix(doubleArray4);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.EigenDecompositionImpl eigenDecompositionImpl7 = new org.apache.commons.math.linear.EigenDecompositionImpl(realMatrix5, (double) 0);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.linear.NonSquareMatrixException; message: a 2x1 matrix was provided instead of a square matrix");
+        } catch (org.apache.commons.math.linear.NonSquareMatrixException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(doubleArray1);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray1), "[97.0]");
+        org.junit.Assert.assertNotNull(doubleArray3);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray3), "[97.0]");
+        org.junit.Assert.assertNotNull(doubleArray4);
+        org.junit.Assert.assertNotNull(realMatrix5);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #70
+19: aastore
+20: invokevirtual #7
+23: pop
+24: iconst_1
+25: newarray       double
+27: dup
+28: iconst_0
+29: ldc2_w        #8
+32: dastore
+33: astore_1
+34: iconst_1
+35: newarray       double
+37: dup
+38: iconst_0
+39: ldc2_w        #8
+42: dastore
+43: astore_2
+44: iconst_2
+45: anewarray     #10
+48: dup
+49: iconst_0
+50: aload_1
+51: aastore
+52: dup
+53: iconst_1
+54: aload_2
+55: aastore
+56: astore_3
+57: aload_3
+58: invokestatic  #11
+61: astore        4
+63: new           #13
+66: dup
+67: aload         4
+69: dconst_0
+70: invokespecial #16
+73: astore        5
+75: ldc           #17
+77: invokestatic  #18
+80: goto          85
+83: astore        5
+85: aload_1
+86: invokestatic  #20
+89: aload_1
+90: invokestatic  #21
+93: ldc           #22
+95: invokestatic  #23
+98: aload_2
+99: invokestatic  #20
+102: aload_2
+103: invokestatic  #21
+106: ldc           #22
+108: invokestatic  #23
+111: aload_3
+112: invokestatic  #20
+115: aload         4
+117: invokestatic  #20
+120: return
+Exception table:
+from    to  target type
+63    80    83   Class org/apache/commons/math/linear/NonSquareMatrixException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test07
+Start line: 226
+End line: 378
+Method source code: 
+    public void test07() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test07");
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector1 = new org.apache.commons.math.linear.ArrayRealVector(0);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector2 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray3 = arrayRealVector2.getData();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector4 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray5 = arrayRealVector4.getData();
+        org.apache.commons.math.linear.RealVector realVector6 = arrayRealVector2.projection((org.apache.commons.math.linear.RealVector) arrayRealVector4);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector7 = new org.apache.commons.math.linear.ArrayRealVector();
+        org.apache.commons.math.linear.RealVector realVector8 = arrayRealVector7.mapAcosToSelf();
+        org.apache.commons.math.linear.RealVector realVector9 = arrayRealVector7.mapExp();
+        double double10 = arrayRealVector2.dotProduct(realVector9);
+        org.apache.commons.math.linear.RealVector realVector11 = arrayRealVector2.mapFloorToSelf();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector12 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray13 = arrayRealVector12.getData();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector14 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray15 = arrayRealVector14.getData();
+        org.apache.commons.math.linear.RealVector realVector16 = arrayRealVector12.projection((org.apache.commons.math.linear.RealVector) arrayRealVector14);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector17 = new org.apache.commons.math.linear.ArrayRealVector();
+        org.apache.commons.math.linear.RealVector realVector18 = arrayRealVector17.mapAcosToSelf();
+        org.apache.commons.math.linear.RealVector realVector19 = arrayRealVector17.mapExp();
+        double double20 = arrayRealVector12.dotProduct(realVector19);
+        double[] doubleArray21 = arrayRealVector12.getData();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector22 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray23 = arrayRealVector22.getData();
+        double double24 = arrayRealVector12.getLInfDistance(doubleArray23);
+        org.apache.commons.math.linear.RealVector realVector25 = arrayRealVector12.mapSinhToSelf();
+        double double26 = arrayRealVector12.getNorm();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector27 = new org.apache.commons.math.linear.ArrayRealVector();
+        org.apache.commons.math.linear.RealVector realVector28 = arrayRealVector27.mapAcosToSelf();
+        org.apache.commons.math.linear.RealVector realVector29 = arrayRealVector27.mapExp();
+        org.apache.commons.math.linear.RealVector realVector30 = arrayRealVector27.mapCoshToSelf();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector31 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray32 = arrayRealVector31.getData();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector33 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray34 = arrayRealVector33.getData();
+        org.apache.commons.math.linear.RealVector realVector35 = arrayRealVector31.projection((org.apache.commons.math.linear.RealVector) arrayRealVector33);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector36 = arrayRealVector27.append(arrayRealVector31);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector37 = new org.apache.commons.math.linear.ArrayRealVector();
+        org.apache.commons.math.linear.RealVector realVector38 = arrayRealVector37.mapAcosToSelf();
+        org.apache.commons.math.linear.RealVector realVector39 = realVector38.mapCbrtToSelf();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector40 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray41 = arrayRealVector40.getData();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector42 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray43 = arrayRealVector42.getData();
+        org.apache.commons.math.linear.RealVector realVector44 = arrayRealVector40.projection((org.apache.commons.math.linear.RealVector) arrayRealVector42);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector45 = new org.apache.commons.math.linear.ArrayRealVector();
+        org.apache.commons.math.linear.RealVector realVector46 = arrayRealVector45.mapAcosToSelf();
+        org.apache.commons.math.linear.RealVector realVector47 = arrayRealVector45.mapExp();
+        double double48 = arrayRealVector40.dotProduct(realVector47);
+        double[] doubleArray49 = arrayRealVector40.getData();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector50 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray51 = arrayRealVector50.getData();
+        double double52 = arrayRealVector40.getLInfDistance(doubleArray51);
+        org.apache.commons.math.linear.RealVector realVector53 = realVector38.append(doubleArray51);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector54 = new org.apache.commons.math.linear.ArrayRealVector(arrayRealVector36, doubleArray51);
+        org.apache.commons.math.linear.RealVector realVector55 = arrayRealVector12.ebeDivide(doubleArray51);
+        org.apache.commons.math.linear.RealVector realVector56 = arrayRealVector2.add(doubleArray51);
+        org.apache.commons.math.linear.RealVector realVector57 = arrayRealVector1.ebeDivide(doubleArray51);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector58 = new org.apache.commons.math.linear.ArrayRealVector();
+        org.apache.commons.math.linear.RealVector realVector59 = arrayRealVector58.mapAcosToSelf();
+        org.apache.commons.math.linear.RealVector realVector60 = realVector59.mapCbrtToSelf();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector61 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray62 = arrayRealVector61.getData();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector63 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray64 = arrayRealVector63.getData();
+        org.apache.commons.math.linear.RealVector realVector65 = arrayRealVector61.projection((org.apache.commons.math.linear.RealVector) arrayRealVector63);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector66 = new org.apache.commons.math.linear.ArrayRealVector();
+        org.apache.commons.math.linear.RealVector realVector67 = arrayRealVector66.mapAcosToSelf();
+        org.apache.commons.math.linear.RealVector realVector68 = arrayRealVector66.mapExp();
+        double double69 = arrayRealVector61.dotProduct(realVector68);
+        double[] doubleArray70 = arrayRealVector61.getData();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector71 = new org.apache.commons.math.linear.ArrayRealVector();
+        double[] doubleArray72 = arrayRealVector71.getData();
+        double double73 = arrayRealVector61.getLInfDistance(doubleArray72);
+        org.apache.commons.math.linear.RealVector realVector74 = realVector59.append(doubleArray72);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.EigenDecompositionImpl eigenDecompositionImpl76 = new org.apache.commons.math.linear.EigenDecompositionImpl(doubleArray51, doubleArray72, (double) (short) 100);
+            org.junit.Assert.fail("Expected exception of type java.lang.ArrayIndexOutOfBoundsException; message: -1");
+        } catch (java.lang.ArrayIndexOutOfBoundsException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(doubleArray3);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray3), "[]");
+        org.junit.Assert.assertNotNull(doubleArray5);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray5), "[]");
+        org.junit.Assert.assertNotNull(realVector6);
+        org.junit.Assert.assertNotNull(realVector8);
+        org.junit.Assert.assertNotNull(realVector9);
+        org.junit.Assert.assertTrue("'" + double10 + "' != '" + 0.0d + "'", double10 == 0.0d);
+        org.junit.Assert.assertNotNull(realVector11);
+        org.junit.Assert.assertNotNull(doubleArray13);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray13), "[]");
+        org.junit.Assert.assertNotNull(doubleArray15);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray15), "[]");
+        org.junit.Assert.assertNotNull(realVector16);
+        org.junit.Assert.assertNotNull(realVector18);
+        org.junit.Assert.assertNotNull(realVector19);
+        org.junit.Assert.assertTrue("'" + double20 + "' != '" + 0.0d + "'", double20 == 0.0d);
+        org.junit.Assert.assertNotNull(doubleArray21);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray21), "[]");
+        org.junit.Assert.assertNotNull(doubleArray23);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray23), "[]");
+        org.junit.Assert.assertTrue("'" + double24 + "' != '" + 0.0d + "'", double24 == 0.0d);
+        org.junit.Assert.assertNotNull(realVector25);
+        org.junit.Assert.assertTrue("'" + double26 + "' != '" + 0.0d + "'", double26 == 0.0d);
+        org.junit.Assert.assertNotNull(realVector28);
+        org.junit.Assert.assertNotNull(realVector29);
+        org.junit.Assert.assertNotNull(realVector30);
+        org.junit.Assert.assertNotNull(doubleArray32);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray32), "[]");
+        org.junit.Assert.assertNotNull(doubleArray34);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray34), "[]");
+        org.junit.Assert.assertNotNull(realVector35);
+        org.junit.Assert.assertNotNull(arrayRealVector36);
+        org.junit.Assert.assertNotNull(realVector38);
+        org.junit.Assert.assertNotNull(realVector39);
+        org.junit.Assert.assertNotNull(doubleArray41);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray41), "[]");
+        org.junit.Assert.assertNotNull(doubleArray43);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray43), "[]");
+        org.junit.Assert.assertNotNull(realVector44);
+        org.junit.Assert.assertNotNull(realVector46);
+        org.junit.Assert.assertNotNull(realVector47);
+        org.junit.Assert.assertTrue("'" + double48 + "' != '" + 0.0d + "'", double48 == 0.0d);
+        org.junit.Assert.assertNotNull(doubleArray49);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray49), "[]");
+        org.junit.Assert.assertNotNull(doubleArray51);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray51), "[]");
+        org.junit.Assert.assertTrue("'" + double52 + "' != '" + 0.0d + "'", double52 == 0.0d);
+        org.junit.Assert.assertNotNull(realVector53);
+        org.junit.Assert.assertNotNull(realVector55);
+        org.junit.Assert.assertNotNull(realVector56);
+        org.junit.Assert.assertNotNull(realVector57);
+        org.junit.Assert.assertNotNull(realVector59);
+        org.junit.Assert.assertNotNull(realVector60);
+        org.junit.Assert.assertNotNull(doubleArray62);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray62), "[]");
+        org.junit.Assert.assertNotNull(doubleArray64);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray64), "[]");
+        org.junit.Assert.assertNotNull(realVector65);
+        org.junit.Assert.assertNotNull(realVector67);
+        org.junit.Assert.assertNotNull(realVector68);
+        org.junit.Assert.assertTrue("'" + double69 + "' != '" + 0.0d + "'", double69 == 0.0d);
+        org.junit.Assert.assertNotNull(doubleArray70);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray70), "[]");
+        org.junit.Assert.assertNotNull(doubleArray72);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray72), "[]");
+        org.junit.Assert.assertTrue("'" + double73 + "' != '" + 0.0d + "'", double73 == 0.0d);
+        org.junit.Assert.assertNotNull(realVector74);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #71
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #36
+27: dup
+28: iconst_0
+29: invokespecial #72
+32: astore_1
+33: new           #36
+36: dup
+37: invokespecial #37
+40: astore_2
+41: aload_2
+42: invokevirtual #46
+45: astore_3
+46: new           #36
+49: dup
+50: invokespecial #37
+53: astore        4
+55: aload         4
+57: invokevirtual #46
+60: astore        5
+62: aload_2
+63: aload         4
+65: invokevirtual #47
+68: astore        6
+70: new           #36
+73: dup
+74: invokespecial #37
+77: astore        7
+79: aload         7
+81: invokevirtual #48
+84: astore        8
+86: aload         7
+88: invokevirtual #49
+91: astore        9
+93: aload_2
+94: aload         9
+96: invokevirtual #50
+99: dstore        10
+101: aload_2
+102: invokevirtual #73
+105: astore        12
+107: new           #36
+110: dup
+111: invokespecial #37
+114: astore        13
+116: aload         13
+118: invokevirtual #46
+121: astore        14
+123: new           #36
+126: dup
+127: invokespecial #37
+130: astore        15
+132: aload         15
+134: invokevirtual #46
+137: astore        16
+139: aload         13
+141: aload         15
+143: invokevirtual #47
+146: astore        17
+148: new           #36
+151: dup
+152: invokespecial #37
+155: astore        18
+157: aload         18
+159: invokevirtual #48
+162: astore        19
+164: aload         18
+166: invokevirtual #49
+169: astore        20
+171: aload         13
+173: aload         20
+175: invokevirtual #50
+178: dstore        21
+180: aload         13
+182: invokevirtual #46
+185: astore        23
+187: new           #36
+190: dup
+191: invokespecial #37
+194: astore        24
+196: aload         24
+198: invokevirtual #46
+201: astore        25
+203: aload         13
+205: aload         25
+207: invokevirtual #51
+210: dstore        26
+212: aload         13
+214: invokevirtual #74
+217: astore        28
+219: aload         13
+221: invokevirtual #75
+224: dstore        29
+226: new           #36
+229: dup
+230: invokespecial #37
+233: astore        31
+235: aload         31
+237: invokevirtual #48
+240: astore        32
+242: aload         31
+244: invokevirtual #49
+247: astore        33
+249: aload         31
+251: invokevirtual #76
+254: astore        34
+256: new           #36
+259: dup
+260: invokespecial #37
+263: astore        35
+265: aload         35
+267: invokevirtual #46
+270: astore        36
+272: new           #36
+275: dup
+276: invokespecial #37
+279: astore        37
+281: aload         37
+283: invokevirtual #46
+286: astore        38
+288: aload         35
+290: aload         37
+292: invokevirtual #47
+295: astore        39
+297: aload         31
+299: aload         35
+301: invokevirtual #77
+304: astore        40
+306: new           #36
+309: dup
+310: invokespecial #37
+313: astore        41
+315: aload         41
+317: invokevirtual #48
+320: astore        42
+322: aload         42
+324: invokeinterface #78,  1
+329: astore        43
+331: new           #36
+334: dup
+335: invokespecial #37
+338: astore        44
+340: aload         44
+342: invokevirtual #46
+345: astore        45
+347: new           #36
+350: dup
+351: invokespecial #37
+354: astore        46
+356: aload         46
+358: invokevirtual #46
+361: astore        47
+363: aload         44
+365: aload         46
+367: invokevirtual #47
+370: astore        48
+372: new           #36
+375: dup
+376: invokespecial #37
+379: astore        49
+381: aload         49
+383: invokevirtual #48
+386: astore        50
+388: aload         49
+390: invokevirtual #49
+393: astore        51
+395: aload         44
+397: aload         51
+399: invokevirtual #50
+402: dstore        52
+404: aload         44
+406: invokevirtual #46
+409: astore        54
+411: new           #36
+414: dup
+415: invokespecial #37
+418: astore        55
+420: aload         55
+422: invokevirtual #46
+425: astore        56
+427: aload         44
+429: aload         56
+431: invokevirtual #51
+434: dstore        57
+436: aload         42
+438: aload         56
+440: invokeinterface #79,  2
+445: astore        59
+447: new           #36
+450: dup
+451: aload         40
+453: aload         56
+455: invokespecial #80
+458: astore        60
+460: aload         13
+462: aload         56
+464: invokevirtual #81
+467: astore        61
+469: aload_2
+470: aload         56
+472: invokevirtual #82
+475: astore        62
+477: aload_1
+478: aload         56
+480: invokevirtual #81
+483: astore        63
+485: new           #36
+488: dup
+489: invokespecial #37
+492: astore        64
+494: aload         64
+496: invokevirtual #48
+499: astore        65
+501: aload         65
+503: invokeinterface #78,  1
+508: astore        66
+510: new           #36
+513: dup
+514: invokespecial #37
+517: astore        67
+519: aload         67
+521: invokevirtual #46
+524: astore        68
+526: new           #36
+529: dup
+530: invokespecial #37
+533: astore        69
+535: aload         69
+537: invokevirtual #46
+540: astore        70
+542: aload         67
+544: aload         69
+546: invokevirtual #47
+549: astore        71
+551: new           #36
+554: dup
+555: invokespecial #37
+558: astore        72
+560: aload         72
+562: invokevirtual #48
+565: astore        73
+567: aload         72
+569: invokevirtual #49
+572: astore        74
+574: aload         67
+576: aload         74
+578: invokevirtual #50
+581: dstore        75
+583: aload         67
+585: invokevirtual #46
+588: astore        77
+590: new           #36
+593: dup
+594: invokespecial #37
+597: astore        78
+599: aload         78
+601: invokevirtual #46
+604: astore        79
+606: aload         67
+608: aload         79
+610: invokevirtual #51
+613: dstore        80
+615: aload         65
+617: aload         79
+619: invokeinterface #79,  2
+624: astore        82
+626: new           #13
+629: dup
+630: aload         56
+632: aload         79
+634: ldc2_w        #66
+637: invokespecial #56
+640: astore        83
+642: ldc           #57
+644: invokestatic  #18
+647: goto          652
+650: astore        83
+652: aload_3
+653: invokestatic  #20
+656: aload_3
+657: invokestatic  #21
+660: ldc           #59
+662: invokestatic  #23
+665: aload         5
+667: invokestatic  #20
+670: aload         5
+672: invokestatic  #21
+675: ldc           #59
+677: invokestatic  #23
+680: aload         6
+682: invokestatic  #20
+685: aload         8
+687: invokestatic  #20
+690: aload         9
+692: invokestatic  #20
+695: new           #24
+698: dup
+699: invokespecial #25
+702: ldc           #26
+704: invokevirtual #27
+707: dload         10
+709: invokevirtual #60
+712: ldc           #29
+714: invokevirtual #27
+717: dconst_0
+718: invokevirtual #60
+721: ldc           #26
+723: invokevirtual #27
+726: invokevirtual #30
+729: dload         10
+731: dconst_0
+732: dcmpl
+733: ifne          740
+736: iconst_1
+737: goto          741
+740: iconst_0
+741: invokestatic  #31
+744: aload         12
+746: invokestatic  #20
+749: aload         14
+751: invokestatic  #20
+754: aload         14
+756: invokestatic  #21
+759: ldc           #59
+761: invokestatic  #23
+764: aload         16
+766: invokestatic  #20
+769: aload         16
+771: invokestatic  #21
+774: ldc           #59
+776: invokestatic  #23
+779: aload         17
+781: invokestatic  #20
+784: aload         19
+786: invokestatic  #20
+789: aload         20
+791: invokestatic  #20
+794: new           #24
+797: dup
+798: invokespecial #25
+801: ldc           #26
+803: invokevirtual #27
+806: dload         21
+808: invokevirtual #60
+811: ldc           #29
+813: invokevirtual #27
+816: dconst_0
+817: invokevirtual #60
+820: ldc           #26
+822: invokevirtual #27
+825: invokevirtual #30
+828: dload         21
+830: dconst_0
+831: dcmpl
+832: ifne          839
+835: iconst_1
+836: goto          840
+839: iconst_0
+840: invokestatic  #31
+843: aload         23
+845: invokestatic  #20
+848: aload         23
+850: invokestatic  #21
+853: ldc           #59
+855: invokestatic  #23
+858: aload         25
+860: invokestatic  #20
+863: aload         25
+865: invokestatic  #21
+868: ldc           #59
+870: invokestatic  #23
+873: new           #24
+876: dup
+877: invokespecial #25
+880: ldc           #26
+882: invokevirtual #27
+885: dload         26
+887: invokevirtual #60
+890: ldc           #29
+892: invokevirtual #27
+895: dconst_0
+896: invokevirtual #60
+899: ldc           #26
+901: invokevirtual #27
+904: invokevirtual #30
+907: dload         26
+909: dconst_0
+910: dcmpl
+911: ifne          918
+914: iconst_1
+915: goto          919
+918: iconst_0
+919: invokestatic  #31
+922: aload         28
+924: invokestatic  #20
+927: new           #24
+930: dup
+931: invokespecial #25
+934: ldc           #26
+936: invokevirtual #27
+939: dload         29
+941: invokevirtual #60
+944: ldc           #29
+946: invokevirtual #27
+949: dconst_0
+950: invokevirtual #60
+953: ldc           #26
+955: invokevirtual #27
+958: invokevirtual #30
+961: dload         29
+963: dconst_0
+964: dcmpl
+965: ifne          972
+968: iconst_1
+969: goto          973
+972: iconst_0
+973: invokestatic  #31
+976: aload         32
+978: invokestatic  #20
+981: aload         33
+983: invokestatic  #20
+986: aload         34
+988: invokestatic  #20
+991: aload         36
+993: invokestatic  #20
+996: aload         36
+998: invokestatic  #21
+1001: ldc           #59
+1003: invokestatic  #23
+1006: aload         38
+1008: invokestatic  #20
+1011: aload         38
+1013: invokestatic  #21
+1016: ldc           #59
+1018: invokestatic  #23
+1021: aload         39
+1023: invokestatic  #20
+1026: aload         40
+1028: invokestatic  #20
+1031: aload         42
+1033: invokestatic  #20
+1036: aload         43
+1038: invokestatic  #20
+1041: aload         45
+1043: invokestatic  #20
+1046: aload         45
+1048: invokestatic  #21
+1051: ldc           #59
+1053: invokestatic  #23
+1056: aload         47
+1058: invokestatic  #20
+1061: aload         47
+1063: invokestatic  #21
+1066: ldc           #59
+1068: invokestatic  #23
+1071: aload         48
+1073: invokestatic  #20
+1076: aload         50
+1078: invokestatic  #20
+1081: aload         51
+1083: invokestatic  #20
+1086: new           #24
+1089: dup
+1090: invokespecial #25
+1093: ldc           #26
+1095: invokevirtual #27
+1098: dload         52
+1100: invokevirtual #60
+1103: ldc           #29
+1105: invokevirtual #27
+1108: dconst_0
+1109: invokevirtual #60
+1112: ldc           #26
+1114: invokevirtual #27
+1117: invokevirtual #30
+1120: dload         52
+1122: dconst_0
+1123: dcmpl
+1124: ifne          1131
+1127: iconst_1
+1128: goto          1132
+1131: iconst_0
+1132: invokestatic  #31
+1135: aload         54
+1137: invokestatic  #20
+1140: aload         54
+1142: invokestatic  #21
+1145: ldc           #59
+1147: invokestatic  #23
+1150: aload         56
+1152: invokestatic  #20
+1155: aload         56
+1157: invokestatic  #21
+1160: ldc           #59
+1162: invokestatic  #23
+1165: new           #24
+1168: dup
+1169: invokespecial #25
+1172: ldc           #26
+1174: invokevirtual #27
+1177: dload         57
+1179: invokevirtual #60
+1182: ldc           #29
+1184: invokevirtual #27
+1187: dconst_0
+1188: invokevirtual #60
+1191: ldc           #26
+1193: invokevirtual #27
+1196: invokevirtual #30
+1199: dload         57
+1201: dconst_0
+1202: dcmpl
+1203: ifne          1210
+1206: iconst_1
+1207: goto          1211
+1210: iconst_0
+1211: invokestatic  #31
+1214: aload         59
+1216: invokestatic  #20
+1219: aload         61
+1221: invokestatic  #20
+1224: aload         62
+1226: invokestatic  #20
+1229: aload         63
+1231: invokestatic  #20
+1234: aload         65
+1236: invokestatic  #20
+1239: aload         66
+1241: invokestatic  #20
+1244: aload         68
+1246: invokestatic  #20
+1249: aload         68
+1251: invokestatic  #21
+1254: ldc           #59
+1256: invokestatic  #23
+1259: aload         70
+1261: invokestatic  #20
+1264: aload         70
+1266: invokestatic  #21
+1269: ldc           #59
+1271: invokestatic  #23
+1274: aload         71
+1276: invokestatic  #20
+1279: aload         73
+1281: invokestatic  #20
+1284: aload         74
+1286: invokestatic  #20
+1289: new           #24
+1292: dup
+1293: invokespecial #25
+1296: ldc           #26
+1298: invokevirtual #27
+1301: dload         75
+1303: invokevirtual #60
+1306: ldc           #29
+1308: invokevirtual #27
+1311: dconst_0
+1312: invokevirtual #60
+1315: ldc           #26
+1317: invokevirtual #27
+1320: invokevirtual #30
+1323: dload         75
+1325: dconst_0
+1326: dcmpl
+1327: ifne          1334
+1330: iconst_1
+1331: goto          1335
+1334: iconst_0
+1335: invokestatic  #31
+1338: aload         77
+1340: invokestatic  #20
+1343: aload         77
+1345: invokestatic  #21
+1348: ldc           #59
+1350: invokestatic  #23
+1353: aload         79
+1355: invokestatic  #20
+1358: aload         79
+1360: invokestatic  #21
+1363: ldc           #59
+1365: invokestatic  #23
+1368: new           #24
+1371: dup
+1372: invokespecial #25
+1375: ldc           #26
+1377: invokevirtual #27
+1380: dload         80
+1382: invokevirtual #60
+1385: ldc           #29
+1387: invokevirtual #27
+1390: dconst_0
+1391: invokevirtual #60
+1394: ldc           #26
+1396: invokevirtual #27
+1399: invokevirtual #30
+1402: dload         80
+1404: dconst_0
+1405: dcmpl
+1406: ifne          1413
+1409: iconst_1
+1410: goto          1414
+1413: iconst_0
+1414: invokestatic  #31
+1417: aload         82
+1419: invokestatic  #20
+1422: return
+Exception table:
+from    to  target type
+626   647   650   Class java/lang/ArrayIndexOutOfBoundsException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test08
+Start line: 381
+End line: 409
+Method source code: 
+    public void test08() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test08");
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix2 = new org.apache.commons.math.linear.Array2DRowRealMatrix((int) '#', (int) (short) 1);
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix5 = new org.apache.commons.math.linear.Array2DRowRealMatrix((int) '#', (int) (short) 1);
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix6 = array2DRowRealMatrix2.add(array2DRowRealMatrix5);
+        int int7 = array2DRowRealMatrix2.getColumnDimension();
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix10 = new org.apache.commons.math.linear.Array2DRowRealMatrix((int) '#', (int) (short) 1);
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix13 = new org.apache.commons.math.linear.Array2DRowRealMatrix((int) '#', (int) (short) 1);
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix14 = array2DRowRealMatrix10.add(array2DRowRealMatrix13);
+        int int15 = array2DRowRealMatrix10.getColumnDimension();
+        org.apache.commons.math.linear.RealMatrix realMatrix16 = array2DRowRealMatrix10.copy();
+        org.apache.commons.math.linear.RealVector realVector18 = array2DRowRealMatrix10.getRowVector(0);
+        org.apache.commons.math.linear.RealMatrix realMatrix19 = array2DRowRealMatrix2.add((org.apache.commons.math.linear.RealMatrix) array2DRowRealMatrix10);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.EigenDecompositionImpl eigenDecompositionImpl21 = new org.apache.commons.math.linear.EigenDecompositionImpl(realMatrix19, 100.0d);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.linear.NonSquareMatrixException; message: a 35x1 matrix was provided instead of a square matrix");
+        } catch (org.apache.commons.math.linear.NonSquareMatrixException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix6);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 1 + "'", int7 == 1);
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix14);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + 1 + "'", int15 == 1);
+        org.junit.Assert.assertNotNull(realMatrix16);
+        org.junit.Assert.assertNotNull(realVector18);
+        org.junit.Assert.assertNotNull(realMatrix19);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #83
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #33
+27: dup
+28: bipush        35
+30: iconst_1
+31: invokespecial #34
+34: astore_1
+35: new           #33
+38: dup
+39: bipush        35
+41: iconst_1
+42: invokespecial #34
+45: astore_2
+46: aload_1
+47: aload_2
+48: invokevirtual #35
+51: astore_3
+52: aload_1
+53: invokevirtual #84
+56: istore        4
+58: new           #33
+61: dup
+62: bipush        35
+64: iconst_1
+65: invokespecial #34
+68: astore        5
+70: new           #33
+73: dup
+74: bipush        35
+76: iconst_1
+77: invokespecial #34
+80: astore        6
+82: aload         5
+84: aload         6
+86: invokevirtual #35
+89: astore        7
+91: aload         5
+93: invokevirtual #84
+96: istore        8
+98: aload         5
+100: invokevirtual #85
+103: astore        9
+105: aload         5
+107: iconst_0
+108: invokevirtual #86
+111: astore        10
+113: aload_1
+114: aload         5
+116: invokevirtual #87
+119: astore        11
+121: new           #13
+124: dup
+125: aload         11
+127: ldc2_w        #66
+130: invokespecial #16
+133: astore        12
+135: ldc           #43
+137: invokestatic  #18
+140: goto          145
+143: astore        12
+145: aload_3
+146: invokestatic  #20
+149: new           #24
+152: dup
+153: invokespecial #25
+156: ldc           #26
+158: invokevirtual #27
+161: iload         4
+163: invokevirtual #28
+166: ldc           #29
+168: invokevirtual #27
+171: iconst_1
+172: invokevirtual #28
+175: ldc           #26
+177: invokevirtual #27
+180: invokevirtual #30
+183: iload         4
+185: iconst_1
+186: if_icmpne     193
+189: iconst_1
+190: goto          194
+193: iconst_0
+194: invokestatic  #31
+197: aload         7
+199: invokestatic  #20
+202: new           #24
+205: dup
+206: invokespecial #25
+209: ldc           #26
+211: invokevirtual #27
+214: iload         8
+216: invokevirtual #28
+219: ldc           #29
+221: invokevirtual #27
+224: iconst_1
+225: invokevirtual #28
+228: ldc           #26
+230: invokevirtual #27
+233: invokevirtual #30
+236: iload         8
+238: iconst_1
+239: if_icmpne     246
+242: iconst_1
+243: goto          247
+246: iconst_0
+247: invokestatic  #31
+250: aload         9
+252: invokestatic  #20
+255: aload         10
+257: invokestatic  #20
+260: aload         11
+262: invokestatic  #20
+265: return
+Exception table:
+from    to  target type
+121   140   143   Class org/apache/commons/math/linear/NonSquareMatrixException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test09
+Start line: 412
+End line: 428
+Method source code: 
+    public void test09() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test09");
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix2 = new org.apache.commons.math.linear.Array2DRowRealMatrix((int) '#', (int) (short) 1);
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix5 = new org.apache.commons.math.linear.Array2DRowRealMatrix((int) '#', (int) (short) 1);
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix6 = array2DRowRealMatrix2.add(array2DRowRealMatrix5);
+        int int7 = array2DRowRealMatrix5.getRowDimension();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.EigenDecompositionImpl eigenDecompositionImpl9 = new org.apache.commons.math.linear.EigenDecompositionImpl((org.apache.commons.math.linear.RealMatrix) array2DRowRealMatrix5, 0.0d);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.linear.NonSquareMatrixException; message: a 35x1 matrix was provided instead of a square matrix");
+        } catch (org.apache.commons.math.linear.NonSquareMatrixException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix6);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 35 + "'", int7 == 35);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #88
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #33
+27: dup
+28: bipush        35
+30: iconst_1
+31: invokespecial #34
+34: astore_1
+35: new           #33
+38: dup
+39: bipush        35
+41: iconst_1
+42: invokespecial #34
+45: astore_2
+46: aload_1
+47: aload_2
+48: invokevirtual #35
+51: astore_3
+52: aload_2
+53: invokevirtual #89
+56: istore        4
+58: new           #13
+61: dup
+62: aload_2
+63: dconst_0
+64: invokespecial #16
+67: astore        5
+69: ldc           #43
+71: invokestatic  #18
+74: goto          79
+77: astore        5
+79: aload_3
+80: invokestatic  #20
+83: new           #24
+86: dup
+87: invokespecial #25
+90: ldc           #26
+92: invokevirtual #27
+95: iload         4
+97: invokevirtual #28
+100: ldc           #29
+102: invokevirtual #27
+105: bipush        35
+107: invokevirtual #28
+110: ldc           #26
+112: invokevirtual #27
+115: invokevirtual #30
+118: iload         4
+120: bipush        35
+122: if_icmpne     129
+125: iconst_1
+126: goto          130
+129: iconst_0
+130: invokestatic  #31
+133: return
+Exception table:
+from    to  target type
+58    74    77   Class org/apache/commons/math/linear/NonSquareMatrixException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test10
+Start line: 431
+End line: 451
+Method source code: 
+    public void test10() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test10");
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix2 = new org.apache.commons.math.linear.Array2DRowRealMatrix((int) '#', (int) (short) 1);
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix5 = new org.apache.commons.math.linear.Array2DRowRealMatrix((int) '#', (int) (short) 1);
+        org.apache.commons.math.linear.Array2DRowRealMatrix array2DRowRealMatrix6 = array2DRowRealMatrix2.add(array2DRowRealMatrix5);
+        org.apache.commons.math.linear.RealMatrix realMatrix7 = array2DRowRealMatrix2.transpose();
+        org.apache.commons.math.linear.RealMatrix realMatrix8 = array2DRowRealMatrix2.copy();
+        org.apache.commons.math.linear.RealMatrix realMatrix9 = array2DRowRealMatrix2.transpose();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.EigenDecompositionImpl eigenDecompositionImpl11 = new org.apache.commons.math.linear.EigenDecompositionImpl((org.apache.commons.math.linear.RealMatrix) array2DRowRealMatrix2, (double) (short) 0);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.linear.NonSquareMatrixException; message: a 35x1 matrix was provided instead of a square matrix");
+        } catch (org.apache.commons.math.linear.NonSquareMatrixException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(array2DRowRealMatrix6);
+        org.junit.Assert.assertNotNull(realMatrix7);
+        org.junit.Assert.assertNotNull(realMatrix8);
+        org.junit.Assert.assertNotNull(realMatrix9);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #90
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #33
+27: dup
+28: bipush        35
+30: iconst_1
+31: invokespecial #34
+34: astore_1
+35: new           #33
+38: dup
+39: bipush        35
+41: iconst_1
+42: invokespecial #34
+45: astore_2
+46: aload_1
+47: aload_2
+48: invokevirtual #35
+51: astore_3
+52: aload_1
+53: invokevirtual #62
+56: astore        4
+58: aload_1
+59: invokevirtual #85
+62: astore        5
+64: aload_1
+65: invokevirtual #62
+68: astore        6
+70: new           #13
+73: dup
+74: aload_1
+75: dconst_0
+76: invokespecial #16
+79: astore        7
+81: ldc           #43
+83: invokestatic  #18
+86: goto          91
+89: astore        7
+91: aload_3
+92: invokestatic  #20
+95: aload         4
+97: invokestatic  #20
+100: aload         5
+102: invokestatic  #20
+105: aload         6
+107: invokestatic  #20
+110: return
+Exception table:
+from    to  target type
+70    86    89   Class org/apache/commons/math/linear/NonSquareMatrixException
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testDimension1
+Start line: 49
+End line: 54
+Method source code: 
+    public void testDimension1() {
+        RealMatrix matrix =
+            MatrixUtils.createRealMatrix(new double[][] { { 1.5 } });
+        EigenDecomposition ed = new EigenDecompositionImpl(matrix, MathUtils.SAFE_MIN);
+        assertEquals(1.5, ed.getRealEigenvalue(0), 1.0e-15);
+    }
+Method byte code: 
+0: iconst_1
+1: anewarray     #7
+4: dup
+5: iconst_0
+6: iconst_1
+7: newarray       double
+9: dup
+10: iconst_0
+11: ldc2_w        #8
+14: dastore
+15: aastore
+16: invokestatic  #10
+19: astore_1
+20: new           #11
+23: dup
+24: aload_1
+25: ldc2_w        #13
+28: invokespecial #15
+31: astore_2
+32: ldc2_w        #8
+35: aload_2
+36: iconst_0
+37: invokeinterface #16,  2
+42: ldc2_w        #17
+45: invokestatic  #19
+48: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testDimension2
+Start line: 56
+End line: 65
+Method source code: 
+    public void testDimension2() {
+        RealMatrix matrix =
+            MatrixUtils.createRealMatrix(new double[][] {
+                    { 59.0, 12.0 },
+                    { 12.0, 66.0 }
+            });
+        EigenDecomposition ed = new EigenDecompositionImpl(matrix, MathUtils.SAFE_MIN);
+        assertEquals(75.0, ed.getRealEigenvalue(0), 1.0e-15);
+        assertEquals(50.0, ed.getRealEigenvalue(1), 1.0e-15);
+    }
+Method byte code: 
+0: iconst_2
+1: anewarray     #7
+4: dup
+5: iconst_0
+6: iconst_2
+7: newarray       double
+9: dup
+10: iconst_0
+11: ldc2_w        #20
+14: dastore
+15: dup
+16: iconst_1
+17: ldc2_w        #22
+20: dastore
+21: aastore
+22: dup
+23: iconst_1
+24: iconst_2
+25: newarray       double
+27: dup
+28: iconst_0
+29: ldc2_w        #22
+32: dastore
+33: dup
+34: iconst_1
+35: ldc2_w        #24
+38: dastore
+39: aastore
+40: invokestatic  #10
+43: astore_1
+44: new           #11
+47: dup
+48: aload_1
+49: ldc2_w        #13
+52: invokespecial #15
+55: astore_2
+56: ldc2_w        #26
+59: aload_2
+60: iconst_0
+61: invokeinterface #16,  2
+66: ldc2_w        #17
+69: invokestatic  #19
+72: ldc2_w        #28
+75: aload_2
+76: iconst_1
+77: invokeinterface #16,  2
+82: ldc2_w        #17
+85: invokestatic  #19
+88: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testDimension3
+Start line: 67
+End line: 78
+Method source code: 
+    public void testDimension3() {
+        RealMatrix matrix =
+            MatrixUtils.createRealMatrix(new double[][] {
+                                   {  39632.0, -4824.0, -16560.0 },
+                                   {  -4824.0,  8693.0,   7920.0 },
+                                   { -16560.0,  7920.0,  17300.0 }
+                               });
+        EigenDecomposition ed = new EigenDecompositionImpl(matrix, MathUtils.SAFE_MIN);
+        assertEquals(50000.0, ed.getRealEigenvalue(0), 3.0e-11);
+        assertEquals(12500.0, ed.getRealEigenvalue(1), 3.0e-11);
+        assertEquals( 3125.0, ed.getRealEigenvalue(2), 3.0e-11);
+    }
+Method byte code: 
+0: iconst_3
+1: anewarray     #7
+4: dup
+5: iconst_0
+6: iconst_3
+7: newarray       double
+9: dup
+10: iconst_0
+11: ldc2_w        #30
+14: dastore
+15: dup
+16: iconst_1
+17: ldc2_w        #32
+20: dastore
+21: dup
+22: iconst_2
+23: ldc2_w        #34
+26: dastore
+27: aastore
+28: dup
+29: iconst_1
+30: iconst_3
+31: newarray       double
+33: dup
+34: iconst_0
+35: ldc2_w        #32
+38: dastore
+39: dup
+40: iconst_1
+41: ldc2_w        #36
+44: dastore
+45: dup
+46: iconst_2
+47: ldc2_w        #38
+50: dastore
+51: aastore
+52: dup
+53: iconst_2
+54: iconst_3
+55: newarray       double
+57: dup
+58: iconst_0
+59: ldc2_w        #34
+62: dastore
+63: dup
+64: iconst_1
+65: ldc2_w        #38
+68: dastore
+69: dup
+70: iconst_2
+71: ldc2_w        #40
+74: dastore
+75: aastore
+76: invokestatic  #10
+79: astore_1
+80: new           #11
+83: dup
+84: aload_1
+85: ldc2_w        #13
+88: invokespecial #15
+91: astore_2
+92: ldc2_w        #42
+95: aload_2
+96: iconst_0
+97: invokeinterface #16,  2
+102: ldc2_w        #44
+105: invokestatic  #19
+108: ldc2_w        #46
+111: aload_2
+112: iconst_1
+113: invokeinterface #16,  2
+118: ldc2_w        #44
+121: invokestatic  #19
+124: ldc2_w        #48
+127: aload_2
+128: iconst_2
+129: invokeinterface #16,  2
+134: ldc2_w        #44
+137: invokestatic  #19
+140: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testDimension4WithSplit
+Start line: 80
+End line: 93
+Method source code: 
+    public void testDimension4WithSplit() {
+        RealMatrix matrix =
+            MatrixUtils.createRealMatrix(new double[][] {
+                                   {  0.784, -0.288,  0.000,  0.000 },
+                                   { -0.288,  0.616,  0.000,  0.000 },
+                                   {  0.000,  0.000,  0.164, -0.048 },
+                                   {  0.000,  0.000, -0.048,  0.136 }
+                               });
+        EigenDecomposition ed = new EigenDecompositionImpl(matrix, MathUtils.SAFE_MIN);
+        assertEquals(1.0, ed.getRealEigenvalue(0), 1.0e-15);
+        assertEquals(0.4, ed.getRealEigenvalue(1), 1.0e-15);
+        assertEquals(0.2, ed.getRealEigenvalue(2), 1.0e-15);
+        assertEquals(0.1, ed.getRealEigenvalue(3), 1.0e-15);
+    }
+Method byte code: 
+0: iconst_4
+1: anewarray     #7
+4: dup
+5: iconst_0
+6: iconst_4
+7: newarray       double
+9: dup
+10: iconst_0
+11: ldc2_w        #50
+14: dastore
+15: dup
+16: iconst_1
+17: ldc2_w        #52
+20: dastore
+21: dup
+22: iconst_2
+23: dconst_0
+24: dastore
+25: dup
+26: iconst_3
+27: dconst_0
+28: dastore
+29: aastore
+30: dup
+31: iconst_1
+32: iconst_4
+33: newarray       double
+35: dup
+36: iconst_0
+37: ldc2_w        #52
+40: dastore
+41: dup
+42: iconst_1
+43: ldc2_w        #54
+46: dastore
+47: dup
+48: iconst_2
+49: dconst_0
+50: dastore
+51: dup
+52: iconst_3
+53: dconst_0
+54: dastore
+55: aastore
+56: dup
+57: iconst_2
+58: iconst_4
+59: newarray       double
+61: dup
+62: iconst_0
+63: dconst_0
+64: dastore
+65: dup
+66: iconst_1
+67: dconst_0
+68: dastore
+69: dup
+70: iconst_2
+71: ldc2_w        #56
+74: dastore
+75: dup
+76: iconst_3
+77: ldc2_w        #58
+80: dastore
+81: aastore
+82: dup
+83: iconst_3
+84: iconst_4
+85: newarray       double
+87: dup
+88: iconst_0
+89: dconst_0
+90: dastore
+91: dup
+92: iconst_1
+93: dconst_0
+94: dastore
+95: dup
+96: iconst_2
+97: ldc2_w        #58
+100: dastore
+101: dup
+102: iconst_3
+103: ldc2_w        #60
+106: dastore
+107: aastore
+108: invokestatic  #10
+111: astore_1
+112: new           #11
+115: dup
+116: aload_1
+117: ldc2_w        #13
+120: invokespecial #15
+123: astore_2
+124: dconst_1
+125: aload_2
+126: iconst_0
+127: invokeinterface #16,  2
+132: ldc2_w        #17
+135: invokestatic  #19
+138: ldc2_w        #62
+141: aload_2
+142: iconst_1
+143: invokeinterface #16,  2
+148: ldc2_w        #17
+151: invokestatic  #19
+154: ldc2_w        #64
+157: aload_2
+158: iconst_2
+159: invokeinterface #16,  2
+164: ldc2_w        #17
+167: invokestatic  #19
+170: ldc2_w        #66
+173: aload_2
+174: iconst_3
+175: invokeinterface #16,  2
+180: ldc2_w        #17
+183: invokestatic  #19
+186: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testDimension4WithoutSplit
+Start line: 95
+End line: 108
+Method source code: 
+    public void testDimension4WithoutSplit() {
+        RealMatrix matrix =
+            MatrixUtils.createRealMatrix(new double[][] {
+                                   {  0.5608, -0.2016,  0.1152, -0.2976 },
+                                   { -0.2016,  0.4432, -0.2304,  0.1152 },
+                                   {  0.1152, -0.2304,  0.3088, -0.1344 },
+                                   { -0.2976,  0.1152, -0.1344,  0.3872 }
+                               });
+        EigenDecomposition ed = new EigenDecompositionImpl(matrix, MathUtils.SAFE_MIN);
+        assertEquals(1.0, ed.getRealEigenvalue(0), 1.0e-15);
+        assertEquals(0.4, ed.getRealEigenvalue(1), 1.0e-15);
+        assertEquals(0.2, ed.getRealEigenvalue(2), 1.0e-15);
+        assertEquals(0.1, ed.getRealEigenvalue(3), 1.0e-15);
+    }
+Method byte code: 
+0: iconst_4
+1: anewarray     #7
+4: dup
+5: iconst_0
+6: iconst_4
+7: newarray       double
+9: dup
+10: iconst_0
+11: ldc2_w        #68
+14: dastore
+15: dup
+16: iconst_1
+17: ldc2_w        #70
+20: dastore
+21: dup
+22: iconst_2
+23: ldc2_w        #72
+26: dastore
+27: dup
+28: iconst_3
+29: ldc2_w        #74
+32: dastore
+33: aastore
+34: dup
+35: iconst_1
+36: iconst_4
+37: newarray       double
+39: dup
+40: iconst_0
+41: ldc2_w        #70
+44: dastore
+45: dup
+46: iconst_1
+47: ldc2_w        #76
+50: dastore
+51: dup
+52: iconst_2
+53: ldc2_w        #78
+56: dastore
+57: dup
+58: iconst_3
+59: ldc2_w        #72
+62: dastore
+63: aastore
+64: dup
+65: iconst_2
+66: iconst_4
+67: newarray       double
+69: dup
+70: iconst_0
+71: ldc2_w        #72
+74: dastore
+75: dup
+76: iconst_1
+77: ldc2_w        #78
+80: dastore
+81: dup
+82: iconst_2
+83: ldc2_w        #80
+86: dastore
+87: dup
+88: iconst_3
+89: ldc2_w        #82
+92: dastore
+93: aastore
+94: dup
+95: iconst_3
+96: iconst_4
+97: newarray       double
+99: dup
+100: iconst_0
+101: ldc2_w        #74
+104: dastore
+105: dup
+106: iconst_1
+107: ldc2_w        #72
+110: dastore
+111: dup
+112: iconst_2
+113: ldc2_w        #82
+116: dastore
+117: dup
+118: iconst_3
+119: ldc2_w        #84
+122: dastore
+123: aastore
+124: invokestatic  #10
+127: astore_1
+128: new           #11
+131: dup
+132: aload_1
+133: ldc2_w        #13
+136: invokespecial #15
+139: astore_2
+140: dconst_1
+141: aload_2
+142: iconst_0
+143: invokeinterface #16,  2
+148: ldc2_w        #17
+151: invokestatic  #19
+154: ldc2_w        #62
+157: aload_2
+158: iconst_1
+159: invokeinterface #16,  2
+164: ldc2_w        #17
+167: invokestatic  #19
+170: ldc2_w        #64
+173: aload_2
+174: iconst_2
+175: invokeinterface #16,  2
+180: ldc2_w        #17
+183: invokestatic  #19
+186: ldc2_w        #66
+189: aload_2
+190: iconst_3
+191: invokeinterface #16,  2
+196: ldc2_w        #17
+199: invokestatic  #19
+202: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testMath308
+Start line: 111
+End line: 142
+Method source code: 
+    public void testMath308() {
+
+        double[] mainTridiagonal = {
+            22.330154644539597, 46.65485522478641, 17.393672330044705, 54.46687435351116, 80.17800767709437
+        };
+        double[] secondaryTridiagonal = {
+            13.04450406501361, -5.977590941539671, 2.9040909856707517, 7.1570352792841225
+        };
+
+        // the reference values have been computed using routine DSTEMR
+        // from the fortran library LAPACK version 3.2.1
+        double[] refEigenValues = {
+            82.044413207204002, 53.456697699894512, 52.536278520113882, 18.847969733754262, 14.138204224043099
+        };
+        RealVector[] refEigenVectors = {
+            new ArrayRealVector(new double[] { -0.000462690386766, -0.002118073109055,  0.011530080757413,  0.252322434584915,  0.967572088232592 }),
+            new ArrayRealVector(new double[] {  0.314647769490148,  0.750806415553905, -0.167700312025760, -0.537092972407375,  0.143854968127780 }),
+            new ArrayRealVector(new double[] {  0.222368839324646,  0.514921891363332, -0.021377019336614,  0.801196801016305, -0.207446991247740 }),
+            new ArrayRealVector(new double[] {  0.713933751051495, -0.190582113553930,  0.671410443368332, -0.056056055955050,  0.006541576993581 }),
+            new ArrayRealVector(new double[] {  0.584677060845929, -0.367177264979103, -0.721453187784497,  0.052971054621812, -0.005740715188257 })
+        };
+
+        EigenDecomposition decomposition =
+            new EigenDecompositionImpl(mainTridiagonal, secondaryTridiagonal, MathUtils.SAFE_MIN);
+
+        double[] eigenValues = decomposition.getRealEigenvalues();
+        for (int i = 0; i < refEigenValues.length; ++i) {
+            assertEquals(refEigenValues[i], eigenValues[i], 1.0e-5);
+            assertEquals(0, refEigenVectors[i].subtract(decomposition.getEigenvector(i)).getNorm(), 2.0e-7);
+        }
+
+    }
+Method byte code: 
+0: iconst_5
+1: newarray       double
+3: dup
+4: iconst_0
+5: ldc2_w        #86
+8: dastore
+9: dup
+10: iconst_1
+11: ldc2_w        #88
+14: dastore
+15: dup
+16: iconst_2
+17: ldc2_w        #90
+20: dastore
+21: dup
+22: iconst_3
+23: ldc2_w        #92
+26: dastore
+27: dup
+28: iconst_4
+29: ldc2_w        #94
+32: dastore
+33: astore_1
+34: iconst_4
+35: newarray       double
+37: dup
+38: iconst_0
+39: ldc2_w        #96
+42: dastore
+43: dup
+44: iconst_1
+45: ldc2_w        #98
+48: dastore
+49: dup
+50: iconst_2
+51: ldc2_w        #100
+54: dastore
+55: dup
+56: iconst_3
+57: ldc2_w        #102
+60: dastore
+61: astore_2
+62: iconst_5
+63: newarray       double
+65: dup
+66: iconst_0
+67: ldc2_w        #104
+70: dastore
+71: dup
+72: iconst_1
+73: ldc2_w        #106
+76: dastore
+77: dup
+78: iconst_2
+79: ldc2_w        #108
+82: dastore
+83: dup
+84: iconst_3
+85: ldc2_w        #110
+88: dastore
+89: dup
+90: iconst_4
+91: ldc2_w        #112
+94: dastore
+95: astore_3
+96: iconst_5
+97: anewarray     #114
+100: dup
+101: iconst_0
+102: new           #115
+105: dup
+106: iconst_5
+107: newarray       double
+109: dup
+110: iconst_0
+111: ldc2_w        #116
+114: dastore
+115: dup
+116: iconst_1
+117: ldc2_w        #118
+120: dastore
+121: dup
+122: iconst_2
+123: ldc2_w        #120
+126: dastore
+127: dup
+128: iconst_3
+129: ldc2_w        #122
+132: dastore
+133: dup
+134: iconst_4
+135: ldc2_w        #124
+138: dastore
+139: invokespecial #126
+142: aastore
+143: dup
+144: iconst_1
+145: new           #115
+148: dup
+149: iconst_5
+150: newarray       double
+152: dup
+153: iconst_0
+154: ldc2_w        #127
+157: dastore
+158: dup
+159: iconst_1
+160: ldc2_w        #129
+163: dastore
+164: dup
+165: iconst_2
+166: ldc2_w        #131
+169: dastore
+170: dup
+171: iconst_3
+172: ldc2_w        #133
+175: dastore
+176: dup
+177: iconst_4
+178: ldc2_w        #135
+181: dastore
+182: invokespecial #126
+185: aastore
+186: dup
+187: iconst_2
+188: new           #115
+191: dup
+192: iconst_5
+193: newarray       double
+195: dup
+196: iconst_0
+197: ldc2_w        #137
+200: dastore
+201: dup
+202: iconst_1
+203: ldc2_w        #139
+206: dastore
+207: dup
+208: iconst_2
+209: ldc2_w        #141
+212: dastore
+213: dup
+214: iconst_3
+215: ldc2_w        #143
+218: dastore
+219: dup
+220: iconst_4
+221: ldc2_w        #145
+224: dastore
+225: invokespecial #126
+228: aastore
+229: dup
+230: iconst_3
+231: new           #115
+234: dup
+235: iconst_5
+236: newarray       double
+238: dup
+239: iconst_0
+240: ldc2_w        #147
+243: dastore
+244: dup
+245: iconst_1
+246: ldc2_w        #149
+249: dastore
+250: dup
+251: iconst_2
+252: ldc2_w        #151
+255: dastore
+256: dup
+257: iconst_3
+258: ldc2_w        #153
+261: dastore
+262: dup
+263: iconst_4
+264: ldc2_w        #155
+267: dastore
+268: invokespecial #126
+271: aastore
+272: dup
+273: iconst_4
+274: new           #115
+277: dup
+278: iconst_5
+279: newarray       double
+281: dup
+282: iconst_0
+283: ldc2_w        #157
+286: dastore
+287: dup
+288: iconst_1
+289: ldc2_w        #159
+292: dastore
+293: dup
+294: iconst_2
+295: ldc2_w        #161
+298: dastore
+299: dup
+300: iconst_3
+301: ldc2_w        #163
+304: dastore
+305: dup
+306: iconst_4
+307: ldc2_w        #165
+310: dastore
+311: invokespecial #126
+314: aastore
+315: astore        4
+317: new           #11
+320: dup
+321: aload_1
+322: aload_2
+323: ldc2_w        #13
+326: invokespecial #167
+329: astore        5
+331: aload         5
+333: invokeinterface #168,  1
+338: astore        6
+340: iconst_0
+341: istore        7
+343: iload         7
+345: aload_3
+346: arraylength
+347: if_icmpge     402
+350: aload_3
+351: iload         7
+353: daload
+354: aload         6
+356: iload         7
+358: daload
+359: ldc2_w        #169
+362: invokestatic  #19
+365: dconst_0
+366: aload         4
+368: iload         7
+370: aaload
+371: aload         5
+373: iload         7
+375: invokeinterface #171,  2
+380: invokeinterface #172,  2
+385: invokeinterface #173,  1
+390: ldc2_w        #174
+393: invokestatic  #19
+396: iinc          7, 1
+399: goto          343
+402: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testTridiagonal
+Start line: 145
+End line: 168
+Method source code: 
+    public void testTridiagonal() {
+        Random r = new Random(4366663527842l);
+        double[] ref = new double[30];
+        for (int i = 0; i < ref.length; ++i) {
+            if (i < 5) {
+                ref[i] = 2 * r.nextDouble() - 1;
+            } else {
+                ref[i] = 0.0001 * r.nextDouble() + 6;
+            }
+        }
+        Arrays.sort(ref);
+        TriDiagonalTransformer t =
+            new TriDiagonalTransformer(createTestMatrix(r, ref));
+        EigenDecomposition ed =
+            new EigenDecompositionImpl(t.getMainDiagonalRef(),
+                                       t.getSecondaryDiagonalRef(),
+                                       MathUtils.SAFE_MIN);
+        double[] eigenValues = ed.getRealEigenvalues();
+        assertEquals(ref.length, eigenValues.length);
+        for (int i = 0; i < ref.length; ++i) {
+            assertEquals(ref[ref.length - i - 1], eigenValues[i], 2.0e-14);
+        }
+
+    }
+Method byte code: 
+0: new           #176
+3: dup
+4: ldc2_w        #177
+7: invokespecial #179
+10: astore_1
+11: bipush        30
+13: newarray       double
+15: astore_2
+16: iconst_0
+17: istore_3
+18: iload_3
+19: aload_2
+20: arraylength
+21: if_icmpge     66
+24: iload_3
+25: iconst_5
+26: if_icmpge     45
+29: aload_2
+30: iload_3
+31: ldc2_w        #180
+34: aload_1
+35: invokevirtual #182
+38: dmul
+39: dconst_1
+40: dsub
+41: dastore
+42: goto          60
+45: aload_2
+46: iload_3
+47: ldc2_w        #183
+50: aload_1
+51: invokevirtual #182
+54: dmul
+55: ldc2_w        #185
+58: dadd
+59: dastore
+60: iinc          3, 1
+63: goto          18
+66: aload_2
+67: invokestatic  #187
+70: new           #188
+73: dup
+74: aload_1
+75: aload_2
+76: invokestatic  #189
+79: invokespecial #190
+82: astore_3
+83: new           #11
+86: dup
+87: aload_3
+88: invokevirtual #191
+91: aload_3
+92: invokevirtual #192
+95: ldc2_w        #13
+98: invokespecial #167
+101: astore        4
+103: aload         4
+105: invokeinterface #168,  1
+110: astore        5
+112: aload_2
+113: arraylength
+114: aload         5
+116: arraylength
+117: invokestatic  #193
+120: iconst_0
+121: istore        6
+123: iload         6
+125: aload_2
+126: arraylength
+127: if_icmpge     156
+130: aload_2
+131: aload_2
+132: arraylength
+133: iload         6
+135: isub
+136: iconst_1
+137: isub
+138: daload
+139: aload         5
+141: iload         6
+143: daload
+144: ldc2_w        #194
+147: invokestatic  #19
+150: iinc          6, 1
+153: goto          123
+156: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testDimensions
+Start line: 171
+End line: 180
+Method source code: 
+    public void testDimensions() {
+        final int m = matrix.getRowDimension();
+        EigenDecomposition ed = new EigenDecompositionImpl(matrix, MathUtils.SAFE_MIN);
+        assertEquals(m, ed.getV().getRowDimension());
+        assertEquals(m, ed.getV().getColumnDimension());
+        assertEquals(m, ed.getD().getColumnDimension());
+        assertEquals(m, ed.getD().getColumnDimension());
+        assertEquals(m, ed.getVT().getRowDimension());
+        assertEquals(m, ed.getVT().getColumnDimension());
+    }
+Method byte code: 
+0: aload_0
+1: getfield      #196
+4: invokeinterface #197,  1
+9: istore_1
+10: new           #11
+13: dup
+14: aload_0
+15: getfield      #196
+18: ldc2_w        #13
+21: invokespecial #15
+24: astore_2
+25: iload_1
+26: aload_2
+27: invokeinterface #198,  1
+32: invokeinterface #197,  1
+37: invokestatic  #193
+40: iload_1
+41: aload_2
+42: invokeinterface #198,  1
+47: invokeinterface #199,  1
+52: invokestatic  #193
+55: iload_1
+56: aload_2
+57: invokeinterface #200,  1
+62: invokeinterface #199,  1
+67: invokestatic  #193
+70: iload_1
+71: aload_2
+72: invokeinterface #200,  1
+77: invokeinterface #199,  1
+82: invokestatic  #193
+85: iload_1
+86: aload_2
+87: invokeinterface #201,  1
+92: invokeinterface #197,  1
+97: invokestatic  #193
+100: iload_1
+101: aload_2
+102: invokeinterface #201,  1
+107: invokeinterface #199,  1
+112: invokestatic  #193
+115: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testEigenvalues
+Start line: 183
+End line: 190
+Method source code: 
+    public void testEigenvalues() {
+        EigenDecomposition ed = new EigenDecompositionImpl(matrix, MathUtils.SAFE_MIN);
+        double[] eigenValues = ed.getRealEigenvalues();
+        assertEquals(refValues.length, eigenValues.length);
+        for (int i = 0; i < refValues.length; ++i) {
+            assertEquals(refValues[i], eigenValues[i], 3.0e-15);
+        }
+    }
+Method byte code: 
+0: new           #11
+3: dup
+4: aload_0
+5: getfield      #196
+8: ldc2_w        #13
+11: invokespecial #15
+14: astore_1
+15: aload_1
+16: invokeinterface #168,  1
+21: astore_2
+22: aload_0
+23: getfield      #202
+26: arraylength
+27: aload_2
+28: arraylength
+29: invokestatic  #193
+32: iconst_0
+33: istore_3
+34: iload_3
+35: aload_0
+36: getfield      #202
+39: arraylength
+40: if_icmpge     64
+43: aload_0
+44: getfield      #202
+47: iload_3
+48: daload
+49: aload_2
+50: iload_3
+51: daload
+52: ldc2_w        #203
+55: invokestatic  #19
+58: iinc          3, 1
+61: goto          34
+64: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testBigMatrix
+Start line: 193
+End line: 207
+Method source code: 
+    public void testBigMatrix() {
+        Random r = new Random(17748333525117l);
+        double[] bigValues = new double[200];
+        for (int i = 0; i < bigValues.length; ++i) {
+            bigValues[i] = 2 * r.nextDouble() - 1;
+        }
+        Arrays.sort(bigValues);
+        EigenDecomposition ed =
+            new EigenDecompositionImpl(createTestMatrix(r, bigValues), MathUtils.SAFE_MIN);
+        double[] eigenValues = ed.getRealEigenvalues();
+        assertEquals(bigValues.length, eigenValues.length);
+        for (int i = 0; i < bigValues.length; ++i) {
+            assertEquals(bigValues[bigValues.length - i - 1], eigenValues[i], 2.0e-14);
+        }
+    }
+Method byte code: 
+0: new           #176
+3: dup
+4: ldc2_w        #205
+7: invokespecial #179
+10: astore_1
+11: sipush        200
+14: newarray       double
+16: astore_2
+17: iconst_0
+18: istore_3
+19: iload_3
+20: aload_2
+21: arraylength
+22: if_icmpge     44
+25: aload_2
+26: iload_3
+27: ldc2_w        #180
+30: aload_1
+31: invokevirtual #182
+34: dmul
+35: dconst_1
+36: dsub
+37: dastore
+38: iinc          3, 1
+41: goto          19
+44: aload_2
+45: invokestatic  #187
+48: new           #11
+51: dup
+52: aload_1
+53: aload_2
+54: invokestatic  #189
+57: ldc2_w        #13
+60: invokespecial #15
+63: astore_3
+64: aload_3
+65: invokeinterface #168,  1
+70: astore        4
+72: aload_2
+73: arraylength
+74: aload         4
+76: arraylength
+77: invokestatic  #193
+80: iconst_0
+81: istore        5
+83: iload         5
+85: aload_2
+86: arraylength
+87: if_icmpge     116
+90: aload_2
+91: aload_2
+92: arraylength
+93: iload         5
+95: isub
+96: iconst_1
+97: isub
+98: daload
+99: aload         4
+101: iload         5
+103: daload
+104: ldc2_w        #194
+107: invokestatic  #19
+110: iinc          5, 1
+113: goto          83
+116: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testEigenvectors
+Start line: 210
+End line: 218
+Method source code: 
+    public void testEigenvectors() {
+        EigenDecomposition ed = new EigenDecompositionImpl(matrix, MathUtils.SAFE_MIN);
+        for (int i = 0; i < matrix.getRowDimension(); ++i) {
+            double lambda = ed.getRealEigenvalue(i);
+            RealVector v  = ed.getEigenvector(i);
+            RealVector mV = matrix.operate(v);
+            assertEquals(0, mV.subtract(v.mapMultiplyToSelf(lambda)).getNorm(), 1.0e-13);
+        }
+    }
+Method byte code: 
+0: new           #11
+3: dup
+4: aload_0
+5: getfield      #196
+8: ldc2_w        #13
+11: invokespecial #15
+14: astore_1
+15: iconst_0
+16: istore_2
+17: iload_2
+18: aload_0
+19: getfield      #196
+22: invokeinterface #197,  1
+27: if_icmpge     93
+30: aload_1
+31: iload_2
+32: invokeinterface #16,  2
+37: dstore_3
+38: aload_1
+39: iload_2
+40: invokeinterface #171,  2
+45: astore        5
+47: aload_0
+48: getfield      #196
+51: aload         5
+53: invokeinterface #207,  2
+58: astore        6
+60: dconst_0
+61: aload         6
+63: aload         5
+65: dload_3
+66: invokeinterface #208,  3
+71: invokeinterface #172,  2
+76: invokeinterface #173,  1
+81: ldc2_w        #209
+84: invokestatic  #19
+87: iinc          2, 1
+90: goto          17
+93: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testAEqualVDVt
+Start line: 221
+End line: 228
+Method source code: 
+    public void testAEqualVDVt() {
+        EigenDecomposition ed = new EigenDecompositionImpl(matrix, MathUtils.SAFE_MIN);
+        RealMatrix v  = ed.getV();
+        RealMatrix d  = ed.getD();
+        RealMatrix vT = ed.getVT();
+        double norm = v.multiply(d).multiply(vT).subtract(matrix).getNorm();
+        assertEquals(0, norm, 6.0e-13);
+    }
+Method byte code: 
+0: new           #11
+3: dup
+4: aload_0
+5: getfield      #196
+8: ldc2_w        #13
+11: invokespecial #15
+14: astore_1
+15: aload_1
+16: invokeinterface #198,  1
+21: astore_2
+22: aload_1
+23: invokeinterface #200,  1
+28: astore_3
+29: aload_1
+30: invokeinterface #201,  1
+35: astore        4
+37: aload_2
+38: aload_3
+39: invokeinterface #211,  2
+44: aload         4
+46: invokeinterface #211,  2
+51: aload_0
+52: getfield      #196
+55: invokeinterface #212,  2
+60: invokeinterface #213,  1
+65: dstore        5
+67: dconst_0
+68: dload         5
+70: ldc2_w        #214
+73: invokestatic  #19
+76: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testVOrthogonal
+Start line: 231
+End line: 236
+Method source code: 
+    public void testVOrthogonal() {
+        RealMatrix v = new EigenDecompositionImpl(matrix, MathUtils.SAFE_MIN).getV();
+        RealMatrix vTv = v.transpose().multiply(v);
+        RealMatrix id  = MatrixUtils.createRealIdentityMatrix(vTv.getRowDimension());
+        assertEquals(0, vTv.subtract(id).getNorm(), 2.0e-13);
+    }
+Method byte code: 
+0: new           #11
+3: dup
+4: aload_0
+5: getfield      #196
+8: ldc2_w        #13
+11: invokespecial #15
+14: invokevirtual #216
+17: astore_1
+18: aload_1
+19: invokeinterface #217,  1
+24: aload_1
+25: invokeinterface #211,  2
+30: astore_2
+31: aload_2
+32: invokeinterface #197,  1
+37: invokestatic  #218
+40: astore_3
+41: dconst_0
+42: aload_2
+43: aload_3
+44: invokeinterface #212,  2
+49: invokeinterface #213,  1
+54: ldc2_w        #219
+57: invokestatic  #19
+60: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testDiagonal
+Start line: 239
+End line: 247
+Method source code: 
+    public void testDiagonal() {
+        double[] diagonal = new double[] { -3.0, -2.0, 2.0, 5.0 };
+        RealMatrix m = createDiagonalMatrix(diagonal, diagonal.length, diagonal.length);
+        EigenDecomposition ed = new EigenDecompositionImpl(m, MathUtils.SAFE_MIN);
+        assertEquals(diagonal[0], ed.getRealEigenvalue(3), 2.0e-15);
+        assertEquals(diagonal[1], ed.getRealEigenvalue(2), 2.0e-15);
+        assertEquals(diagonal[2], ed.getRealEigenvalue(1), 2.0e-15);
+        assertEquals(diagonal[3], ed.getRealEigenvalue(0), 2.0e-15);
+    }
+Method byte code: 
+0: iconst_4
+1: newarray       double
+3: dup
+4: iconst_0
+5: ldc2_w        #221
+8: dastore
+9: dup
+10: iconst_1
+11: ldc2_w        #223
+14: dastore
+15: dup
+16: iconst_2
+17: ldc2_w        #180
+20: dastore
+21: dup
+22: iconst_3
+23: ldc2_w        #225
+26: dastore
+27: astore_1
+28: aload_1
+29: aload_1
+30: arraylength
+31: aload_1
+32: arraylength
+33: invokestatic  #227
+36: astore_2
+37: new           #11
+40: dup
+41: aload_2
+42: ldc2_w        #13
+45: invokespecial #15
+48: astore_3
+49: aload_1
+50: iconst_0
+51: daload
+52: aload_3
+53: iconst_3
+54: invokeinterface #16,  2
+59: ldc2_w        #228
+62: invokestatic  #19
+65: aload_1
+66: iconst_1
+67: daload
+68: aload_3
+69: iconst_2
+70: invokeinterface #16,  2
+75: ldc2_w        #228
+78: invokestatic  #19
+81: aload_1
+82: iconst_2
+83: daload
+84: aload_3
+85: iconst_1
+86: invokeinterface #16,  2
+91: ldc2_w        #228
+94: invokestatic  #19
+97: aload_1
+98: iconst_3
+99: daload
+100: aload_3
+101: iconst_0
+102: invokeinterface #16,  2
+107: ldc2_w        #228
+110: invokestatic  #19
+113: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testRepeatedEigenvalue
+Start line: 252
+End line: 261
+Method source code: 
+    public void testRepeatedEigenvalue() {
+        RealMatrix repeated = MatrixUtils.createRealMatrix(new double[][] {
+                {3,  2,  4},
+                {2,  0,  2},
+                {4,  2,  3}
+        });
+        EigenDecomposition ed = new EigenDecompositionImpl(repeated, MathUtils.SAFE_MIN);
+        checkEigenValues((new double[] {8, -1, -1}), ed, 1E-12);
+        checkEigenVector((new double[] {2, 1, 2}), ed, 1E-12);
+    }
+Method byte code: 
+0: iconst_3
+1: anewarray     #7
+4: dup
+5: iconst_0
+6: iconst_3
+7: newarray       double
+9: dup
+10: iconst_0
+11: ldc2_w        #230
+14: dastore
+15: dup
+16: iconst_1
+17: ldc2_w        #180
+20: dastore
+21: dup
+22: iconst_2
+23: ldc2_w        #232
+26: dastore
+27: aastore
+28: dup
+29: iconst_1
+30: iconst_3
+31: newarray       double
+33: dup
+34: iconst_0
+35: ldc2_w        #180
+38: dastore
+39: dup
+40: iconst_1
+41: dconst_0
+42: dastore
+43: dup
+44: iconst_2
+45: ldc2_w        #180
+48: dastore
+49: aastore
+50: dup
+51: iconst_2
+52: iconst_3
+53: newarray       double
+55: dup
+56: iconst_0
+57: ldc2_w        #232
+60: dastore
+61: dup
+62: iconst_1
+63: ldc2_w        #180
+66: dastore
+67: dup
+68: iconst_2
+69: ldc2_w        #230
+72: dastore
+73: aastore
+74: invokestatic  #10
+77: astore_1
+78: new           #11
+81: dup
+82: aload_1
+83: ldc2_w        #13
+86: invokespecial #15
+89: astore_2
+90: aload_0
+91: iconst_3
+92: newarray       double
+94: dup
+95: iconst_0
+96: ldc2_w        #234
+99: dastore
+100: dup
+101: iconst_1
+102: ldc2_w        #236
+105: dastore
+106: dup
+107: iconst_2
+108: ldc2_w        #236
+111: dastore
+112: aload_2
+113: ldc2_w        #238
+116: invokevirtual #240
+119: aload_0
+120: iconst_3
+121: newarray       double
+123: dup
+124: iconst_0
+125: ldc2_w        #180
+128: dastore
+129: dup
+130: iconst_1
+131: dconst_1
+132: dastore
+133: dup
+134: iconst_2
+135: ldc2_w        #180
+138: dastore
+139: aload_2
+140: ldc2_w        #238
+143: invokevirtual #241
+146: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testDistinctEigenvalues
+Start line: 266
+End line: 277
+Method source code: 
+    public void testDistinctEigenvalues() {
+        RealMatrix distinct = MatrixUtils.createRealMatrix(new double[][] {
+                {3, 1, -4},
+                {1, 3, -4},
+                {-4, -4, 8}
+        });
+        EigenDecomposition ed = new EigenDecompositionImpl(distinct, MathUtils.SAFE_MIN);
+        checkEigenValues((new double[] {2, 0, 12}), ed, 1E-12);
+        checkEigenVector((new double[] {1, -1, 0}), ed, 1E-12);
+        checkEigenVector((new double[] {1, 1, 1}), ed, 1E-12);
+        checkEigenVector((new double[] {-1, -1, 2}), ed, 1E-12);
+    }
+Method byte code: 
+0: iconst_3
+1: anewarray     #7
+4: dup
+5: iconst_0
+6: iconst_3
+7: newarray       double
+9: dup
+10: iconst_0
+11: ldc2_w        #230
+14: dastore
+15: dup
+16: iconst_1
+17: dconst_1
+18: dastore
+19: dup
+20: iconst_2
+21: ldc2_w        #242
+24: dastore
+25: aastore
+26: dup
+27: iconst_1
+28: iconst_3
+29: newarray       double
+31: dup
+32: iconst_0
+33: dconst_1
+34: dastore
+35: dup
+36: iconst_1
+37: ldc2_w        #230
+40: dastore
+41: dup
+42: iconst_2
+43: ldc2_w        #242
+46: dastore
+47: aastore
+48: dup
+49: iconst_2
+50: iconst_3
+51: newarray       double
+53: dup
+54: iconst_0
+55: ldc2_w        #242
+58: dastore
+59: dup
+60: iconst_1
+61: ldc2_w        #242
+64: dastore
+65: dup
+66: iconst_2
+67: ldc2_w        #234
+70: dastore
+71: aastore
+72: invokestatic  #10
+75: astore_1
+76: new           #11
+79: dup
+80: aload_1
+81: ldc2_w        #13
+84: invokespecial #15
+87: astore_2
+88: aload_0
+89: iconst_3
+90: newarray       double
+92: dup
+93: iconst_0
+94: ldc2_w        #180
+97: dastore
+98: dup
+99: iconst_1
+100: dconst_0
+101: dastore
+102: dup
+103: iconst_2
+104: ldc2_w        #22
+107: dastore
+108: aload_2
+109: ldc2_w        #238
+112: invokevirtual #240
+115: aload_0
+116: iconst_3
+117: newarray       double
+119: dup
+120: iconst_0
+121: dconst_1
+122: dastore
+123: dup
+124: iconst_1
+125: ldc2_w        #236
+128: dastore
+129: dup
+130: iconst_2
+131: dconst_0
+132: dastore
+133: aload_2
+134: ldc2_w        #238
+137: invokevirtual #241
+140: aload_0
+141: iconst_3
+142: newarray       double
+144: dup
+145: iconst_0
+146: dconst_1
+147: dastore
+148: dup
+149: iconst_1
+150: dconst_1
+151: dastore
+152: dup
+153: iconst_2
+154: dconst_1
+155: dastore
+156: aload_2
+157: ldc2_w        #238
+160: invokevirtual #241
+163: aload_0
+164: iconst_3
+165: newarray       double
+167: dup
+168: iconst_0
+169: ldc2_w        #236
+172: dastore
+173: dup
+174: iconst_1
+175: ldc2_w        #236
+178: dastore
+179: dup
+180: iconst_2
+181: ldc2_w        #180
+184: dastore
+185: aload_2
+186: ldc2_w        #238
+189: invokevirtual #241
+192: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImplTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImplTest.class
+Class name: EigenDecompositionImplTest
+Method name: testZeroDivide
+Start line: 282
+End line: 296
+Method source code: 
+    public void testZeroDivide() {
+        RealMatrix indefinite = MatrixUtils.createRealMatrix(new double [][] {
+                { 0.0, 1.0, -1.0 }, 
+                { 1.0, 1.0, 0.0 }, 
+                { -1.0,0.0, 1.0 }        
+        });
+        EigenDecomposition ed = new EigenDecompositionImpl(indefinite, MathUtils.SAFE_MIN);
+        checkEigenValues((new double[] {2, 1, -1}), ed, 1E-12);
+        double isqrt3 = 1/Math.sqrt(3.0);
+        checkEigenVector((new double[] {isqrt3,isqrt3,-isqrt3}), ed, 1E-12);
+        double isqrt2 = 1/Math.sqrt(2.0);
+        checkEigenVector((new double[] {0.0,-isqrt2,-isqrt2}), ed, 1E-12);
+        double isqrt6 = 1/Math.sqrt(6.0);
+        checkEigenVector((new double[] {2*isqrt6,-isqrt6,isqrt6}), ed, 1E-12);
+    }
+Method byte code: 
+0: iconst_3
+1: anewarray     #7
+4: dup
+5: iconst_0
+6: iconst_3
+7: newarray       double
+9: dup
+10: iconst_0
+11: dconst_0
+12: dastore
+13: dup
+14: iconst_1
+15: dconst_1
+16: dastore
+17: dup
+18: iconst_2
+19: ldc2_w        #236
+22: dastore
+23: aastore
+24: dup
+25: iconst_1
+26: iconst_3
+27: newarray       double
+29: dup
+30: iconst_0
+31: dconst_1
+32: dastore
+33: dup
+34: iconst_1
+35: dconst_1
+36: dastore
+37: dup
+38: iconst_2
+39: dconst_0
+40: dastore
+41: aastore
+42: dup
+43: iconst_2
+44: iconst_3
+45: newarray       double
+47: dup
+48: iconst_0
+49: ldc2_w        #236
+52: dastore
+53: dup
+54: iconst_1
+55: dconst_0
+56: dastore
+57: dup
+58: iconst_2
+59: dconst_1
+60: dastore
+61: aastore
+62: invokestatic  #10
+65: astore_1
+66: new           #11
+69: dup
+70: aload_1
+71: ldc2_w        #13
+74: invokespecial #15
+77: astore_2
+78: aload_0
+79: iconst_3
+80: newarray       double
+82: dup
+83: iconst_0
+84: ldc2_w        #180
+87: dastore
+88: dup
+89: iconst_1
+90: dconst_1
+91: dastore
+92: dup
+93: iconst_2
+94: ldc2_w        #236
+97: dastore
+98: aload_2
+99: ldc2_w        #238
+102: invokevirtual #240
+105: dconst_1
+106: ldc2_w        #230
+109: invokestatic  #244
+112: ddiv
+113: dstore_3
+114: aload_0
+115: iconst_3
+116: newarray       double
+118: dup
+119: iconst_0
+120: dload_3
+121: dastore
+122: dup
+123: iconst_1
+124: dload_3
+125: dastore
+126: dup
+127: iconst_2
+128: dload_3
+129: dneg
+130: dastore
+131: aload_2
+132: ldc2_w        #238
+135: invokevirtual #241
+138: dconst_1
+139: ldc2_w        #180
+142: invokestatic  #244
+145: ddiv
+146: dstore        5
+148: aload_0
+149: iconst_3
+150: newarray       double
+152: dup
+153: iconst_0
+154: dconst_0
+155: dastore
+156: dup
+157: iconst_1
+158: dload         5
+160: dneg
+161: dastore
+162: dup
+163: iconst_2
+164: dload         5
+166: dneg
+167: dastore
+168: aload_2
+169: ldc2_w        #238
+172: invokevirtual #241
+175: dconst_1
+176: ldc2_w        #185
+179: invokestatic  #244
+182: ddiv
+183: dstore        7
+185: aload_0
+186: iconst_3
+187: newarray       double
+189: dup
+190: iconst_0
+191: ldc2_w        #180
+194: dload         7
+196: dmul
+197: dastore
+198: dup
+199: iconst_1
+200: dload         7
+202: dneg
+203: dastore
+204: dup
+205: iconst_2
+206: dload         7
+208: dastore
+209: aload_2
+210: ldc2_w        #238
+213: invokevirtual #241
+216: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test00
+Start line: 21
+End line: 27
+Method source code: 
+  public void test00()  throws Throwable  {
+      double[] doubleArray0 = new double[1];
+      Array2DRowRealMatrix array2DRowRealMatrix0 = new Array2DRowRealMatrix(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(array2DRowRealMatrix0, 1090.045613197);
+      double[] doubleArray1 = eigenDecompositionImpl0.getImagEigenvalues();
+      assertFalse(doubleArray1.equals((Object)doubleArray0));
+  }
+Method byte code: 
+0: iconst_1
+1: newarray       double
+3: astore_1
+4: new           #2
+7: dup
+8: aload_1
+9: invokespecial #3
+12: astore_2
+13: new           #4
+16: dup
+17: aload_2
+18: ldc2_w        #5
+21: invokespecial #7
+24: astore_3
+25: aload_3
+26: invokevirtual #8
+29: astore        4
+31: aload         4
+33: aload_1
+34: invokevirtual #9
+37: invokestatic  #10
+40: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test01
+Start line: 30
+End line: 44
+Method source code: 
+  public void test01()  throws Throwable  {
+      double[] doubleArray0 = new double[1];
+      Array2DRowRealMatrix array2DRowRealMatrix0 = new Array2DRowRealMatrix(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(array2DRowRealMatrix0, 1090.045613197);
+      try { 
+        eigenDecompositionImpl0.getImagEigenvalue(2074707065);
+        fail("Expecting exception: ArrayIndexOutOfBoundsException");
+      
+      } catch(ArrayIndexOutOfBoundsException e) {
+         //
+         // 2074707065
+         //
+         verifyException("org.apache.commons.math.linear.EigenDecompositionImpl", e);
+      }
+  }
+Method byte code: 
+0: iconst_1
+1: newarray       double
+3: astore_1
+4: new           #2
+7: dup
+8: aload_1
+9: invokespecial #3
+12: astore_2
+13: new           #4
+16: dup
+17: aload_2
+18: ldc2_w        #5
+21: invokespecial #7
+24: astore_3
+25: aload_3
+26: ldc           #11
+28: invokevirtual #12
+31: pop2
+32: ldc           #13
+34: invokestatic  #14
+37: goto          49
+40: astore        4
+42: ldc           #16
+44: aload         4
+46: invokestatic  #17
+49: return
+Exception table:
+from    to  target type
+25    37    40   Class java/lang/ArrayIndexOutOfBoundsException
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test02
+Start line: 47
+End line: 62
+Method source code: 
+  public void test02()  throws Throwable  {
+      double[] doubleArray0 = new double[1];
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      RealMatrix realMatrix0 = openMapRealVector0.outerProduct(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(realMatrix0, 1495100.343013787);
+      try { 
+        eigenDecompositionImpl0.getRealEigenvalue(2143);
+        fail("Expecting exception: ArrayIndexOutOfBoundsException");
+      
+      } catch(ArrayIndexOutOfBoundsException e) {
+         //
+         // 2143
+         //
+         verifyException("org.apache.commons.math.linear.EigenDecompositionImpl", e);
+      }
+  }
+Method byte code: 
+0: iconst_1
+1: newarray       double
+3: astore_1
+4: new           #18
+7: dup
+8: aload_1
+9: invokespecial #19
+12: astore_2
+13: aload_2
+14: aload_1
+15: invokevirtual #20
+18: astore_3
+19: new           #4
+22: dup
+23: aload_3
+24: ldc2_w        #21
+27: invokespecial #7
+30: astore        4
+32: aload         4
+34: sipush        2143
+37: invokevirtual #23
+40: pop2
+41: ldc           #13
+43: invokestatic  #14
+46: goto          58
+49: astore        5
+51: ldc           #16
+53: aload         5
+55: invokestatic  #17
+58: return
+Exception table:
+from    to  target type
+32    46    49   Class java/lang/ArrayIndexOutOfBoundsException
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test03
+Start line: 65
+End line: 72
+Method source code: 
+  public void test03()  throws Throwable  {
+      double[] doubleArray0 = new double[1];
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      RealMatrix realMatrix0 = openMapRealVector0.outerProduct(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(realMatrix0, Double.NaN);
+      double[] doubleArray1 = eigenDecompositionImpl0.getRealEigenvalues();
+      assertEquals(1, doubleArray1.length);
+  }
+Method byte code: 
+0: iconst_1
+1: newarray       double
+3: astore_1
+4: new           #18
+7: dup
+8: aload_1
+9: invokespecial #19
+12: astore_2
+13: aload_2
+14: aload_1
+15: invokevirtual #20
+18: astore_3
+19: new           #4
+22: dup
+23: aload_3
+24: ldc2_w        #25
+27: invokespecial #7
+30: astore        4
+32: aload         4
+34: invokevirtual #27
+37: astore        5
+39: lconst_1
+40: aload         5
+42: arraylength
+43: i2l
+44: invokestatic  #28
+47: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test04
+Start line: 75
+End line: 93
+Method source code: 
+  public void test04()  throws Throwable  {
+      double[] doubleArray0 = new double[3];
+      doubleArray0[0] = 500.192292427972;
+      doubleArray0[1] = 0.9999999999999998;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealVector openMapRealVector1 = new OpenMapRealVector(doubleArray0, 500.192292427972);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector1);
+      EigenDecompositionImpl eigenDecompositionImpl0 = null;
+      try {
+        eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, 500.192292427972);
+        fail("Expecting exception: RuntimeException");
+      
+      } catch(RuntimeException e) {
+         //
+         // eigen decomposition of assymetric matrices not supported yet
+         //
+         verifyException("org.apache.commons.math.linear.EigenDecompositionImpl", e);
+      }
+  }
+Method byte code: 
+0: iconst_3
+1: newarray       double
+3: astore_1
+4: aload_1
+5: iconst_0
+6: ldc2_w        #29
+9: dastore
+10: aload_1
+11: iconst_1
+12: ldc2_w        #31
+15: dastore
+16: new           #18
+19: dup
+20: aload_1
+21: invokespecial #19
+24: astore_2
+25: new           #18
+28: dup
+29: aload_1
+30: ldc2_w        #29
+33: invokespecial #33
+36: astore_3
+37: aload_2
+38: aload_3
+39: invokevirtual #34
+42: astore        4
+44: aconst_null
+45: astore        5
+47: new           #4
+50: dup
+51: aload         4
+53: ldc2_w        #29
+56: invokespecial #7
+59: astore        5
+61: ldc           #35
+63: invokestatic  #14
+66: goto          78
+69: astore        6
+71: ldc           #16
+73: aload         6
+75: invokestatic  #17
+78: return
+Exception table:
+from    to  target type
+47    66    69   Class java/lang/RuntimeException
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test05
+Start line: 96
+End line: 104
+Method source code: 
+  public void test05()  throws Throwable  {
+      double[] doubleArray0 = new double[1];
+      Array2DRowRealMatrix array2DRowRealMatrix0 = new Array2DRowRealMatrix(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(array2DRowRealMatrix0, (-3350.8421464557214));
+      eigenDecompositionImpl0.getV();
+      RealMatrix realMatrix0 = eigenDecompositionImpl0.getV();
+      assertNotNull(realMatrix0);
+      assertFalse(realMatrix0.equals((Object)array2DRowRealMatrix0));
+  }
+Method byte code: 
+0: iconst_1
+1: newarray       double
+3: astore_1
+4: new           #2
+7: dup
+8: aload_1
+9: invokespecial #3
+12: astore_2
+13: new           #4
+16: dup
+17: aload_2
+18: ldc2_w        #37
+21: invokespecial #7
+24: astore_3
+25: aload_3
+26: invokevirtual #39
+29: pop
+30: aload_3
+31: invokevirtual #39
+34: astore        4
+36: aload         4
+38: invokestatic  #40
+41: aload         4
+43: aload_2
+44: invokevirtual #9
+47: invokestatic  #10
+50: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test06
+Start line: 107
+End line: 116
+Method source code: 
+  public void test06()  throws Throwable  {
+      double[] doubleArray0 = new double[1];
+      Array2DRowRealMatrix array2DRowRealMatrix0 = new Array2DRowRealMatrix(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(array2DRowRealMatrix0, (-3350.8421464557214));
+      RealMatrix realMatrix0 = eigenDecompositionImpl0.getVT();
+      assertNotNull(realMatrix0);
+      
+      RealMatrix realMatrix1 = eigenDecompositionImpl0.getV();
+      assertTrue(realMatrix1.equals((Object)realMatrix0));
+  }
+Method byte code: 
+0: iconst_1
+1: newarray       double
+3: astore_1
+4: new           #2
+7: dup
+8: aload_1
+9: invokespecial #3
+12: astore_2
+13: new           #4
+16: dup
+17: aload_2
+18: ldc2_w        #37
+21: invokespecial #7
+24: astore_3
+25: aload_3
+26: invokevirtual #41
+29: astore        4
+31: aload         4
+33: invokestatic  #40
+36: aload_3
+37: invokevirtual #39
+40: astore        5
+42: aload         5
+44: aload         4
+46: invokevirtual #9
+49: invokestatic  #42
+52: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test07
+Start line: 119
+End line: 126
+Method source code: 
+  public void test07()  throws Throwable  {
+      double[] doubleArray0 = new double[1];
+      Array2DRowRealMatrix array2DRowRealMatrix0 = new Array2DRowRealMatrix(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(array2DRowRealMatrix0, (-3350.8421464557214));
+      eigenDecompositionImpl0.getD();
+      RealMatrix realMatrix0 = eigenDecompositionImpl0.getD();
+      assertEquals(1, realMatrix0.getColumnDimension());
+  }
+Method byte code: 
+0: iconst_1
+1: newarray       double
+3: astore_1
+4: new           #2
+7: dup
+8: aload_1
+9: invokespecial #3
+12: astore_2
+13: new           #4
+16: dup
+17: aload_2
+18: ldc2_w        #37
+21: invokespecial #7
+24: astore_3
+25: aload_3
+26: invokevirtual #43
+29: pop
+30: aload_3
+31: invokevirtual #43
+34: astore        4
+36: lconst_1
+37: aload         4
+39: invokeinterface #44,  1
+44: i2l
+45: invokestatic  #28
+48: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test08
+Start line: 129
+End line: 136
+Method source code: 
+  public void test08()  throws Throwable  {
+      double[] doubleArray0 = new double[1];
+      Array2DRowRealMatrix array2DRowRealMatrix0 = new Array2DRowRealMatrix(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(array2DRowRealMatrix0, (-3350.8421464557214));
+      eigenDecompositionImpl0.getVT();
+      RealMatrix realMatrix0 = eigenDecompositionImpl0.getVT();
+      assertFalse(realMatrix0.equals((Object)array2DRowRealMatrix0));
+  }
+Method byte code: 
+0: iconst_1
+1: newarray       double
+3: astore_1
+4: new           #2
+7: dup
+8: aload_1
+9: invokespecial #3
+12: astore_2
+13: new           #4
+16: dup
+17: aload_2
+18: ldc2_w        #37
+21: invokespecial #7
+24: astore_3
+25: aload_3
+26: invokevirtual #41
+29: pop
+30: aload_3
+31: invokevirtual #41
+34: astore        4
+36: aload         4
+38: aload_2
+39: invokevirtual #9
+42: invokestatic  #10
+45: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test09
+Start line: 139
+End line: 147
+Method source code: 
+  public void test09()  throws Throwable  {
+      double[] doubleArray0 = new double[2];
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      RealMatrix realMatrix0 = openMapRealVector0.outerProduct(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(realMatrix0, Double.NaN);
+      eigenDecompositionImpl0.getV();
+      eigenDecompositionImpl0.getVT();
+      assertEquals(Double.NaN, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: iconst_2
+1: newarray       double
+3: astore_1
+4: new           #18
+7: dup
+8: aload_1
+9: invokespecial #19
+12: astore_2
+13: aload_2
+14: aload_1
+15: invokevirtual #20
+18: astore_3
+19: new           #4
+22: dup
+23: aload_3
+24: ldc2_w        #25
+27: invokespecial #7
+30: astore        4
+32: aload         4
+34: invokevirtual #39
+37: pop
+38: aload         4
+40: invokevirtual #41
+43: pop
+44: ldc2_w        #25
+47: aload         4
+49: invokevirtual #45
+52: ldc2_w        #46
+55: invokestatic  #48
+58: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test10
+Start line: 150
+End line: 165
+Method source code: 
+  public void test10()  throws Throwable  {
+      double[] doubleArray0 = new double[1];
+      Array2DRowRealMatrix array2DRowRealMatrix0 = new Array2DRowRealMatrix(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(array2DRowRealMatrix0, (-3350.8421464557214));
+      eigenDecompositionImpl0.getVT();
+      try { 
+        eigenDecompositionImpl0.getEigenvector(9);
+        fail("Expecting exception: ArrayIndexOutOfBoundsException");
+      
+      } catch(ArrayIndexOutOfBoundsException e) {
+         //
+         // 9
+         //
+         verifyException("org.apache.commons.math.linear.EigenDecompositionImpl", e);
+      }
+  }
+Method byte code: 
+0: iconst_1
+1: newarray       double
+3: astore_1
+4: new           #2
+7: dup
+8: aload_1
+9: invokespecial #3
+12: astore_2
+13: new           #4
+16: dup
+17: aload_2
+18: ldc2_w        #37
+21: invokespecial #7
+24: astore_3
+25: aload_3
+26: invokevirtual #41
+29: pop
+30: aload_3
+31: bipush        9
+33: invokevirtual #49
+36: pop
+37: ldc           #13
+39: invokestatic  #14
+42: goto          54
+45: astore        4
+47: ldc           #16
+49: aload         4
+51: invokestatic  #17
+54: return
+Exception table:
+from    to  target type
+30    42    45   Class java/lang/ArrayIndexOutOfBoundsException
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test11
+Start line: 168
+End line: 181
+Method source code: 
+  public void test11()  throws Throwable  {
+      OpenMapRealMatrix openMapRealMatrix0 = new OpenMapRealMatrix(5, 5);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, 5);
+      try { 
+        eigenDecompositionImpl0.getEigenvector(5);
+        fail("Expecting exception: ArrayIndexOutOfBoundsException");
+      
+      } catch(ArrayIndexOutOfBoundsException e) {
+         //
+         // 5
+         //
+         verifyException("org.apache.commons.math.linear.EigenDecompositionImpl", e);
+      }
+  }
+Method byte code: 
+0: new           #50
+3: dup
+4: iconst_5
+5: iconst_5
+6: invokespecial #51
+9: astore_1
+10: new           #4
+13: dup
+14: aload_1
+15: ldc2_w        #52
+18: invokespecial #7
+21: astore_2
+22: aload_2
+23: iconst_5
+24: invokevirtual #49
+27: pop
+28: ldc           #13
+30: invokestatic  #14
+33: goto          43
+36: astore_3
+37: ldc           #16
+39: aload_3
+40: invokestatic  #17
+43: return
+Exception table:
+from    to  target type
+22    33    36   Class java/lang/ArrayIndexOutOfBoundsException
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test12
+Start line: 184
+End line: 191
+Method source code: 
+  public void test12()  throws Throwable  {
+      double[] doubleArray0 = new double[5];
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      RealMatrix realMatrix0 = openMapRealVector0.outerProduct(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(realMatrix0, 874.4937167134);
+      double double0 = eigenDecompositionImpl0.getDeterminant();
+      assertEquals(0.0, double0, 0.01);
+  }
+Method byte code: 
+0: iconst_5
+1: newarray       double
+3: astore_1
+4: new           #18
+7: dup
+8: aload_1
+9: invokespecial #19
+12: astore_2
+13: aload_2
+14: aload_1
+15: invokevirtual #20
+18: astore_3
+19: new           #4
+22: dup
+23: aload_3
+24: ldc2_w        #54
+27: invokespecial #7
+30: astore        4
+32: aload         4
+34: invokevirtual #45
+37: dstore        5
+39: dconst_0
+40: dload         5
+42: ldc2_w        #46
+45: invokestatic  #48
+48: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test13
+Start line: 194
+End line: 202
+Method source code: 
+  public void test13()  throws Throwable  {
+      double[] doubleArray0 = new double[5];
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      RealMatrix realMatrix0 = openMapRealVector0.outerProduct(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(realMatrix0, 1.0E-12);
+      eigenDecompositionImpl0.getV();
+      eigenDecompositionImpl0.getSolver();
+      assertEquals(0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: iconst_5
+1: newarray       double
+3: astore_1
+4: new           #18
+7: dup
+8: aload_1
+9: invokespecial #19
+12: astore_2
+13: aload_2
+14: aload_1
+15: invokevirtual #20
+18: astore_3
+19: new           #4
+22: dup
+23: aload_3
+24: ldc2_w        #56
+27: invokespecial #7
+30: astore        4
+32: aload         4
+34: invokevirtual #39
+37: pop
+38: aload         4
+40: invokevirtual #58
+43: pop
+44: dconst_0
+45: aload         4
+47: invokevirtual #45
+50: ldc2_w        #46
+53: invokestatic  #48
+56: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test14
+Start line: 205
+End line: 212
+Method source code: 
+  public void test14()  throws Throwable  {
+      double[] doubleArray0 = new double[20];
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      RealMatrix realMatrix0 = openMapRealVector0.outerProduct(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(realMatrix0, 1.0E-12);
+      eigenDecompositionImpl0.getSolver();
+      assertEquals(0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        20
+2: newarray       double
+4: astore_1
+5: new           #18
+8: dup
+9: aload_1
+10: invokespecial #19
+13: astore_2
+14: aload_2
+15: aload_1
+16: invokevirtual #20
+19: astore_3
+20: new           #4
+23: dup
+24: aload_3
+25: ldc2_w        #56
+28: invokespecial #7
+31: astore        4
+33: aload         4
+35: invokevirtual #58
+38: pop
+39: dconst_0
+40: aload         4
+42: invokevirtual #45
+45: ldc2_w        #46
+48: invokestatic  #48
+51: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test15
+Start line: 215
+End line: 222
+Method source code: 
+  public void test15()  throws Throwable  {
+      double[] doubleArray0 = new double[6];
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      openMapRealVector0.mapAcosToSelf();
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, 1.0E-12);
+      assertEquals(-0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        6
+2: newarray       double
+4: astore_1
+5: new           #18
+8: dup
+9: aload_1
+10: invokespecial #19
+13: astore_2
+14: aload_2
+15: invokevirtual #59
+18: pop
+19: aload_2
+20: aload_2
+21: invokevirtual #34
+24: astore_3
+25: new           #4
+28: dup
+29: aload_3
+30: ldc2_w        #56
+33: invokespecial #7
+36: astore        4
+38: ldc2_w        #60
+41: aload         4
+43: invokevirtual #45
+46: ldc2_w        #46
+49: invokestatic  #48
+52: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test16
+Start line: 225
+End line: 240
+Method source code: 
+  public void test16()  throws Throwable  {
+      double[] doubleArray0 = new double[3];
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = null;
+      try {
+        eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, Double.NaN);
+        fail("Expecting exception: RuntimeException");
+      
+      } catch(RuntimeException e) {
+         //
+         // cannot solve degree 3 equation
+         //
+         verifyException("org.apache.commons.math.linear.EigenDecompositionImpl", e);
+      }
+  }
+Method byte code: 
+0: iconst_3
+1: newarray       double
+3: astore_1
+4: new           #18
+7: dup
+8: aload_1
+9: invokespecial #19
+12: astore_2
+13: aload_2
+14: aload_2
+15: invokevirtual #34
+18: astore_3
+19: aconst_null
+20: astore        4
+22: new           #4
+25: dup
+26: aload_3
+27: ldc2_w        #25
+30: invokespecial #7
+33: astore        4
+35: ldc           #35
+37: invokestatic  #14
+40: goto          52
+43: astore        5
+45: ldc           #16
+47: aload         5
+49: invokestatic  #17
+52: return
+Exception table:
+from    to  target type
+22    40    43   Class java/lang/RuntimeException
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test17
+Start line: 243
+End line: 250
+Method source code: 
+  public void test17()  throws Throwable  {
+      double[] doubleArray0 = new double[3];
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealVector openMapRealVector1 = openMapRealVector0.mapInvToSelf();
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector1);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, 1.0E-12);
+      assertEquals(Double.NaN, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: iconst_3
+1: newarray       double
+3: astore_1
+4: new           #18
+7: dup
+8: aload_1
+9: invokespecial #19
+12: astore_2
+13: aload_2
+14: invokevirtual #62
+17: astore_3
+18: aload_2
+19: aload_3
+20: invokevirtual #34
+23: astore        4
+25: new           #4
+28: dup
+29: aload         4
+31: ldc2_w        #56
+34: invokespecial #7
+37: astore        5
+39: ldc2_w        #25
+42: aload         5
+44: invokevirtual #45
+47: ldc2_w        #46
+50: invokestatic  #48
+53: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test18
+Start line: 253
+End line: 261
+Method source code: 
+  public void test18()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[1] = (-4564.6);
+      doubleArray0[2] = 500.192292427972;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, Double.POSITIVE_INFINITY);
+      assertEquals(0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_1
+7: ldc2_w        #63
+10: dastore
+11: aload_1
+12: iconst_2
+13: ldc2_w        #29
+16: dastore
+17: new           #18
+20: dup
+21: aload_1
+22: invokespecial #19
+25: astore_2
+26: aload_2
+27: aload_2
+28: invokevirtual #34
+31: astore_3
+32: new           #4
+35: dup
+36: aload_3
+37: ldc2_w        #65
+40: invokespecial #7
+43: astore        4
+45: dconst_0
+46: aload         4
+48: invokevirtual #45
+51: ldc2_w        #46
+54: invokestatic  #48
+57: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test19
+Start line: 264
+End line: 271
+Method source code: 
+  public void test19()  throws Throwable  {
+      double[] doubleArray0 = new double[10];
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealVector openMapRealVector1 = openMapRealVector0.mapAcosToSelf();
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector1.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, 1.0E-12);
+      assertEquals(0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        10
+2: newarray       double
+4: astore_1
+5: new           #18
+8: dup
+9: aload_1
+10: invokespecial #19
+13: astore_2
+14: aload_2
+15: invokevirtual #59
+18: astore_3
+19: aload_3
+20: aload_2
+21: invokevirtual #34
+24: astore        4
+26: new           #4
+29: dup
+30: aload         4
+32: ldc2_w        #56
+35: invokespecial #7
+38: astore        5
+40: dconst_0
+41: aload         5
+43: invokevirtual #45
+46: ldc2_w        #46
+49: invokestatic  #48
+52: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test20
+Start line: 274
+End line: 285
+Method source code: 
+  public void test20()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[1] = 0.333;
+      doubleArray0[2] = 500.3796041087657;
+      doubleArray0[3] = 0.333;
+      doubleArray0[6] = (-4564.852543981662);
+      doubleArray0[7] = 500.3796041087657;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, (-4564.852543981662));
+      assertEquals(-0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_1
+7: ldc2_w        #67
+10: dastore
+11: aload_1
+12: iconst_2
+13: ldc2_w        #69
+16: dastore
+17: aload_1
+18: iconst_3
+19: ldc2_w        #67
+22: dastore
+23: aload_1
+24: bipush        6
+26: ldc2_w        #71
+29: dastore
+30: aload_1
+31: bipush        7
+33: ldc2_w        #69
+36: dastore
+37: new           #18
+40: dup
+41: aload_1
+42: invokespecial #19
+45: astore_2
+46: aload_2
+47: aload_2
+48: invokevirtual #34
+51: astore_3
+52: new           #4
+55: dup
+56: aload_3
+57: ldc2_w        #71
+60: invokespecial #7
+63: astore        4
+65: ldc2_w        #60
+68: aload         4
+70: invokevirtual #45
+73: ldc2_w        #46
+76: invokestatic  #48
+79: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test21
+Start line: 288
+End line: 304
+Method source code: 
+  public void test21()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[0] = 500.192292427972;
+      doubleArray0[1] = (-4564.6);
+      doubleArray0[2] = 500.192292427972;
+      doubleArray0[3] = 0.333;
+      doubleArray0[4] = 500.192292427972;
+      doubleArray0[5] = 500.192292427972;
+      doubleArray0[6] = (-4564.6);
+      doubleArray0[7] = 500.192292427972;
+      doubleArray0[8] = 500.192292427972;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      openMapRealVector0.mapInvToSelf();
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, (-4564.6));
+      assertEquals(-0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_0
+7: ldc2_w        #29
+10: dastore
+11: aload_1
+12: iconst_1
+13: ldc2_w        #63
+16: dastore
+17: aload_1
+18: iconst_2
+19: ldc2_w        #29
+22: dastore
+23: aload_1
+24: iconst_3
+25: ldc2_w        #67
+28: dastore
+29: aload_1
+30: iconst_4
+31: ldc2_w        #29
+34: dastore
+35: aload_1
+36: iconst_5
+37: ldc2_w        #29
+40: dastore
+41: aload_1
+42: bipush        6
+44: ldc2_w        #63
+47: dastore
+48: aload_1
+49: bipush        7
+51: ldc2_w        #29
+54: dastore
+55: aload_1
+56: bipush        8
+58: ldc2_w        #29
+61: dastore
+62: new           #18
+65: dup
+66: aload_1
+67: invokespecial #19
+70: astore_2
+71: aload_2
+72: invokevirtual #62
+75: pop
+76: aload_2
+77: aload_2
+78: invokevirtual #34
+81: astore_3
+82: new           #4
+85: dup
+86: aload_3
+87: ldc2_w        #63
+90: invokespecial #7
+93: astore        4
+95: ldc2_w        #60
+98: aload         4
+100: invokevirtual #45
+103: ldc2_w        #46
+106: invokestatic  #48
+109: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test22
+Start line: 307
+End line: 325
+Method source code: 
+  public void test22()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[2] = 500.3796041087657;
+      doubleArray0[6] = (-4564.852543981662);
+      doubleArray0[7] = (-4564.852543981662);
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = null;
+      try {
+        eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, (-4564.852543981662));
+        fail("Expecting exception: RuntimeException");
+      
+      } catch(RuntimeException e) {
+         //
+         // 
+         //
+         verifyException("org.apache.commons.math.linear.EigenDecompositionImpl", e);
+      }
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_2
+7: ldc2_w        #69
+10: dastore
+11: aload_1
+12: bipush        6
+14: ldc2_w        #71
+17: dastore
+18: aload_1
+19: bipush        7
+21: ldc2_w        #71
+24: dastore
+25: new           #18
+28: dup
+29: aload_1
+30: invokespecial #19
+33: astore_2
+34: aload_2
+35: aload_2
+36: invokevirtual #34
+39: astore_3
+40: aconst_null
+41: astore        4
+43: new           #4
+46: dup
+47: aload_3
+48: ldc2_w        #71
+51: invokespecial #7
+54: astore        4
+56: ldc           #35
+58: invokestatic  #14
+61: goto          73
+64: astore        5
+66: ldc           #16
+68: aload         5
+70: invokestatic  #17
+73: return
+Exception table:
+from    to  target type
+43    61    64   Class java/lang/RuntimeException
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test23
+Start line: 328
+End line: 341
+Method source code: 
+  public void test23()  throws Throwable  {
+      double[] doubleArray0 = new double[8];
+      doubleArray0[3] = 500.192292427972;
+      doubleArray0[1] = 500.192292427972;
+      doubleArray0[2] = (-2429.103671008035);
+      doubleArray0[4] = 500.192292427972;
+      doubleArray0[5] = (-2429.103671008035);
+      doubleArray0[6] = (-2429.103671008035);
+      doubleArray0[7] = 500.192292427972;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      RealMatrix realMatrix0 = openMapRealVector0.outerProduct(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(realMatrix0, Double.NEGATIVE_INFINITY);
+      assertEquals(-0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        8
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_3
+7: ldc2_w        #29
+10: dastore
+11: aload_1
+12: iconst_1
+13: ldc2_w        #29
+16: dastore
+17: aload_1
+18: iconst_2
+19: ldc2_w        #73
+22: dastore
+23: aload_1
+24: iconst_4
+25: ldc2_w        #29
+28: dastore
+29: aload_1
+30: iconst_5
+31: ldc2_w        #73
+34: dastore
+35: aload_1
+36: bipush        6
+38: ldc2_w        #73
+41: dastore
+42: aload_1
+43: bipush        7
+45: ldc2_w        #29
+48: dastore
+49: new           #18
+52: dup
+53: aload_1
+54: invokespecial #19
+57: astore_2
+58: aload_2
+59: aload_1
+60: invokevirtual #20
+63: astore_3
+64: new           #4
+67: dup
+68: aload_3
+69: ldc2_w        #75
+72: invokespecial #7
+75: astore        4
+77: ldc2_w        #60
+80: aload         4
+82: invokevirtual #45
+85: ldc2_w        #46
+88: invokestatic  #48
+91: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test24
+Start line: 344
+End line: 352
+Method source code: 
+  public void test24()  throws Throwable  {
+      double[] doubleArray0 = new double[10];
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealVector openMapRealVector1 = openMapRealVector0.mapAcosToSelf();
+      OpenMapRealVector openMapRealVector2 = openMapRealVector1.mapInvToSelf();
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector2);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, 1.0E-12);
+      assertEquals(0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        10
+2: newarray       double
+4: astore_1
+5: new           #18
+8: dup
+9: aload_1
+10: invokespecial #19
+13: astore_2
+14: aload_2
+15: invokevirtual #59
+18: astore_3
+19: aload_3
+20: invokevirtual #62
+23: astore        4
+25: aload_2
+26: aload         4
+28: invokevirtual #34
+31: astore        5
+33: new           #4
+36: dup
+37: aload         5
+39: ldc2_w        #56
+42: invokespecial #7
+45: astore        6
+47: dconst_0
+48: aload         6
+50: invokevirtual #45
+53: ldc2_w        #46
+56: invokestatic  #48
+59: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test25
+Start line: 355
+End line: 365
+Method source code: 
+  public void test25()  throws Throwable  {
+      double[] doubleArray0 = new double[5];
+      doubleArray0[0] = 0.333;
+      doubleArray0[1] = 500.192292427972;
+      doubleArray0[2] = (-4030.314272269569);
+      doubleArray0[3] = 500.192292427972;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      RealMatrix realMatrix0 = openMapRealVector0.outerProduct(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(realMatrix0, (-4030.314272269569));
+      assertEquals(-0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: iconst_5
+1: newarray       double
+3: astore_1
+4: aload_1
+5: iconst_0
+6: ldc2_w        #67
+9: dastore
+10: aload_1
+11: iconst_1
+12: ldc2_w        #29
+15: dastore
+16: aload_1
+17: iconst_2
+18: ldc2_w        #77
+21: dastore
+22: aload_1
+23: iconst_3
+24: ldc2_w        #29
+27: dastore
+28: new           #18
+31: dup
+32: aload_1
+33: invokespecial #19
+36: astore_2
+37: aload_2
+38: aload_1
+39: invokevirtual #20
+42: astore_3
+43: new           #4
+46: dup
+47: aload_3
+48: ldc2_w        #77
+51: invokespecial #7
+54: astore        4
+56: ldc2_w        #60
+59: aload         4
+61: invokevirtual #45
+64: ldc2_w        #46
+67: invokestatic  #48
+70: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test26
+Start line: 368
+End line: 377
+Method source code: 
+  public void test26()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[0] = 500.192292427972;
+      doubleArray0[1] = (-4564.6);
+      doubleArray0[2] = 500.192292427972;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, Double.POSITIVE_INFINITY);
+      assertEquals(-0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_0
+7: ldc2_w        #29
+10: dastore
+11: aload_1
+12: iconst_1
+13: ldc2_w        #63
+16: dastore
+17: aload_1
+18: iconst_2
+19: ldc2_w        #29
+22: dastore
+23: new           #18
+26: dup
+27: aload_1
+28: invokespecial #19
+31: astore_2
+32: aload_2
+33: aload_2
+34: invokevirtual #34
+37: astore_3
+38: new           #4
+41: dup
+42: aload_3
+43: ldc2_w        #65
+46: invokespecial #7
+49: astore        4
+51: ldc2_w        #60
+54: aload         4
+56: invokevirtual #45
+59: ldc2_w        #46
+62: invokestatic  #48
+65: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test27
+Start line: 380
+End line: 396
+Method source code: 
+  public void test27()  throws Throwable  {
+      double[] doubleArray0 = new double[10];
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealVector openMapRealVector1 = openMapRealVector0.mapInvToSelf();
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector1.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = null;
+      try {
+        eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, 1.0E-12);
+        fail("Expecting exception: RuntimeException");
+      
+      } catch(RuntimeException e) {
+         //
+         // 
+         //
+         verifyException("org.apache.commons.math.linear.EigenDecompositionImpl", e);
+      }
+  }
+Method byte code: 
+0: bipush        10
+2: newarray       double
+4: astore_1
+5: new           #18
+8: dup
+9: aload_1
+10: invokespecial #19
+13: astore_2
+14: aload_2
+15: invokevirtual #62
+18: astore_3
+19: aload_3
+20: aload_2
+21: invokevirtual #34
+24: astore        4
+26: aconst_null
+27: astore        5
+29: new           #4
+32: dup
+33: aload         4
+35: ldc2_w        #56
+38: invokespecial #7
+41: astore        5
+43: ldc           #35
+45: invokestatic  #14
+48: goto          60
+51: astore        6
+53: ldc           #16
+55: aload         6
+57: invokestatic  #17
+60: return
+Exception table:
+from    to  target type
+29    48    51   Class java/lang/RuntimeException
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test28
+Start line: 399
+End line: 411
+Method source code: 
+  public void test28()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[1] = 0.333;
+      doubleArray0[2] = 500.3796041087657;
+      doubleArray0[3] = 0.333;
+      doubleArray0[4] = 500.3796041087657;
+      doubleArray0[6] = (-4564.852543981662);
+      doubleArray0[7] = 500.3796041087657;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, (-4564.852543981662));
+      assertEquals(0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_1
+7: ldc2_w        #67
+10: dastore
+11: aload_1
+12: iconst_2
+13: ldc2_w        #69
+16: dastore
+17: aload_1
+18: iconst_3
+19: ldc2_w        #67
+22: dastore
+23: aload_1
+24: iconst_4
+25: ldc2_w        #69
+28: dastore
+29: aload_1
+30: bipush        6
+32: ldc2_w        #71
+35: dastore
+36: aload_1
+37: bipush        7
+39: ldc2_w        #69
+42: dastore
+43: new           #18
+46: dup
+47: aload_1
+48: invokespecial #19
+51: astore_2
+52: aload_2
+53: aload_2
+54: invokevirtual #34
+57: astore_3
+58: new           #4
+61: dup
+62: aload_3
+63: ldc2_w        #71
+66: invokespecial #7
+69: astore        4
+71: dconst_0
+72: aload         4
+74: invokevirtual #45
+77: ldc2_w        #46
+80: invokestatic  #48
+83: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test29
+Start line: 414
+End line: 425
+Method source code: 
+  public void test29()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[1] = 0.333;
+      doubleArray0[3] = (-4564.852543981662);
+      doubleArray0[4] = 500.3796041087657;
+      doubleArray0[6] = (-4564.852543981662);
+      doubleArray0[7] = 500.3796041087657;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, (-4564.852543981662));
+      assertEquals(-0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_1
+7: ldc2_w        #67
+10: dastore
+11: aload_1
+12: iconst_3
+13: ldc2_w        #71
+16: dastore
+17: aload_1
+18: iconst_4
+19: ldc2_w        #69
+22: dastore
+23: aload_1
+24: bipush        6
+26: ldc2_w        #71
+29: dastore
+30: aload_1
+31: bipush        7
+33: ldc2_w        #69
+36: dastore
+37: new           #18
+40: dup
+41: aload_1
+42: invokespecial #19
+45: astore_2
+46: aload_2
+47: aload_2
+48: invokevirtual #34
+51: astore_3
+52: new           #4
+55: dup
+56: aload_3
+57: ldc2_w        #71
+60: invokespecial #7
+63: astore        4
+65: ldc2_w        #60
+68: aload         4
+70: invokevirtual #45
+73: ldc2_w        #46
+76: invokestatic  #48
+79: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test30
+Start line: 428
+End line: 442
+Method source code: 
+  public void test30()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[0] = 500.192292427972;
+      doubleArray0[2] = (-0.5439101624818368);
+      doubleArray0[3] = (-2375.949478660966);
+      doubleArray0[4] = (-2375.949478660966);
+      doubleArray0[5] = 500.192292427972;
+      doubleArray0[6] = (-0.5439101624818368);
+      doubleArray0[7] = 0.333;
+      doubleArray0[8] = 0.333;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, 1.0E-12);
+      assertEquals((-5.041920642469308E-96), eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_0
+7: ldc2_w        #29
+10: dastore
+11: aload_1
+12: iconst_2
+13: ldc2_w        #79
+16: dastore
+17: aload_1
+18: iconst_3
+19: ldc2_w        #81
+22: dastore
+23: aload_1
+24: iconst_4
+25: ldc2_w        #81
+28: dastore
+29: aload_1
+30: iconst_5
+31: ldc2_w        #29
+34: dastore
+35: aload_1
+36: bipush        6
+38: ldc2_w        #79
+41: dastore
+42: aload_1
+43: bipush        7
+45: ldc2_w        #67
+48: dastore
+49: aload_1
+50: bipush        8
+52: ldc2_w        #67
+55: dastore
+56: new           #18
+59: dup
+60: aload_1
+61: invokespecial #19
+64: astore_2
+65: aload_2
+66: aload_2
+67: invokevirtual #34
+70: astore_3
+71: new           #4
+74: dup
+75: aload_3
+76: ldc2_w        #56
+79: invokespecial #7
+82: astore        4
+84: ldc2_w        #83
+87: aload         4
+89: invokevirtual #45
+92: ldc2_w        #46
+95: invokestatic  #48
+98: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test31
+Start line: 445
+End line: 455
+Method source code: 
+  public void test31()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[1] = 0.333;
+      doubleArray0[3] = 0.333;
+      doubleArray0[4] = 500.3796041088;
+      doubleArray0[6] = (-4564.852543981662);
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, (-1625.55));
+      assertEquals(-0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_1
+7: ldc2_w        #67
+10: dastore
+11: aload_1
+12: iconst_3
+13: ldc2_w        #67
+16: dastore
+17: aload_1
+18: iconst_4
+19: ldc2_w        #85
+22: dastore
+23: aload_1
+24: bipush        6
+26: ldc2_w        #71
+29: dastore
+30: new           #18
+33: dup
+34: aload_1
+35: invokespecial #19
+38: astore_2
+39: aload_2
+40: aload_2
+41: invokevirtual #34
+44: astore_3
+45: new           #4
+48: dup
+49: aload_3
+50: ldc2_w        #87
+53: invokespecial #7
+56: astore        4
+58: ldc2_w        #60
+61: aload         4
+63: invokevirtual #45
+66: ldc2_w        #46
+69: invokestatic  #48
+72: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test32
+Start line: 458
+End line: 469
+Method source code: 
+  public void test32()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[0] = 500.192292427972;
+      doubleArray0[1] = (-4564.6);
+      doubleArray0[2] = 500.192292427972;
+      doubleArray0[3] = 0.333;
+      doubleArray0[4] = 500.192292427972;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      RealMatrix realMatrix0 = openMapRealVector0.outerProduct(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(realMatrix0, 1.0E-12);
+      assertEquals(-0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_0
+7: ldc2_w        #29
+10: dastore
+11: aload_1
+12: iconst_1
+13: ldc2_w        #63
+16: dastore
+17: aload_1
+18: iconst_2
+19: ldc2_w        #29
+22: dastore
+23: aload_1
+24: iconst_3
+25: ldc2_w        #67
+28: dastore
+29: aload_1
+30: iconst_4
+31: ldc2_w        #29
+34: dastore
+35: new           #18
+38: dup
+39: aload_1
+40: invokespecial #19
+43: astore_2
+44: aload_2
+45: aload_1
+46: invokevirtual #20
+49: astore_3
+50: new           #4
+53: dup
+54: aload_3
+55: ldc2_w        #56
+58: invokespecial #7
+61: astore        4
+63: ldc2_w        #60
+66: aload         4
+68: invokevirtual #45
+71: ldc2_w        #46
+74: invokestatic  #48
+77: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test33
+Start line: 472
+End line: 484
+Method source code: 
+  public void test33()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[1] = 0.333;
+      doubleArray0[3] = 0.333;
+      doubleArray0[4] = 500.3796041087657;
+      doubleArray0[8] = 500.3796041087657;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealVector openMapRealVector1 = openMapRealVector0.mapCbrtToSelf();
+      openMapRealVector1.mapExpToSelf();
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, 1.0E-12);
+      assertEquals(-0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_1
+7: ldc2_w        #67
+10: dastore
+11: aload_1
+12: iconst_3
+13: ldc2_w        #67
+16: dastore
+17: aload_1
+18: iconst_4
+19: ldc2_w        #69
+22: dastore
+23: aload_1
+24: bipush        8
+26: ldc2_w        #69
+29: dastore
+30: new           #18
+33: dup
+34: aload_1
+35: invokespecial #19
+38: astore_2
+39: aload_2
+40: invokevirtual #89
+43: astore_3
+44: aload_3
+45: invokevirtual #90
+48: pop
+49: aload_2
+50: aload_2
+51: invokevirtual #34
+54: astore        4
+56: new           #4
+59: dup
+60: aload         4
+62: ldc2_w        #56
+65: invokespecial #7
+68: astore        5
+70: ldc2_w        #60
+73: aload         5
+75: invokevirtual #45
+78: ldc2_w        #46
+81: invokestatic  #48
+84: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test34
+Start line: 487
+End line: 500
+Method source code: 
+  public void test34()  throws Throwable  {
+      double[] doubleArray0 = new double[7];
+      doubleArray0[0] = (-4554.238218529531);
+      doubleArray0[1] = (-2429.103671008035);
+      doubleArray0[2] = 500.192292427972;
+      doubleArray0[3] = (-4554.238218529531);
+      doubleArray0[4] = 500.192292427972;
+      doubleArray0[5] = (-4554.238218529531);
+      doubleArray0[6] = (-1138.043677438);
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, (-2429.103671008035));
+      assertEquals(1.5860378850338067E-49, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        7
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_0
+7: ldc2_w        #91
+10: dastore
+11: aload_1
+12: iconst_1
+13: ldc2_w        #73
+16: dastore
+17: aload_1
+18: iconst_2
+19: ldc2_w        #29
+22: dastore
+23: aload_1
+24: iconst_3
+25: ldc2_w        #91
+28: dastore
+29: aload_1
+30: iconst_4
+31: ldc2_w        #29
+34: dastore
+35: aload_1
+36: iconst_5
+37: ldc2_w        #91
+40: dastore
+41: aload_1
+42: bipush        6
+44: ldc2_w        #93
+47: dastore
+48: new           #18
+51: dup
+52: aload_1
+53: invokespecial #19
+56: astore_2
+57: aload_2
+58: aload_2
+59: invokevirtual #34
+62: astore_3
+63: new           #4
+66: dup
+67: aload_3
+68: ldc2_w        #73
+71: invokespecial #7
+74: astore        4
+76: ldc2_w        #95
+79: aload         4
+81: invokevirtual #45
+84: ldc2_w        #46
+87: invokestatic  #48
+90: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test35
+Start line: 503
+End line: 514
+Method source code: 
+  public void test35()  throws Throwable  {
+      double[] doubleArray0 = new double[5];
+      doubleArray0[0] = 0.333;
+      doubleArray0[1] = (-4554.238218529531);
+      doubleArray0[2] = 500.192292427972;
+      doubleArray0[3] = 0.333;
+      doubleArray0[4] = 500.192292427972;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, 3.946433775211339E-9);
+      assertEquals(1.4567679885985228E-47, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: iconst_5
+1: newarray       double
+3: astore_1
+4: aload_1
+5: iconst_0
+6: ldc2_w        #67
+9: dastore
+10: aload_1
+11: iconst_1
+12: ldc2_w        #91
+15: dastore
+16: aload_1
+17: iconst_2
+18: ldc2_w        #29
+21: dastore
+22: aload_1
+23: iconst_3
+24: ldc2_w        #67
+27: dastore
+28: aload_1
+29: iconst_4
+30: ldc2_w        #29
+33: dastore
+34: new           #18
+37: dup
+38: aload_1
+39: invokespecial #19
+42: astore_2
+43: aload_2
+44: aload_2
+45: invokevirtual #34
+48: astore_3
+49: new           #4
+52: dup
+53: aload_3
+54: ldc2_w        #97
+57: invokespecial #7
+60: astore        4
+62: ldc2_w        #99
+65: aload         4
+67: invokevirtual #45
+70: ldc2_w        #46
+73: invokestatic  #48
+76: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test36
+Start line: 517
+End line: 528
+Method source code: 
+  public void test36()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[1] = 523.5187183453528;
+      doubleArray0[3] = 0.333;
+      doubleArray0[4] = 523.5187183453528;
+      doubleArray0[6] = (-4564.852543981662);
+      doubleArray0[7] = 523.5187183453528;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, (-4564.852543981662));
+      assertEquals(-0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_1
+7: ldc2_w        #101
+10: dastore
+11: aload_1
+12: iconst_3
+13: ldc2_w        #67
+16: dastore
+17: aload_1
+18: iconst_4
+19: ldc2_w        #101
+22: dastore
+23: aload_1
+24: bipush        6
+26: ldc2_w        #71
+29: dastore
+30: aload_1
+31: bipush        7
+33: ldc2_w        #101
+36: dastore
+37: new           #18
+40: dup
+41: aload_1
+42: invokespecial #19
+45: astore_2
+46: aload_2
+47: aload_2
+48: invokevirtual #34
+51: astore_3
+52: new           #4
+55: dup
+56: aload_3
+57: ldc2_w        #71
+60: invokespecial #7
+63: astore        4
+65: ldc2_w        #60
+68: aload         4
+70: invokevirtual #45
+73: ldc2_w        #46
+76: invokestatic  #48
+79: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test37
+Start line: 531
+End line: 542
+Method source code: 
+  public void test37()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[1] = 500.3796041087657;
+      doubleArray0[3] = (-1.4975663204529266);
+      doubleArray0[4] = 500.3796041087657;
+      doubleArray0[6] = (-4564.852543981662);
+      doubleArray0[7] = 500.3796041087657;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, (-4564.852543981662));
+      assertEquals(0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_1
+7: ldc2_w        #69
+10: dastore
+11: aload_1
+12: iconst_3
+13: ldc2_w        #103
+16: dastore
+17: aload_1
+18: iconst_4
+19: ldc2_w        #69
+22: dastore
+23: aload_1
+24: bipush        6
+26: ldc2_w        #71
+29: dastore
+30: aload_1
+31: bipush        7
+33: ldc2_w        #69
+36: dastore
+37: new           #18
+40: dup
+41: aload_1
+42: invokespecial #19
+45: astore_2
+46: aload_2
+47: aload_2
+48: invokevirtual #34
+51: astore_3
+52: new           #4
+55: dup
+56: aload_3
+57: ldc2_w        #71
+60: invokespecial #7
+63: astore        4
+65: dconst_0
+66: aload         4
+68: invokevirtual #45
+71: ldc2_w        #46
+74: invokestatic  #48
+77: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test38
+Start line: 545
+End line: 555
+Method source code: 
+  public void test38()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[1] = 0.333;
+      doubleArray0[3] = (-4564.852543981662);
+      doubleArray0[6] = (-4564.852543981662);
+      doubleArray0[7] = 503.840720452005;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, (-4564.852543981662));
+      assertEquals(0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_1
+7: ldc2_w        #67
+10: dastore
+11: aload_1
+12: iconst_3
+13: ldc2_w        #71
+16: dastore
+17: aload_1
+18: bipush        6
+20: ldc2_w        #71
+23: dastore
+24: aload_1
+25: bipush        7
+27: ldc2_w        #105
+30: dastore
+31: new           #18
+34: dup
+35: aload_1
+36: invokespecial #19
+39: astore_2
+40: aload_2
+41: aload_2
+42: invokevirtual #34
+45: astore_3
+46: new           #4
+49: dup
+50: aload_3
+51: ldc2_w        #71
+54: invokespecial #7
+57: astore        4
+59: dconst_0
+60: aload         4
+62: invokevirtual #45
+65: ldc2_w        #46
+68: invokestatic  #48
+71: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test39
+Start line: 558
+End line: 568
+Method source code: 
+  public void test39()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[1] = 0.333;
+      doubleArray0[3] = 0.333;
+      doubleArray0[4] = 503.840720452005;
+      doubleArray0[6] = (-4564.852543981662);
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, (-4564.852543981662));
+      assertEquals(-0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_1
+7: ldc2_w        #67
+10: dastore
+11: aload_1
+12: iconst_3
+13: ldc2_w        #67
+16: dastore
+17: aload_1
+18: iconst_4
+19: ldc2_w        #105
+22: dastore
+23: aload_1
+24: bipush        6
+26: ldc2_w        #71
+29: dastore
+30: new           #18
+33: dup
+34: aload_1
+35: invokespecial #19
+38: astore_2
+39: aload_2
+40: aload_2
+41: invokevirtual #34
+44: astore_3
+45: new           #4
+48: dup
+49: aload_3
+50: ldc2_w        #71
+53: invokespecial #7
+56: astore        4
+58: ldc2_w        #60
+61: aload         4
+63: invokevirtual #45
+66: ldc2_w        #46
+69: invokestatic  #48
+72: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test40
+Start line: 571
+End line: 581
+Method source code: 
+  public void test40()  throws Throwable  {
+      double[] doubleArray0 = new double[9];
+      doubleArray0[1] = 0.333;
+      doubleArray0[3] = 0.333;
+      doubleArray0[6] = (-4564.852543981662);
+      doubleArray0[7] = 503.840720452005;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      OpenMapRealMatrix openMapRealMatrix0 = openMapRealVector0.outerproduct(openMapRealVector0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(openMapRealMatrix0, (-4564.852543981662));
+      assertEquals(0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        9
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_1
+7: ldc2_w        #67
+10: dastore
+11: aload_1
+12: iconst_3
+13: ldc2_w        #67
+16: dastore
+17: aload_1
+18: bipush        6
+20: ldc2_w        #71
+23: dastore
+24: aload_1
+25: bipush        7
+27: ldc2_w        #105
+30: dastore
+31: new           #18
+34: dup
+35: aload_1
+36: invokespecial #19
+39: astore_2
+40: aload_2
+41: aload_2
+42: invokevirtual #34
+45: astore_3
+46: new           #4
+49: dup
+50: aload_3
+51: ldc2_w        #71
+54: invokespecial #7
+57: astore        4
+59: dconst_0
+60: aload         4
+62: invokevirtual #45
+65: ldc2_w        #46
+68: invokestatic  #48
+71: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test41
+Start line: 584
+End line: 591
+Method source code: 
+  public void test41()  throws Throwable  {
+      double[] doubleArray0 = new double[1];
+      doubleArray0[0] = 0.333;
+      Array2DRowRealMatrix array2DRowRealMatrix0 = new Array2DRowRealMatrix(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(array2DRowRealMatrix0, 0.333);
+      eigenDecompositionImpl0.getV();
+      assertEquals(0.333, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: iconst_1
+1: newarray       double
+3: astore_1
+4: aload_1
+5: iconst_0
+6: ldc2_w        #67
+9: dastore
+10: new           #2
+13: dup
+14: aload_1
+15: invokespecial #3
+18: astore_2
+19: new           #4
+22: dup
+23: aload_2
+24: ldc2_w        #67
+27: invokespecial #7
+30: astore_3
+31: aload_3
+32: invokevirtual #39
+35: pop
+36: ldc2_w        #67
+39: aload_3
+40: invokevirtual #45
+43: ldc2_w        #46
+46: invokestatic  #48
+49: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test42
+Start line: 594
+End line: 603
+Method source code: 
+  public void test42()  throws Throwable  {
+      double[] doubleArray0 = new double[20];
+      doubleArray0[2] = 0.9999999999999998;
+      doubleArray0[3] = 0.9999999999999998;
+      OpenMapRealVector openMapRealVector0 = new OpenMapRealVector(doubleArray0);
+      RealMatrix realMatrix0 = openMapRealVector0.outerProduct(doubleArray0);
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(realMatrix0, 1.0E-12);
+      eigenDecompositionImpl0.getV();
+      assertEquals(0.0, eigenDecompositionImpl0.getDeterminant(), 0.01);
+  }
+Method byte code: 
+0: bipush        20
+2: newarray       double
+4: astore_1
+5: aload_1
+6: iconst_2
+7: ldc2_w        #31
+10: dastore
+11: aload_1
+12: iconst_3
+13: ldc2_w        #31
+16: dastore
+17: new           #18
+20: dup
+21: aload_1
+22: invokespecial #19
+25: astore_2
+26: aload_2
+27: aload_1
+28: invokevirtual #20
+31: astore_3
+32: new           #4
+35: dup
+36: aload_3
+37: ldc2_w        #56
+40: invokespecial #7
+43: astore        4
+45: aload         4
+47: invokevirtual #39
+50: pop
+51: dconst_0
+52: aload         4
+54: invokevirtual #45
+57: ldc2_w        #46
+60: invokestatic  #48
+63: return
+Source File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/src/test/java/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.java
+Bytecode File: /home/islam/MyWork/New-work-2023/DBT-workbench/resources/subjects/fixed/math/81/target/test-classes/org/apache/commons/math/linear/EigenDecompositionImpl_ESTest.class
+Class name: EigenDecompositionImpl_ESTest
+Method name: test43
+Start line: 606
+End line: 612
+Method source code: 
+  public void test43()  throws Throwable  {
+      double[] doubleArray0 = new double[5];
+      double[] doubleArray1 = new double[6];
+      EigenDecompositionImpl eigenDecompositionImpl0 = new EigenDecompositionImpl(doubleArray1, doubleArray0, 0.0);
+      RealMatrix realMatrix0 = eigenDecompositionImpl0.getV();
+      assertEquals(6, realMatrix0.getColumnDimension());
+  }
+Method byte code: 
+0: iconst_5
+1: newarray       double
+3: astore_1
+4: bipush        6
+6: newarray       double
+8: astore_2
+9: new           #4
+12: dup
+13: aload_2
+14: aload_1
+15: dconst_0
+16: invokespecial #107
+19: astore_3
+20: aload_3
+21: invokevirtual #39
+24: astore        4
+26: ldc2_w        #108
+29: aload         4
+31: invokeinterface #44,  1
+36: i2l
+37: invokestatic  #28
+40: return
+}

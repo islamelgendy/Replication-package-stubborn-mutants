@@ -1,0 +1,2883 @@
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/RegressionTest0.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test1
+Start line: 12
+End line: 16
+Method source code: 
+    public void test1() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test1");
+        org.jsoup.parser.CharacterReader characterReader1 = new org.jsoup.parser.CharacterReader("");
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #6
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: ldc           #9
+30: invokespecial #10
+33: astore_1
+34: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/TokeniserState_ESTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/TokeniserState_ESTest.class
+Class name: TokeniserState_ESTest
+Method name: notGeneratedAnyTest
+Start line: 14
+End line: 16
+Method source code: 
+  public void notGeneratedAnyTest() {
+    // EvoSuite did not generate any tests
+  }
+Method byte code: 
+0: return
+}
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: parsesSimpleDocument
+Start line: 23
+End line: 32
+Method source code: 
+    @Test public void parsesSimpleDocument() {
+        String html = "<html><head><title>First!</title></head><body><p>First post! <img src=\"foo.png\" /></p></body></html>";
+        Document doc = Jsoup.parse(html);
+        // need a better way to verify these:
+        Element p = doc.body().child(0);
+        assertEquals("p", p.tagName());
+        Element img = p.child(0);
+        assertEquals("foo.png", img.attr("src"));
+        assertEquals("img", img.tagName());
+    }
+Method byte code: 
+0: ldc           #2
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: aload_2
+9: invokevirtual #4
+12: iconst_0
+13: invokevirtual #5
+16: astore_3
+17: ldc           #6
+19: aload_3
+20: invokevirtual #7
+23: invokestatic  #8
+26: aload_3
+27: iconst_0
+28: invokevirtual #5
+31: astore        4
+33: ldc           #9
+35: aload         4
+37: ldc           #10
+39: invokevirtual #11
+42: invokestatic  #8
+45: ldc           #12
+47: aload         4
+49: invokevirtual #7
+52: invokestatic  #8
+55: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: parsesRoughAttributes
+Start line: 34
+End line: 42
+Method source code: 
+    @Test public void parsesRoughAttributes() {
+        String html = "<html><head><title>First!</title></head><body><p class=\"foo > bar\">First post! <img src=\"foo.png\" /></p></body></html>";
+        Document doc = Jsoup.parse(html);
+
+        // need a better way to verify these:
+        Element p = doc.body().child(0);
+        assertEquals("p", p.tagName());
+        assertEquals("foo > bar", p.attr("class"));
+    }
+Method byte code: 
+0: ldc           #13
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: aload_2
+9: invokevirtual #4
+12: iconst_0
+13: invokevirtual #5
+16: astore_3
+17: ldc           #6
+19: aload_3
+20: invokevirtual #7
+23: invokestatic  #8
+26: ldc           #14
+28: aload_3
+29: ldc           #15
+31: invokevirtual #11
+34: invokestatic  #8
+37: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: parsesQuiteRoughAttributes
+Start line: 44
+End line: 53
+Method source code: 
+    @Test public void parsesQuiteRoughAttributes() {
+        String html = "<p =a>One<a <p>Something</p>Else";
+        // this gets a <p> with attr '=a' and an <a tag with an attribue named '<p'; and then auto-recreated
+        Document doc = Jsoup.parse(html);
+        assertEquals("<p =a=\"\">One<a <p=\"\">Something</a></p>\n" +
+                "<a <p=\"\">Else</a>", doc.body().html());
+
+        doc = Jsoup.parse("<p .....>");
+        assertEquals("<p .....=\"\"></p>", doc.body().html());
+    }
+Method byte code: 
+0: ldc           #16
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #17
+10: aload_2
+11: invokevirtual #4
+14: invokevirtual #18
+17: invokestatic  #8
+20: ldc           #19
+22: invokestatic  #3
+25: astore_2
+26: ldc           #20
+28: aload_2
+29: invokevirtual #4
+32: invokevirtual #18
+35: invokestatic  #8
+38: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: parsesComments
+Start line: 55
+End line: 65
+Method source code: 
+    @Test public void parsesComments() {
+        String html = "<html><head></head><body><img src=foo><!-- <table><tr><td></table> --><p>Hello</p></body></html>";
+        Document doc = Jsoup.parse(html);
+
+        Element body = doc.body();
+        Comment comment = (Comment) body.childNode(1); // comment should not be sub of img, as it's an empty tag
+        assertEquals(" <table><tr><td></table> ", comment.getData());
+        Element p = body.child(1);
+        TextNode text = (TextNode) p.childNode(0);
+        assertEquals("Hello", text.getWholeText());
+    }
+Method byte code: 
+0: ldc           #21
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: aload_2
+9: invokevirtual #4
+12: astore_3
+13: aload_3
+14: iconst_1
+15: invokevirtual #22
+18: checkcast     #23
+21: astore        4
+23: ldc           #24
+25: aload         4
+27: invokevirtual #25
+30: invokestatic  #8
+33: aload_3
+34: iconst_1
+35: invokevirtual #5
+38: astore        5
+40: aload         5
+42: iconst_0
+43: invokevirtual #22
+46: checkcast     #26
+49: astore        6
+51: ldc           #27
+53: aload         6
+55: invokevirtual #28
+58: invokestatic  #8
+61: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: parsesUnterminatedComments
+Start line: 67
+End line: 76
+Method source code: 
+    @Test public void parsesUnterminatedComments() {
+        String html = "<p>Hello<!-- <tr><td>";
+        Document doc = Jsoup.parse(html);
+        Element p = doc.getElementsByTag("p").get(0);
+        assertEquals("Hello", p.text());
+        TextNode text = (TextNode) p.childNode(0);
+        assertEquals("Hello", text.getWholeText());
+        Comment comment = (Comment) p.childNode(1);
+        assertEquals(" <tr><td>", comment.getData());
+    }
+Method byte code: 
+0: ldc           #29
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: aload_2
+9: ldc           #6
+11: invokevirtual #30
+14: iconst_0
+15: invokevirtual #31
+18: astore_3
+19: ldc           #27
+21: aload_3
+22: invokevirtual #32
+25: invokestatic  #8
+28: aload_3
+29: iconst_0
+30: invokevirtual #22
+33: checkcast     #26
+36: astore        4
+38: ldc           #27
+40: aload         4
+42: invokevirtual #28
+45: invokestatic  #8
+48: aload_3
+49: iconst_1
+50: invokevirtual #22
+53: checkcast     #23
+56: astore        5
+58: ldc           #33
+60: aload         5
+62: invokevirtual #25
+65: invokestatic  #8
+68: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: dropsUnterminatedTag
+Start line: 78
+End line: 88
+Method source code: 
+    @Test public void dropsUnterminatedTag() {
+        // jsoup used to parse this to <p>, but whatwg, webkit will drop.
+        String h1 = "<p";
+        Document doc = Jsoup.parse(h1);
+        assertEquals(0, doc.getElementsByTag("p").size());
+        assertEquals("", doc.text());
+
+        String h2 = "<div id=1<p id='2'";
+        doc = Jsoup.parse(h2);
+        assertEquals("", doc.text());
+    }
+Method byte code: 
+0: ldc           #34
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: lconst_0
+9: aload_2
+10: ldc           #6
+12: invokevirtual #30
+15: invokevirtual #35
+18: i2l
+19: invokestatic  #36
+22: ldc           #37
+24: aload_2
+25: invokevirtual #38
+28: invokestatic  #8
+31: ldc           #39
+33: astore_3
+34: aload_3
+35: invokestatic  #3
+38: astore_2
+39: ldc           #37
+41: aload_2
+42: invokevirtual #38
+45: invokestatic  #8
+48: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: dropsUnterminatedAttribute
+Start line: 90
+End line: 95
+Method source code: 
+    @Test public void dropsUnterminatedAttribute() {
+        // jsoup used to parse this to <p id="foo">, but whatwg, webkit will drop.
+        String h1 = "<p id=\"foo";
+        Document doc = Jsoup.parse(h1);
+        assertEquals("", doc.text());
+    }
+Method byte code: 
+0: ldc           #40
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #37
+10: aload_2
+11: invokevirtual #38
+14: invokestatic  #8
+17: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: parsesUnterminatedTextarea
+Start line: 97
+End line: 103
+Method source code: 
+    @Test public void parsesUnterminatedTextarea() {
+        // don't parse right to end, but break on <p>
+        Document doc = Jsoup.parse("<body><p><textarea>one<p>two");
+        Element t = doc.select("textarea").first();
+        assertEquals("one", t.text());
+        assertEquals("two", doc.select("p").get(1).text());
+    }
+Method byte code: 
+0: ldc           #41
+2: invokestatic  #3
+5: astore_1
+6: aload_1
+7: ldc           #42
+9: invokevirtual #43
+12: invokevirtual #44
+15: astore_2
+16: ldc           #45
+18: aload_2
+19: invokevirtual #32
+22: invokestatic  #8
+25: ldc           #46
+27: aload_1
+28: ldc           #6
+30: invokevirtual #43
+33: iconst_1
+34: invokevirtual #31
+37: invokevirtual #32
+40: invokestatic  #8
+43: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: parsesUnterminatedOption
+Start line: 105
+End line: 112
+Method source code: 
+    @Test public void parsesUnterminatedOption() {
+        // bit weird this -- browsers and spec get stuck in select until there's a </select>
+        Document doc = Jsoup.parse("<body><p><select><option>One<option>Two</p><p>Three</p>");
+        Elements options = doc.select("option");
+        assertEquals(2, options.size());
+        assertEquals("One", options.first().text());
+        assertEquals("TwoThree", options.last().text());
+    }
+Method byte code: 
+0: ldc           #47
+2: invokestatic  #3
+5: astore_1
+6: aload_1
+7: ldc           #48
+9: invokevirtual #43
+12: astore_2
+13: ldc2_w        #49
+16: aload_2
+17: invokevirtual #35
+20: i2l
+21: invokestatic  #36
+24: ldc           #51
+26: aload_2
+27: invokevirtual #44
+30: invokevirtual #32
+33: invokestatic  #8
+36: ldc           #52
+38: aload_2
+39: invokevirtual #53
+42: invokevirtual #32
+45: invokestatic  #8
+48: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: testSpaceAfterTag
+Start line: 114
+End line: 117
+Method source code: 
+    @Test public void testSpaceAfterTag() {
+        Document doc = Jsoup.parse("<div > <a name=\"top\"></a ><p id=1 >Hello</p></div>");
+        assertEquals("<div> <a name=\"top\"></a><p id=\"1\">Hello</p></div>", TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #54
+2: invokestatic  #3
+5: astore_1
+6: ldc           #55
+8: aload_1
+9: invokevirtual #4
+12: invokevirtual #18
+15: invokestatic  #56
+18: invokestatic  #8
+21: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: createsDocumentStructure
+Start line: 119
+End line: 135
+Method source code: 
+    @Test public void createsDocumentStructure() {
+        String html = "<meta name=keywords /><link rel=stylesheet /><title>jsoup</title><p>Hello world</p>";
+        Document doc = Jsoup.parse(html);
+        Element head = doc.head();
+        Element body = doc.body();
+
+        assertEquals(1, doc.children().size()); // root node: contains html node
+        assertEquals(2, doc.child(0).children().size()); // html node: head and body
+        assertEquals(3, head.children().size());
+        assertEquals(1, body.children().size());
+
+        assertEquals("keywords", head.getElementsByTag("meta").get(0).attr("name"));
+        assertEquals(0, body.getElementsByTag("meta").size());
+        assertEquals("jsoup", doc.title());
+        assertEquals("Hello world", body.text());
+        assertEquals("Hello world", body.children().get(0).text());
+    }
+Method byte code: 
+0: ldc           #57
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: aload_2
+9: invokevirtual #58
+12: astore_3
+13: aload_2
+14: invokevirtual #4
+17: astore        4
+19: lconst_1
+20: aload_2
+21: invokevirtual #59
+24: invokevirtual #35
+27: i2l
+28: invokestatic  #36
+31: ldc2_w        #49
+34: aload_2
+35: iconst_0
+36: invokevirtual #60
+39: invokevirtual #61
+42: invokevirtual #35
+45: i2l
+46: invokestatic  #36
+49: ldc2_w        #62
+52: aload_3
+53: invokevirtual #61
+56: invokevirtual #35
+59: i2l
+60: invokestatic  #36
+63: lconst_1
+64: aload         4
+66: invokevirtual #61
+69: invokevirtual #35
+72: i2l
+73: invokestatic  #36
+76: ldc           #64
+78: aload_3
+79: ldc           #65
+81: invokevirtual #66
+84: iconst_0
+85: invokevirtual #31
+88: ldc           #67
+90: invokevirtual #11
+93: invokestatic  #8
+96: lconst_0
+97: aload         4
+99: ldc           #65
+101: invokevirtual #66
+104: invokevirtual #35
+107: i2l
+108: invokestatic  #36
+111: ldc           #68
+113: aload_2
+114: invokevirtual #69
+117: invokestatic  #8
+120: ldc           #70
+122: aload         4
+124: invokevirtual #32
+127: invokestatic  #8
+130: ldc           #70
+132: aload         4
+134: invokevirtual #61
+137: iconst_0
+138: invokevirtual #31
+141: invokevirtual #32
+144: invokestatic  #8
+147: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: createsStructureFromBodySnippet
+Start line: 137
+End line: 144
+Method source code: 
+    @Test public void createsStructureFromBodySnippet() {
+        // the bar baz stuff naturally goes into the body, but the 'foo' goes into root, and the normalisation routine
+        // needs to move into the start of the body
+        String html = "foo <b>bar</b> baz";
+        Document doc = Jsoup.parse(html);
+        assertEquals("foo bar baz", doc.text());
+
+    }
+Method byte code: 
+0: ldc           #71
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #72
+10: aload_2
+11: invokevirtual #38
+14: invokestatic  #8
+17: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesEscapedData
+Start line: 146
+End line: 153
+Method source code: 
+    @Test public void handlesEscapedData() {
+        String html = "<div title='Surf &amp; Turf'>Reef &amp; Beef</div>";
+        Document doc = Jsoup.parse(html);
+        Element div = doc.getElementsByTag("div").get(0);
+
+        assertEquals("Surf & Turf", div.attr("title"));
+        assertEquals("Reef & Beef", div.text());
+    }
+Method byte code: 
+0: ldc           #73
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: aload_2
+9: ldc           #74
+11: invokevirtual #30
+14: iconst_0
+15: invokevirtual #31
+18: astore_3
+19: ldc           #75
+21: aload_3
+22: ldc           #76
+24: invokevirtual #11
+27: invokestatic  #8
+30: ldc           #77
+32: aload_3
+33: invokevirtual #32
+36: invokestatic  #8
+39: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesDataOnlyTags
+Start line: 155
+End line: 165
+Method source code: 
+    @Test public void handlesDataOnlyTags() {
+        String t = "<style>font-family: bold</style>";
+        List<Element> tels = Jsoup.parse(t).getElementsByTag("style");
+        assertEquals("font-family: bold", tels.get(0).data());
+        assertEquals("", tels.get(0).text());
+
+        String s = "<p>Hello</p><script>obj.insert('<a rel=\"none\" />');\ni++;</script><p>There</p>";
+        Document doc = Jsoup.parse(s);
+        assertEquals("Hello There", doc.text());
+        assertEquals("obj.insert('<a rel=\"none\" />');\ni++;", doc.data());
+    }
+Method byte code: 
+0: ldc           #78
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: ldc           #79
+9: invokevirtual #30
+12: astore_2
+13: ldc           #80
+15: aload_2
+16: iconst_0
+17: invokeinterface #81,  2
+22: checkcast     #82
+25: invokevirtual #83
+28: invokestatic  #8
+31: ldc           #37
+33: aload_2
+34: iconst_0
+35: invokeinterface #81,  2
+40: checkcast     #82
+43: invokevirtual #32
+46: invokestatic  #8
+49: ldc           #84
+51: astore_3
+52: aload_3
+53: invokestatic  #3
+56: astore        4
+58: ldc           #85
+60: aload         4
+62: invokevirtual #38
+65: invokestatic  #8
+68: ldc           #86
+70: aload         4
+72: invokevirtual #87
+75: invokestatic  #8
+78: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesTextAfterData
+Start line: 167
+End line: 171
+Method source code: 
+    @Test public void handlesTextAfterData() {
+        String h = "<html><body>pre <script>inner</script> aft</body></html>";
+        Document doc = Jsoup.parse(h);
+        assertEquals("<html><head></head><body>pre <script>inner</script> aft</body></html>", TextUtil.stripNewlines(doc.html()));
+    }
+Method byte code: 
+0: ldc           #88
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #89
+10: aload_2
+11: invokevirtual #90
+14: invokestatic  #56
+17: invokestatic  #8
+20: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesTextArea
+Start line: 173
+End line: 178
+Method source code: 
+    @Test public void handlesTextArea() {
+        Document doc = Jsoup.parse("<textarea>Hello</textarea>");
+        Elements els = doc.select("textarea");
+        assertEquals("Hello", els.text());
+        assertEquals("Hello", els.val());
+    }
+Method byte code: 
+0: ldc           #91
+2: invokestatic  #3
+5: astore_1
+6: aload_1
+7: ldc           #42
+9: invokevirtual #43
+12: astore_2
+13: ldc           #27
+15: aload_2
+16: invokevirtual #92
+19: invokestatic  #8
+22: ldc           #27
+24: aload_2
+25: invokevirtual #93
+28: invokestatic  #8
+31: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: doesNotCreateImplicitLists
+Start line: 180
+End line: 199
+Method source code: 
+    @Test public void doesNotCreateImplicitLists() {
+        // old jsoup used to wrap this in <ul>, but that's not to spec
+        String h = "<li>Point one<li>Point two";
+        Document doc = Jsoup.parse(h);
+        Elements ol = doc.select("ul"); // should NOT have created a default ul.
+        assertEquals(0, ol.size());
+        Elements lis = doc.select("li");
+        assertEquals(2, lis.size());
+        assertEquals("body", lis.first().parent().tagName());
+
+        // no fiddling with non-implicit lists
+        String h2 = "<ol><li><p>Point the first<li><p>Point the second";
+        Document doc2 = Jsoup.parse(h2);
+
+        assertEquals(0, doc2.select("ul").size());
+        assertEquals(1, doc2.select("ol").size());
+        assertEquals(2, doc2.select("ol li").size());
+        assertEquals(2, doc2.select("ol li p").size());
+        assertEquals(1, doc2.select("ol li").get(0).children().size()); // one p in first li
+    }
+Method byte code: 
+0: ldc           #94
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: aload_2
+9: ldc           #95
+11: invokevirtual #43
+14: astore_3
+15: lconst_0
+16: aload_3
+17: invokevirtual #35
+20: i2l
+21: invokestatic  #36
+24: aload_2
+25: ldc           #96
+27: invokevirtual #43
+30: astore        4
+32: ldc2_w        #49
+35: aload         4
+37: invokevirtual #35
+40: i2l
+41: invokestatic  #36
+44: ldc           #97
+46: aload         4
+48: invokevirtual #44
+51: invokevirtual #98
+54: invokevirtual #7
+57: invokestatic  #8
+60: ldc           #99
+62: astore        5
+64: aload         5
+66: invokestatic  #3
+69: astore        6
+71: lconst_0
+72: aload         6
+74: ldc           #95
+76: invokevirtual #43
+79: invokevirtual #35
+82: i2l
+83: invokestatic  #36
+86: lconst_1
+87: aload         6
+89: ldc           #100
+91: invokevirtual #43
+94: invokevirtual #35
+97: i2l
+98: invokestatic  #36
+101: ldc2_w        #49
+104: aload         6
+106: ldc           #101
+108: invokevirtual #43
+111: invokevirtual #35
+114: i2l
+115: invokestatic  #36
+118: ldc2_w        #49
+121: aload         6
+123: ldc           #102
+125: invokevirtual #43
+128: invokevirtual #35
+131: i2l
+132: invokestatic  #36
+135: lconst_1
+136: aload         6
+138: ldc           #101
+140: invokevirtual #43
+143: iconst_0
+144: invokevirtual #31
+147: invokevirtual #61
+150: invokevirtual #35
+153: i2l
+154: invokestatic  #36
+157: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: discardsNakedTds
+Start line: 201
+End line: 207
+Method source code: 
+    @Test public void discardsNakedTds() {
+        // jsoup used to make this into an implicit table; but browsers make it into a text run
+        String h = "<td>Hello<td><p>There<p>now";
+        Document doc = Jsoup.parse(h);
+        assertEquals("Hello<p>There</p><p>now</p>", TextUtil.stripNewlines(doc.body().html()));
+        // <tbody> is introduced if no implicitly creating table, but allows tr to be directly under table
+    }
+Method byte code: 
+0: ldc           #103
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #104
+10: aload_2
+11: invokevirtual #4
+14: invokevirtual #18
+17: invokestatic  #56
+20: invokestatic  #8
+23: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesNestedImplicitTable
+Start line: 209
+End line: 212
+Method source code: 
+    @Test public void handlesNestedImplicitTable() {
+        Document doc = Jsoup.parse("<table><td>1</td></tr> <td>2</td></tr> <td> <table><td>3</td> <td>4</td></table> <tr><td>5</table>");
+        assertEquals("<table><tbody><tr><td>1</td></tr> <tr><td>2</td></tr> <tr><td> <table><tbody><tr><td>3</td> <td>4</td></tr></tbody></table> </td></tr><tr><td>5</td></tr></tbody></table>", TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #105
+2: invokestatic  #3
+5: astore_1
+6: ldc           #106
+8: aload_1
+9: invokevirtual #4
+12: invokevirtual #18
+15: invokestatic  #56
+18: invokestatic  #8
+21: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesWhatWgExpensesTableExample
+Start line: 214
+End line: 218
+Method source code: 
+    @Test public void handlesWhatWgExpensesTableExample() {
+        // http://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#examples-0
+        Document doc = Jsoup.parse("<table> <colgroup> <col> <colgroup> <col> <col> <col> <thead> <tr> <th> <th>2008 <th>2007 <th>2006 <tbody> <tr> <th scope=rowgroup> Research and development <td> $ 1,109 <td> $ 782 <td> $ 712 <tr> <th scope=row> Percentage of net sales <td> 3.4% <td> 3.3% <td> 3.7% <tbody> <tr> <th scope=rowgroup> Selling, general, and administrative <td> $ 3,761 <td> $ 2,963 <td> $ 2,433 <tr> <th scope=row> Percentage of net sales <td> 11.6% <td> 12.3% <td> 12.6% </table>");
+        assertEquals("<table> <colgroup> <col /> </colgroup><colgroup> <col /> <col /> <col /> </colgroup><thead> <tr> <th> </th><th>2008 </th><th>2007 </th><th>2006 </th></tr></thead><tbody> <tr> <th scope=\"rowgroup\"> Research and development </th><td> $ 1,109 </td><td> $ 782 </td><td> $ 712 </td></tr><tr> <th scope=\"row\"> Percentage of net sales </th><td> 3.4% </td><td> 3.3% </td><td> 3.7% </td></tr></tbody><tbody> <tr> <th scope=\"rowgroup\"> Selling, general, and administrative </th><td> $ 3,761 </td><td> $ 2,963 </td><td> $ 2,433 </td></tr><tr> <th scope=\"row\"> Percentage of net sales </th><td> 11.6% </td><td> 12.3% </td><td> 12.6% </td></tr></tbody></table>", TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #107
+2: invokestatic  #3
+5: astore_1
+6: ldc           #108
+8: aload_1
+9: invokevirtual #4
+12: invokevirtual #18
+15: invokestatic  #56
+18: invokestatic  #8
+21: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesTbodyTable
+Start line: 220
+End line: 223
+Method source code: 
+    @Test public void handlesTbodyTable() {
+        Document doc = Jsoup.parse("<html><head></head><body><table><tbody><tr><td>aaa</td><td>bbb</td></tr></tbody></table></body></html>");
+        assertEquals("<table><tbody><tr><td>aaa</td><td>bbb</td></tr></tbody></table>", TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #109
+2: invokestatic  #3
+5: astore_1
+6: ldc           #110
+8: aload_1
+9: invokevirtual #4
+12: invokevirtual #18
+15: invokestatic  #56
+18: invokestatic  #8
+21: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesImplicitCaptionClose
+Start line: 225
+End line: 228
+Method source code: 
+    @Test public void handlesImplicitCaptionClose() {
+        Document doc = Jsoup.parse("<table><caption>A caption<td>One<td>Two");
+        assertEquals("<table><caption>A caption</caption><tbody><tr><td>One</td><td>Two</td></tr></tbody></table>", TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #111
+2: invokestatic  #3
+5: astore_1
+6: ldc           #112
+8: aload_1
+9: invokevirtual #4
+12: invokevirtual #18
+15: invokestatic  #56
+18: invokestatic  #8
+21: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: noTableDirectInTable
+Start line: 230
+End line: 234
+Method source code: 
+    @Test public void noTableDirectInTable() {
+        Document doc = Jsoup.parse("<table> <td>One <td><table><td>Two</table> <table><td>Three");
+        assertEquals("<table> <tbody><tr><td>One </td><td><table><tbody><tr><td>Two</td></tr></tbody></table> <table><tbody><tr><td>Three</td></tr></tbody></table></td></tr></tbody></table>",
+                TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #113
+2: invokestatic  #3
+5: astore_1
+6: ldc           #114
+8: aload_1
+9: invokevirtual #4
+12: invokevirtual #18
+15: invokestatic  #56
+18: invokestatic  #8
+21: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: ignoresDupeEndTrTag
+Start line: 236
+End line: 240
+Method source code: 
+    @Test public void ignoresDupeEndTrTag() {
+        Document doc = Jsoup.parse("<table><tr><td>One</td><td><table><tr><td>Two</td></tr></tr></table></td><td>Three</td></tr></table>"); // two </tr></tr>, must ignore or will close table
+        assertEquals("<table><tbody><tr><td>One</td><td><table><tbody><tr><td>Two</td></tr></tbody></table></td><td>Three</td></tr></tbody></table>",
+                TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #115
+2: invokestatic  #3
+5: astore_1
+6: ldc           #116
+8: aload_1
+9: invokevirtual #4
+12: invokevirtual #18
+15: invokestatic  #56
+18: invokestatic  #8
+21: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesBaseTags
+Start line: 242
+End line: 258
+Method source code: 
+    @Test public void handlesBaseTags() {
+        // only listen to the first base href
+        String h = "<a href=1>#</a><base href='/2/'><a href='3'>#</a><base href='http://bar'><a href=/4>#</a>";
+        Document doc = Jsoup.parse(h, "http://foo/");
+        assertEquals("http://foo/2/", doc.baseUri()); // gets set once, so doc and descendants have first only
+
+        Elements anchors = doc.getElementsByTag("a");
+        assertEquals(3, anchors.size());
+
+        assertEquals("http://foo/2/", anchors.get(0).baseUri());
+        assertEquals("http://foo/2/", anchors.get(1).baseUri());
+        assertEquals("http://foo/2/", anchors.get(2).baseUri());
+
+        assertEquals("http://foo/2/1", anchors.get(0).absUrl("href"));
+        assertEquals("http://foo/2/3", anchors.get(1).absUrl("href"));
+        assertEquals("http://foo/4", anchors.get(2).absUrl("href"));
+    }
+Method byte code: 
+0: ldc           #117
+2: astore_1
+3: aload_1
+4: ldc           #118
+6: invokestatic  #119
+9: astore_2
+10: ldc           #120
+12: aload_2
+13: invokevirtual #121
+16: invokestatic  #8
+19: aload_2
+20: ldc           #122
+22: invokevirtual #30
+25: astore_3
+26: ldc2_w        #62
+29: aload_3
+30: invokevirtual #35
+33: i2l
+34: invokestatic  #36
+37: ldc           #120
+39: aload_3
+40: iconst_0
+41: invokevirtual #31
+44: invokevirtual #123
+47: invokestatic  #8
+50: ldc           #120
+52: aload_3
+53: iconst_1
+54: invokevirtual #31
+57: invokevirtual #123
+60: invokestatic  #8
+63: ldc           #120
+65: aload_3
+66: iconst_2
+67: invokevirtual #31
+70: invokevirtual #123
+73: invokestatic  #8
+76: ldc           #124
+78: aload_3
+79: iconst_0
+80: invokevirtual #31
+83: ldc           #125
+85: invokevirtual #126
+88: invokestatic  #8
+91: ldc           #127
+93: aload_3
+94: iconst_1
+95: invokevirtual #31
+98: ldc           #125
+100: invokevirtual #126
+103: invokestatic  #8
+106: ldc           #128
+108: aload_3
+109: iconst_2
+110: invokevirtual #31
+113: ldc           #125
+115: invokevirtual #126
+118: invokestatic  #8
+121: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesCdata
+Start line: 260
+End line: 268
+Method source code: 
+    @Test public void handlesCdata() {
+        // todo: as this is html namespace, should actually treat as bogus comment, not cdata. keep as cdata for now
+        String h = "<div id=1><![CDATA[<html>\n<foo><&amp;]]></div>"; // the &amp; in there should remain literal
+        Document doc = Jsoup.parse(h);
+        Element div = doc.getElementById("1");
+        assertEquals("<html> <foo><&amp;", div.text());
+        assertEquals(0, div.children().size());
+        assertEquals(1, div.childNodes().size()); // no elements, one text node
+    }
+Method byte code: 
+0: ldc           #129
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: aload_2
+9: ldc           #130
+11: invokevirtual #131
+14: astore_3
+15: ldc           #132
+17: aload_3
+18: invokevirtual #32
+21: invokestatic  #8
+24: lconst_0
+25: aload_3
+26: invokevirtual #61
+29: invokevirtual #35
+32: i2l
+33: invokestatic  #36
+36: lconst_1
+37: aload_3
+38: invokevirtual #133
+41: invokeinterface #134,  1
+46: i2l
+47: invokestatic  #36
+50: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesInvalidStartTags
+Start line: 270
+End line: 274
+Method source code: 
+    @Test public void handlesInvalidStartTags() {
+        String h = "<div>Hello < There <&amp;></div>"; // parse to <div {#text=Hello < There <&>}>
+        Document doc = Jsoup.parse(h);
+        assertEquals("Hello < There <&>", doc.select("div").first().text());
+    }
+Method byte code: 
+0: ldc           #135
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #136
+10: aload_2
+11: ldc           #74
+13: invokevirtual #43
+16: invokevirtual #44
+19: invokevirtual #32
+22: invokestatic  #8
+25: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesUnknownTags
+Start line: 276
+End line: 284
+Method source code: 
+    @Test public void handlesUnknownTags() {
+        String h = "<div><foo title=bar>Hello<foo title=qux>there</foo></div>";
+        Document doc = Jsoup.parse(h);
+        Elements foos = doc.select("foo");
+        assertEquals(2, foos.size());
+        assertEquals("bar", foos.first().attr("title"));
+        assertEquals("qux", foos.last().attr("title"));
+        assertEquals("there", foos.last().text());
+    }
+Method byte code: 
+0: ldc           #137
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: aload_2
+9: ldc           #138
+11: invokevirtual #43
+14: astore_3
+15: ldc2_w        #49
+18: aload_3
+19: invokevirtual #35
+22: i2l
+23: invokestatic  #36
+26: ldc           #139
+28: aload_3
+29: invokevirtual #44
+32: ldc           #76
+34: invokevirtual #11
+37: invokestatic  #8
+40: ldc           #140
+42: aload_3
+43: invokevirtual #53
+46: ldc           #76
+48: invokevirtual #11
+51: invokestatic  #8
+54: ldc           #141
+56: aload_3
+57: invokevirtual #53
+60: invokevirtual #32
+63: invokestatic  #8
+66: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesUnknownInlineTags
+Start line: 286
+End line: 291
+Method source code: 
+    @Test public void handlesUnknownInlineTags() {
+        String h = "<p><cust>Test</cust></p><p><cust><cust>Test</cust></cust></p>";
+        Document doc = Jsoup.parseBodyFragment(h);
+        String out = doc.body().html();
+        assertEquals(h, TextUtil.stripNewlines(out));
+    }
+Method byte code: 
+0: ldc           #142
+2: astore_1
+3: aload_1
+4: invokestatic  #143
+7: astore_2
+8: aload_2
+9: invokevirtual #4
+12: invokevirtual #18
+15: astore_3
+16: aload_1
+17: aload_3
+18: invokestatic  #56
+21: invokestatic  #8
+24: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: parsesBodyFragment
+Start line: 293
+End line: 298
+Method source code: 
+    @Test public void parsesBodyFragment() {
+        String h = "<!-- comment --><p><a href='foo'>One</a></p>";
+        Document doc = Jsoup.parseBodyFragment(h, "http://example.com");
+        assertEquals("<body><!-- comment --><p><a href=\"foo\">One</a></p></body>", TextUtil.stripNewlines(doc.body().outerHtml()));
+        assertEquals("http://example.com/foo", doc.select("a").first().absUrl("href"));
+    }
+Method byte code: 
+0: ldc           #144
+2: astore_1
+3: aload_1
+4: ldc           #145
+6: invokestatic  #146
+9: astore_2
+10: ldc           #147
+12: aload_2
+13: invokevirtual #4
+16: invokevirtual #148
+19: invokestatic  #56
+22: invokestatic  #8
+25: ldc           #149
+27: aload_2
+28: ldc           #122
+30: invokevirtual #43
+33: invokevirtual #44
+36: ldc           #125
+38: invokevirtual #126
+41: invokestatic  #8
+44: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesUnknownNamespaceTags
+Start line: 300
+End line: 305
+Method source code: 
+    @Test public void handlesUnknownNamespaceTags() {
+        // note that the first foo:bar should not really be allowed to be self closing, if parsed in html mode.
+        String h = "<foo:bar id='1' /><abc:def id=2>Foo<p>Hello</p></abc:def><foo:bar>There</foo:bar>";
+        Document doc = Jsoup.parse(h);
+        assertEquals("<foo:bar id=\"1\" /><abc:def id=\"2\">Foo<p>Hello</p></abc:def><foo:bar>There</foo:bar>", TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #150
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #151
+10: aload_2
+11: invokevirtual #4
+14: invokevirtual #18
+17: invokestatic  #56
+20: invokestatic  #8
+23: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesKnownEmptyBlocks
+Start line: 307
+End line: 317
+Method source code: 
+    @Test public void handlesKnownEmptyBlocks() {
+        // if known tag, must be defined as self closing to allow as self closing. unkown tags can be self closing.
+        String h = "<div id='1' /><div id=2><img /><img></div> <hr /> hr text <hr> hr text two";
+        Document doc = Jsoup.parse(h);
+        Element div1 = doc.getElementById("1");
+        assertTrue(!div1.children().isEmpty()); // <div /> is treated as <div>...
+        assertTrue(doc.select("hr").first().children().isEmpty());
+        assertTrue(doc.select("hr").last().children().isEmpty());
+        assertTrue(doc.select("img").first().children().isEmpty());
+        assertTrue(doc.select("img").last().children().isEmpty());
+    }
+Method byte code: 
+0: ldc           #152
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: aload_2
+9: ldc           #130
+11: invokevirtual #131
+14: astore_3
+15: aload_3
+16: invokevirtual #61
+19: invokevirtual #153
+22: ifne          29
+25: iconst_1
+26: goto          30
+29: iconst_0
+30: invokestatic  #154
+33: aload_2
+34: ldc           #155
+36: invokevirtual #43
+39: invokevirtual #44
+42: invokevirtual #61
+45: invokevirtual #153
+48: invokestatic  #154
+51: aload_2
+52: ldc           #155
+54: invokevirtual #43
+57: invokevirtual #53
+60: invokevirtual #61
+63: invokevirtual #153
+66: invokestatic  #154
+69: aload_2
+70: ldc           #12
+72: invokevirtual #43
+75: invokevirtual #44
+78: invokevirtual #61
+81: invokevirtual #153
+84: invokestatic  #154
+87: aload_2
+88: ldc           #12
+90: invokevirtual #43
+93: invokevirtual #53
+96: invokevirtual #61
+99: invokevirtual #153
+102: invokestatic  #154
+105: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesSolidusAtAttributeEnd
+Start line: 319
+End line: 324
+Method source code: 
+    @Test public void handlesSolidusAtAttributeEnd() {
+        // this test makes sure [<a href=/>link</a>] is parsed as [<a href="/">link</a>], not [<a href="" /><a>link</a>]
+        String h = "<a href=/>link</a>";
+        Document doc = Jsoup.parse(h);
+        assertEquals("<a href=\"/\">link</a>", doc.body().html());
+    }
+Method byte code: 
+0: ldc           #156
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #157
+10: aload_2
+11: invokevirtual #4
+14: invokevirtual #18
+17: invokestatic  #8
+20: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesMultiClosingBody
+Start line: 326
+End line: 331
+Method source code: 
+    @Test public void handlesMultiClosingBody() {
+        String h = "<body><p>Hello</body><p>there</p></body></body></html><p>now";
+        Document doc = Jsoup.parse(h);
+        assertEquals(3, doc.select("p").size());
+        assertEquals(3, doc.body().children().size());
+    }
+Method byte code: 
+0: ldc           #158
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc2_w        #62
+11: aload_2
+12: ldc           #6
+14: invokevirtual #43
+17: invokevirtual #35
+20: i2l
+21: invokestatic  #36
+24: ldc2_w        #62
+27: aload_2
+28: invokevirtual #4
+31: invokevirtual #61
+34: invokevirtual #35
+37: i2l
+38: invokestatic  #36
+41: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesUnclosedDefinitionLists
+Start line: 333
+End line: 342
+Method source code: 
+    @Test public void handlesUnclosedDefinitionLists() {
+        // jsoup used to create a <dl>, but that's not to spec
+        String h = "<dt>Foo<dd>Bar<dt>Qux<dd>Zug";
+        Document doc = Jsoup.parse(h);
+        assertEquals(0, doc.select("dl").size()); // no auto dl
+        assertEquals(4, doc.select("dt, dd").size());
+        Elements dts = doc.select("dt");
+        assertEquals(2, dts.size());
+        assertEquals("Zug", dts.get(1).nextElementSibling().text());
+    }
+Method byte code: 
+0: ldc           #159
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: lconst_0
+9: aload_2
+10: ldc           #160
+12: invokevirtual #43
+15: invokevirtual #35
+18: i2l
+19: invokestatic  #36
+22: ldc2_w        #161
+25: aload_2
+26: ldc           #163
+28: invokevirtual #43
+31: invokevirtual #35
+34: i2l
+35: invokestatic  #36
+38: aload_2
+39: ldc           #164
+41: invokevirtual #43
+44: astore_3
+45: ldc2_w        #49
+48: aload_3
+49: invokevirtual #35
+52: i2l
+53: invokestatic  #36
+56: ldc           #165
+58: aload_3
+59: iconst_1
+60: invokevirtual #31
+63: invokevirtual #166
+66: invokevirtual #32
+69: invokestatic  #8
+72: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesBlocksInDefinitions
+Start line: 344
+End line: 351
+Method source code: 
+    @Test public void handlesBlocksInDefinitions() {
+        // per the spec, dt and dd are inline, but in practise are block
+        String h = "<dl><dt><div id=1>Term</div></dt><dd><div id=2>Def</div></dd></dl>";
+        Document doc = Jsoup.parse(h);
+        assertEquals("dt", doc.select("#1").first().parent().tagName());
+        assertEquals("dd", doc.select("#2").first().parent().tagName());
+        assertEquals("<dl><dt><div id=\"1\">Term</div></dt><dd><div id=\"2\">Def</div></dd></dl>", TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #167
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #164
+10: aload_2
+11: ldc           #168
+13: invokevirtual #43
+16: invokevirtual #44
+19: invokevirtual #98
+22: invokevirtual #7
+25: invokestatic  #8
+28: ldc           #169
+30: aload_2
+31: ldc           #170
+33: invokevirtual #43
+36: invokevirtual #44
+39: invokevirtual #98
+42: invokevirtual #7
+45: invokestatic  #8
+48: ldc           #171
+50: aload_2
+51: invokevirtual #4
+54: invokevirtual #18
+57: invokestatic  #56
+60: invokestatic  #8
+63: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesFrames
+Start line: 353
+End line: 359
+Method source code: 
+    @Test public void handlesFrames() {
+        String h = "<html><head><script></script><noscript></noscript></head><frameset><frame src=foo></frame><frame src=foo></frameset></html>";
+        Document doc = Jsoup.parse(h);
+        assertEquals("<html><head><script></script><noscript></noscript></head><frameset><frame src=\"foo\" /><frame src=\"foo\" /></frameset></html>",
+                TextUtil.stripNewlines(doc.html()));
+        // no body auto vivification
+    }
+Method byte code: 
+0: ldc           #172
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #173
+10: aload_2
+11: invokevirtual #90
+14: invokestatic  #56
+17: invokestatic  #8
+20: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: ignoresContentAfterFrameset
+Start line: 361
+End line: 366
+Method source code: 
+    @Test public void ignoresContentAfterFrameset() {
+        String h = "<html><head><title>One</title></head><frameset><frame /><frame /></frameset><table></table></html>";
+        Document doc = Jsoup.parse(h);
+        assertEquals("<html><head><title>One</title></head><frameset><frame /><frame /></frameset></html>", TextUtil.stripNewlines(doc.html()));
+        // no body, no table. No crash!
+    }
+Method byte code: 
+0: ldc           #174
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #175
+10: aload_2
+11: invokevirtual #90
+14: invokestatic  #56
+17: invokestatic  #8
+20: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesJavadocFont
+Start line: 368
+End line: 375
+Method source code: 
+    @Test public void handlesJavadocFont() {
+        String h = "<TD BGCOLOR=\"#EEEEFF\" CLASS=\"NavBarCell1\">    <A HREF=\"deprecated-list.html\"><FONT CLASS=\"NavBarFont1\"><B>Deprecated</B></FONT></A>&nbsp;</TD>";
+        Document doc = Jsoup.parse(h);
+        Element a = doc.select("a").first();
+        assertEquals("Deprecated", a.text());
+        assertEquals("font", a.child(0).tagName());
+        assertEquals("b", a.child(0).child(0).tagName());
+    }
+Method byte code: 
+0: ldc           #176
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: aload_2
+9: ldc           #122
+11: invokevirtual #43
+14: invokevirtual #44
+17: astore_3
+18: ldc           #177
+20: aload_3
+21: invokevirtual #32
+24: invokestatic  #8
+27: ldc           #178
+29: aload_3
+30: iconst_0
+31: invokevirtual #5
+34: invokevirtual #7
+37: invokestatic  #8
+40: ldc           #179
+42: aload_3
+43: iconst_0
+44: invokevirtual #5
+47: iconst_0
+48: invokevirtual #5
+51: invokevirtual #7
+54: invokestatic  #8
+57: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesBaseWithoutHref
+Start line: 377
+End line: 383
+Method source code: 
+    @Test public void handlesBaseWithoutHref() {
+        String h = "<head><base target='_blank'></head><body><a href=/foo>Test</a></body>";
+        Document doc = Jsoup.parse(h, "http://example.com/");
+        Element a = doc.select("a").first();
+        assertEquals("/foo", a.attr("href"));
+        assertEquals("http://example.com/foo", a.attr("abs:href"));
+    }
+Method byte code: 
+0: ldc           #180
+2: astore_1
+3: aload_1
+4: ldc           #181
+6: invokestatic  #119
+9: astore_2
+10: aload_2
+11: ldc           #122
+13: invokevirtual #43
+16: invokevirtual #44
+19: astore_3
+20: ldc           #182
+22: aload_3
+23: ldc           #125
+25: invokevirtual #11
+28: invokestatic  #8
+31: ldc           #149
+33: aload_3
+34: ldc           #183
+36: invokevirtual #11
+39: invokestatic  #8
+42: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: normalisesDocument
+Start line: 385
+End line: 390
+Method source code: 
+    @Test public void normalisesDocument() {
+        String h = "<!doctype html>One<html>Two<head>Three<link></head>Four<body>Five </body>Six </html>Seven ";
+        Document doc = Jsoup.parse(h);
+        assertEquals("<!DOCTYPE html><html><head></head><body>OneTwoThree<link />FourFive Six Seven </body></html>",
+                TextUtil.stripNewlines(doc.html()));
+    }
+Method byte code: 
+0: ldc           #184
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #185
+10: aload_2
+11: invokevirtual #90
+14: invokestatic  #56
+17: invokestatic  #8
+20: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: normalisesEmptyDocument
+Start line: 392
+End line: 395
+Method source code: 
+    @Test public void normalisesEmptyDocument() {
+        Document doc = Jsoup.parse("");
+        assertEquals("<html><head></head><body></body></html>", TextUtil.stripNewlines(doc.html()));
+    }
+Method byte code: 
+0: ldc           #37
+2: invokestatic  #3
+5: astore_1
+6: ldc           #186
+8: aload_1
+9: invokevirtual #90
+12: invokestatic  #56
+15: invokestatic  #8
+18: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: normalisesHeadlessBody
+Start line: 397
+End line: 401
+Method source code: 
+    @Test public void normalisesHeadlessBody() {
+        Document doc = Jsoup.parse("<html><body><span class=\"foo\">bar</span>");
+        assertEquals("<html><head></head><body><span class=\"foo\">bar</span></body></html>",
+                TextUtil.stripNewlines(doc.html()));
+    }
+Method byte code: 
+0: ldc           #187
+2: invokestatic  #3
+5: astore_1
+6: ldc           #188
+8: aload_1
+9: invokevirtual #90
+12: invokestatic  #56
+15: invokestatic  #8
+18: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: normalisedBodyAfterContent
+Start line: 403
+End line: 407
+Method source code: 
+    @Test public void normalisedBodyAfterContent() {
+        Document doc = Jsoup.parse("<font face=Arial><body class=name><div>One</div></body></font>");
+        assertEquals("<html><head></head><body class=\"name\"><font face=\"Arial\"><div>One</div></font></body></html>",
+                TextUtil.stripNewlines(doc.html()));
+    }
+Method byte code: 
+0: ldc           #189
+2: invokestatic  #3
+5: astore_1
+6: ldc           #190
+8: aload_1
+9: invokevirtual #90
+12: invokestatic  #56
+15: invokestatic  #8
+18: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: findsCharsetInMalformedMeta
+Start line: 409
+End line: 414
+Method source code: 
+    @Test public void findsCharsetInMalformedMeta() {
+        String h = "<meta http-equiv=Content-Type content=text/html; charset=gb2312>";
+        // example cited for reason of html5's <meta charset> element
+        Document doc = Jsoup.parse(h);
+        assertEquals("gb2312", doc.select("meta").attr("charset"));
+    }
+Method byte code: 
+0: ldc           #191
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #192
+10: aload_2
+11: ldc           #65
+13: invokevirtual #43
+16: ldc           #193
+18: invokevirtual #194
+21: invokestatic  #8
+24: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: testHgroup
+Start line: 416
+End line: 420
+Method source code: 
+    @Test public void testHgroup() {
+        // jsoup used to not allow hroup in h{n}, but that's not in spec, and browsers are OK
+        Document doc = Jsoup.parse("<h1>Hello <h2>There <hgroup><h1>Another<h2>headline</hgroup> <hgroup><h1>More</h1><p>stuff</p></hgroup>");
+        assertEquals("<h1>Hello </h1><h2>There <hgroup><h1>Another</h1><h2>headline</h2></hgroup> <hgroup><h1>More</h1><p>stuff</p></hgroup></h2>", TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #195
+2: invokestatic  #3
+5: astore_1
+6: ldc           #196
+8: aload_1
+9: invokevirtual #4
+12: invokevirtual #18
+15: invokestatic  #56
+18: invokestatic  #8
+21: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: testRelaxedTags
+Start line: 422
+End line: 425
+Method source code: 
+    @Test public void testRelaxedTags() {
+        Document doc = Jsoup.parse("<abc_def id=1>Hello</abc_def> <abc-def>There</abc-def>");
+        assertEquals("<abc_def id=\"1\">Hello</abc_def> <abc-def>There</abc-def>", TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #197
+2: invokestatic  #3
+5: astore_1
+6: ldc           #198
+8: aload_1
+9: invokevirtual #4
+12: invokevirtual #18
+15: invokestatic  #56
+18: invokestatic  #8
+21: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: testHeaderContents
+Start line: 427
+End line: 432
+Method source code: 
+    @Test public void testHeaderContents() {
+        // h* tags (h1 .. h9) in browsers can handle any internal content other than other h*. which is not per any
+        // spec, which defines them as containing phrasing content only. so, reality over theory.
+        Document doc = Jsoup.parse("<h1>Hello <div>There</div> now</h1> <h2>More <h3>Content</h3></h2>");
+        assertEquals("<h1>Hello <div>There</div> now</h1> <h2>More </h2><h3>Content</h3>", TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #199
+2: invokestatic  #3
+5: astore_1
+6: ldc           #200
+8: aload_1
+9: invokevirtual #4
+12: invokevirtual #18
+15: invokestatic  #56
+18: invokestatic  #8
+21: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: testSpanContents
+Start line: 434
+End line: 438
+Method source code: 
+    @Test public void testSpanContents() {
+        // like h1 tags, the spec says SPAN is phrasing only, but browsers and publisher treat span as a block tag
+        Document doc = Jsoup.parse("<span>Hello <div>there</div> <span>now</span></span>");
+        assertEquals("<span>Hello <div>there</div> <span>now</span></span>", TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #201
+2: invokestatic  #3
+5: astore_1
+6: ldc           #201
+8: aload_1
+9: invokevirtual #4
+12: invokevirtual #18
+15: invokestatic  #56
+18: invokestatic  #8
+21: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: testNoImagesInNoScriptInHead
+Start line: 440
+End line: 444
+Method source code: 
+    @Test public void testNoImagesInNoScriptInHead() {
+        // jsoup used to allow, but against spec if parsing with noscript
+        Document doc = Jsoup.parse("<html><head><noscript><img src='foo'></noscript></head><body><p>Hello</p></body></html>");
+        assertEquals("<html><head><noscript></noscript></head><body><img src=\"foo\" /><p>Hello</p></body></html>", TextUtil.stripNewlines(doc.html()));
+    }
+Method byte code: 
+0: ldc           #202
+2: invokestatic  #3
+5: astore_1
+6: ldc           #203
+8: aload_1
+9: invokevirtual #90
+12: invokestatic  #56
+15: invokestatic  #8
+18: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: testAFlowContents
+Start line: 446
+End line: 450
+Method source code: 
+    @Test public void testAFlowContents() {
+        // html5 has <a> as either phrasing or block
+        Document doc = Jsoup.parse("<a>Hello <div>there</div> <span>now</span></a>");
+        assertEquals("<a>Hello <div>there</div> <span>now</span></a>", TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #204
+2: invokestatic  #3
+5: astore_1
+6: ldc           #204
+8: aload_1
+9: invokevirtual #4
+12: invokevirtual #18
+15: invokestatic  #56
+18: invokestatic  #8
+21: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: testFontFlowContents
+Start line: 452
+End line: 456
+Method source code: 
+    @Test public void testFontFlowContents() {
+        // html5 has no definition of <font>; often used as flow
+        Document doc = Jsoup.parse("<font>Hello <div>there</div> <span>now</span></font>");
+        assertEquals("<font>Hello <div>there</div> <span>now</span></font>", TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #205
+2: invokestatic  #3
+5: astore_1
+6: ldc           #205
+8: aload_1
+9: invokevirtual #4
+12: invokevirtual #18
+15: invokestatic  #56
+18: invokestatic  #8
+21: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesMisnestedTagsBI
+Start line: 458
+End line: 464
+Method source code: 
+    @Test public void handlesMisnestedTagsBI() {
+        // whatwg: <b><i></b></i>
+        String h = "<p>1<b>2<i>3</b>4</i>5</p>";
+        Document doc = Jsoup.parse(h);
+        assertEquals("<p>1<b>2<i>3</i></b><i>4</i>5</p>", doc.body().html());
+        // adoption agency on </b>, reconstruction of formatters on 4.
+    }
+Method byte code: 
+0: ldc           #206
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #207
+10: aload_2
+11: invokevirtual #4
+14: invokevirtual #18
+17: invokestatic  #8
+20: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesMisnestedTagsBP
+Start line: 466
+End line: 471
+Method source code: 
+    @Test public void handlesMisnestedTagsBP() {
+        //  whatwg: <b><p></b></p>
+        String h = "<b>1<p>2</b>3</p>";
+        Document doc = Jsoup.parse(h);
+        assertEquals("<b>1</b>\n<p><b>2</b>3</p>", doc.body().html());
+    }
+Method byte code: 
+0: ldc           #208
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #209
+10: aload_2
+11: invokevirtual #4
+14: invokevirtual #18
+17: invokestatic  #8
+20: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesUnexpectedMarkupInTables
+Start line: 473
+End line: 479
+Method source code: 
+    @Test public void handlesUnexpectedMarkupInTables() {
+        // whatwg - tests markers in active formatting (if they didn't work, would get in in table)
+        // also tests foster parenting
+        String h = "<table><b><tr><td>aaa</td></tr>bbb</table>ccc";
+        Document doc = Jsoup.parse(h);
+        assertEquals("<b></b><b>bbb</b><table><tbody><tr><td>aaa</td></tr></tbody></table><b>ccc</b>", TextUtil.stripNewlines(doc.body().html()));
+    }
+Method byte code: 
+0: ldc           #210
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #211
+10: aload_2
+11: invokevirtual #4
+14: invokevirtual #18
+17: invokestatic  #56
+20: invokestatic  #8
+23: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesUnclosedFormattingElements
+Start line: 481
+End line: 501
+Method source code: 
+    @Test public void handlesUnclosedFormattingElements() {
+        // whatwg: formatting elements get collected and applied, but excess elements are thrown away
+        String h = "<!DOCTYPE html>\n" +
+                "<p><b class=x><b class=x><b><b class=x><b class=x><b>X\n" +
+                "<p>X\n" +
+                "<p><b><b class=x><b>X\n" +
+                "<p></b></b></b></b></b></b>X";
+        Document doc = Jsoup.parse(h);
+        doc.outputSettings().indentAmount(0);
+        String want = "<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<head></head>\n" +
+                "<body>\n" +
+                "<p><b class=\"x\"><b class=\"x\"><b><b class=\"x\"><b class=\"x\"><b>X </b></b></b></b></b></b></p>\n" +
+                "<p><b class=\"x\"><b><b class=\"x\"><b class=\"x\"><b>X </b></b></b></b></b></p>\n" +
+                "<p><b class=\"x\"><b><b class=\"x\"><b class=\"x\"><b><b><b class=\"x\"><b>X </b></b></b></b></b></b></b></b></p>\n" +
+                "<p>X</p>\n" +
+                "</body>\n" +
+                "</html>";
+        assertEquals(want, doc.html());
+    }
+Method byte code: 
+0: ldc           #212
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: aload_2
+9: invokevirtual #213
+12: iconst_0
+13: invokevirtual #214
+16: pop
+17: ldc           #215
+19: astore_3
+20: aload_3
+21: aload_2
+22: invokevirtual #90
+25: invokestatic  #8
+28: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: reconstructFormattingElements
+Start line: 503
+End line: 508
+Method source code: 
+    @Test public void reconstructFormattingElements() {
+        // tests attributes and multi b
+        String h = "<p><b class=one>One <i>Two <b>Three</p><p>Hello</p>";
+        Document doc = Jsoup.parse(h);
+        assertEquals("<p><b class=\"one\">One <i>Two <b>Three</b></i></b></p>\n<p><b class=\"one\"><i><b>Hello</b></i></b></p>", doc.body().html());
+    }
+Method byte code: 
+0: ldc           #216
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #217
+10: aload_2
+11: invokevirtual #4
+14: invokevirtual #18
+17: invokestatic  #8
+20: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: reconstructFormattingElementsInTable
+Start line: 510
+End line: 525
+Method source code: 
+    @Test public void reconstructFormattingElementsInTable() {
+        // tests that tables get formatting markers -- the <b> applies outside the table and does not leak in,
+        // and the <i> inside the table and does not leak out.
+        String h = "<p><b>One</p> <table><tr><td><p><i>Three<p>Four</i></td></tr></table> <p>Five</p>";
+        Document doc = Jsoup.parse(h);
+        String want = "<p><b>One</b></p>\n" +
+                "<b> \n" +
+                " <table>\n" +
+                "  <tbody>\n" +
+                "   <tr>\n" +
+                "    <td><p><i>Three</i></p><p><i>Four</i></p></td>\n" +
+                "   </tr>\n" +
+                "  </tbody>\n" +
+                " </table> <p>Five</p></b>";
+        assertEquals(want, doc.body().html());
+    }
+Method byte code: 
+0: ldc           #218
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #219
+10: astore_3
+11: aload_3
+12: aload_2
+13: invokevirtual #4
+16: invokevirtual #18
+19: invokestatic  #8
+22: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: commentBeforeHtml
+Start line: 527
+End line: 531
+Method source code: 
+    @Test public void commentBeforeHtml() {
+        String h = "<!-- comment --><!-- comment 2 --><p>One</p>";
+        Document doc = Jsoup.parse(h);
+        assertEquals("<!-- comment --><!-- comment 2 --><html><head></head><body><p>One</p></body></html>", TextUtil.stripNewlines(doc.html()));
+    }
+Method byte code: 
+0: ldc           #220
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #221
+10: aload_2
+11: invokevirtual #90
+14: invokestatic  #56
+17: invokestatic  #8
+20: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: emptyTdTag
+Start line: 533
+End line: 537
+Method source code: 
+    @Test public void emptyTdTag() {
+        String h = "<table><tr><td>One</td><td id='2' /></tr></table>";
+        Document doc = Jsoup.parse(h);
+        assertEquals("<td>One</td>\n<td id=\"2\"></td>", doc.select("tr").first().html());
+    }
+Method byte code: 
+0: ldc           #222
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: ldc           #223
+10: aload_2
+11: ldc           #224
+13: invokevirtual #43
+16: invokevirtual #44
+19: invokevirtual #18
+22: invokestatic  #8
+25: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesSolidusInA
+Start line: 539
+End line: 546
+Method source code: 
+    @Test public void handlesSolidusInA() {
+        // test for bug #66
+        String h = "<a class=lp href=/lib/14160711/>link text</a>";
+        Document doc = Jsoup.parse(h);
+        Element a = doc.select("a").first();
+        assertEquals("link text", a.text());
+        assertEquals("/lib/14160711/", a.attr("href"));
+    }
+Method byte code: 
+0: ldc           #225
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: aload_2
+9: ldc           #122
+11: invokevirtual #43
+14: invokevirtual #44
+17: astore_3
+18: ldc           #226
+20: aload_3
+21: invokevirtual #32
+24: invokestatic  #8
+27: ldc           #227
+29: aload_3
+30: ldc           #125
+32: invokevirtual #11
+35: invokestatic  #8
+38: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesSpanInTbody
+Start line: 548
+End line: 554
+Method source code: 
+    @Test public void handlesSpanInTbody() {
+        // test for bug 64
+        String h = "<table><tbody><span class='1'><tr><td>One</td></tr><tr><td>Two</td></tr></span></tbody></table>";
+        Document doc = Jsoup.parse(h);
+        assertEquals(doc.select("span").first().children().size(), 0); // the span gets closed
+        assertEquals(doc.select("table").size(), 1); // only one table
+    }
+Method byte code: 
+0: ldc           #228
+2: astore_1
+3: aload_1
+4: invokestatic  #3
+7: astore_2
+8: aload_2
+9: ldc           #229
+11: invokevirtual #43
+14: invokevirtual #44
+17: invokevirtual #61
+20: invokevirtual #35
+23: i2l
+24: lconst_0
+25: invokestatic  #36
+28: aload_2
+29: ldc           #230
+31: invokevirtual #43
+34: invokevirtual #35
+37: i2l
+38: lconst_1
+39: invokestatic  #36
+42: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesUnclosedTitleAtEof
+Start line: 556
+End line: 564
+Method source code: 
+    @Test public void handlesUnclosedTitleAtEof() {
+        assertEquals("Data", Jsoup.parse("<title>Data").title());
+        assertEquals("Data<", Jsoup.parse("<title>Data<").title());
+        assertEquals("Data</", Jsoup.parse("<title>Data</").title());
+        assertEquals("Data</t", Jsoup.parse("<title>Data</t").title());
+        assertEquals("Data</ti", Jsoup.parse("<title>Data</ti").title());
+        assertEquals("Data", Jsoup.parse("<title>Data</title>").title());
+        assertEquals("Data", Jsoup.parse("<title>Data</title >").title());
+    }
+Method byte code: 
+0: ldc           #231
+2: ldc           #232
+4: invokestatic  #3
+7: invokevirtual #69
+10: invokestatic  #8
+13: ldc           #233
+15: ldc           #234
+17: invokestatic  #3
+20: invokevirtual #69
+23: invokestatic  #8
+26: ldc           #235
+28: ldc           #236
+30: invokestatic  #3
+33: invokevirtual #69
+36: invokestatic  #8
+39: ldc           #237
+41: ldc           #238
+43: invokestatic  #3
+46: invokevirtual #69
+49: invokestatic  #8
+52: ldc           #239
+54: ldc           #240
+56: invokestatic  #3
+59: invokevirtual #69
+62: invokestatic  #8
+65: ldc           #231
+67: ldc           #241
+69: invokestatic  #3
+72: invokevirtual #69
+75: invokestatic  #8
+78: ldc           #231
+80: ldc           #242
+82: invokestatic  #3
+85: invokevirtual #69
+88: invokestatic  #8
+91: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesUnclosedTitle
+Start line: 566
+End line: 574
+Method source code: 
+    @Test public void handlesUnclosedTitle() {
+        Document one = Jsoup.parse("<title>One <b>Two <b>Three</TITLE><p>Test</p>"); // has title, so <b> is plain text
+        assertEquals("One <b>Two <b>Three", one.title());
+        assertEquals("Test", one.select("p").first().text());
+
+        Document two = Jsoup.parse("<title>One<b>Two <p>Test</p>"); // no title, so <b> causes </title> breakout
+        assertEquals("One", two.title());
+        assertEquals("<b>Two <p>Test</p></b>", two.body().html());
+    }
+Method byte code: 
+0: ldc           #231
+2: ldc           #232
+4: invokestatic  #3
+7: invokevirtual #69
+10: invokestatic  #8
+13: ldc           #233
+15: ldc           #234
+17: invokestatic  #3
+20: invokevirtual #69
+23: invokestatic  #8
+26: ldc           #235
+28: ldc           #236
+30: invokestatic  #3
+33: invokevirtual #69
+36: invokestatic  #8
+39: ldc           #237
+41: ldc           #238
+43: invokestatic  #3
+46: invokevirtual #69
+49: invokestatic  #8
+52: ldc           #239
+54: ldc           #240
+56: invokestatic  #3
+59: invokevirtual #69
+62: invokestatic  #8
+65: ldc           #231
+67: ldc           #241
+69: invokestatic  #3
+72: invokevirtual #69
+75: invokestatic  #8
+78: ldc           #231
+80: ldc           #242
+82: invokestatic  #3
+85: invokevirtual #69
+88: invokestatic  #8
+91: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesUnclosedScriptAtEof
+Start line: 576
+End line: 590
+Method source code: 
+    @Test public void handlesUnclosedScriptAtEof() {
+        assertEquals("Data", Jsoup.parse("<script>Data").select("script").first().data());
+        assertEquals("Data<", Jsoup.parse("<script>Data<").select("script").first().data());
+        assertEquals("Data</sc", Jsoup.parse("<script>Data</sc").select("script").first().data());
+        assertEquals("Data</-sc", Jsoup.parse("<script>Data</-sc").select("script").first().data());
+        assertEquals("Data</sc-", Jsoup.parse("<script>Data</sc-").select("script").first().data());
+        assertEquals("Data</sc--", Jsoup.parse("<script>Data</sc--").select("script").first().data());
+        assertEquals("Data", Jsoup.parse("<script>Data</script>").select("script").first().data());
+        assertEquals("Data</script", Jsoup.parse("<script>Data</script").select("script").first().data());
+        assertEquals("Data", Jsoup.parse("<script>Data</script ").select("script").first().data());
+        assertEquals("Data", Jsoup.parse("<script>Data</script n").select("script").first().data());
+        assertEquals("Data", Jsoup.parse("<script>Data</script n=").select("script").first().data());
+        assertEquals("Data", Jsoup.parse("<script>Data</script n=\"").select("script").first().data());
+        assertEquals("Data", Jsoup.parse("<script>Data</script n=\"p").select("script").first().data());
+    }
+Method byte code: 
+0: ldc           #231
+2: ldc           #248
+4: invokestatic  #3
+7: ldc           #249
+9: invokevirtual #43
+12: invokevirtual #44
+15: invokevirtual #83
+18: invokestatic  #8
+21: ldc           #233
+23: ldc           #250
+25: invokestatic  #3
+28: ldc           #249
+30: invokevirtual #43
+33: invokevirtual #44
+36: invokevirtual #83
+39: invokestatic  #8
+42: ldc           #251
+44: ldc           #252
+46: invokestatic  #3
+49: ldc           #249
+51: invokevirtual #43
+54: invokevirtual #44
+57: invokevirtual #83
+60: invokestatic  #8
+63: ldc           #253
+65: ldc           #254
+67: invokestatic  #3
+70: ldc           #249
+72: invokevirtual #43
+75: invokevirtual #44
+78: invokevirtual #83
+81: invokestatic  #8
+84: ldc           #255
+86: ldc_w         #256
+89: invokestatic  #3
+92: ldc           #249
+94: invokevirtual #43
+97: invokevirtual #44
+100: invokevirtual #83
+103: invokestatic  #8
+106: ldc_w         #257
+109: ldc_w         #258
+112: invokestatic  #3
+115: ldc           #249
+117: invokevirtual #43
+120: invokevirtual #44
+123: invokevirtual #83
+126: invokestatic  #8
+129: ldc           #231
+131: ldc_w         #259
+134: invokestatic  #3
+137: ldc           #249
+139: invokevirtual #43
+142: invokevirtual #44
+145: invokevirtual #83
+148: invokestatic  #8
+151: ldc_w         #260
+154: ldc_w         #261
+157: invokestatic  #3
+160: ldc           #249
+162: invokevirtual #43
+165: invokevirtual #44
+168: invokevirtual #83
+171: invokestatic  #8
+174: ldc           #231
+176: ldc_w         #262
+179: invokestatic  #3
+182: ldc           #249
+184: invokevirtual #43
+187: invokevirtual #44
+190: invokevirtual #83
+193: invokestatic  #8
+196: ldc           #231
+198: ldc_w         #263
+201: invokestatic  #3
+204: ldc           #249
+206: invokevirtual #43
+209: invokevirtual #44
+212: invokevirtual #83
+215: invokestatic  #8
+218: ldc           #231
+220: ldc_w         #264
+223: invokestatic  #3
+226: ldc           #249
+228: invokevirtual #43
+231: invokevirtual #44
+234: invokevirtual #83
+237: invokestatic  #8
+240: ldc           #231
+242: ldc_w         #265
+245: invokestatic  #3
+248: ldc           #249
+250: invokevirtual #43
+253: invokevirtual #44
+256: invokevirtual #83
+259: invokestatic  #8
+262: ldc           #231
+264: ldc_w         #266
+267: invokestatic  #3
+270: ldc           #249
+272: invokevirtual #43
+275: invokevirtual #44
+278: invokevirtual #83
+281: invokestatic  #8
+284: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesUnclosedRawtextAtEof
+Start line: 592
+End line: 600
+Method source code: 
+    @Test public void handlesUnclosedRawtextAtEof() {
+        assertEquals("Data", Jsoup.parse("<style>Data").select("style").first().data());
+        assertEquals("Data</st", Jsoup.parse("<style>Data</st").select("style").first().data());
+        assertEquals("Data", Jsoup.parse("<style>Data</style>").select("style").first().data());
+        assertEquals("Data</style", Jsoup.parse("<style>Data</style").select("style").first().data());
+        assertEquals("Data</-style", Jsoup.parse("<style>Data</-style").select("style").first().data());
+        assertEquals("Data</style-", Jsoup.parse("<style>Data</style-").select("style").first().data());
+        assertEquals("Data</style--", Jsoup.parse("<style>Data</style--").select("style").first().data());
+    }
+Method byte code: 
+0: ldc           #231
+2: ldc_w         #267
+5: invokestatic  #3
+8: ldc           #79
+10: invokevirtual #43
+13: invokevirtual #44
+16: invokevirtual #83
+19: invokestatic  #8
+22: ldc_w         #268
+25: ldc_w         #269
+28: invokestatic  #3
+31: ldc           #79
+33: invokevirtual #43
+36: invokevirtual #44
+39: invokevirtual #83
+42: invokestatic  #8
+45: ldc           #231
+47: ldc_w         #270
+50: invokestatic  #3
+53: ldc           #79
+55: invokevirtual #43
+58: invokevirtual #44
+61: invokevirtual #83
+64: invokestatic  #8
+67: ldc_w         #271
+70: ldc_w         #272
+73: invokestatic  #3
+76: ldc           #79
+78: invokevirtual #43
+81: invokevirtual #44
+84: invokevirtual #83
+87: invokestatic  #8
+90: ldc_w         #273
+93: ldc_w         #274
+96: invokestatic  #3
+99: ldc           #79
+101: invokevirtual #43
+104: invokevirtual #44
+107: invokevirtual #83
+110: invokestatic  #8
+113: ldc_w         #275
+116: ldc_w         #276
+119: invokestatic  #3
+122: ldc           #79
+124: invokevirtual #43
+127: invokevirtual #44
+130: invokevirtual #83
+133: invokestatic  #8
+136: ldc_w         #277
+139: ldc_w         #278
+142: invokestatic  #3
+145: ldc           #79
+147: invokevirtual #43
+150: invokevirtual #44
+153: invokevirtual #83
+156: invokestatic  #8
+159: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: noImplicitFormForTextAreas
+Start line: 602
+End line: 606
+Method source code: 
+    @Test public void noImplicitFormForTextAreas() {
+        // old jsoup parser would create implicit forms for form children like <textarea>, but no more
+        Document doc = Jsoup.parse("<textarea>One</textarea>");
+        assertEquals("<textarea>One</textarea>", doc.body().html());
+    }
+Method byte code: 
+0: ldc_w         #279
+3: invokestatic  #3
+6: astore_1
+7: ldc_w         #279
+10: aload_1
+11: invokevirtual #4
+14: invokevirtual #18
+17: invokestatic  #8
+20: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesEscapedScript
+Start line: 608
+End line: 611
+Method source code: 
+    @Test public void handlesEscapedScript() {
+        Document doc = Jsoup.parse("<script><!-- one <script>Blah</script> --></script>");
+        assertEquals("<!-- one <script>Blah</script> -->", doc.select("script").first().data());
+    }
+Method byte code: 
+0: ldc_w         #280
+3: invokestatic  #3
+6: astore_1
+7: ldc_w         #281
+10: aload_1
+11: ldc           #249
+13: invokevirtual #43
+16: invokevirtual #44
+19: invokevirtual #83
+22: invokestatic  #8
+25: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handles0CharacterAsText
+Start line: 613
+End line: 616
+Method source code: 
+    @Test public void handles0CharacterAsText() {
+        Document doc = Jsoup.parse("0<p>0</p>");
+        assertEquals("0\n<p>0</p>", doc.body().html());
+    }
+Method byte code: 
+0: ldc_w         #282
+3: invokestatic  #3
+6: astore_1
+7: ldc_w         #283
+10: aload_1
+11: invokevirtual #4
+14: invokevirtual #18
+17: invokestatic  #8
+20: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesNullInData
+Start line: 618
+End line: 621
+Method source code: 
+    @Test public void handlesNullInData() {
+        Document doc = Jsoup.parse("<p id=\u0000>Blah \u0000</p>");
+        assertEquals("<p id=\"\uFFFD\">Blah \u0000</p>", doc.body().html()); // replaced in attr, NOT replaced in data
+    }
+Method byte code: 
+0: ldc_w         #284
+3: invokestatic  #3
+6: astore_1
+7: ldc_w         #285
+10: aload_1
+11: invokevirtual #4
+14: invokevirtual #18
+17: invokestatic  #8
+20: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesNullInComments
+Start line: 623
+End line: 626
+Method source code: 
+    @Test public void handlesNullInComments() {
+        Document doc = Jsoup.parse("<body><!-- \u0000 \u0000 -->");
+        assertEquals("<!-- \uFFFD \uFFFD -->", doc.body().html());
+    }
+Method byte code: 
+0: ldc_w         #286
+3: invokestatic  #3
+6: astore_1
+7: ldc_w         #287
+10: aload_1
+11: invokevirtual #4
+14: invokevirtual #18
+17: invokestatic  #8
+20: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesNewlinesAndWhitespaceInTag
+Start line: 628
+End line: 631
+Method source code: 
+    @Test public void handlesNewlinesAndWhitespaceInTag() {
+        Document doc = Jsoup.parse("<a \n href=\"one\" \r\n id=\"two\" \f >");
+        assertEquals("<a href=\"one\" id=\"two\"></a>", doc.body().html());
+    }
+Method byte code: 
+0: ldc_w         #288
+3: invokestatic  #3
+6: astore_1
+7: ldc_w         #289
+10: aload_1
+11: invokevirtual #4
+14: invokevirtual #18
+17: invokestatic  #8
+20: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesWhitespaceInoDocType
+Start line: 633
+End line: 639
+Method source code: 
+    @Test public void handlesWhitespaceInoDocType() {
+        String html = "<!DOCTYPE html\n" +
+                "      PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\"\n" +
+                "      \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">";
+        Document doc = Jsoup.parse(html);
+        assertEquals("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">", doc.childNode(0).outerHtml());
+    }
+Method byte code: 
+0: ldc_w         #290
+3: astore_1
+4: aload_1
+5: invokestatic  #3
+8: astore_2
+9: ldc_w         #291
+12: aload_2
+13: iconst_0
+14: invokevirtual #292
+17: invokevirtual #293
+20: invokestatic  #8
+23: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: tracksErrorsWhenRequested
+Start line: 641
+End line: 653
+Method source code: 
+    @Test public void tracksErrorsWhenRequested() {
+        String html = "<p>One</p href='no'><!DOCTYPE html>&arrgh;<font /><br /><foo";
+        Parser parser = Parser.htmlParser().setTrackErrors(500);
+        Document doc = Jsoup.parse(html, "http://example.com", parser);
+        
+        List<ParseError> errors = parser.getErrors();
+        assertEquals(5, errors.size());
+        assertEquals("20: Attributes incorrectly present on end tag", errors.get(0).toString());
+        assertEquals("35: Unexpected token [Doctype] when in state [InBody]", errors.get(1).toString());
+        assertEquals("36: Invalid character reference: invalid named referenece 'arrgh'", errors.get(2).toString());
+        assertEquals("50: Self closing flag not acknowledged", errors.get(3).toString());
+        assertEquals("61: Unexpectedly reached end of file (EOF) in input state [TagName]", errors.get(4).toString());
+    }
+Method byte code: 
+0: ldc_w         #294
+3: astore_1
+4: invokestatic  #295
+7: sipush        500
+10: invokevirtual #296
+13: astore_2
+14: aload_1
+15: ldc           #145
+17: aload_2
+18: invokestatic  #297
+21: astore_3
+22: aload_2
+23: invokevirtual #298
+26: astore        4
+28: ldc2_w        #299
+31: aload         4
+33: invokeinterface #134,  1
+38: i2l
+39: invokestatic  #36
+42: ldc_w         #301
+45: aload         4
+47: iconst_0
+48: invokeinterface #81,  2
+53: checkcast     #302
+56: invokevirtual #303
+59: invokestatic  #8
+62: ldc_w         #304
+65: aload         4
+67: iconst_1
+68: invokeinterface #81,  2
+73: checkcast     #302
+76: invokevirtual #303
+79: invokestatic  #8
+82: ldc_w         #305
+85: aload         4
+87: iconst_2
+88: invokeinterface #81,  2
+93: checkcast     #302
+96: invokevirtual #303
+99: invokestatic  #8
+102: ldc_w         #306
+105: aload         4
+107: iconst_3
+108: invokeinterface #81,  2
+113: checkcast     #302
+116: invokevirtual #303
+119: invokestatic  #8
+122: ldc_w         #307
+125: aload         4
+127: iconst_4
+128: invokeinterface #81,  2
+133: checkcast     #302
+136: invokevirtual #303
+139: invokestatic  #8
+142: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: tracksLimitedErrorsWhenRequested
+Start line: 655
+End line: 665
+Method source code: 
+    @Test public void tracksLimitedErrorsWhenRequested() {
+        String html = "<p>One</p href='no'><!DOCTYPE html>&arrgh;<font /><br /><foo";
+        Parser parser = Parser.htmlParser().setTrackErrors(3);
+        Document doc = parser.parseInput(html, "http://example.com");
+
+        List<ParseError> errors = parser.getErrors();
+        assertEquals(3, errors.size());
+        assertEquals("20: Attributes incorrectly present on end tag", errors.get(0).toString());
+        assertEquals("35: Unexpected token [Doctype] when in state [InBody]", errors.get(1).toString());
+        assertEquals("36: Invalid character reference: invalid named referenece 'arrgh'", errors.get(2).toString());
+    }
+Method byte code: 
+0: ldc_w         #294
+3: astore_1
+4: invokestatic  #295
+7: iconst_3
+8: invokevirtual #296
+11: astore_2
+12: aload_2
+13: aload_1
+14: ldc           #145
+16: invokevirtual #308
+19: astore_3
+20: aload_2
+21: invokevirtual #298
+24: astore        4
+26: ldc2_w        #62
+29: aload         4
+31: invokeinterface #134,  1
+36: i2l
+37: invokestatic  #36
+40: ldc_w         #301
+43: aload         4
+45: iconst_0
+46: invokeinterface #81,  2
+51: checkcast     #302
+54: invokevirtual #303
+57: invokestatic  #8
+60: ldc_w         #304
+63: aload         4
+65: iconst_1
+66: invokeinterface #81,  2
+71: checkcast     #302
+74: invokevirtual #303
+77: invokestatic  #8
+80: ldc_w         #305
+83: aload         4
+85: iconst_2
+86: invokeinterface #81,  2
+91: checkcast     #302
+94: invokevirtual #303
+97: invokestatic  #8
+100: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: noErrorsByDefault
+Start line: 667
+End line: 674
+Method source code: 
+    @Test public void noErrorsByDefault() {
+        String html = "<p>One</p href='no'>&arrgh;<font /><br /><foo";
+        Parser parser = Parser.htmlParser();
+        Document doc = Jsoup.parse(html, "http://example.com", parser);
+
+        List<ParseError> errors = parser.getErrors();
+        assertEquals(0, errors.size());
+    }
+Method byte code: 
+0: ldc_w         #309
+3: astore_1
+4: invokestatic  #295
+7: astore_2
+8: aload_1
+9: ldc           #145
+11: aload_2
+12: invokestatic  #297
+15: astore_3
+16: aload_2
+17: invokevirtual #298
+20: astore        4
+22: lconst_0
+23: aload         4
+25: invokeinterface #134,  1
+30: i2l
+31: invokestatic  #36
+34: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesCommentsInTable
+Start line: 676
+End line: 680
+Method source code: 
+    @Test public void handlesCommentsInTable() {
+        String html = "<table><tr><td>text</td><!-- Comment --></tr></table>";
+        Document node = Jsoup.parseBodyFragment(html);
+        assertEquals("<html><head></head><body><table><tbody><tr><td>text</td><!-- Comment --></tr></tbody></table></body></html>", TextUtil.stripNewlines(node.outerHtml()));
+    }
+Method byte code: 
+0: ldc_w         #310
+3: astore_1
+4: aload_1
+5: invokestatic  #143
+8: astore_2
+9: ldc_w         #311
+12: aload_2
+13: invokevirtual #312
+16: invokestatic  #56
+19: invokestatic  #8
+22: return
+Source File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/src/test/java/org/jsoup/parser/HtmlParserTest.java
+Bytecode File: /data/islam/DBT-workbench/resources/subjects/fixed/jsoup/24/target/test-classes/org/jsoup/parser/HtmlParserTest.class
+Class name: HtmlParserTest
+Method name: handlesQuotesInCommentsInScripts
+Start line: 682
+End line: 694
+Method source code: 
+    @Test public void handlesQuotesInCommentsInScripts() {
+        String html = "<script>\n" +
+                "  <!--\n" +
+                "    document.write('</scr' + 'ipt>');\n" +
+                "  // -->\n" +
+                "</script>";
+        Document node = Jsoup.parseBodyFragment(html);
+        assertEquals("<script>\n" +
+                "  <!--\n" +
+                "    document.write('</scr' + 'ipt>');\n" +
+                "  // -->\n" +
+                "</script>", node.body().html());
+    }
+Method byte code: 
+0: ldc_w         #313
+3: astore_1
+4: aload_1
+5: invokestatic  #143
+8: astore_2
+9: ldc_w         #313
+12: aload_2
+13: invokevirtual #4
+16: invokevirtual #18
+19: invokestatic  #8
+22: return
+}

@@ -1,0 +1,13 @@
+NumericEntityUnescaperTest::testSupplementaryUnescaping
+NumericEntityUnescaperTest::testOutOfBounds
+NumericEntityUnescaperTest::testUnfinishedEntity
+NumericEntityUnescaper_ESTest::test0
+NumericEntityUnescaper_ESTest::test1
+NumericEntityUnescaper_ESTest::test2
+NumericEntityUnescaper_ESTest::test3
+NumericEntityUnescaper_ESTest::test4
+NumericEntityUnescaper_ESTest::test5
+NumericEntityUnescaper_ESTest::test6
+NumericEntityUnescaper_ESTest::test7
+NumericEntityUnescaper_ESTest::test8
+NumericEntityUnescaper_ESTest::test9

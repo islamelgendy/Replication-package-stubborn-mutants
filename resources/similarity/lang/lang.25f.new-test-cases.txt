@@ -1,0 +1,14 @@
+EntityArrays_ESTest::test00
+EntityArrays_ESTest::test01
+EntityArrays_ESTest::test02
+EntityArrays_ESTest::test03
+EntityArrays_ESTest::test04
+EntityArrays_ESTest::test05
+EntityArrays_ESTest::test06
+EntityArrays_ESTest::test07
+EntityArrays_ESTest::test08
+EntityArrays_ESTest::test09
+EntityArrays_ESTest::test10
+EntityArraysTest::testConstructorExists
+EntityArraysTest::testHTML40_EXTENDED_ESCAPE
+EntityArraysTest::testISO8859_1_ESCAPE

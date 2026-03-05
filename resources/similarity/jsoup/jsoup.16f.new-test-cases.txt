@@ -1,0 +1,8 @@
+DocumentType_ESTest::test0
+DocumentType_ESTest::test1
+DocumentType_ESTest::test2
+DocumentType_ESTest::test3
+DocumentTypeTest::constructorValidationThrowsExceptionOnBlankName
+DocumentTypeTest::constructorValidationThrowsExceptionOnNulls
+DocumentTypeTest::constructorValidationOkWithBlankPublicAndSystemIds
+DocumentTypeTest::outerHtmlGeneration

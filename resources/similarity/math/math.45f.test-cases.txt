@@ -1,0 +1,4286 @@
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test01
+Start line: 12
+End line: 23
+Method source code: 
+    public void test01() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test01");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix0 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix1 = new org.apache.commons.math.linear.OpenMapRealMatrix(openMapRealMatrix0);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #6
+19: aastore
+20: invokevirtual #7
+23: pop
+24: aconst_null
+25: astore_1
+26: new           #8
+29: dup
+30: aload_1
+31: invokespecial #9
+34: astore_2
+35: ldc           #10
+37: invokestatic  #11
+40: goto          44
+43: astore_2
+44: return
+Exception table:
+from    to  target type
+26    40    43   Class java/lang/NullPointerException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test02
+Start line: 26
+End line: 36
+Method source code: 
+    public void test02() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test02");
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(0, (int) '4');
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.NotStrictlyPositiveException; message: 0 is smaller than, or equal to, the minimum (0)");
+        } catch (org.apache.commons.math.exception.NotStrictlyPositiveException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #13
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_0
+29: bipush        52
+31: invokespecial #14
+34: astore_1
+35: ldc           #15
+37: invokestatic  #11
+40: goto          44
+43: astore_1
+44: return
+Exception table:
+from    to  target type
+24    40    43   Class org/apache/commons/math/exception/NotStrictlyPositiveException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test03
+Start line: 39
+End line: 49
+Method source code: 
+    public void test03() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test03");
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(0, 100);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.NotStrictlyPositiveException; message: 0 is smaller than, or equal to, the minimum (0)");
+        } catch (org.apache.commons.math.exception.NotStrictlyPositiveException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #17
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_0
+29: bipush        100
+31: invokespecial #14
+34: astore_1
+35: ldc           #15
+37: invokestatic  #11
+40: goto          44
+43: astore_1
+44: return
+Exception table:
+from    to  target type
+24    40    43   Class org/apache/commons/math/exception/NotStrictlyPositiveException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test04
+Start line: 52
+End line: 62
+Method source code: 
+    public void test04() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test04");
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(0, (int) ' ');
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.NotStrictlyPositiveException; message: 0 is smaller than, or equal to, the minimum (0)");
+        } catch (org.apache.commons.math.exception.NotStrictlyPositiveException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #18
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_0
+29: bipush        32
+31: invokespecial #14
+34: astore_1
+35: ldc           #15
+37: invokestatic  #11
+40: goto          44
+43: astore_1
+44: return
+Exception table:
+from    to  target type
+24    40    43   Class org/apache/commons/math/exception/NotStrictlyPositiveException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test05
+Start line: 65
+End line: 75
+Method source code: 
+    public void test05() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test05");
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(0, (int) (byte) 100);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.NotStrictlyPositiveException; message: 0 is smaller than, or equal to, the minimum (0)");
+        } catch (org.apache.commons.math.exception.NotStrictlyPositiveException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #19
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_0
+29: bipush        100
+31: invokespecial #14
+34: astore_1
+35: ldc           #15
+37: invokestatic  #11
+40: goto          44
+43: astore_1
+44: return
+Exception table:
+from    to  target type
+24    40    43   Class org/apache/commons/math/exception/NotStrictlyPositiveException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test06
+Start line: 78
+End line: 88
+Method source code: 
+    public void test06() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test06");
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(4, 0);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.NotStrictlyPositiveException; message: 0 is smaller than, or equal to, the minimum (0)");
+        } catch (org.apache.commons.math.exception.NotStrictlyPositiveException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #20
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_4
+29: iconst_0
+30: invokespecial #14
+33: astore_1
+34: ldc           #15
+36: invokestatic  #11
+39: goto          43
+42: astore_1
+43: return
+Exception table:
+from    to  target type
+24    39    42   Class org/apache/commons/math/exception/NotStrictlyPositiveException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test07
+Start line: 91
+End line: 103
+Method source code: 
+    public void test07() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test07");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.RealMatrixChangingVisitor realMatrixChangingVisitor3 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            double double8 = openMapRealMatrix2.walkInColumnOrder(realMatrixChangingVisitor3, (int) 'a', (int) (byte) 100, (int) (short) -1, (int) '4');
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.OutOfRangeException; message: row index (97)");
+        } catch (org.apache.commons.math.exception.OutOfRangeException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #21
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: aconst_null
+35: astore_2
+36: aload_1
+37: aload_2
+38: bipush        97
+40: bipush        100
+42: iconst_m1
+43: bipush        52
+45: invokevirtual #22
+48: dstore_3
+49: ldc           #23
+51: invokestatic  #11
+54: goto          58
+57: astore_3
+58: return
+Exception table:
+from    to  target type
+36    54    57   Class org/apache/commons/math/exception/OutOfRangeException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test08
+Start line: 106
+End line: 118
+Method source code: 
+    public void test08() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test08");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.RealMatrixPreservingVisitor realMatrixPreservingVisitor3 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            double double4 = openMapRealMatrix2.walkInOptimizedOrder(realMatrixPreservingVisitor3);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #25
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: aconst_null
+35: astore_2
+36: aload_1
+37: aload_2
+38: invokevirtual #26
+41: dstore_3
+42: ldc           #10
+44: invokestatic  #11
+47: goto          51
+50: astore_3
+51: return
+Exception table:
+from    to  target type
+36    47    50   Class java/lang/NullPointerException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test09
+Start line: 121
+End line: 133
+Method source code: 
+    public void test09() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test09");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.RealMatrixPreservingVisitor realMatrixPreservingVisitor3 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            double double4 = openMapRealMatrix2.walkInRowOrder(realMatrixPreservingVisitor3);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #27
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: aconst_null
+35: astore_2
+36: aload_1
+37: aload_2
+38: invokevirtual #28
+41: dstore_3
+42: ldc           #10
+44: invokestatic  #11
+47: goto          51
+50: astore_3
+51: return
+Exception table:
+from    to  target type
+36    47    50   Class java/lang/NullPointerException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test10
+Start line: 136
+End line: 147
+Method source code: 
+    public void test10() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test10");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        // The following exception was thrown during execution in test generation
+        try {
+            openMapRealMatrix2.addToEntry((int) (byte) 10, (int) ' ', (double) (short) 0);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.OutOfRangeException; message: row index (10)");
+        } catch (org.apache.commons.math.exception.OutOfRangeException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #29
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: aload_1
+35: bipush        10
+37: bipush        32
+39: dconst_0
+40: invokevirtual #30
+43: ldc           #31
+45: invokestatic  #11
+48: goto          52
+51: astore_2
+52: return
+Exception table:
+from    to  target type
+34    48    51   Class org/apache/commons/math/exception/OutOfRangeException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test11
+Start line: 150
+End line: 163
+Method source code: 
+    public void test11() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test11");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix3 = new org.apache.commons.math.linear.OpenMapRealMatrix(openMapRealMatrix2);
+        org.apache.commons.math.linear.RealMatrixPreservingVisitor realMatrixPreservingVisitor4 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            double double9 = openMapRealMatrix3.walkInColumnOrder(realMatrixPreservingVisitor4, (int) (short) 100, 10, (int) (short) 1, (int) (short) 1);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.OutOfRangeException; message: row index (100)");
+        } catch (org.apache.commons.math.exception.OutOfRangeException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #32
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: new           #8
+37: dup
+38: aload_1
+39: invokespecial #9
+42: astore_2
+43: aconst_null
+44: astore_3
+45: aload_2
+46: aload_3
+47: bipush        100
+49: bipush        10
+51: iconst_1
+52: iconst_1
+53: invokevirtual #33
+56: dstore        4
+58: ldc           #34
+60: invokestatic  #11
+63: goto          68
+66: astore        4
+68: return
+Exception table:
+from    to  target type
+45    63    66   Class org/apache/commons/math/exception/OutOfRangeException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test12
+Start line: 166
+End line: 232
+Method source code: 
+    public void test12() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test12");
+        double[] doubleArray1 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector2 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray1);
+        org.apache.commons.math.linear.RealVector realVector4 = arrayRealVector2.mapDivide((double) (-1L));
+        double double5 = arrayRealVector2.getL1Norm();
+        org.apache.commons.math.linear.RealVector realVector7 = arrayRealVector2.mapMultiply((double) (byte) -1);
+        arrayRealVector2.set((double) (-1));
+        org.apache.commons.math.exception.util.LocalizedFormats localizedFormats10 = org.apache.commons.math.exception.util.LocalizedFormats.NOT_POSITIVE_NUMBER_OF_SAMPLES;
+        java.lang.Integer[] intArray13 = new java.lang.Integer[] { 100, 1 };
+        java.lang.Integer[] intArray17 = new java.lang.Integer[] { 0, 100, 10 };
+        org.apache.commons.math.exception.MultiDimensionMismatchException multiDimensionMismatchException18 = new org.apache.commons.math.exception.MultiDimensionMismatchException(intArray13, intArray17);
+        org.apache.commons.math.exception.MathIllegalArgumentException mathIllegalArgumentException19 = new org.apache.commons.math.exception.MathIllegalArgumentException((org.apache.commons.math.exception.util.Localizable) localizedFormats10, (java.lang.Object[]) intArray17);
+        org.apache.commons.math.exception.util.ExceptionContext exceptionContext20 = new org.apache.commons.math.exception.util.ExceptionContext((java.lang.Throwable) mathIllegalArgumentException19);
+        java.util.Set<java.lang.String> strSet21 = exceptionContext20.getKeys();
+        double[] doubleArray24 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector25 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray24);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector26 = arrayRealVector25.copy();
+        double[] doubleArray27 = arrayRealVector25.data;
+        org.apache.commons.math.linear.RealVector.SparseEntryIterator sparseEntryIterator28 = arrayRealVector25.new SparseEntryIterator();
+        org.apache.commons.math.linear.RealVector realVector30 = arrayRealVector25.append((double) 0);
+        double[] doubleArray32 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector33 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray32);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector34 = arrayRealVector33.copy();
+        double[] doubleArray35 = arrayRealVector33.data;
+        org.apache.commons.math.linear.RealVector realVector36 = arrayRealVector33.unitVector();
+        org.apache.commons.math.linear.RealVector realVector37 = arrayRealVector25.ebeDivide(realVector36);
+        exceptionContext20.setValue("org.apache.commons.math.exception.DimensionMismatchException: 10 != -1", (java.lang.Object) arrayRealVector25);
+        int int39 = arrayRealVector25.getMaxIndex();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector41 = new org.apache.commons.math.linear.ArrayRealVector(arrayRealVector25, false);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector42 = arrayRealVector2.add((org.apache.commons.math.linear.RealVector) arrayRealVector41);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector44 = new org.apache.commons.math.linear.ArrayRealVector((int) '#');
+        org.apache.commons.math.linear.RealVector realVector46 = arrayRealVector44.mapDivide((double) '#');
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.ArrayRealVector arrayRealVector47 = arrayRealVector2.ebeMultiply((org.apache.commons.math.linear.RealVector) arrayRealVector44);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.DimensionMismatchException; message: 1 != 35");
+        } catch (org.apache.commons.math.exception.DimensionMismatchException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(doubleArray1);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray1), "[100.0]");
+        org.junit.Assert.assertNotNull(realVector4);
+        org.junit.Assert.assertTrue("'" + double5 + "' != '" + 100.0d + "'", double5 == 100.0d);
+        org.junit.Assert.assertNotNull(realVector7);
+        org.junit.Assert.assertTrue("'" + localizedFormats10 + "' != '" + org.apache.commons.math.exception.util.LocalizedFormats.NOT_POSITIVE_NUMBER_OF_SAMPLES + "'", localizedFormats10.equals(org.apache.commons.math.exception.util.LocalizedFormats.NOT_POSITIVE_NUMBER_OF_SAMPLES));
+        org.junit.Assert.assertNotNull(intArray13);
+        org.junit.Assert.assertNotNull(intArray17);
+        org.junit.Assert.assertNotNull(strSet21);
+        org.junit.Assert.assertNotNull(doubleArray24);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray24), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector26);
+        org.junit.Assert.assertNotNull(doubleArray27);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray27), "[100.0]");
+        org.junit.Assert.assertNotNull(realVector30);
+        org.junit.Assert.assertNotNull(doubleArray32);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray32), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector34);
+        org.junit.Assert.assertNotNull(doubleArray35);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray35), "[100.0]");
+        org.junit.Assert.assertNotNull(realVector36);
+        org.junit.Assert.assertNotNull(realVector37);
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + 0 + "'", int39 == 0);
+        org.junit.Assert.assertNotNull(arrayRealVector42);
+        org.junit.Assert.assertNotNull(realVector46);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #35
+19: aastore
+20: invokevirtual #7
+23: pop
+24: iconst_1
+25: newarray       double
+27: dup
+28: iconst_0
+29: ldc2_w        #36
+32: dastore
+33: astore_1
+34: new           #38
+37: dup
+38: aload_1
+39: invokespecial #39
+42: astore_2
+43: aload_2
+44: ldc2_w        #40
+47: invokevirtual #42
+50: astore_3
+51: aload_2
+52: invokevirtual #43
+55: dstore        4
+57: aload_2
+58: ldc2_w        #40
+61: invokevirtual #44
+64: astore        6
+66: aload_2
+67: ldc2_w        #40
+70: invokevirtual #45
+73: getstatic     #46
+76: astore        7
+78: iconst_2
+79: anewarray     #47
+82: dup
+83: iconst_0
+84: bipush        100
+86: invokestatic  #48
+89: aastore
+90: dup
+91: iconst_1
+92: iconst_1
+93: invokestatic  #48
+96: aastore
+97: astore        8
+99: iconst_3
+100: anewarray     #47
+103: dup
+104: iconst_0
+105: iconst_0
+106: invokestatic  #48
+109: aastore
+110: dup
+111: iconst_1
+112: bipush        100
+114: invokestatic  #48
+117: aastore
+118: dup
+119: iconst_2
+120: bipush        10
+122: invokestatic  #48
+125: aastore
+126: astore        9
+128: new           #49
+131: dup
+132: aload         8
+134: aload         9
+136: invokespecial #50
+139: astore        10
+141: new           #51
+144: dup
+145: aload         7
+147: aload         9
+149: checkcast     #52
+152: invokespecial #53
+155: astore        11
+157: new           #54
+160: dup
+161: aload         11
+163: invokespecial #55
+166: astore        12
+168: aload         12
+170: invokevirtual #56
+173: astore        13
+175: iconst_1
+176: newarray       double
+178: dup
+179: iconst_0
+180: ldc2_w        #36
+183: dastore
+184: astore        14
+186: new           #38
+189: dup
+190: aload         14
+192: invokespecial #39
+195: astore        15
+197: aload         15
+199: invokevirtual #57
+202: astore        16
+204: aload         15
+206: getfield      #58
+209: astore        17
+211: new           #59
+214: dup
+215: aload         15
+217: dup
+218: invokevirtual #60
+221: pop
+222: invokespecial #61
+225: astore        18
+227: aload         15
+229: dconst_0
+230: invokevirtual #62
+233: astore        19
+235: iconst_1
+236: newarray       double
+238: dup
+239: iconst_0
+240: ldc2_w        #36
+243: dastore
+244: astore        20
+246: new           #38
+249: dup
+250: aload         20
+252: invokespecial #39
+255: astore        21
+257: aload         21
+259: invokevirtual #57
+262: astore        22
+264: aload         21
+266: getfield      #58
+269: astore        23
+271: aload         21
+273: invokevirtual #63
+276: astore        24
+278: aload         15
+280: aload         24
+282: invokevirtual #64
+285: astore        25
+287: aload         12
+289: ldc           #65
+291: aload         15
+293: invokevirtual #66
+296: aload         15
+298: invokevirtual #67
+301: istore        26
+303: new           #38
+306: dup
+307: aload         15
+309: iconst_0
+310: invokespecial #68
+313: astore        27
+315: aload_2
+316: aload         27
+318: invokevirtual #69
+321: astore        28
+323: new           #38
+326: dup
+327: bipush        35
+329: invokespecial #70
+332: astore        29
+334: aload         29
+336: ldc2_w        #71
+339: invokevirtual #42
+342: astore        30
+344: aload_2
+345: aload         29
+347: invokevirtual #73
+350: astore        31
+352: ldc           #74
+354: invokestatic  #11
+357: goto          362
+360: astore        31
+362: aload_1
+363: invokestatic  #76
+366: aload_1
+367: invokestatic  #77
+370: ldc           #78
+372: invokestatic  #79
+375: aload_3
+376: invokestatic  #76
+379: new           #80
+382: dup
+383: invokespecial #81
+386: ldc           #82
+388: invokevirtual #83
+391: dload         4
+393: invokevirtual #84
+396: ldc           #85
+398: invokevirtual #83
+401: ldc2_w        #36
+404: invokevirtual #84
+407: ldc           #82
+409: invokevirtual #83
+412: invokevirtual #86
+415: dload         4
+417: ldc2_w        #36
+420: dcmpl
+421: ifne          428
+424: iconst_1
+425: goto          429
+428: iconst_0
+429: invokestatic  #87
+432: aload         6
+434: invokestatic  #76
+437: new           #80
+440: dup
+441: invokespecial #81
+444: ldc           #82
+446: invokevirtual #83
+449: aload         7
+451: invokevirtual #88
+454: ldc           #85
+456: invokevirtual #83
+459: getstatic     #46
+462: invokevirtual #88
+465: ldc           #82
+467: invokevirtual #83
+470: invokevirtual #86
+473: aload         7
+475: getstatic     #46
+478: invokevirtual #89
+481: invokestatic  #87
+484: aload         8
+486: invokestatic  #76
+489: aload         9
+491: invokestatic  #76
+494: aload         13
+496: invokestatic  #76
+499: aload         14
+501: invokestatic  #76
+504: aload         14
+506: invokestatic  #77
+509: ldc           #78
+511: invokestatic  #79
+514: aload         16
+516: invokestatic  #76
+519: aload         17
+521: invokestatic  #76
+524: aload         17
+526: invokestatic  #77
+529: ldc           #78
+531: invokestatic  #79
+534: aload         19
+536: invokestatic  #76
+539: aload         20
+541: invokestatic  #76
+544: aload         20
+546: invokestatic  #77
+549: ldc           #78
+551: invokestatic  #79
+554: aload         22
+556: invokestatic  #76
+559: aload         23
+561: invokestatic  #76
+564: aload         23
+566: invokestatic  #77
+569: ldc           #78
+571: invokestatic  #79
+574: aload         24
+576: invokestatic  #76
+579: aload         25
+581: invokestatic  #76
+584: new           #80
+587: dup
+588: invokespecial #81
+591: ldc           #82
+593: invokevirtual #83
+596: iload         26
+598: invokevirtual #90
+601: ldc           #85
+603: invokevirtual #83
+606: iconst_0
+607: invokevirtual #90
+610: ldc           #82
+612: invokevirtual #83
+615: invokevirtual #86
+618: iload         26
+620: ifne          627
+623: iconst_1
+624: goto          628
+627: iconst_0
+628: invokestatic  #87
+631: aload         28
+633: invokestatic  #76
+636: aload         30
+638: invokestatic  #76
+641: return
+Exception table:
+from    to  target type
+344   357   360   Class org/apache/commons/math/exception/DimensionMismatchException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test13
+Start line: 235
+End line: 337
+Method source code: 
+    public void test13() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test13");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        double[] doubleArray4 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector5 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray4);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector6 = arrayRealVector5.copy();
+        double[] doubleArray7 = arrayRealVector5.data;
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector8 = new org.apache.commons.math.linear.ArrayRealVector(arrayRealVector5);
+        double[] doubleArray10 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector11 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray10);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector12 = arrayRealVector11.copy();
+        double[] doubleArray13 = arrayRealVector11.data;
+        java.util.Iterator<org.apache.commons.math.linear.RealVector.Entry> entryItor14 = arrayRealVector11.iterator();
+        double[] doubleArray16 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector17 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray16);
+        arrayRealVector17.unitize();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector19 = arrayRealVector17.copy();
+        org.apache.commons.math.linear.RealVector realVector20 = arrayRealVector11.ebeDivide((org.apache.commons.math.linear.RealVector) arrayRealVector19);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector21 = arrayRealVector11.copy();
+        double[] doubleArray23 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector24 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray23);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector25 = arrayRealVector24.copy();
+        org.apache.commons.math.linear.RealVector realVector26 = arrayRealVector11.ebeMultiply((org.apache.commons.math.linear.RealVector) arrayRealVector24);
+        double[] doubleArray28 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector29 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray28);
+        org.apache.commons.math.linear.RealVector realVector31 = arrayRealVector29.mapDivide((double) (-1L));
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector32 = arrayRealVector24.subtract((org.apache.commons.math.linear.RealVector) arrayRealVector29);
+        int int33 = arrayRealVector29.getMaxIndex();
+        org.apache.commons.math.linear.RealMatrix realMatrix34 = arrayRealVector5.outerProduct((org.apache.commons.math.linear.RealVector) arrayRealVector29);
+        org.apache.commons.math.linear.RealMatrix realMatrix36 = realMatrix34.scalarMultiply((double) 0);
+        org.apache.commons.math.linear.RealMatrix realMatrix38 = realMatrix34.scalarMultiply(200.0d);
+        org.apache.commons.math.linear.RealMatrix realMatrix39 = realMatrix38.copy();
+        double[] doubleArray41 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector42 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray41);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector43 = arrayRealVector42.copy();
+        double[] doubleArray47 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector48 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray47);
+        arrayRealVector48.set((double) 1);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector51 = arrayRealVector43.combine((double) 1.0f, 0.0d, (org.apache.commons.math.linear.RealVector) arrayRealVector48);
+        double[] doubleArray52 = arrayRealVector51.getDataRef();
+        double[] doubleArray54 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector55 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray54);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector56 = arrayRealVector55.copy();
+        double[] doubleArray57 = arrayRealVector55.data;
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector58 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray52, doubleArray57);
+        double[] doubleArray59 = realMatrix38.operate(doubleArray57);
+        double[] doubleArray60 = openMapRealMatrix2.preMultiply(doubleArray57);
+        org.apache.commons.math.linear.RealMatrixChangingVisitor realMatrixChangingVisitor61 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            double double62 = openMapRealMatrix2.walkInRowOrder(realMatrixChangingVisitor61);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(doubleArray4);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray4), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector6);
+        org.junit.Assert.assertNotNull(doubleArray7);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray7), "[100.0]");
+        org.junit.Assert.assertNotNull(doubleArray10);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray10), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector12);
+        org.junit.Assert.assertNotNull(doubleArray13);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray13), "[100.0]");
+        org.junit.Assert.assertNotNull(entryItor14);
+        org.junit.Assert.assertNotNull(doubleArray16);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray16), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector19);
+        org.junit.Assert.assertNotNull(realVector20);
+        org.junit.Assert.assertNotNull(arrayRealVector21);
+        org.junit.Assert.assertNotNull(doubleArray23);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray23), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector25);
+        org.junit.Assert.assertNotNull(realVector26);
+        org.junit.Assert.assertNotNull(doubleArray28);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray28), "[100.0]");
+        org.junit.Assert.assertNotNull(realVector31);
+        org.junit.Assert.assertNotNull(arrayRealVector32);
+        org.junit.Assert.assertTrue("'" + int33 + "' != '" + 0 + "'", int33 == 0);
+        org.junit.Assert.assertNotNull(realMatrix34);
+        org.junit.Assert.assertNotNull(realMatrix36);
+        org.junit.Assert.assertNotNull(realMatrix38);
+        org.junit.Assert.assertNotNull(realMatrix39);
+        org.junit.Assert.assertNotNull(doubleArray41);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray41), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector43);
+        org.junit.Assert.assertNotNull(doubleArray47);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray47), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector51);
+        org.junit.Assert.assertNotNull(doubleArray52);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray52), "[100.0]");
+        org.junit.Assert.assertNotNull(doubleArray54);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray54), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector56);
+        org.junit.Assert.assertNotNull(doubleArray57);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray57), "[100.0]");
+        org.junit.Assert.assertNotNull(doubleArray59);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray59), "[2.0E8]");
+        org.junit.Assert.assertNotNull(doubleArray60);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray60), "[0.0, 0.0, 0.0, 0.0]");
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #91
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: iconst_1
+35: newarray       double
+37: dup
+38: iconst_0
+39: ldc2_w        #36
+42: dastore
+43: astore_2
+44: new           #38
+47: dup
+48: aload_2
+49: invokespecial #39
+52: astore_3
+53: aload_3
+54: invokevirtual #57
+57: astore        4
+59: aload_3
+60: getfield      #58
+63: astore        5
+65: new           #38
+68: dup
+69: aload_3
+70: invokespecial #92
+73: astore        6
+75: iconst_1
+76: newarray       double
+78: dup
+79: iconst_0
+80: ldc2_w        #36
+83: dastore
+84: astore        7
+86: new           #38
+89: dup
+90: aload         7
+92: invokespecial #39
+95: astore        8
+97: aload         8
+99: invokevirtual #57
+102: astore        9
+104: aload         8
+106: getfield      #58
+109: astore        10
+111: aload         8
+113: invokevirtual #93
+116: astore        11
+118: iconst_1
+119: newarray       double
+121: dup
+122: iconst_0
+123: ldc2_w        #36
+126: dastore
+127: astore        12
+129: new           #38
+132: dup
+133: aload         12
+135: invokespecial #39
+138: astore        13
+140: aload         13
+142: invokevirtual #94
+145: aload         13
+147: invokevirtual #57
+150: astore        14
+152: aload         8
+154: aload         14
+156: invokevirtual #64
+159: astore        15
+161: aload         8
+163: invokevirtual #57
+166: astore        16
+168: iconst_1
+169: newarray       double
+171: dup
+172: iconst_0
+173: ldc2_w        #36
+176: dastore
+177: astore        17
+179: new           #38
+182: dup
+183: aload         17
+185: invokespecial #39
+188: astore        18
+190: aload         18
+192: invokevirtual #57
+195: astore        19
+197: aload         8
+199: aload         18
+201: invokevirtual #73
+204: astore        20
+206: iconst_1
+207: newarray       double
+209: dup
+210: iconst_0
+211: ldc2_w        #36
+214: dastore
+215: astore        21
+217: new           #38
+220: dup
+221: aload         21
+223: invokespecial #39
+226: astore        22
+228: aload         22
+230: ldc2_w        #40
+233: invokevirtual #42
+236: astore        23
+238: aload         18
+240: aload         22
+242: invokevirtual #95
+245: astore        24
+247: aload         22
+249: invokevirtual #67
+252: istore        25
+254: aload_3
+255: aload         22
+257: invokevirtual #96
+260: astore        26
+262: aload         26
+264: dconst_0
+265: invokeinterface #97,  3
+270: astore        27
+272: aload         26
+274: ldc2_w        #98
+277: invokeinterface #97,  3
+282: astore        28
+284: aload         28
+286: invokeinterface #100,  1
+291: astore        29
+293: iconst_1
+294: newarray       double
+296: dup
+297: iconst_0
+298: ldc2_w        #36
+301: dastore
+302: astore        30
+304: new           #38
+307: dup
+308: aload         30
+310: invokespecial #39
+313: astore        31
+315: aload         31
+317: invokevirtual #57
+320: astore        32
+322: iconst_1
+323: newarray       double
+325: dup
+326: iconst_0
+327: ldc2_w        #36
+330: dastore
+331: astore        33
+333: new           #38
+336: dup
+337: aload         33
+339: invokespecial #39
+342: astore        34
+344: aload         34
+346: dconst_1
+347: invokevirtual #45
+350: aload         32
+352: dconst_1
+353: dconst_0
+354: aload         34
+356: invokevirtual #101
+359: astore        35
+361: aload         35
+363: invokevirtual #102
+366: astore        36
+368: iconst_1
+369: newarray       double
+371: dup
+372: iconst_0
+373: ldc2_w        #36
+376: dastore
+377: astore        37
+379: new           #38
+382: dup
+383: aload         37
+385: invokespecial #39
+388: astore        38
+390: aload         38
+392: invokevirtual #57
+395: astore        39
+397: aload         38
+399: getfield      #58
+402: astore        40
+404: new           #38
+407: dup
+408: aload         36
+410: aload         40
+412: invokespecial #103
+415: astore        41
+417: aload         28
+419: aload         40
+421: invokeinterface #104,  2
+426: astore        42
+428: aload_1
+429: aload         40
+431: invokevirtual #105
+434: astore        43
+436: aconst_null
+437: astore        44
+439: aload_1
+440: aload         44
+442: invokevirtual #106
+445: dstore        45
+447: ldc           #10
+449: invokestatic  #11
+452: goto          457
+455: astore        45
+457: aload_2
+458: invokestatic  #76
+461: aload_2
+462: invokestatic  #77
+465: ldc           #78
+467: invokestatic  #79
+470: aload         4
+472: invokestatic  #76
+475: aload         5
+477: invokestatic  #76
+480: aload         5
+482: invokestatic  #77
+485: ldc           #78
+487: invokestatic  #79
+490: aload         7
+492: invokestatic  #76
+495: aload         7
+497: invokestatic  #77
+500: ldc           #78
+502: invokestatic  #79
+505: aload         9
+507: invokestatic  #76
+510: aload         10
+512: invokestatic  #76
+515: aload         10
+517: invokestatic  #77
+520: ldc           #78
+522: invokestatic  #79
+525: aload         11
+527: invokestatic  #76
+530: aload         12
+532: invokestatic  #76
+535: aload         12
+537: invokestatic  #77
+540: ldc           #78
+542: invokestatic  #79
+545: aload         14
+547: invokestatic  #76
+550: aload         15
+552: invokestatic  #76
+555: aload         16
+557: invokestatic  #76
+560: aload         17
+562: invokestatic  #76
+565: aload         17
+567: invokestatic  #77
+570: ldc           #78
+572: invokestatic  #79
+575: aload         19
+577: invokestatic  #76
+580: aload         20
+582: invokestatic  #76
+585: aload         21
+587: invokestatic  #76
+590: aload         21
+592: invokestatic  #77
+595: ldc           #78
+597: invokestatic  #79
+600: aload         23
+602: invokestatic  #76
+605: aload         24
+607: invokestatic  #76
+610: new           #80
+613: dup
+614: invokespecial #81
+617: ldc           #82
+619: invokevirtual #83
+622: iload         25
+624: invokevirtual #90
+627: ldc           #85
+629: invokevirtual #83
+632: iconst_0
+633: invokevirtual #90
+636: ldc           #82
+638: invokevirtual #83
+641: invokevirtual #86
+644: iload         25
+646: ifne          653
+649: iconst_1
+650: goto          654
+653: iconst_0
+654: invokestatic  #87
+657: aload         26
+659: invokestatic  #76
+662: aload         27
+664: invokestatic  #76
+667: aload         28
+669: invokestatic  #76
+672: aload         29
+674: invokestatic  #76
+677: aload         30
+679: invokestatic  #76
+682: aload         30
+684: invokestatic  #77
+687: ldc           #78
+689: invokestatic  #79
+692: aload         32
+694: invokestatic  #76
+697: aload         33
+699: invokestatic  #76
+702: aload         33
+704: invokestatic  #77
+707: ldc           #78
+709: invokestatic  #79
+712: aload         35
+714: invokestatic  #76
+717: aload         36
+719: invokestatic  #76
+722: aload         36
+724: invokestatic  #77
+727: ldc           #78
+729: invokestatic  #79
+732: aload         37
+734: invokestatic  #76
+737: aload         37
+739: invokestatic  #77
+742: ldc           #78
+744: invokestatic  #79
+747: aload         39
+749: invokestatic  #76
+752: aload         40
+754: invokestatic  #76
+757: aload         40
+759: invokestatic  #77
+762: ldc           #78
+764: invokestatic  #79
+767: aload         42
+769: invokestatic  #76
+772: aload         42
+774: invokestatic  #77
+777: ldc           #107
+779: invokestatic  #79
+782: aload         43
+784: invokestatic  #76
+787: aload         43
+789: invokestatic  #77
+792: ldc           #108
+794: invokestatic  #79
+797: return
+Exception table:
+from    to  target type
+439   452   455   Class java/lang/NullPointerException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test14
+Start line: 340
+End line: 365
+Method source code: 
+    public void test14() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test14");
+        double[] doubleArray1 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector2 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray1);
+        arrayRealVector2.unitize();
+        boolean boolean4 = arrayRealVector2.isNaN();
+        int int5 = arrayRealVector2.getDimension();
+        java.util.Iterator<org.apache.commons.math.linear.RealVector.Entry> entryItor6 = arrayRealVector2.iterator();
+        double[] doubleArray8 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector9 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray8);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector10 = arrayRealVector9.copy();
+        double[] doubleArray11 = arrayRealVector9.data;
+        arrayRealVector2.data = doubleArray11;
+        arrayRealVector2.unitize();
+        org.junit.Assert.assertNotNull(doubleArray1);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray1), "[100.0]");
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 1 + "'", int5 == 1);
+        org.junit.Assert.assertNotNull(entryItor6);
+        org.junit.Assert.assertNotNull(doubleArray8);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray8), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector10);
+        org.junit.Assert.assertNotNull(doubleArray11);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray11), "[1.0]");
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #109
+19: aastore
+20: invokevirtual #7
+23: pop
+24: iconst_1
+25: newarray       double
+27: dup
+28: iconst_0
+29: ldc2_w        #36
+32: dastore
+33: astore_1
+34: new           #38
+37: dup
+38: aload_1
+39: invokespecial #39
+42: astore_2
+43: aload_2
+44: invokevirtual #94
+47: aload_2
+48: invokevirtual #110
+51: istore_3
+52: aload_2
+53: invokevirtual #111
+56: istore        4
+58: aload_2
+59: invokevirtual #93
+62: astore        5
+64: iconst_1
+65: newarray       double
+67: dup
+68: iconst_0
+69: ldc2_w        #36
+72: dastore
+73: astore        6
+75: new           #38
+78: dup
+79: aload         6
+81: invokespecial #39
+84: astore        7
+86: aload         7
+88: invokevirtual #57
+91: astore        8
+93: aload         7
+95: getfield      #58
+98: astore        9
+100: aload_2
+101: aload         9
+103: putfield      #58
+106: aload_2
+107: invokevirtual #94
+110: aload_1
+111: invokestatic  #76
+114: aload_1
+115: invokestatic  #77
+118: ldc           #78
+120: invokestatic  #79
+123: new           #80
+126: dup
+127: invokespecial #81
+130: ldc           #82
+132: invokevirtual #83
+135: iload_3
+136: invokevirtual #112
+139: ldc           #85
+141: invokevirtual #83
+144: iconst_0
+145: invokevirtual #112
+148: ldc           #82
+150: invokevirtual #83
+153: invokevirtual #86
+156: iload_3
+157: ifne          164
+160: iconst_1
+161: goto          165
+164: iconst_0
+165: invokestatic  #87
+168: new           #80
+171: dup
+172: invokespecial #81
+175: ldc           #82
+177: invokevirtual #83
+180: iload         4
+182: invokevirtual #90
+185: ldc           #85
+187: invokevirtual #83
+190: iconst_1
+191: invokevirtual #90
+194: ldc           #82
+196: invokevirtual #83
+199: invokevirtual #86
+202: iload         4
+204: iconst_1
+205: if_icmpne     212
+208: iconst_1
+209: goto          213
+212: iconst_0
+213: invokestatic  #87
+216: aload         5
+218: invokestatic  #76
+221: aload         6
+223: invokestatic  #76
+226: aload         6
+228: invokestatic  #77
+231: ldc           #78
+233: invokestatic  #79
+236: aload         8
+238: invokestatic  #76
+241: aload         9
+243: invokestatic  #76
+246: aload         9
+248: invokestatic  #77
+251: ldc           #113
+253: invokestatic  #79
+256: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test15
+Start line: 368
+End line: 402
+Method source code: 
+    public void test15() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test15");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix3 = new org.apache.commons.math.linear.OpenMapRealMatrix(openMapRealMatrix2);
+        double[] doubleArray5 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector6 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray5);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector7 = arrayRealVector6.copy();
+        double[] doubleArray8 = arrayRealVector6.data;
+        java.util.Iterator<org.apache.commons.math.linear.RealVector.Entry> entryItor9 = arrayRealVector6.iterator();
+        double[] doubleArray11 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector12 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray11);
+        arrayRealVector12.unitize();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector14 = arrayRealVector12.copy();
+        org.apache.commons.math.linear.RealVector realVector15 = arrayRealVector6.ebeDivide((org.apache.commons.math.linear.RealVector) arrayRealVector14);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector16 = arrayRealVector6.copy();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.RealVector realVector17 = openMapRealMatrix2.operate((org.apache.commons.math.linear.RealVector) arrayRealVector16);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.DimensionMismatchException; message: 1 != 4");
+        } catch (org.apache.commons.math.exception.DimensionMismatchException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(doubleArray5);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray5), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector7);
+        org.junit.Assert.assertNotNull(doubleArray8);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray8), "[100.0]");
+        org.junit.Assert.assertNotNull(entryItor9);
+        org.junit.Assert.assertNotNull(doubleArray11);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray11), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector14);
+        org.junit.Assert.assertNotNull(realVector15);
+        org.junit.Assert.assertNotNull(arrayRealVector16);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #114
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: new           #8
+37: dup
+38: aload_1
+39: invokespecial #9
+42: astore_2
+43: iconst_1
+44: newarray       double
+46: dup
+47: iconst_0
+48: ldc2_w        #36
+51: dastore
+52: astore_3
+53: new           #38
+56: dup
+57: aload_3
+58: invokespecial #39
+61: astore        4
+63: aload         4
+65: invokevirtual #57
+68: astore        5
+70: aload         4
+72: getfield      #58
+75: astore        6
+77: aload         4
+79: invokevirtual #93
+82: astore        7
+84: iconst_1
+85: newarray       double
+87: dup
+88: iconst_0
+89: ldc2_w        #36
+92: dastore
+93: astore        8
+95: new           #38
+98: dup
+99: aload         8
+101: invokespecial #39
+104: astore        9
+106: aload         9
+108: invokevirtual #94
+111: aload         9
+113: invokevirtual #57
+116: astore        10
+118: aload         4
+120: aload         10
+122: invokevirtual #64
+125: astore        11
+127: aload         4
+129: invokevirtual #57
+132: astore        12
+134: aload_1
+135: aload         12
+137: invokevirtual #115
+140: astore        13
+142: ldc           #116
+144: invokestatic  #11
+147: goto          152
+150: astore        13
+152: aload_3
+153: invokestatic  #76
+156: aload_3
+157: invokestatic  #77
+160: ldc           #78
+162: invokestatic  #79
+165: aload         5
+167: invokestatic  #76
+170: aload         6
+172: invokestatic  #76
+175: aload         6
+177: invokestatic  #77
+180: ldc           #78
+182: invokestatic  #79
+185: aload         7
+187: invokestatic  #76
+190: aload         8
+192: invokestatic  #76
+195: aload         8
+197: invokestatic  #77
+200: ldc           #78
+202: invokestatic  #79
+205: aload         10
+207: invokestatic  #76
+210: aload         11
+212: invokestatic  #76
+215: aload         12
+217: invokestatic  #76
+220: return
+Exception table:
+from    to  target type
+134   147   150   Class org/apache/commons/math/exception/DimensionMismatchException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test16
+Start line: 405
+End line: 417
+Method source code: 
+    public void test16() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test16");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.RealMatrixPreservingVisitor realMatrixPreservingVisitor3 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            double double8 = openMapRealMatrix2.walkInColumnOrder(realMatrixPreservingVisitor3, (int) (short) -1, 1, (int) '4', (int) (short) 100);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.OutOfRangeException; message: row index (-1)");
+        } catch (org.apache.commons.math.exception.OutOfRangeException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #117
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: aconst_null
+35: astore_2
+36: aload_1
+37: aload_2
+38: iconst_m1
+39: iconst_1
+40: bipush        52
+42: bipush        100
+44: invokevirtual #33
+47: dstore_3
+48: ldc           #118
+50: invokestatic  #11
+53: goto          57
+56: astore_3
+57: return
+Exception table:
+from    to  target type
+36    53    56   Class org/apache/commons/math/exception/OutOfRangeException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test17
+Start line: 420
+End line: 481
+Method source code: 
+    public void test17() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test17");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.exception.util.LocalizedFormats localizedFormats3 = org.apache.commons.math.exception.util.LocalizedFormats.NUMBER_TOO_LARGE;
+        boolean boolean4 = openMapRealMatrix2.equals((java.lang.Object) localizedFormats3);
+        double[] doubleArray6 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector7 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray6);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector8 = arrayRealVector7.copy();
+        org.apache.commons.math.linear.RealVector.SparseEntryIterator sparseEntryIterator9 = arrayRealVector7.new SparseEntryIterator();
+        double[] doubleArray11 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector12 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray11);
+        arrayRealVector12.unitize();
+        boolean boolean14 = arrayRealVector12.isNaN();
+        int int15 = arrayRealVector12.getDimension();
+        double double16 = arrayRealVector7.getLInfDistance((org.apache.commons.math.linear.RealVector) arrayRealVector12);
+        double[] doubleArray18 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector19 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray18);
+        org.apache.commons.math.linear.RealVector realVector21 = arrayRealVector19.mapDivide((double) (-1L));
+        double double22 = arrayRealVector19.getL1Norm();
+        org.apache.commons.math.linear.RealVector realVector24 = arrayRealVector19.mapMultiply((double) (byte) -1);
+        double double25 = arrayRealVector19.getNorm();
+        double[] doubleArray27 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector28 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray27);
+        arrayRealVector28.unitize();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector30 = arrayRealVector28.copy();
+        org.apache.commons.math.linear.RealVector realVector32 = arrayRealVector30.mapMultiply((double) (short) 10);
+        arrayRealVector30.set(0.0d);
+        org.apache.commons.math.linear.RealVector realVector35 = arrayRealVector19.subtract((org.apache.commons.math.linear.RealVector) arrayRealVector30);
+        double[] doubleArray36 = arrayRealVector19.getDataRef();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector37 = new org.apache.commons.math.linear.ArrayRealVector(arrayRealVector7, doubleArray36);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.RealVector realVector38 = openMapRealMatrix2.operate((org.apache.commons.math.linear.RealVector) arrayRealVector7);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.DimensionMismatchException; message: 1 != 4");
+        } catch (org.apache.commons.math.exception.DimensionMismatchException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + localizedFormats3 + "' != '" + org.apache.commons.math.exception.util.LocalizedFormats.NUMBER_TOO_LARGE + "'", localizedFormats3.equals(org.apache.commons.math.exception.util.LocalizedFormats.NUMBER_TOO_LARGE));
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertNotNull(doubleArray6);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray6), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector8);
+        org.junit.Assert.assertNotNull(doubleArray11);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray11), "[100.0]");
+        org.junit.Assert.assertTrue("'" + boolean14 + "' != '" + false + "'", boolean14 == false);
+        org.junit.Assert.assertTrue("'" + int15 + "' != '" + 1 + "'", int15 == 1);
+        org.junit.Assert.assertTrue("'" + double16 + "' != '" + 99.0d + "'", double16 == 99.0d);
+        org.junit.Assert.assertNotNull(doubleArray18);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray18), "[100.0]");
+        org.junit.Assert.assertNotNull(realVector21);
+        org.junit.Assert.assertTrue("'" + double22 + "' != '" + 100.0d + "'", double22 == 100.0d);
+        org.junit.Assert.assertNotNull(realVector24);
+        org.junit.Assert.assertTrue("'" + double25 + "' != '" + 100.0d + "'", double25 == 100.0d);
+        org.junit.Assert.assertNotNull(doubleArray27);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray27), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector30);
+        org.junit.Assert.assertNotNull(realVector32);
+        org.junit.Assert.assertNotNull(realVector35);
+        org.junit.Assert.assertNotNull(doubleArray36);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray36), "[100.0]");
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #119
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: getstatic     #120
+37: astore_2
+38: aload_1
+39: aload_2
+40: invokevirtual #121
+43: istore_3
+44: iconst_1
+45: newarray       double
+47: dup
+48: iconst_0
+49: ldc2_w        #36
+52: dastore
+53: astore        4
+55: new           #38
+58: dup
+59: aload         4
+61: invokespecial #39
+64: astore        5
+66: aload         5
+68: invokevirtual #57
+71: astore        6
+73: new           #59
+76: dup
+77: aload         5
+79: dup
+80: invokevirtual #60
+83: pop
+84: invokespecial #61
+87: astore        7
+89: iconst_1
+90: newarray       double
+92: dup
+93: iconst_0
+94: ldc2_w        #36
+97: dastore
+98: astore        8
+100: new           #38
+103: dup
+104: aload         8
+106: invokespecial #39
+109: astore        9
+111: aload         9
+113: invokevirtual #94
+116: aload         9
+118: invokevirtual #110
+121: istore        10
+123: aload         9
+125: invokevirtual #111
+128: istore        11
+130: aload         5
+132: aload         9
+134: invokevirtual #122
+137: dstore        12
+139: iconst_1
+140: newarray       double
+142: dup
+143: iconst_0
+144: ldc2_w        #36
+147: dastore
+148: astore        14
+150: new           #38
+153: dup
+154: aload         14
+156: invokespecial #39
+159: astore        15
+161: aload         15
+163: ldc2_w        #40
+166: invokevirtual #42
+169: astore        16
+171: aload         15
+173: invokevirtual #43
+176: dstore        17
+178: aload         15
+180: ldc2_w        #40
+183: invokevirtual #44
+186: astore        19
+188: aload         15
+190: invokevirtual #123
+193: dstore        20
+195: iconst_1
+196: newarray       double
+198: dup
+199: iconst_0
+200: ldc2_w        #36
+203: dastore
+204: astore        22
+206: new           #38
+209: dup
+210: aload         22
+212: invokespecial #39
+215: astore        23
+217: aload         23
+219: invokevirtual #94
+222: aload         23
+224: invokevirtual #57
+227: astore        24
+229: aload         24
+231: ldc2_w        #124
+234: invokevirtual #44
+237: astore        25
+239: aload         24
+241: dconst_0
+242: invokevirtual #45
+245: aload         15
+247: aload         24
+249: invokevirtual #95
+252: astore        26
+254: aload         15
+256: invokevirtual #102
+259: astore        27
+261: new           #38
+264: dup
+265: aload         5
+267: aload         27
+269: invokespecial #126
+272: astore        28
+274: aload_1
+275: aload         5
+277: invokevirtual #115
+280: astore        29
+282: ldc           #116
+284: invokestatic  #11
+287: goto          292
+290: astore        29
+292: new           #80
+295: dup
+296: invokespecial #81
+299: ldc           #82
+301: invokevirtual #83
+304: aload_2
+305: invokevirtual #88
+308: ldc           #85
+310: invokevirtual #83
+313: getstatic     #120
+316: invokevirtual #88
+319: ldc           #82
+321: invokevirtual #83
+324: invokevirtual #86
+327: aload_2
+328: getstatic     #120
+331: invokevirtual #89
+334: invokestatic  #87
+337: new           #80
+340: dup
+341: invokespecial #81
+344: ldc           #82
+346: invokevirtual #83
+349: iload_3
+350: invokevirtual #112
+353: ldc           #85
+355: invokevirtual #83
+358: iconst_0
+359: invokevirtual #112
+362: ldc           #82
+364: invokevirtual #83
+367: invokevirtual #86
+370: iload_3
+371: ifne          378
+374: iconst_1
+375: goto          379
+378: iconst_0
+379: invokestatic  #87
+382: aload         4
+384: invokestatic  #76
+387: aload         4
+389: invokestatic  #77
+392: ldc           #78
+394: invokestatic  #79
+397: aload         6
+399: invokestatic  #76
+402: aload         8
+404: invokestatic  #76
+407: aload         8
+409: invokestatic  #77
+412: ldc           #78
+414: invokestatic  #79
+417: new           #80
+420: dup
+421: invokespecial #81
+424: ldc           #82
+426: invokevirtual #83
+429: iload         10
+431: invokevirtual #112
+434: ldc           #85
+436: invokevirtual #83
+439: iconst_0
+440: invokevirtual #112
+443: ldc           #82
+445: invokevirtual #83
+448: invokevirtual #86
+451: iload         10
+453: ifne          460
+456: iconst_1
+457: goto          461
+460: iconst_0
+461: invokestatic  #87
+464: new           #80
+467: dup
+468: invokespecial #81
+471: ldc           #82
+473: invokevirtual #83
+476: iload         11
+478: invokevirtual #90
+481: ldc           #85
+483: invokevirtual #83
+486: iconst_1
+487: invokevirtual #90
+490: ldc           #82
+492: invokevirtual #83
+495: invokevirtual #86
+498: iload         11
+500: iconst_1
+501: if_icmpne     508
+504: iconst_1
+505: goto          509
+508: iconst_0
+509: invokestatic  #87
+512: new           #80
+515: dup
+516: invokespecial #81
+519: ldc           #82
+521: invokevirtual #83
+524: dload         12
+526: invokevirtual #84
+529: ldc           #85
+531: invokevirtual #83
+534: ldc2_w        #127
+537: invokevirtual #84
+540: ldc           #82
+542: invokevirtual #83
+545: invokevirtual #86
+548: dload         12
+550: ldc2_w        #127
+553: dcmpl
+554: ifne          561
+557: iconst_1
+558: goto          562
+561: iconst_0
+562: invokestatic  #87
+565: aload         14
+567: invokestatic  #76
+570: aload         14
+572: invokestatic  #77
+575: ldc           #78
+577: invokestatic  #79
+580: aload         16
+582: invokestatic  #76
+585: new           #80
+588: dup
+589: invokespecial #81
+592: ldc           #82
+594: invokevirtual #83
+597: dload         17
+599: invokevirtual #84
+602: ldc           #85
+604: invokevirtual #83
+607: ldc2_w        #36
+610: invokevirtual #84
+613: ldc           #82
+615: invokevirtual #83
+618: invokevirtual #86
+621: dload         17
+623: ldc2_w        #36
+626: dcmpl
+627: ifne          634
+630: iconst_1
+631: goto          635
+634: iconst_0
+635: invokestatic  #87
+638: aload         19
+640: invokestatic  #76
+643: new           #80
+646: dup
+647: invokespecial #81
+650: ldc           #82
+652: invokevirtual #83
+655: dload         20
+657: invokevirtual #84
+660: ldc           #85
+662: invokevirtual #83
+665: ldc2_w        #36
+668: invokevirtual #84
+671: ldc           #82
+673: invokevirtual #83
+676: invokevirtual #86
+679: dload         20
+681: ldc2_w        #36
+684: dcmpl
+685: ifne          692
+688: iconst_1
+689: goto          693
+692: iconst_0
+693: invokestatic  #87
+696: aload         22
+698: invokestatic  #76
+701: aload         22
+703: invokestatic  #77
+706: ldc           #78
+708: invokestatic  #79
+711: aload         24
+713: invokestatic  #76
+716: aload         25
+718: invokestatic  #76
+721: aload         26
+723: invokestatic  #76
+726: aload         27
+728: invokestatic  #76
+731: aload         27
+733: invokestatic  #77
+736: ldc           #78
+738: invokestatic  #79
+741: return
+Exception table:
+from    to  target type
+274   287   290   Class org/apache/commons/math/exception/DimensionMismatchException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test18
+Start line: 484
+End line: 492
+Method source code: 
+    public void test18() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test18");
+        double[] doubleArray1 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector2 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray1);
+        arrayRealVector2.checkVectorDimensions(1);
+        org.junit.Assert.assertNotNull(doubleArray1);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray1), "[100.0]");
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #129
+19: aastore
+20: invokevirtual #7
+23: pop
+24: iconst_1
+25: newarray       double
+27: dup
+28: iconst_0
+29: ldc2_w        #36
+32: dastore
+33: astore_1
+34: new           #38
+37: dup
+38: aload_1
+39: invokespecial #39
+42: astore_2
+43: aload_2
+44: iconst_1
+45: invokevirtual #130
+48: aload_1
+49: invokestatic  #76
+52: aload_1
+53: invokestatic  #77
+56: ldc           #78
+58: invokestatic  #79
+61: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test19
+Start line: 495
+End line: 505
+Method source code: 
+    public void test19() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test19");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix3 = new org.apache.commons.math.linear.OpenMapRealMatrix(openMapRealMatrix2);
+        double double4 = openMapRealMatrix2.getFrobeniusNorm();
+        double[] doubleArray6 = openMapRealMatrix2.getColumn((int) (byte) 1);
+        org.junit.Assert.assertTrue("'" + double4 + "' != '" + 0.0d + "'", double4 == 0.0d);
+        org.junit.Assert.assertNotNull(doubleArray6);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray6), "[0.0]");
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #131
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: new           #8
+37: dup
+38: aload_1
+39: invokespecial #9
+42: astore_2
+43: aload_1
+44: invokevirtual #132
+47: dstore_3
+48: aload_1
+49: iconst_1
+50: invokevirtual #133
+53: astore        5
+55: new           #80
+58: dup
+59: invokespecial #81
+62: ldc           #82
+64: invokevirtual #83
+67: dload_3
+68: invokevirtual #84
+71: ldc           #85
+73: invokevirtual #83
+76: dconst_0
+77: invokevirtual #84
+80: ldc           #82
+82: invokevirtual #83
+85: invokevirtual #86
+88: dload_3
+89: dconst_0
+90: dcmpl
+91: ifne          98
+94: iconst_1
+95: goto          99
+98: iconst_0
+99: invokestatic  #87
+102: aload         5
+104: invokestatic  #76
+107: aload         5
+109: invokestatic  #77
+112: ldc           #134
+114: invokestatic  #79
+117: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test20
+Start line: 508
+End line: 520
+Method source code: 
+    public void test20() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test20");
+        org.apache.commons.math.linear.MatrixDimensionMismatchException matrixDimensionMismatchException4 = new org.apache.commons.math.linear.MatrixDimensionMismatchException((int) (short) 10, 0, (int) (short) 100, (int) (byte) 10);
+        int int5 = matrixDimensionMismatchException4.getExpectedRowDimension();
+        int int6 = matrixDimensionMismatchException4.getExpectedRowDimension();
+        int int7 = matrixDimensionMismatchException4.getWrongColumnDimension();
+        int int8 = matrixDimensionMismatchException4.getWrongRowDimension();
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 100 + "'", int5 == 100);
+        org.junit.Assert.assertTrue("'" + int6 + "' != '" + 100 + "'", int6 == 100);
+        org.junit.Assert.assertTrue("'" + int7 + "' != '" + 0 + "'", int7 == 0);
+        org.junit.Assert.assertTrue("'" + int8 + "' != '" + 10 + "'", int8 == 10);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #135
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #136
+27: dup
+28: bipush        10
+30: iconst_0
+31: bipush        100
+33: bipush        10
+35: invokespecial #137
+38: astore_1
+39: aload_1
+40: invokevirtual #138
+43: istore_2
+44: aload_1
+45: invokevirtual #138
+48: istore_3
+49: aload_1
+50: invokevirtual #139
+53: istore        4
+55: aload_1
+56: invokevirtual #140
+59: istore        5
+61: new           #80
+64: dup
+65: invokespecial #81
+68: ldc           #82
+70: invokevirtual #83
+73: iload_2
+74: invokevirtual #90
+77: ldc           #85
+79: invokevirtual #83
+82: bipush        100
+84: invokevirtual #90
+87: ldc           #82
+89: invokevirtual #83
+92: invokevirtual #86
+95: iload_2
+96: bipush        100
+98: if_icmpne     105
+101: iconst_1
+102: goto          106
+105: iconst_0
+106: invokestatic  #87
+109: new           #80
+112: dup
+113: invokespecial #81
+116: ldc           #82
+118: invokevirtual #83
+121: iload_3
+122: invokevirtual #90
+125: ldc           #85
+127: invokevirtual #83
+130: bipush        100
+132: invokevirtual #90
+135: ldc           #82
+137: invokevirtual #83
+140: invokevirtual #86
+143: iload_3
+144: bipush        100
+146: if_icmpne     153
+149: iconst_1
+150: goto          154
+153: iconst_0
+154: invokestatic  #87
+157: new           #80
+160: dup
+161: invokespecial #81
+164: ldc           #82
+166: invokevirtual #83
+169: iload         4
+171: invokevirtual #90
+174: ldc           #85
+176: invokevirtual #83
+179: iconst_0
+180: invokevirtual #90
+183: ldc           #82
+185: invokevirtual #83
+188: invokevirtual #86
+191: iload         4
+193: ifne          200
+196: iconst_1
+197: goto          201
+200: iconst_0
+201: invokestatic  #87
+204: new           #80
+207: dup
+208: invokespecial #81
+211: ldc           #82
+213: invokevirtual #83
+216: iload         5
+218: invokevirtual #90
+221: ldc           #85
+223: invokevirtual #83
+226: bipush        10
+228: invokevirtual #90
+231: ldc           #82
+233: invokevirtual #83
+236: invokevirtual #86
+239: iload         5
+241: bipush        10
+243: if_icmpne     250
+246: iconst_1
+247: goto          251
+250: iconst_0
+251: invokestatic  #87
+254: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test21
+Start line: 523
+End line: 540
+Method source code: 
+    public void test21() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test21");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix3 = new org.apache.commons.math.linear.OpenMapRealMatrix(openMapRealMatrix2);
+        double double4 = openMapRealMatrix2.getFrobeniusNorm();
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix5 = openMapRealMatrix2.copy();
+        org.apache.commons.math.linear.RealMatrixPreservingVisitor realMatrixPreservingVisitor6 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            double double7 = openMapRealMatrix2.walkInOptimizedOrder(realMatrixPreservingVisitor6);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + double4 + "' != '" + 0.0d + "'", double4 == 0.0d);
+        org.junit.Assert.assertNotNull(openMapRealMatrix5);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #141
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: new           #8
+37: dup
+38: aload_1
+39: invokespecial #9
+42: astore_2
+43: aload_1
+44: invokevirtual #132
+47: dstore_3
+48: aload_1
+49: invokevirtual #142
+52: astore        5
+54: aconst_null
+55: astore        6
+57: aload_1
+58: aload         6
+60: invokevirtual #26
+63: dstore        7
+65: ldc           #10
+67: invokestatic  #11
+70: goto          75
+73: astore        7
+75: new           #80
+78: dup
+79: invokespecial #81
+82: ldc           #82
+84: invokevirtual #83
+87: dload_3
+88: invokevirtual #84
+91: ldc           #85
+93: invokevirtual #83
+96: dconst_0
+97: invokevirtual #84
+100: ldc           #82
+102: invokevirtual #83
+105: invokevirtual #86
+108: dload_3
+109: dconst_0
+110: dcmpl
+111: ifne          118
+114: iconst_1
+115: goto          119
+118: iconst_0
+119: invokestatic  #87
+122: aload         5
+124: invokestatic  #76
+127: return
+Exception table:
+from    to  target type
+57    70    73   Class java/lang/NullPointerException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test22
+Start line: 543
+End line: 559
+Method source code: 
+    public void test22() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test22");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix3 = new org.apache.commons.math.linear.OpenMapRealMatrix(openMapRealMatrix2);
+        double double4 = openMapRealMatrix2.getFrobeniusNorm();
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix5 = openMapRealMatrix2.copy();
+        // The following exception was thrown during execution in test generation
+        try {
+            openMapRealMatrix5.addToEntry(4, (-1), (double) (short) 100);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.OutOfRangeException; message: row index (4)");
+        } catch (org.apache.commons.math.exception.OutOfRangeException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + double4 + "' != '" + 0.0d + "'", double4 == 0.0d);
+        org.junit.Assert.assertNotNull(openMapRealMatrix5);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #143
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: new           #8
+37: dup
+38: aload_1
+39: invokespecial #9
+42: astore_2
+43: aload_1
+44: invokevirtual #132
+47: dstore_3
+48: aload_1
+49: invokevirtual #142
+52: astore        5
+54: aload         5
+56: iconst_4
+57: iconst_m1
+58: ldc2_w        #36
+61: invokevirtual #30
+64: ldc           #144
+66: invokestatic  #11
+69: goto          74
+72: astore        6
+74: new           #80
+77: dup
+78: invokespecial #81
+81: ldc           #82
+83: invokevirtual #83
+86: dload_3
+87: invokevirtual #84
+90: ldc           #85
+92: invokevirtual #83
+95: dconst_0
+96: invokevirtual #84
+99: ldc           #82
+101: invokevirtual #83
+104: invokevirtual #86
+107: dload_3
+108: dconst_0
+109: dcmpl
+110: ifne          117
+113: iconst_1
+114: goto          118
+117: iconst_0
+118: invokestatic  #87
+121: aload         5
+123: invokestatic  #76
+126: return
+Exception table:
+from    to  target type
+54    69    72   Class org/apache/commons/math/exception/OutOfRangeException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test23
+Start line: 562
+End line: 578
+Method source code: 
+    public void test23() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test23");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix3 = new org.apache.commons.math.linear.OpenMapRealMatrix(openMapRealMatrix2);
+        double double4 = openMapRealMatrix2.getFrobeniusNorm();
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix5 = openMapRealMatrix2.copy();
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.RealVector realVector7 = openMapRealMatrix5.getColumnVector((int) (byte) 10);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.OutOfRangeException; message: column index (10)");
+        } catch (org.apache.commons.math.exception.OutOfRangeException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertTrue("'" + double4 + "' != '" + 0.0d + "'", double4 == 0.0d);
+        org.junit.Assert.assertNotNull(openMapRealMatrix5);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #145
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: new           #8
+37: dup
+38: aload_1
+39: invokespecial #9
+42: astore_2
+43: aload_1
+44: invokevirtual #132
+47: dstore_3
+48: aload_1
+49: invokevirtual #142
+52: astore        5
+54: aload         5
+56: bipush        10
+58: invokevirtual #146
+61: astore        6
+63: ldc           #147
+65: invokestatic  #11
+68: goto          73
+71: astore        6
+73: new           #80
+76: dup
+77: invokespecial #81
+80: ldc           #82
+82: invokevirtual #83
+85: dload_3
+86: invokevirtual #84
+89: ldc           #85
+91: invokevirtual #83
+94: dconst_0
+95: invokevirtual #84
+98: ldc           #82
+100: invokevirtual #83
+103: invokevirtual #86
+106: dload_3
+107: dconst_0
+108: dcmpl
+109: ifne          116
+112: iconst_1
+113: goto          117
+116: iconst_0
+117: invokestatic  #87
+120: aload         5
+122: invokestatic  #76
+125: return
+Exception table:
+from    to  target type
+54    68    71   Class org/apache/commons/math/exception/OutOfRangeException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test24
+Start line: 581
+End line: 596
+Method source code: 
+    public void test24() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test24");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix3 = new org.apache.commons.math.linear.OpenMapRealMatrix(openMapRealMatrix2);
+        org.apache.commons.math.linear.RealMatrix realMatrix5 = openMapRealMatrix2.getColumnMatrix(0);
+        org.apache.commons.math.linear.RealMatrixPreservingVisitor realMatrixPreservingVisitor6 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            double double11 = openMapRealMatrix2.walkInOptimizedOrder(realMatrixPreservingVisitor6, 100, 100, (int) (short) 10, (int) (byte) 1);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.OutOfRangeException; message: row index (100)");
+        } catch (org.apache.commons.math.exception.OutOfRangeException e) {
+        // Expected exception.
+        }
+        org.junit.Assert.assertNotNull(realMatrix5);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #148
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: new           #8
+37: dup
+38: aload_1
+39: invokespecial #9
+42: astore_2
+43: aload_1
+44: iconst_0
+45: invokevirtual #149
+48: astore_3
+49: aconst_null
+50: astore        4
+52: aload_1
+53: aload         4
+55: bipush        100
+57: bipush        100
+59: bipush        10
+61: iconst_1
+62: invokevirtual #150
+65: dstore        5
+67: ldc           #34
+69: invokestatic  #11
+72: goto          77
+75: astore        5
+77: aload_3
+78: invokestatic  #76
+81: return
+Exception table:
+from    to  target type
+52    72    75   Class org/apache/commons/math/exception/OutOfRangeException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test25
+Start line: 599
+End line: 608
+Method source code: 
+    public void test25() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test25");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix3 = new org.apache.commons.math.linear.OpenMapRealMatrix(openMapRealMatrix2);
+        org.apache.commons.math.linear.RealMatrix realMatrix4 = openMapRealMatrix3.transpose();
+        org.apache.commons.math.linear.RealMatrix realMatrix6 = openMapRealMatrix3.scalarAdd(0.0d);
+        org.junit.Assert.assertNotNull(realMatrix4);
+        org.junit.Assert.assertNotNull(realMatrix6);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #151
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: new           #8
+37: dup
+38: aload_1
+39: invokespecial #9
+42: astore_2
+43: aload_2
+44: invokevirtual #152
+47: astore_3
+48: aload_2
+49: dconst_0
+50: invokevirtual #153
+53: astore        4
+55: aload_3
+56: invokestatic  #76
+59: aload         4
+61: invokestatic  #76
+64: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test26
+Start line: 611
+End line: 676
+Method source code: 
+    public void test26() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test26");
+        double[] doubleArray1 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector2 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray1);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector3 = arrayRealVector2.copy();
+        org.apache.commons.math.linear.RealVector.SparseEntryIterator sparseEntryIterator4 = arrayRealVector2.new SparseEntryIterator();
+        double[] doubleArray6 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector7 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray6);
+        arrayRealVector7.unitize();
+        boolean boolean9 = arrayRealVector7.isNaN();
+        int int10 = arrayRealVector7.getDimension();
+        double double11 = arrayRealVector2.getLInfDistance((org.apache.commons.math.linear.RealVector) arrayRealVector7);
+        double[] doubleArray13 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector14 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray13);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector15 = arrayRealVector14.copy();
+        double[] doubleArray16 = arrayRealVector14.data;
+        java.util.Iterator<org.apache.commons.math.linear.RealVector.Entry> entryItor17 = arrayRealVector14.iterator();
+        double[] doubleArray19 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector20 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray19);
+        arrayRealVector20.unitize();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector22 = arrayRealVector20.copy();
+        org.apache.commons.math.linear.RealVector realVector23 = arrayRealVector14.ebeDivide((org.apache.commons.math.linear.RealVector) arrayRealVector22);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector24 = arrayRealVector14.copy();
+        double[] doubleArray26 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector27 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray26);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector28 = arrayRealVector27.copy();
+        org.apache.commons.math.linear.RealVector realVector29 = arrayRealVector14.ebeMultiply((org.apache.commons.math.linear.RealVector) arrayRealVector27);
+        double[] doubleArray31 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector32 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray31);
+        arrayRealVector32.unitize();
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector34 = arrayRealVector32.copy();
+        org.apache.commons.math.linear.RealVector realVector36 = arrayRealVector34.mapMultiplyToSelf((-1.0d));
+        double double37 = arrayRealVector14.getL1Distance(realVector36);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector38 = new org.apache.commons.math.linear.ArrayRealVector((org.apache.commons.math.linear.RealVector) arrayRealVector14);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector39 = arrayRealVector2.ebeMultiply((org.apache.commons.math.linear.RealVector) arrayRealVector38);
+        org.junit.Assert.assertNotNull(doubleArray1);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray1), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector3);
+        org.junit.Assert.assertNotNull(doubleArray6);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray6), "[100.0]");
+        org.junit.Assert.assertTrue("'" + boolean9 + "' != '" + false + "'", boolean9 == false);
+        org.junit.Assert.assertTrue("'" + int10 + "' != '" + 1 + "'", int10 == 1);
+        org.junit.Assert.assertTrue("'" + double11 + "' != '" + 99.0d + "'", double11 == 99.0d);
+        org.junit.Assert.assertNotNull(doubleArray13);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray13), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector15);
+        org.junit.Assert.assertNotNull(doubleArray16);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray16), "[100.0]");
+        org.junit.Assert.assertNotNull(entryItor17);
+        org.junit.Assert.assertNotNull(doubleArray19);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray19), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector22);
+        org.junit.Assert.assertNotNull(realVector23);
+        org.junit.Assert.assertNotNull(arrayRealVector24);
+        org.junit.Assert.assertNotNull(doubleArray26);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray26), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector28);
+        org.junit.Assert.assertNotNull(realVector29);
+        org.junit.Assert.assertNotNull(doubleArray31);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray31), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector34);
+        org.junit.Assert.assertNotNull(realVector36);
+        org.junit.Assert.assertTrue("'" + double37 + "' != '" + 101.0d + "'", double37 == 101.0d);
+        org.junit.Assert.assertNotNull(arrayRealVector39);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #154
+19: aastore
+20: invokevirtual #7
+23: pop
+24: iconst_1
+25: newarray       double
+27: dup
+28: iconst_0
+29: ldc2_w        #36
+32: dastore
+33: astore_1
+34: new           #38
+37: dup
+38: aload_1
+39: invokespecial #39
+42: astore_2
+43: aload_2
+44: invokevirtual #57
+47: astore_3
+48: new           #59
+51: dup
+52: aload_2
+53: dup
+54: invokevirtual #60
+57: pop
+58: invokespecial #61
+61: astore        4
+63: iconst_1
+64: newarray       double
+66: dup
+67: iconst_0
+68: ldc2_w        #36
+71: dastore
+72: astore        5
+74: new           #38
+77: dup
+78: aload         5
+80: invokespecial #39
+83: astore        6
+85: aload         6
+87: invokevirtual #94
+90: aload         6
+92: invokevirtual #110
+95: istore        7
+97: aload         6
+99: invokevirtual #111
+102: istore        8
+104: aload_2
+105: aload         6
+107: invokevirtual #122
+110: dstore        9
+112: iconst_1
+113: newarray       double
+115: dup
+116: iconst_0
+117: ldc2_w        #36
+120: dastore
+121: astore        11
+123: new           #38
+126: dup
+127: aload         11
+129: invokespecial #39
+132: astore        12
+134: aload         12
+136: invokevirtual #57
+139: astore        13
+141: aload         12
+143: getfield      #58
+146: astore        14
+148: aload         12
+150: invokevirtual #93
+153: astore        15
+155: iconst_1
+156: newarray       double
+158: dup
+159: iconst_0
+160: ldc2_w        #36
+163: dastore
+164: astore        16
+166: new           #38
+169: dup
+170: aload         16
+172: invokespecial #39
+175: astore        17
+177: aload         17
+179: invokevirtual #94
+182: aload         17
+184: invokevirtual #57
+187: astore        18
+189: aload         12
+191: aload         18
+193: invokevirtual #64
+196: astore        19
+198: aload         12
+200: invokevirtual #57
+203: astore        20
+205: iconst_1
+206: newarray       double
+208: dup
+209: iconst_0
+210: ldc2_w        #36
+213: dastore
+214: astore        21
+216: new           #38
+219: dup
+220: aload         21
+222: invokespecial #39
+225: astore        22
+227: aload         22
+229: invokevirtual #57
+232: astore        23
+234: aload         12
+236: aload         22
+238: invokevirtual #73
+241: astore        24
+243: iconst_1
+244: newarray       double
+246: dup
+247: iconst_0
+248: ldc2_w        #36
+251: dastore
+252: astore        25
+254: new           #38
+257: dup
+258: aload         25
+260: invokespecial #39
+263: astore        26
+265: aload         26
+267: invokevirtual #94
+270: aload         26
+272: invokevirtual #57
+275: astore        27
+277: aload         27
+279: ldc2_w        #40
+282: invokevirtual #155
+285: astore        28
+287: aload         12
+289: aload         28
+291: invokevirtual #156
+294: dstore        29
+296: new           #38
+299: dup
+300: aload         12
+302: invokespecial #157
+305: astore        31
+307: aload_2
+308: aload         31
+310: invokevirtual #73
+313: astore        32
+315: aload_1
+316: invokestatic  #76
+319: aload_1
+320: invokestatic  #77
+323: ldc           #78
+325: invokestatic  #79
+328: aload_3
+329: invokestatic  #76
+332: aload         5
+334: invokestatic  #76
+337: aload         5
+339: invokestatic  #77
+342: ldc           #78
+344: invokestatic  #79
+347: new           #80
+350: dup
+351: invokespecial #81
+354: ldc           #82
+356: invokevirtual #83
+359: iload         7
+361: invokevirtual #112
+364: ldc           #85
+366: invokevirtual #83
+369: iconst_0
+370: invokevirtual #112
+373: ldc           #82
+375: invokevirtual #83
+378: invokevirtual #86
+381: iload         7
+383: ifne          390
+386: iconst_1
+387: goto          391
+390: iconst_0
+391: invokestatic  #87
+394: new           #80
+397: dup
+398: invokespecial #81
+401: ldc           #82
+403: invokevirtual #83
+406: iload         8
+408: invokevirtual #90
+411: ldc           #85
+413: invokevirtual #83
+416: iconst_1
+417: invokevirtual #90
+420: ldc           #82
+422: invokevirtual #83
+425: invokevirtual #86
+428: iload         8
+430: iconst_1
+431: if_icmpne     438
+434: iconst_1
+435: goto          439
+438: iconst_0
+439: invokestatic  #87
+442: new           #80
+445: dup
+446: invokespecial #81
+449: ldc           #82
+451: invokevirtual #83
+454: dload         9
+456: invokevirtual #84
+459: ldc           #85
+461: invokevirtual #83
+464: ldc2_w        #127
+467: invokevirtual #84
+470: ldc           #82
+472: invokevirtual #83
+475: invokevirtual #86
+478: dload         9
+480: ldc2_w        #127
+483: dcmpl
+484: ifne          491
+487: iconst_1
+488: goto          492
+491: iconst_0
+492: invokestatic  #87
+495: aload         11
+497: invokestatic  #76
+500: aload         11
+502: invokestatic  #77
+505: ldc           #78
+507: invokestatic  #79
+510: aload         13
+512: invokestatic  #76
+515: aload         14
+517: invokestatic  #76
+520: aload         14
+522: invokestatic  #77
+525: ldc           #78
+527: invokestatic  #79
+530: aload         15
+532: invokestatic  #76
+535: aload         16
+537: invokestatic  #76
+540: aload         16
+542: invokestatic  #77
+545: ldc           #78
+547: invokestatic  #79
+550: aload         18
+552: invokestatic  #76
+555: aload         19
+557: invokestatic  #76
+560: aload         20
+562: invokestatic  #76
+565: aload         21
+567: invokestatic  #76
+570: aload         21
+572: invokestatic  #77
+575: ldc           #78
+577: invokestatic  #79
+580: aload         23
+582: invokestatic  #76
+585: aload         24
+587: invokestatic  #76
+590: aload         25
+592: invokestatic  #76
+595: aload         25
+597: invokestatic  #77
+600: ldc           #78
+602: invokestatic  #79
+605: aload         27
+607: invokestatic  #76
+610: aload         28
+612: invokestatic  #76
+615: new           #80
+618: dup
+619: invokespecial #81
+622: ldc           #82
+624: invokevirtual #83
+627: dload         29
+629: invokevirtual #84
+632: ldc           #85
+634: invokevirtual #83
+637: ldc2_w        #158
+640: invokevirtual #84
+643: ldc           #82
+645: invokevirtual #83
+648: invokevirtual #86
+651: dload         29
+653: ldc2_w        #158
+656: dcmpl
+657: ifne          664
+660: iconst_1
+661: goto          665
+664: iconst_0
+665: invokestatic  #87
+668: aload         32
+670: invokestatic  #76
+673: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test27
+Start line: 679
+End line: 686
+Method source code: 
+    public void test27() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test27");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix3 = new org.apache.commons.math.linear.OpenMapRealMatrix(openMapRealMatrix2);
+        int int4 = openMapRealMatrix3.getRowDimension();
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 1 + "'", int4 == 1);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #160
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: new           #8
+37: dup
+38: aload_1
+39: invokespecial #9
+42: astore_2
+43: aload_2
+44: invokevirtual #161
+47: istore_3
+48: new           #80
+51: dup
+52: invokespecial #81
+55: ldc           #82
+57: invokevirtual #83
+60: iload_3
+61: invokevirtual #90
+64: ldc           #85
+66: invokevirtual #83
+69: iconst_1
+70: invokevirtual #90
+73: ldc           #82
+75: invokevirtual #83
+78: invokevirtual #86
+81: iload_3
+82: iconst_1
+83: if_icmpne     90
+86: iconst_1
+87: goto          91
+90: iconst_0
+91: invokestatic  #87
+94: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test28
+Start line: 689
+End line: 700
+Method source code: 
+    public void test28() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test28");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.RealMatrix realMatrix7 = openMapRealMatrix2.getSubMatrix(2, (int) (byte) 1, (int) 'a', (int) (short) 1);
+            org.junit.Assert.fail("Expected exception of type org.apache.commons.math.exception.OutOfRangeException; message: row index (2)");
+        } catch (org.apache.commons.math.exception.OutOfRangeException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #162
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: aload_1
+35: iconst_2
+36: iconst_1
+37: bipush        97
+39: iconst_1
+40: invokevirtual #163
+43: astore_2
+44: ldc           #164
+46: invokestatic  #11
+49: goto          53
+52: astore_2
+53: return
+Exception table:
+from    to  target type
+34    49    52   Class org/apache/commons/math/exception/OutOfRangeException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test29
+Start line: 703
+End line: 715
+Method source code: 
+    public void test29() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test29");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.RealVector realVector3 = null;
+        // The following exception was thrown during execution in test generation
+        try {
+            org.apache.commons.math.linear.RealVector realVector4 = openMapRealMatrix2.preMultiply(realVector3);
+            org.junit.Assert.fail("Expected exception of type java.lang.NullPointerException; message: null");
+        } catch (java.lang.NullPointerException e) {
+        // Expected exception.
+        }
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #165
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: aconst_null
+35: astore_2
+36: aload_1
+37: aload_2
+38: invokevirtual #166
+41: astore_3
+42: ldc           #10
+44: invokestatic  #11
+47: goto          51
+50: astore_3
+51: return
+Exception table:
+from    to  target type
+36    47    50   Class java/lang/NullPointerException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test30
+Start line: 718
+End line: 725
+Method source code: 
+    public void test30() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test30");
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix2 = new org.apache.commons.math.linear.OpenMapRealMatrix(1, 4);
+        org.apache.commons.math.linear.OpenMapRealMatrix openMapRealMatrix3 = new org.apache.commons.math.linear.OpenMapRealMatrix(openMapRealMatrix2);
+        int int4 = openMapRealMatrix3.getColumnDimension();
+        org.junit.Assert.assertTrue("'" + int4 + "' != '" + 4 + "'", int4 == 4);
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #167
+19: aastore
+20: invokevirtual #7
+23: pop
+24: new           #8
+27: dup
+28: iconst_1
+29: iconst_4
+30: invokespecial #14
+33: astore_1
+34: new           #8
+37: dup
+38: aload_1
+39: invokespecial #9
+42: astore_2
+43: aload_2
+44: invokevirtual #168
+47: istore_3
+48: new           #80
+51: dup
+52: invokespecial #81
+55: ldc           #82
+57: invokevirtual #83
+60: iload_3
+61: invokevirtual #90
+64: ldc           #85
+66: invokevirtual #83
+69: iconst_4
+70: invokevirtual #90
+73: ldc           #82
+75: invokevirtual #83
+78: invokevirtual #86
+81: iload_3
+82: iconst_4
+83: if_icmpne     90
+86: iconst_1
+87: goto          91
+90: iconst_0
+91: invokestatic  #87
+94: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/RegressionTest0.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/RegressionTest0.class
+Class name: RegressionTest0
+Method name: test31
+Start line: 728
+End line: 794
+Method source code: 
+    public void test31() throws Throwable {
+        if (debug)
+            System.out.format("%n%s%n", "RegressionTest0.test31");
+        double[] doubleArray1 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector2 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray1);
+        arrayRealVector2.unitize();
+        boolean boolean4 = arrayRealVector2.isNaN();
+        int int5 = arrayRealVector2.getDimension();
+        java.util.Iterator<org.apache.commons.math.linear.RealVector.Entry> entryItor6 = arrayRealVector2.iterator();
+        double[] doubleArray8 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector9 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray8);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector10 = arrayRealVector9.copy();
+        double[] doubleArray11 = arrayRealVector9.data;
+        arrayRealVector2.data = doubleArray11;
+        org.apache.commons.math.linear.RealVector realVector14 = arrayRealVector2.mapDivideToSelf(10000.0d);
+        double[] doubleArray18 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector19 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray18);
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector20 = arrayRealVector19.copy();
+        double[] doubleArray21 = arrayRealVector19.data;
+        java.util.Iterator<org.apache.commons.math.linear.RealVector.Entry> entryItor22 = arrayRealVector19.iterator();
+        arrayRealVector19.unitize();
+        double[] doubleArray24 = arrayRealVector19.data;
+        double[] doubleArray25 = arrayRealVector19.data;
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector26 = arrayRealVector2.combineToSelf((double) (byte) -1, 99.0d, (org.apache.commons.math.linear.RealVector) arrayRealVector19);
+        double[] doubleArray28 = new double[] { (short) 100 };
+        org.apache.commons.math.linear.ArrayRealVector arrayRealVector29 = new org.apache.commons.math.linear.ArrayRealVector(doubleArray28);
+        org.apache.commons.math.linear.RealVector realVector31 = arrayRealVector29.mapDivide((double) (-1L));
+        double double32 = arrayRealVector29.getL1Norm();
+        org.apache.commons.math.linear.RealVector realVector34 = arrayRealVector29.mapMultiply((double) (byte) -1);
+        double double35 = realVector34.getLInfNorm();
+        org.apache.commons.math.linear.RealVector realVector37 = realVector34.mapDivideToSelf(1.0d);
+        double double38 = arrayRealVector2.cosine(realVector37);
+        int int39 = arrayRealVector2.getMinIndex();
+        java.lang.String str40 = arrayRealVector2.toString();
+        org.junit.Assert.assertNotNull(doubleArray1);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray1), "[100.0]");
+        org.junit.Assert.assertTrue("'" + boolean4 + "' != '" + false + "'", boolean4 == false);
+        org.junit.Assert.assertTrue("'" + int5 + "' != '" + 1 + "'", int5 == 1);
+        org.junit.Assert.assertNotNull(entryItor6);
+        org.junit.Assert.assertNotNull(doubleArray8);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray8), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector10);
+        org.junit.Assert.assertNotNull(doubleArray11);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray11), "[98.99]");
+        org.junit.Assert.assertNotNull(realVector14);
+        org.junit.Assert.assertNotNull(doubleArray18);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray18), "[100.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector20);
+        org.junit.Assert.assertNotNull(doubleArray21);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray21), "[1.0]");
+        org.junit.Assert.assertNotNull(entryItor22);
+        org.junit.Assert.assertNotNull(doubleArray24);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray24), "[1.0]");
+        org.junit.Assert.assertNotNull(doubleArray25);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray25), "[1.0]");
+        org.junit.Assert.assertNotNull(arrayRealVector26);
+        org.junit.Assert.assertNotNull(doubleArray28);
+        org.junit.Assert.assertEquals(java.util.Arrays.toString(doubleArray28), "[100.0]");
+        org.junit.Assert.assertNotNull(realVector31);
+        org.junit.Assert.assertTrue("'" + double32 + "' != '" + 100.0d + "'", double32 == 100.0d);
+        org.junit.Assert.assertNotNull(realVector34);
+        org.junit.Assert.assertTrue("'" + double35 + "' != '" + 100.0d + "'", double35 == 100.0d);
+        org.junit.Assert.assertNotNull(realVector37);
+        org.junit.Assert.assertTrue("'" + double38 + "' != '" + (-1.0d) + "'", double38 == (-1.0d));
+        org.junit.Assert.assertTrue("'" + int39 + "' != '" + 0 + "'", int39 == 0);
+        org.junit.Assert.assertEquals("'" + str40 + "' != '" + "{98.99}" + "'", str40, "{98.99}");
+    }
+Method byte code: 
+0: getstatic     #2
+3: ifeq          24
+6: getstatic     #3
+9: ldc           #4
+11: iconst_1
+12: anewarray     #5
+15: dup
+16: iconst_0
+17: ldc           #169
+19: aastore
+20: invokevirtual #7
+23: pop
+24: iconst_1
+25: newarray       double
+27: dup
+28: iconst_0
+29: ldc2_w        #36
+32: dastore
+33: astore_1
+34: new           #38
+37: dup
+38: aload_1
+39: invokespecial #39
+42: astore_2
+43: aload_2
+44: invokevirtual #94
+47: aload_2
+48: invokevirtual #110
+51: istore_3
+52: aload_2
+53: invokevirtual #111
+56: istore        4
+58: aload_2
+59: invokevirtual #93
+62: astore        5
+64: iconst_1
+65: newarray       double
+67: dup
+68: iconst_0
+69: ldc2_w        #36
+72: dastore
+73: astore        6
+75: new           #38
+78: dup
+79: aload         6
+81: invokespecial #39
+84: astore        7
+86: aload         7
+88: invokevirtual #57
+91: astore        8
+93: aload         7
+95: getfield      #58
+98: astore        9
+100: aload_2
+101: aload         9
+103: putfield      #58
+106: aload_2
+107: ldc2_w        #170
+110: invokevirtual #172
+113: astore        10
+115: iconst_1
+116: newarray       double
+118: dup
+119: iconst_0
+120: ldc2_w        #36
+123: dastore
+124: astore        11
+126: new           #38
+129: dup
+130: aload         11
+132: invokespecial #39
+135: astore        12
+137: aload         12
+139: invokevirtual #57
+142: astore        13
+144: aload         12
+146: getfield      #58
+149: astore        14
+151: aload         12
+153: invokevirtual #93
+156: astore        15
+158: aload         12
+160: invokevirtual #94
+163: aload         12
+165: getfield      #58
+168: astore        16
+170: aload         12
+172: getfield      #58
+175: astore        17
+177: aload_2
+178: ldc2_w        #40
+181: ldc2_w        #127
+184: aload         12
+186: invokevirtual #173
+189: astore        18
+191: iconst_1
+192: newarray       double
+194: dup
+195: iconst_0
+196: ldc2_w        #36
+199: dastore
+200: astore        19
+202: new           #38
+205: dup
+206: aload         19
+208: invokespecial #39
+211: astore        20
+213: aload         20
+215: ldc2_w        #40
+218: invokevirtual #42
+221: astore        21
+223: aload         20
+225: invokevirtual #43
+228: dstore        22
+230: aload         20
+232: ldc2_w        #40
+235: invokevirtual #44
+238: astore        24
+240: aload         24
+242: invokevirtual #174
+245: dstore        25
+247: aload         24
+249: dconst_1
+250: invokevirtual #175
+253: astore        27
+255: aload_2
+256: aload         27
+258: invokevirtual #176
+261: dstore        28
+263: aload_2
+264: invokevirtual #177
+267: istore        30
+269: aload_2
+270: invokevirtual #178
+273: astore        31
+275: aload_1
+276: invokestatic  #76
+279: aload_1
+280: invokestatic  #77
+283: ldc           #78
+285: invokestatic  #79
+288: new           #80
+291: dup
+292: invokespecial #81
+295: ldc           #82
+297: invokevirtual #83
+300: iload_3
+301: invokevirtual #112
+304: ldc           #85
+306: invokevirtual #83
+309: iconst_0
+310: invokevirtual #112
+313: ldc           #82
+315: invokevirtual #83
+318: invokevirtual #86
+321: iload_3
+322: ifne          329
+325: iconst_1
+326: goto          330
+329: iconst_0
+330: invokestatic  #87
+333: new           #80
+336: dup
+337: invokespecial #81
+340: ldc           #82
+342: invokevirtual #83
+345: iload         4
+347: invokevirtual #90
+350: ldc           #85
+352: invokevirtual #83
+355: iconst_1
+356: invokevirtual #90
+359: ldc           #82
+361: invokevirtual #83
+364: invokevirtual #86
+367: iload         4
+369: iconst_1
+370: if_icmpne     377
+373: iconst_1
+374: goto          378
+377: iconst_0
+378: invokestatic  #87
+381: aload         5
+383: invokestatic  #76
+386: aload         6
+388: invokestatic  #76
+391: aload         6
+393: invokestatic  #77
+396: ldc           #78
+398: invokestatic  #79
+401: aload         8
+403: invokestatic  #76
+406: aload         9
+408: invokestatic  #76
+411: aload         9
+413: invokestatic  #77
+416: ldc           #179
+418: invokestatic  #79
+421: aload         10
+423: invokestatic  #76
+426: aload         11
+428: invokestatic  #76
+431: aload         11
+433: invokestatic  #77
+436: ldc           #78
+438: invokestatic  #79
+441: aload         13
+443: invokestatic  #76
+446: aload         14
+448: invokestatic  #76
+451: aload         14
+453: invokestatic  #77
+456: ldc           #113
+458: invokestatic  #79
+461: aload         15
+463: invokestatic  #76
+466: aload         16
+468: invokestatic  #76
+471: aload         16
+473: invokestatic  #77
+476: ldc           #113
+478: invokestatic  #79
+481: aload         17
+483: invokestatic  #76
+486: aload         17
+488: invokestatic  #77
+491: ldc           #113
+493: invokestatic  #79
+496: aload         18
+498: invokestatic  #76
+501: aload         19
+503: invokestatic  #76
+506: aload         19
+508: invokestatic  #77
+511: ldc           #78
+513: invokestatic  #79
+516: aload         21
+518: invokestatic  #76
+521: new           #80
+524: dup
+525: invokespecial #81
+528: ldc           #82
+530: invokevirtual #83
+533: dload         22
+535: invokevirtual #84
+538: ldc           #85
+540: invokevirtual #83
+543: ldc2_w        #36
+546: invokevirtual #84
+549: ldc           #82
+551: invokevirtual #83
+554: invokevirtual #86
+557: dload         22
+559: ldc2_w        #36
+562: dcmpl
+563: ifne          570
+566: iconst_1
+567: goto          571
+570: iconst_0
+571: invokestatic  #87
+574: aload         24
+576: invokestatic  #76
+579: new           #80
+582: dup
+583: invokespecial #81
+586: ldc           #82
+588: invokevirtual #83
+591: dload         25
+593: invokevirtual #84
+596: ldc           #85
+598: invokevirtual #83
+601: ldc2_w        #36
+604: invokevirtual #84
+607: ldc           #82
+609: invokevirtual #83
+612: invokevirtual #86
+615: dload         25
+617: ldc2_w        #36
+620: dcmpl
+621: ifne          628
+624: iconst_1
+625: goto          629
+628: iconst_0
+629: invokestatic  #87
+632: aload         27
+634: invokestatic  #76
+637: new           #80
+640: dup
+641: invokespecial #81
+644: ldc           #82
+646: invokevirtual #83
+649: dload         28
+651: invokevirtual #84
+654: ldc           #85
+656: invokevirtual #83
+659: ldc2_w        #40
+662: invokevirtual #84
+665: ldc           #82
+667: invokevirtual #83
+670: invokevirtual #86
+673: dload         28
+675: ldc2_w        #40
+678: dcmpl
+679: ifne          686
+682: iconst_1
+683: goto          687
+686: iconst_0
+687: invokestatic  #87
+690: new           #80
+693: dup
+694: invokespecial #81
+697: ldc           #82
+699: invokevirtual #83
+702: iload         30
+704: invokevirtual #90
+707: ldc           #85
+709: invokevirtual #83
+712: iconst_0
+713: invokevirtual #90
+716: ldc           #82
+718: invokevirtual #83
+721: invokevirtual #86
+724: iload         30
+726: ifne          733
+729: iconst_1
+730: goto          734
+733: iconst_0
+734: invokestatic  #87
+737: new           #80
+740: dup
+741: invokespecial #81
+744: ldc           #82
+746: invokevirtual #83
+749: aload         31
+751: invokevirtual #83
+754: ldc           #180
+756: invokevirtual #83
+759: invokevirtual #86
+762: aload         31
+764: ldc           #181
+766: invokestatic  #182
+769: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.class
+Class name: OpenMapRealMatrix_ESTest
+Method name: test0
+Start line: 19
+End line: 27
+Method source code: 
+  public void test0()  throws Throwable  {
+      OpenMapRealMatrix openMapRealMatrix0 = new OpenMapRealMatrix(293, 293);
+      openMapRealMatrix0.addToEntry(88, 88, 293);
+      OpenMapRealMatrix openMapRealMatrix1 = openMapRealMatrix0.subtract(openMapRealMatrix0);
+      assertEquals(293, openMapRealMatrix1.getColumnDimension());
+      assertEquals(293, openMapRealMatrix0.getColumnDimension());
+      assertNotSame(openMapRealMatrix1, openMapRealMatrix0);
+      assertEquals(293, openMapRealMatrix1.getRowDimension());
+  }
+Method byte code: 
+0: new           #2
+3: dup
+4: sipush        293
+7: sipush        293
+10: invokespecial #3
+13: astore_1
+14: aload_1
+15: bipush        88
+17: bipush        88
+19: ldc2_w        #4
+22: invokevirtual #6
+25: aload_1
+26: aload_1
+27: invokevirtual #7
+30: astore_2
+31: ldc2_w        #8
+34: aload_2
+35: invokevirtual #10
+38: i2l
+39: invokestatic  #11
+42: ldc2_w        #8
+45: aload_1
+46: invokevirtual #10
+49: i2l
+50: invokestatic  #11
+53: aload_2
+54: aload_1
+55: invokestatic  #12
+58: ldc2_w        #8
+61: aload_2
+62: invokevirtual #13
+65: i2l
+66: invokestatic  #11
+69: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.class
+Class name: OpenMapRealMatrix_ESTest
+Method name: test1
+Start line: 30
+End line: 34
+Method source code: 
+  public void test1()  throws Throwable  {
+      OpenMapRealMatrix openMapRealMatrix0 = new OpenMapRealMatrix(295, 295);
+      // Undeclared exception!
+      openMapRealMatrix0.scalarAdd(295);
+  }
+Method byte code: 
+0: new           #2
+3: dup
+4: sipush        295
+7: sipush        295
+10: invokespecial #3
+13: astore_1
+14: aload_1
+15: ldc2_w        #14
+18: invokevirtual #16
+21: pop
+22: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.class
+Class name: OpenMapRealMatrix_ESTest
+Method name: test2
+Start line: 37
+End line: 43
+Method source code: 
+  public void test2()  throws Throwable  {
+      OpenMapRealMatrix openMapRealMatrix0 = new OpenMapRealMatrix(296, 296);
+      OpenMapRealMatrix openMapRealMatrix1 = openMapRealMatrix0.subtract((RealMatrix) openMapRealMatrix0);
+      assertEquals(296, openMapRealMatrix1.getRowDimension());
+      assertNotSame(openMapRealMatrix1, openMapRealMatrix0);
+      assertEquals(296, openMapRealMatrix1.getColumnDimension());
+  }
+Method byte code: 
+0: new           #2
+3: dup
+4: sipush        296
+7: sipush        296
+10: invokespecial #3
+13: astore_1
+14: aload_1
+15: aload_1
+16: invokevirtual #17
+19: astore_2
+20: ldc2_w        #18
+23: aload_2
+24: invokevirtual #13
+27: i2l
+28: invokestatic  #11
+31: aload_2
+32: aload_1
+33: invokestatic  #12
+36: ldc2_w        #18
+39: aload_2
+40: invokevirtual #10
+43: i2l
+44: invokestatic  #11
+47: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.class
+Class name: OpenMapRealMatrix_ESTest
+Method name: test3
+Start line: 46
+End line: 58
+Method source code: 
+  public void test3()  throws Throwable  {
+      OpenMapRealMatrix openMapRealMatrix0 = null;
+      try {
+        openMapRealMatrix0 = new OpenMapRealMatrix(2147457936, 2147457936);
+        fail("Expecting exception: IllegalArgumentException");
+      
+      } catch(IllegalArgumentException e) {
+         //
+         // 4,611,575,586,889,380,096 is larger than, or equal to, the maximum (2,147,483,647)
+         //
+         verifyException("org.apache.commons.math.linear.OpenMapRealMatrix", e);
+      }
+  }
+Method byte code: 
+0: aconst_null
+1: astore_1
+2: new           #2
+5: dup
+6: ldc           #20
+8: ldc           #20
+10: invokespecial #3
+13: astore_1
+14: ldc           #21
+16: invokestatic  #22
+19: goto          29
+22: astore_2
+23: ldc           #24
+25: aload_2
+26: invokestatic  #25
+29: return
+Exception table:
+from    to  target type
+2    19    22   Class java/lang/IllegalArgumentException
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.class
+Class name: OpenMapRealMatrix_ESTest
+Method name: test4
+Start line: 61
+End line: 69
+Method source code: 
+  public void test4()  throws Throwable  {
+      OpenMapRealMatrix openMapRealMatrix0 = new OpenMapRealMatrix(114, 241);
+      openMapRealMatrix0.addToEntry(108, 114, 108);
+      OpenMapRealMatrix openMapRealMatrix1 = openMapRealMatrix0.add(openMapRealMatrix0);
+      assertEquals(114, openMapRealMatrix1.getRowDimension());
+      assertNotSame(openMapRealMatrix1, openMapRealMatrix0);
+      assertEquals(241, openMapRealMatrix0.getColumnDimension());
+      assertEquals(241, openMapRealMatrix1.getColumnDimension());
+  }
+Method byte code: 
+0: new           #2
+3: dup
+4: bipush        114
+6: sipush        241
+9: invokespecial #3
+12: astore_1
+13: aload_1
+14: bipush        108
+16: bipush        114
+18: ldc2_w        #26
+21: invokevirtual #6
+24: aload_1
+25: aload_1
+26: invokevirtual #28
+29: astore_2
+30: ldc2_w        #29
+33: aload_2
+34: invokevirtual #13
+37: i2l
+38: invokestatic  #11
+41: aload_2
+42: aload_1
+43: invokestatic  #12
+46: ldc2_w        #31
+49: aload_1
+50: invokevirtual #10
+53: i2l
+54: invokestatic  #11
+57: ldc2_w        #31
+60: aload_2
+61: invokevirtual #10
+64: i2l
+65: invokestatic  #11
+68: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.class
+Class name: OpenMapRealMatrix_ESTest
+Method name: test5
+Start line: 72
+End line: 81
+Method source code: 
+  public void test5()  throws Throwable  {
+      OpenMapRealMatrix openMapRealMatrix0 = new OpenMapRealMatrix(293, 293);
+      openMapRealMatrix0.addToEntry(88, 88, 293);
+      assertEquals(293, openMapRealMatrix0.getColumnDimension());
+      
+      BlockRealMatrix blockRealMatrix0 = new BlockRealMatrix(293, 293);
+      RealMatrix realMatrix0 = openMapRealMatrix0.multiply((RealMatrix) blockRealMatrix0);
+      assertEquals(293, realMatrix0.getColumnDimension());
+      assertEquals(293, realMatrix0.getRowDimension());
+  }
+Method byte code: 
+0: new           #2
+3: dup
+4: sipush        293
+7: sipush        293
+10: invokespecial #3
+13: astore_1
+14: aload_1
+15: bipush        88
+17: bipush        88
+19: ldc2_w        #4
+22: invokevirtual #6
+25: ldc2_w        #8
+28: aload_1
+29: invokevirtual #10
+32: i2l
+33: invokestatic  #11
+36: new           #33
+39: dup
+40: sipush        293
+43: sipush        293
+46: invokespecial #34
+49: astore_2
+50: aload_1
+51: aload_2
+52: invokevirtual #35
+55: astore_3
+56: ldc2_w        #8
+59: aload_3
+60: invokeinterface #36,  1
+65: i2l
+66: invokestatic  #11
+69: ldc2_w        #8
+72: aload_3
+73: invokeinterface #37,  1
+78: i2l
+79: invokestatic  #11
+82: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.class
+Class name: OpenMapRealMatrix_ESTest
+Method name: test6
+Start line: 84
+End line: 89
+Method source code: 
+  public void test6()  throws Throwable  {
+      OpenMapRealMatrix openMapRealMatrix0 = new OpenMapRealMatrix(205, 205);
+      openMapRealMatrix0.addToEntry(24, 24, (-4.813899778443457E-9));
+      RealMatrix realMatrix0 = openMapRealMatrix0.power(187);
+      assertEquals(205, realMatrix0.getColumnDimension());
+  }
+Method byte code: 
+0: new           #2
+3: dup
+4: sipush        205
+7: sipush        205
+10: invokespecial #3
+13: astore_1
+14: aload_1
+15: bipush        24
+17: bipush        24
+19: ldc2_w        #38
+22: invokevirtual #6
+25: aload_1
+26: sipush        187
+29: invokevirtual #40
+32: astore_2
+33: ldc2_w        #41
+36: aload_2
+37: invokeinterface #36,  1
+42: i2l
+43: invokestatic  #11
+46: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.class
+Class name: OpenMapRealMatrix_ESTest
+Method name: test7
+Start line: 92
+End line: 97
+Method source code: 
+  public void test7()  throws Throwable  {
+      OpenMapRealMatrix openMapRealMatrix0 = new OpenMapRealMatrix(3134, 2194);
+      openMapRealMatrix0.addToEntry(2194, 652, 0.0);
+      assertEquals(3134, openMapRealMatrix0.getRowDimension());
+      assertEquals(2194, openMapRealMatrix0.getColumnDimension());
+  }
+Method byte code: 
+0: new           #2
+3: dup
+4: sipush        3134
+7: sipush        2194
+10: invokespecial #3
+13: astore_1
+14: aload_1
+15: sipush        2194
+18: sipush        652
+21: dconst_0
+22: invokevirtual #6
+25: ldc2_w        #43
+28: aload_1
+29: invokevirtual #13
+32: i2l
+33: invokestatic  #11
+36: ldc2_w        #45
+39: aload_1
+40: invokevirtual #10
+43: i2l
+44: invokestatic  #11
+47: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.class
+Class name: OpenMapRealMatrix_ESTest
+Method name: test8
+Start line: 100
+End line: 105
+Method source code: 
+  public void test8()  throws Throwable  {
+      OpenMapRealMatrix openMapRealMatrix0 = new OpenMapRealMatrix(289, 289);
+      openMapRealMatrix0.multiplyEntry(256, 0, Double.NaN);
+      assertEquals(289, openMapRealMatrix0.getColumnDimension());
+      assertEquals(289, openMapRealMatrix0.getRowDimension());
+  }
+Method byte code: 
+0: new           #2
+3: dup
+4: sipush        289
+7: sipush        289
+10: invokespecial #3
+13: astore_1
+14: aload_1
+15: sipush        256
+18: iconst_0
+19: ldc2_w        #48
+22: invokevirtual #50
+25: ldc2_w        #51
+28: aload_1
+29: invokevirtual #10
+32: i2l
+33: invokestatic  #11
+36: ldc2_w        #51
+39: aload_1
+40: invokevirtual #13
+43: i2l
+44: invokestatic  #11
+47: return
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/OpenMapRealMatrix_ESTest.class
+Class name: OpenMapRealMatrix_ESTest
+Method name: test9
+Start line: 108
+End line: 113
+Method source code: 
+  public void test9()  throws Throwable  {
+      OpenMapRealMatrix openMapRealMatrix0 = new OpenMapRealMatrix(3134, 3134);
+      openMapRealMatrix0.multiplyEntry(0, 0, 0);
+      assertEquals(3134, openMapRealMatrix0.getColumnDimension());
+      assertEquals(3134, openMapRealMatrix0.getRowDimension());
+  }
+Method byte code: 
+0: new           #2
+3: dup
+4: sipush        3134
+7: sipush        3134
+10: invokespecial #3
+13: astore_1
+14: aload_1
+15: iconst_0
+16: iconst_0
+17: dconst_0
+18: invokevirtual #50
+21: ldc2_w        #43
+24: aload_1
+25: invokevirtual #10
+28: i2l
+29: invokestatic  #11
+32: ldc2_w        #43
+35: aload_1
+36: invokevirtual #13
+39: i2l
+40: invokestatic  #11
+43: return
+}
+Source File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/src/test/java/org/apache/commons/math/linear/OpenMapRealMatrixTest.java
+Bytecode File: /home/ac1ie/DBT-workbench/resources/subjects/fixed/math/45/target/test-classes/org/apache/commons/math/linear/OpenMapRealMatrixTest.class
+Class name: OpenMapRealMatrixTest
+Method name: testMath679
+Start line: 24
+End line: 26
+Method source code: 
+    public void testMath679() {
+        new OpenMapRealMatrix(3, Integer.MAX_VALUE);
+    }
+Method byte code: 
+0: new           #2
+3: dup
+4: iconst_3
+5: ldc           #4
+7: invokespecial #5
+10: pop
+11: return
+}
