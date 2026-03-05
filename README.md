@@ -97,10 +97,11 @@ To replicate the results, follow these steps:
    give a summary of the number of mutants and types found using RSTM.
 
    To view the mutation analysis (i.e. view how many stubborn mutants are identified per threshold and view the mutants' characteristics)
-   open the `resources/Stubborn tables`. If you want to run the script that generates these tables, run the following:
+   open the `resources/Stubborn tables`. If you want to run the script that generates these tables, make sure that the subjects are **unzipped**,
+   and run the following:
 
    ```bash
-    python3 scripts/stubborn_mutant_analysis.py [project] [rank] [stubbornScoreThresholdValue]
+    python3 scripts/stubborn_mutant_analysis.py [project] [rank] 
     ```
 
    #### Parameters:
@@ -115,9 +116,6 @@ To replicate the results, follow these steps:
     - **[rank]**: 
         - A rank 1 means analysis of only the mutants killed by 1 test case.
         - A rank 2 means analysis of only the mutants killed by 2 test cases.
-    - **[stubbornScoreThresholdValue]**: 
-        - Use `0.75` for an RSTM threshold stubbornness value of 0.75.
-        - Same as before.
      
    #### Example:
     To analyse all mutants of rank 1 (killed by only one test case) of the `time` project:
