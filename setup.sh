@@ -40,6 +40,4 @@ done
 
 cd ../../.. # Go back to root
 
-find resources/subjects/fixed -name "*.zip" -exec unzip -d resources/subjects/fixed {} \;
-
 echo "Setup complete."
