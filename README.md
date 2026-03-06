@@ -1,7 +1,30 @@
-# Replication-package-stubborn-mutants
+# Replication package for the paper "How Effective are Coverage- and Diversity-Based Test Selection at Killing Stubborn Mutants?"
 
 This replication package contains all the necessary scripts, data, and results to reproduce the experiments from our study on the impact of diversity-based test selection in killing stubborn mutants.
 
+## Setup
+
+### Hardware Requirements
+- **RAM:** 4GB minimum (8GB recommended)
+- **Disk Space:** Approximately 13GB (including unzipped subjects)
+
+### Software Requirements
+- **OS:** Linux (tested on Ubuntu 22.04) or macOS.
+- **Python:** version 3.10 or higher.
+
+### Installation Steps (Estimated time: 5-10 minutes)
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/islamelgendy/Replication-package-stubborn-mutants.git
+   cd Replication-package-stubborn-mutants
+   ```
+
+2. **Setup:**
+   ```bash
+   chmod +x setup.sh
+   ./setup.sh
+   ```
+   
 ## Repository Structure
 
 The replication package consists of the following directories:
@@ -32,13 +55,7 @@ This directory contains all plots generated from our experimental results.
 
 To replicate the results, follow these steps:
 
-1. **Install Dependencies**
-   Ensure you have Python and the necessary libraries installed. You can install the dependencies using:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-2. **Run Test Case Selection Approaches**
+1. **Run Test Case Selection Approaches**
    Execute the scripts in `Scripts/` to reproduce our results. 
 
    ## Running selection approaches to kill stubborn mutants
@@ -96,9 +113,9 @@ To replicate the results, follow these steps:
    the folder `resources/plots`.  Also, within the `resources/plots` folder, CSV files will be generated that
    give a summary of the number of mutants and types found using RSTM.
 
+2. **Running mutation analysis**
    To view the mutation analysis (i.e. view how many stubborn mutants are identified per threshold and view the mutants' characteristics)
-   open the `resources/Stubborn tables`. If you want to run the script that generates these tables, make sure that the subjects are **unzipped**,
-   and run the following:
+   open the `resources/Stubborn tables`. Run the following:
 
    ```bash
     python3 scripts/stubborn_mutant_analysis.py [project] [rank] 
@@ -123,7 +140,7 @@ To replicate the results, follow these steps:
     python3 scripts/stubborn_mutant_analysis.py time 1
     ```
 
-4. **Reproducing FAST-TCP Results**
+3. **Reproducing FAST-TCP Results**
    Navigate to `FAST-replication/` and follow the instructions in its README to run FAST-TCP experiments.
 
  ## Citation
